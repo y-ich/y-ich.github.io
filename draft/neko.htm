@@ -1,0 +1,147 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=x-sjis">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="GENERATOR" content="Microsoft FrontPage Express 2.0">
+<title>井戸と月</title>
+</head>
+
+<body onload="Init()">
+<script language="javascript" type="text/javascript">
+<!--
+//ブラウザのバージョンチェック
+var brw_v = navigator.appVersion.charAt(0);
+var brw_n = navigator.appName.charAt(0);
+var iIE4 = false;
+var iNN4 = false;
+if((brw_v >= 4)&&(brw_n == "M"))iIE4 = true;
+if((brw_v >= 4)&&(brw_n == "N"))iNN4 = true;
+
+var Laymax = 8;	//レイヤーの最大数
+var actT = 200;	//移動時間：速＝小
+var waitT = 25000;
+
+var Comments = new Array();
+Comments[1] = "<p>　<\/p>\
+<p align=\"center\"><em>好意と憎悪のあいだをゆれうごき、つむいだ愛情に気づいていないひと達にささぐ<\/em><\/p>";
+Comments[2] = "<p>そこは、まっくらな　かれいどのなかでした。<\/p>\
+<p>こねこはからだ中、きずついていました。かれいどは、のぼるには　かべがぎざぎざしていて、とてもふかく、とてもふかく・・・<\/p>\
+<p>こねこは　くらくふかいいどを　おりてゆきました。どうしておりてゆくのか　わかりませんでした。うえをみあげると　ただただ気分がわるかったのです。<\/p>";
+Comments[3] = "<p>かれいどのそとでは　もう一匹のこねこが　心配そうに　いどをずっとのぞいていました。<\/p>\
+<p>気がつくと、すでによるでした。のぞいていたこねこのせなかには　つきがかがやきはじめていました。<\/p>\
+<p>こねこは心配のあまりなきだしました。なみだは　かれいどへながれてゆきました。どんどんながれてゆきました。<\/p>";
+Comments[4] = "<p>いどのなかのこねこは　ぼんやりと　あしもとをみていました。あしもとには　みずがたまりはじめていました。はじめはゆっくりしずかに、やがて、どんどんどんどん　みずかさがふえてきました。<\/p>\
+<p>こねこはおよげませんでした。恐怖のあまり、こねこは　いどのかべをかきむしりました。つめから　ちがでるまでかきむしりました。<\/p>\
+<p>みずは容赦なくふえていきます。<\/p>\
+<p>みずはこねこをのみこみ、こねこはなん度もみずをのんでは　しぬほどくるしいおもいでした。<\/p>";
+Comments[5] = "<p>やがてこねこはつかれはてて、もがくのをやめてしずかにうえをみました。ちいさないどのくちから　ちいさなつきがみえました。<\/p>\
+<p>「こんないどふかくからも　つきがみえる・・・」<\/p>\
+<p>　<\/p>\
+<p>つきはいどのくちをとおりすぎ、またあらわれました。またとおりすぎあらわれました。<\/p>";
+Comments[6] = "<p>どんなにながいあいだ、こねこはおぼれていることをわすれていたのでしょう。<\/p>\
+<p>こねこは　ながいあいだ　みずにうかんでいました。気がつくと、こねこには　満天のほしぞらがみえていました。<\/p>\
+<p>そうです。みずは　こねこをゆっくりゆっくり　いどのいりぐちまではこんでいたのでした。<\/p>";
+Comments[7] = "<p>われにかえったこねこは　あわてていどからでると、もりのなかへにげてゆきました。すごいはやさではしりました。ないていたこねこも　びっくりしながらおいかけてゆきました。<\/p>\
+<p>　<\/p>\
+<p>おおきなつきが二匹のこねこをみまもっていました。<\/p>";
+Comments[8] = "<p>　<\/p>\
+<p align=\"center\">おしまい<\/p>";
+
+ColorPLT = "fedcba9876543210";
+var Count = 0;
+var Com = 1;
+var ColorF;
+var InFlag = 1;
+
+function Init(){
+	SetText(Com);
+	Fade();
+}
+
+function Fade(){
+	if　(Count < ColorPLT.length){
+		z = ColorPLT.charAt(Count);
+		ColorF = z+z+z+z+z+z;
+		SetColor(Com);
+		Count++;
+		setTimeout("Fade()",actT);
+	}
+	else if (InFlag == 1) {
+		if (Com < Laymax) {
+			ColorPLT = "0123456789abcdef";
+			InFlag = 0;
+			Count = 0;
+			setTimeout("Fade()",waitT);
+		}
+	}
+	else {
+		Com++;
+		ColorPLT = "fedcba9876543210";
+		InFlag = 1;
+		Count = 0;
+		SetText(Com);
+		setTimeout("Fade()",actT);
+	}
+}
+
+function SetText(kkk) {
+	if(iIE4){
+		document.all.content1.innerHTML = Comments[kkk];
+	}
+	if(iNN4){
+		document.all.content1.document.open();
+		document.all.content1.document.write(Comments[kkk]);
+		document.all.content1.document.close();
+	}
+}
+
+function SetColor(kkk){
+	if(iIE4){
+		document.all.content1.style.color = ColorF;
+	}
+	if(iNN4){
+		document.all.content1.document.open();
+		document.all.content1.document.fgColor = ColorF;
+		document.all.content1.document.close();
+	}
+}
+// -->
+</script>
+
+<h1 align="center">井戸と月</h1>
+<p align="right">作者：市川雄二</p>
+<p>２００３年１２月１５日更新</p>
+<p>注：しばらくすると物語が始まります。ＢＧＭには福山雅治さん「桜坂」のインスツルメンツが最適です。以前はネットに公開されていたMIDIを付けていたのですが著作権上明らかに問題なので外しました。<img src="/cgi-bin/accesslog/y.ich/2/?action=logging"></p>
+
+<hr>
+<p>　</p>
+<DIV ID="content1"></DIV>
+<DIV STYLE="position:absolute; top:60%">
+<hr>
+感じたことを絵に描いてみてください。Navigatorをクリックして筆アイコンをクリックするとパレットが出てきます。
+<p align="center">
+<OBJECT
+	ID="SqueakOCX Control"
+	WIDTH=320 HEIGHT=400
+	ALIGN=center BORDER=2
+	CLASSID="CLSID:2BE9C39E-8386-4435-B337-FCDAD8EAB006"
+	CODEBASE="http://squeakland.org/installers/SqueakPluginInstaller.exe">
+  <PARAM name="src" value="http://www.h3.dion.ne.jp/~y.ich/tales/draw.001.pr">
+  <PARAM name="update" value="184">
+  <PARAM name="win32" value="Squeak3.2gamma of 12 January 2002 [latest update: #4879]">
+  <PARAM name="macos" value="Squeak3.1alpha of 16 May 2001 [latest update: #4081]">
+  
+  <PARAM name="loader_url" value="http://squeakland.org/project.jsp">
+  <PARAM name="pluginspage" value="http://squeakland.org/detect.html">
+  <PARAM name="update_url" value="http://squeakland.org/update/">
+	 <PARAM name="apiSupported" value="TRUE">
+</OBJECT>
+</p>
+<hr>
+<p align="center">Copyright &copy; 2002-2003 ICHIKAWA, Yuji</p>
+</DIV>
+</body>
+</html>

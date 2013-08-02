@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom" hint="target=sky">
+<Document>
+	<name>gingatetsudo.kml</name>
+	<Style id="s_ylw-pushpin">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin_hl">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Folder>
+		<name>銀河鉄道の夜</name>
+		<Placemark id="ぼうっと青白く後光の射した一つの島">
+			<name>ぼうっと青白く後光の射した一つの島</name>
+			<description>カムパネルラ「おっかさんは、ぼくをゆるしてくださるだろうか」</description>
+			<LookAt>
+				<longitude>130.3051362554793</longitude>
+				<latitude>45.33409117150664</latitude>
+				<altitude>0</altitude>
+				<heading>-0.5781113023324879</heading>
+				<tilt>0</tilt>
+				<range>795146.0098953543</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<gx:altitudeMode>clampToSeaFloor</gx:altitudeMode>
+				<coordinates>130.3469529238874,45.65121646234485,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="白い十字架">
+			<name>白い十字架</name>
+			<description>「ハレルヤ、ハレルヤ」</description>
+			<LookAt>
+				<longitude>124.9114981919361</longitude>
+				<latitude>40.44991444703419</latitude>
+				<altitude>0</altitude>
+				<heading>2.253397316303747</heading>
+				<tilt>0</tilt>
+				<range>2712906.680710968</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>125.4387236633096,40.31216164308238,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="白鳥の停車場">
+			<name>白鳥の停車場</name>
+			<description>カムパネルラ「この砂はみんな水晶だ。中で小さな火が燃えている」</description>
+			<LookAt>
+				<longitude>119.0581835886765</longitude>
+				<latitude>35.12575786496019</latitude>
+				<altitude>0</altitude>
+				<heading>6.045473471350196</heading>
+				<tilt>0</tilt>
+				<range>31894.1622785143</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>119.065330161789,35.1405186505079,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="アルビレオの観測所">
+			<name>アルビレオの観測所</name>
+			<description>鳥捕り「おや、こいつはたいしたもんですぜ。こいつはもう、ほんとうの天上へさえ行ける切符だ。天上どこじゃない、どこでもかってにあるける通行券です。こいつをお持
+もちになれぁ、なるほど、こんな不完全な幻想第四次の銀河鉄道なんか、どこまででも行けるはずでさあ、あなた方たいしたもんですね」
+</description>
+			<LookAt>
+				<longitude>112.6758560963542</longitude>
+				<latitude>28.06888815825472</latitude>
+				<altitude>0</altitude>
+				<heading>0.009864489924946351</heading>
+				<tilt>0</tilt>
+				<range>74406.45117593871</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>112.6786679199749,28.09807091036751,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="孔雀">
+			<name>孔雀</name>
+			<description>男の子「あ、孔雀がいるよ。あ、孔雀がいるよ」</description>
+			<LookAt>
+				<longitude>114.1694579296212</longitude>
+				<latitude>-61.85563256619097</latitude>
+				<altitude>0</altitude>
+				<heading>0.08459881389009864</heading>
+				<tilt>0</tilt>
+				<range>3799518.586488096</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>113.2889246334269,-59.75252544888478,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="琴ライラの宿">
+			<name>琴（ライラ）の宿</name>
+			<description>女の子「あの森琴（ライラ）の宿でしょう。あたしきっとあの森の中にむかしの大きなオーケストラの人たちが集まっていらっしゃると思うわ、まわりには青い孔雀やなんかたくさんいると思うわ」</description>
+			<LookAt>
+				<longitude>102.4478902321253</longitude>
+				<latitude>39.28723954178832</latitude>
+				<altitude>0</altitude>
+				<heading>0.501319230798247</heading>
+				<tilt>0</tilt>
+				<range>1772421.131464267</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>101.6176968509185,40.07253761892915,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="海豚いるか">
+			<name>海豚（いるか）</name>
+			<description>低い声「いるかは海にいるときまっていない」</description>
+			<LookAt>
+				<longitude>130.220418284256</longitude>
+				<latitude>15.19445645260084</latitude>
+				<altitude>0</altitude>
+				<heading>0.1688555995635352</heading>
+				<tilt>0</tilt>
+				<range>986420.9727763576</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<gx:altitudeMode>clampToSeaFloor</gx:altitudeMode>
+				<coordinates>130.3321398798087,16.59077497772074,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="鷲の停車場">
+			<name>鷲の停車場</name>
+			<description>ジョバンニ（こんなしずかないいとこで僕はどうしてもっと愉快になれないだろう。どうしてこんなにひとりさびしいのだろう。）
+</description>
+			<LookAt>
+				<longitude>117.6921461601725</longitude>
+				<latitude>8.946766391285777</latitude>
+				<altitude>0</altitude>
+				<heading>0.001509045612065336</heading>
+				<tilt>0</tilt>
+				<range>130656.9367448901</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>117.6912229187847,9.115045438856646,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="インデアン">
+			<name>インデアン</name>
+			<description>にわかにくっきり白いその羽根はは前の方へ倒れるようになり、インデアンはぴたっと立ちどまって、すばやく弓を空にひきました。</description>
+			<LookAt>
+				<longitude>136.3879340237514</longitude>
+				<latitude>-50.43800155580115</latitude>
+				<altitude>0</altitude>
+				<heading>1.34840697481729</heading>
+				<tilt>0</tilt>
+				<range>3752362.145235644</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>139.7190251907324,-47.90944878470582,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="鶴">
+			<name>鶴</name>
+			<description>そこから一羽の鶴がふらふらと落ちて来て、また走り出したインデアンの大きくひろげた両手に落ちこみました。</description>
+			<LookAt>
+				<longitude>156.7806187355829</longitude>
+				<latitude>-43.54880050376205</latitude>
+				<altitude>0</altitude>
+				<heading>0.8622159596370296</heading>
+				<tilt>0</tilt>
+				<range>3446729.259252912</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>158.7513037261328,-39.5339272025121,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="双子のお星さまのお宮">
+			<name>双子のお星さまのお宮</name>
+			<description>女の子「あのね、天の川の岸にね、おっかさんお話しなすったわ、……」</description>
+			<LookAt>
+				<longitude>-73.9883195939141</longitude>
+				<latitude>29.49179513918957</latitude>
+				<altitude>0</altitude>
+				<heading>1.479253661522502</heading>
+				<tilt>0</tilt>
+				<range>3637068.896674535</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-72.01306007991754,34.63469670392091,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="蠍さそりの火">
+			<name>蠍（さそり）の火</name>
+			<description>さそり「どうしてわたしはわたしのからだを、だまっていたちにくれてやらなかったろう」
+</description>
+			<LookAt>
+				<longitude>71.06167495792039</longitude>
+				<latitude>-29.42950922303992</latitude>
+				<altitude>0</altitude>
+				<heading>-0.9523859684983201</heading>
+				<tilt>0</tilt>
+				<range>3179051.301336552</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>72.80139578947133,-24.16211393846102,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="ケンタウルの村">
+			<name>ケンタウルの村</name>
+			<description>ジョバンニ「ああ、そうだ、今夜ケンタウル祭だねえ」</description>
+			<LookAt>
+				<longitude>23.06758211441493</longitude>
+				<latitude>-43.48581932237777</latitude>
+				<altitude>0</altitude>
+				<heading>1.710526252353096</heading>
+				<tilt>0</tilt>
+				<range>6118977.945419447</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>23.32041870379125,-36.20587663155489,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="サウザンクロス">
+			<name>サウザンクロス</name>
+			<description>ジョバンニ「ああ、そんなんでなしに、たったひとりのほんとうのほんとうの神さまです」
+</description>
+			<LookAt>
+				<longitude>7.015575408569666</longitude>
+				<latitude>-58.55161462658011</latitude>
+				<altitude>0</altitude>
+				<heading>0.5101693185983388</heading>
+				<tilt>0</tilt>
+				<range>1617428.916472628</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>7.567504152046922,-55.98559261742646,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="プレシオス">
+			<name>プレシオス</name>
+			<description>やせた大人「だからおまえの実験は、このきれぎれの考えのはじめから終わりすべてにわたるようでなければいけない」</description>
+			<LookAt>
+				<longitude>-123.3073396672625</longitude>
+				<latitude>24.69817114425593</latitude>
+				<altitude>0</altitude>
+				<heading>0.06110781461114244</heading>
+				<tilt>0</tilt>
+				<range>295340.5653293681</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<gx:balloonVisibility>1</gx:balloonVisibility>
+			<Point>
+				<coordinates>-123.2647168926285,24.9104856855383,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="マジェランの星雲">
+			<name>マジェランの星雲</name>
+			<description>ジョバンニ「さあもうきっと僕は僕のために、僕のお母さんのために、カムパネルラのために、みんなのために、ほんとうのほんとうの幸福をさがすぞ」</description>
+			<LookAt>
+				<longitude>-98.80873247354803</longitude>
+				<latitude>-67.27479544224704</latitude>
+				<altitude>0</altitude>
+				<heading>-0.2233755208558707</heading>
+				<tilt>0</tilt>
+				<range>1291004.508824542</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-100.0880719087907,-66.00497837900402,0</coordinates>
+			</Point>
+		</Placemark>
+	</Folder>
+</Document>
+</kml>

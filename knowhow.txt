@@ -1,0 +1,6 @@
+カウンタの入れ方
+
+新しいカウンタが欲しい場合には、http://www.dion.ne.jp/support/cgimanual/cgi_h.htmにて登録する。
+
+<p class=MsoNormal align=right style='text-align:right'><span lang=EN-US><img
+src="http://www.h3.dion.ne.jp/cgi-bin/Count.cgi?df=h3_y.ich_0.dat&dd=B"></span></p>

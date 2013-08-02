@@ -1,0 +1,385 @@
+<!-- saved from url=(0061)http://env.civil.yamaguchi-u.ac.jp/~sekine/U/squeak/intro.htm -->
+<html>
+
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=x-sjis">
+<meta name="GENERATOR" content="Microsoft FrontPage Express 2.0">
+<title>ReadMe.txt</title>
+<script type="text/javascript"><!--
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-510249-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+--></script>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<p>２００３年４月８日更新</p>
+
+<p>もし、あなたがこの文書を<font
+face="ＭＳ Ｐゴシック"> Squeak</font>上で読んでいな<font
+face="ＭＳ Ｐゴシック">くて、そうしたいなら・・・</font></p>
+
+<p><font face="ＭＳ Ｐゴシック">Squeak</font>を起動して、余白の部分をクリックしてスクリーンメニューを開き<font
+face="ＭＳ Ｐゴシック">、</font></p>
+
+<blockquote>
+    <p><font face="ＭＳ Ｐゴシック">'open...'</font>、<font
+    face="ＭＳ Ｐゴシック">そして'file list'</font>を選択してください。</p>
+</blockquote>
+
+<p>右上のペイン（枠）の中から、このファイル<font
+face="ＭＳ Ｐゴシック">(readme.txt)</font>を選んでください。<font
+face="ＭＳ Ｐゴシック"> </font></p>
+
+<p>　</p>
+
+<p>Squeakユーザインタフェース</p>
+
+<p>----------------------------------</p>
+
+<p>ウィンドウ</p>
+
+<p>ウィンドウを閉じるには、タイトルバーの左側にある&quot;×&quot;をクリックしてください。ウィンドウを最小化したり、拡げたりするには、タイトルバーの右側にある&quot;○&quot;をクリックてください。ウィンドウの名前を変えるには、タイトルバーの&quot;×&quot;（ウィンドウクローズ）の右手にあるメニューアイコンをクリックするとポップアップメニューが現れますので、その中のコマンド&quot;change
+title...&quot;を使ってください。これはモーフィックウィンドウの場合です。もしMVCプロジェクトを使っているなら、ウィンドウが若干違って見えますが同じようにコントロールできます。</p>
+
+<p>タイトルバーをドラッグすると、ウィンドウを動かせます。ウィンドウのサイズを変えるには、コーナーや境界近くにマウスを動かし、リサイズアイコンが現れたらドラッグします。</p>
+
+<p>　</p>
+
+<p>ペイン（枠）</p>
+
+<p>ウィンドウは大抵、複数のペインから構成されていて、ペインの多くにはスクロールバーがあります。スクロールバーは右側にあることもあれば左側にあることもあります。また、スクロールバーは常に置かれることもあれば、バタバタと現れる(flop-out)種類のものもあります（Preferencesを見てください）。立体的な色の四角形はドラッグして上下に動かすことができ、それに合わせてウィンドウの中身がスクロールします。スクロールバーの端の上下矢印を一回クリックすると、一行スクロールします。スクロールバーの上の&quot;-&quot;ボックスをクリックすると、そのペインのメニューがポップアップします。</p>
+
+<p>　</p>
+
+<p>メニュー</p>
+
+<p>ペインメニュー（これはしばしばペインが違うと異なります）は、ほとんどのペインで右クリック（訳注：原文では左クリックと書いてあるがデフォルトのプレファレンスでは右クリック）（マッキントッシュの場合オプション-クリック）することでも呼び出すことができます。多くのメニューコマンドは、メニューに表示されているキーとAlt(cmd)キーを同時に押すことで呼び出すことができます。「スクリーンメニュー」や「ワールドメニュー」とも呼ばれる「デスクトップメニュー」は、ウィンドウの外のSqueakデスクトップ上でクリックすることで呼び出すことができます。</p>
+
+<p>　</p>
+
+<p>プレファレンス</p>
+
+<p>Squeakの概観や振る舞いに影響を与えるたくさんの要素があります。それらの多くは、あなたがyesかnoか決めることができる設定、「プレファレンス」によって決まります。プレファレンスツールを開くことでプレファレンスを見たり変えたりすることができます。プレファレンスツールは、ツールフラップから引き出すか、デスクトップメニューの&quot;help...&quot;ブランチから&quot;preferences&quot;を選んで開くことができます。更に、デスクトップメニューの&quot;appearance...&quot;ブランチを選ぶと、たくさんの概観関係のコントロールにアクセスできます。</p>
+
+<p>　</p>
+
+<p>テーマ</p>
+
+<p>プレファレンスの多くは、一緒になって、ユーザインタフェースの全体的な&quot;look
+and feel&quot;を創り出します。Squeakは「テーマ」のサポートを通してこのレベルのコントロールを可能にします。'Squeak'フラップをクリックして、&quot;choose
+theme...&quot;ボタンをクリックして、Squeakの他のテーマを選んでみてください。リリース時には、意気地のない(wimpy)テーマ
+(outOfTheBox)が、意図的にインストールされているので、初めてのユーザは他のテーマを試したり、やがては自分自身の新しいテーマを定義することに興味を持つでしょう。新しいテーマの多くの局面は、テーマを変えた後生成されたウィンドウ上にのみ現れることに注意してください。だから、新しいテーマを試すよい方法は、最初にテーマを選んで、次に新しいブラウザやファイルリストを開くことです。</p>
+
+<p>　</p>
+
+<p>［(*) 単なる冗談。誰もそんなこと（訳注：よくわかりません）に賛成しませんし、Squeakを作った人たちの多くはoutOfTheBox設定が好きじゃないです。しかし、Squeakが初めてのユーザに刺激が強すぎないプレファレンスを選ぶことは意味があるということには皆賛成しました。］</p>
+
+<p>　</p>
+
+<p>色</p>
+
+<p>Squeakグラフィックスは１ビット、２ビット、４ビット、８ビット、１６ビット、３２ビットカラーをサポートします。Squeakスクリーンの色解像度を変えるためには、スクリーンメニュー'appearance...'から'set
+display depth...'を選んでください。Squeakのスクリーン色深度がモニタの色設定に一致する場合、ベストのパフォーマンスが得られるでしょう。Squeakの１６ビット色深度は&quot;数千色&quot;、３２ビット色深度は&quot;数百万色&quot;もしくは&quot;２４ビットカラー&quot;に対応することに注意してください。</p>
+
+<p>　</p>
+
+<p>プロジェクト</p>
+
+<p>プロジェクトは、ウィンドウを埋めるSqueakデスクトップ全体のことです。プロジェクトは、１つの仕事から別のものへ素早く変えるのに使われます。アクティブでないプロジェクトは、そのプロジェクトのウィンドウのサムネールを示すプロジェクトウィンドウによって示されます。プロジェクトウィンドウをクリックするとそのプロジェクトに入ることができるので、プロジェクトウィンドウは実際にはウィンドウより扉により近いものです。スクリーンメニューから'open...project'を選ぶことで、新しいプロジェクトを作ることができます。プロジェクトから出て、その親プロジェクトに戻るには、スクリーンメニューから'previous
+project'を選んでください。それぞれのプロジェクトは、その中のウィンドウの集合やSmalltalk変更の集合、スクリーン色深度を維持します。プロジェクトはSuper
+Swiki上に保存することができるので、プロジェクトは共有や公開の単位でもあります。</p>
+
+<p>モーフィックハロ</p>
+
+<p>モーフィックプロジェクトでは、ウィンドウや他のグラフィカルなオブジェクト上でcmd-クリック（alt-クリック）すると、「ハロハンドル」と呼ばれる色の付いた円の集まりが、そのオブジェクトの回りに現れます。更にクリックすると、ネストされた構造内で、他のグラフィカルオブジェクト用にハロが移ります。cmd-クリックの時シフトキーををしながらクリックすると、一番内側の部分から外側に向かってハロが移ります。cmd(alt)を押さずにクリックすれば、ハロは消えます。ハロが表示されている時に、ハロハンドルの１つの上にカーソルを２，３秒置いておくと、そのハンドルの名前を表示するバルーンがポップアップします。左上の&quot;X&quot;ハンドル（削除する）、右下の黄色のハンドル（サイズを変更する）、茶色のハンドル（オブジェクトを移動させる）の２つのハンドルが便利です。ハロを使って、複雑なグラフィカルなオブジェクトを探検することができます。（黒いハロハンドルを使って）分解することさえできます。オブジェクトをばらばらにしても普通は害はありません；ばらばらにした断片は捨てて、新しいものを生成することができます。</p>
+
+<p>フラップ</p>
+
+<p>Squeakデスクトップの端に沿って、&quot;Squeak&quot;や&quot;Tools&quot;,
+&quot;Supplies&quot;などと名前が付いたタブが見えるでしょう。どのタブでもいいのでクリックして、フラップを開いてみてください。タブをドラッグして、フラップのサイズを変更したり、タブの位置を変えてみてください。どのタブでもいいのでタブのハロを呼び出して、メニューハンドルをクリックしてフラップに関係したたくさんのオプションを表示させてください。デスクトップメニューから&quot;Flaps...&quot;メニューを使って、どのフラップを見えるようにするかとか他のフラップ関連のオプションやアシスタントをコントロールしてみてください。</p>
+
+<p>部品箱</p>
+
+<p>色々な方法で、新しいオブジェクトを得ることができます。（デスクトップメニューから&quot;objects&quot;を選択すると現れる）&quot;Objects
+Catalog&quot;や（例えば&quot;Tools&quot;や&quot;Supplies&quot;のような）いくつかの標準のフラップが新しいオブジェクトの「部品箱」として使えます。部品箱の中に見えるアイコンをドラッグすると、「あなたの手の中に」アイコンが示す種類のオブジェクトが新しく生成されます；クリックして好きなところに新しいオブジェクトを置いてください。また、どのフラップにも自分のオブジェクトを加えることができます。--オブジェクトをタブ上にドラッグして、フラップが開くのを待ち、フラップの中の好きなところにオブジェクトを置くだけです。</p>
+
+<p>タイピング</p>
+
+<p>Squeakの割り当て演算子&quot;←&quot;文字は、実際にはASCIIのアンダーバー文字です。アンダーバーを入力すれば得られます。２文字ストリング&quot;:=&quot;は、←の代わりです。同様に、&quot;↑&quot;はASCIIのキャロット文字です。USキーボードではシフト-6で入力します。</p>
+
+<p>Squeakのテキストエディタはコマンドキーで呼び出すことができるたくさんの編集操作をサポートしています。これらの操作の全リストを見るには、デスクトップメニューから'help...'を選択して、'command-key
+help'を選択してください。是非使ってみてください。--たくさん時間を節約できるでしょう。コマンドキーは、Macキーボードではリンゴマークのついたキーです。他のキーボードでは&quot;ALT&quot;がマークされています。</p>
+
+<p><br>
+Managing and Saving Changes<br>
+-------------------------------------<br>
+Starting and Quitting<br>
+Obviously you have figured out how to start the system. One way
+is to double-click on an image. If you have several different
+interpreters, you may want to drag the image to the appropriate
+interpreter; that lets you decide which interpreter should be
+used.<br>
+<br>
+To quit a Squeak session, choose 'quit' with or without saving
+from the desktop menu. If you save, your previous image file will
+be overwritten. You may choose 'save as...' or 'save as new
+version' to save a copy of your image and changes files with a
+new name (see below).<br>
+<br>
+Image File<br>
+All of the objects -- classes, dictionaries, windows and other
+objects -- that make up the Squeak environment are stored in an
+image file (this must be named 'SomeName.image' or 'SomeName.ima').
+When you start up an image, everything is right where you left it
+when you last saved that image.<br>
+<br>
+Sources and Changes<br>
+The source code associated with the Squeak code in an image file
+is stored in two other files. The code of the base system (e.g.,
+Squeak version 3.0) is stored in the file 'SqueakV3.sources', and
+the sources for methods added or changed since that time are in
+the changes file (which must similarly be named 'SomeName.changes').<br>
+<br>
+Storing the source code in a separate file has several advantages.
+To begin with, if you have been working for a couple of hours,
+and your dog pulls out the power cord, you will still have a
+sequential record of all your program edits, and these can be
+perused and replayed to recover your work. This feature has also
+saved many a hacker who got too adventurous while changing the
+system he or she was using.<br>
+<br>
+However, if you wish to run the system with severely limited
+resources, it can be operated without any source code, owing to
+its ability to decompile the bytecode methods into a readable and
+editable version of the original source code (only comments and
+temporary variable names are lost).<br>
+<br>
+Finally, since the changes file does not consume memory space,
+Squeak keeps a complete history of all your program changes. This
+makes it easy to examine or even reinstate older versions of
+methods (see 'versions' option in browser selector pane). This
+encourages experimentation, since you can easily revert to the
+original versions of any set of methods.<br>
+<br>
+FileOut, FileIn<br>
+In addition to the 'save' command that saves the entire state of
+your Squeak image, individual methods, categories and classes may
+be 'filed out'. Filing out a method, category, or class results
+in the creation of a text file containing the code in question.
+This file can be read into the same or another Squeak image to
+recreate the saved classes and methods.<br>
+<br>
+ChangeLists, ChangeSets, and ChangeSorters<br>
+A ChangeList is a method-by-method view of a fileOut. Note that
+the changes file records all your programming actions using the
+same fileOut format, so a ChangeList can browse the change
+history of any Squeak image. The &quot;recently logged changes&quot;
+command of the changes... menu is one way to do this. You can
+also open a ChangeList on any fileOut file by selecting the file
+in the FileList and selecting the &quot;browse changes&quot;
+command.<br>
+<br>
+In addition to the image-wide record of changes kept in the
+changes file, a record of changes is also associated with every
+project. This &quot;change set&quot; records only the class and
+method changes you made within that project. This allows you to
+make a fileOut of all the changes that constitute your work on
+that project. Single and dual ChangeSorters allow one to examine
+the change set of the current project and other projects, and
+also allows changes to be moved between change sets. These are
+very useful tools for more experienced Squeak programmers.<br>
+<br>
+Organizing your Disk<br>
+Squeak will look for the sources file either in the folder
+containing the image. If the sources file is not found there,
+then it looks in the folder containing the VM. In general, it is
+simplest to keep a single copy of the sources file in the folder
+containing the VM. You can use any number of image/changes pairs
+anywhere on your disk.<br>
+<br>
+If you wish to maintain several versions of the VM, here is the
+easiest way: place all VMs in one folder along with the sources
+file. Then, in each folder with images for version X, place an
+alias of the VM for version X. You can then start VM version X on
+that image by dragging the image onto the VM alias. (If you start
+Squeak by double-clicking on the image, it might use the wrong
+version of the VM to run that image.) Another technique is to
+keep an alias for your favorite VM on the desktop and start
+images by dropping them on this alias. These instructions apply
+to Mac and Windows, but the same general strategy can be applied
+to Linux, Unix, and many other platforms.<br>
+<br>
+<br>
+Morphic and MVC<br>
+---------------------<br>
+Squeak has two completely independent user interface frameworks,
+each with its own window system. The newer Morphic framework is
+the locus current development and most of the interesting
+facilities, such as end-user scripting, work only in Morphic.
+However, the older &quot;Model-View-Controller&quot; (MVC)
+framework is still a viable Smalltalk programming environment and
+may perform better on slower machines and when memory is
+extremely limited. The choice of frameworks is made when you
+create a project using the &quot;open...&quot; command on the
+screen menu. You can have any mixture of Morphic and MVC projects
+within an image.<br>
+<br>
+<br>
+Brainstorming and Engineering<br>
+-------------------------------------<br>
+The Squeak team works in periods of expansion, when we try new
+approaches and write lots of new code, and periods of reflection,
+where we re-factor, clean up and document (well... when there's
+nothing else to do ;-). It is important for critics to understand
+that the morphic system and the end-user programming systems that
+are embedded in it, are still in an expanding brainstorming phase.
+We know that the morphic protocols are overgrown and unwieldy.<br>
+<br>
+But there's a good reason for this. Morphic is being taken in new
+directions, including flexing, scripting, and viewing. When we
+have gained experience with these new areas, when we have done
+some testing with real users, when we better understand the real
+kernel of this new architecture, then we will clean up and
+simplify the architecture.<br>
+<br>
+<br>
+Source Code Updates<br>
+------------------------<br>
+Tired of waiting months for the next release?<br>
+<br>
+You can load the latest updates automatically into any Squeak
+attached to the internet. Just hit 'load code updates' in the
+Squeak flap, or choose 'update code from server' in the 'help...'
+menu. The Squeak team periodically releases approved changes to
+Squeak to the update servers. Updates are numbered and are loaded
+in order.<br>
+<br>
+Active Squeak developers work with an advanced version of Squeak
+for which new updates are issued weekly or even daily. If you
+wish to participate as a &quot;test pilot&quot; in this process,
+you should join the Squeak mailing list (described on Squeak.org),
+get a current &quot;test pilot&quot; image, and watch for
+announcements of new updates.<br>
+<br>
+If you wish to set up your own Update server for your own
+organization, please contact Ted Kaehler. It is an easy way to
+distribute changes to a group of people using Squeak.<br>
+<br>
+<br>
+Image Size<br>
+--------------<br>
+We have intentionally included more features with the Squeak 3.5
+release than most people will use. If space is of concern, many
+of these facilities can be removed to produce a considerably
+smaller image.<br>
+<br>
+We are in the process of sanitizing and automating this removal
+process. Right now, if you fileIn MajorShrinkFor3.0.cs, and
+follow the instructions, you should end up with an image that is
+around 870k. It will not have Morphic in it, and there will be
+loose ends in the image that may cause errors when you attempt to
+use facilities that have been removed, but this is usually not
+fatal. The shrunken image has compiled method temp names into a
+compact trailer on every method, allowing the entire system to be
+browsed by decompiling with temp names preserved. This means
+there is no need to store the sources file on small machines.
+While comments are not available after abandoning sources, all
+the code you write will be preserved properly in the changes
+file, so that you can upload it to a full Squeak when you return
+from your backpack trip. <br>
+<br>
+We will be updating the various shrinking routines to improve
+this process, and they can be browsed in the 'shrinking' category
+of SystemDictionary. If you simply want a small image to play
+with, search for the mini2.2 image on the Squeak servers. It is
+quite complete and only 600K.<br>
+<br>
+<br>
+The Squeak Wiki Wiki Server<br>
+-----------------------------------<br>
+Ward Cunningham invented the idea of a web server with pages that
+any user can modify. He called it the &quot;Wiki Wiki&quot;
+server, after the Hawaiian word for &quot;quick&quot;. Mark
+Guzdial and his students at Georgia Tech implemented a Wiki Wiki
+server in Squeak, which we call a &quot;swiki&quot;.<br>
+<br>
+Every web page on a Swiki web site has a button that says, &quot;Edit
+this Page&quot;. It gives you the contents of that page in a
+scrolling window. If you edit this text and hit &quot;Save&quot;,
+the page is stored back on the server with your changes. This can
+work from any web browser. Changing a page is easy enough that a
+workgroup, class, or organization can quickly create and maintain
+an evolving web site of its own pages.<br>
+<br>
+To start your own Swiki, see the instructions in (PWS class
+howToStart), and get a folder with necessary template files from...<br>
+http://www.cc.gatech.edu/fac/mark.guzdial/squeak/pws/ <br>
+<br>
+Many thanks to Georg Gollmann, Mark Guzdial, Mark's students, and
+to the father of the Wiki Wiki, Ward Cunningham.<br>
+<br>
+<br>
+Stylized Text and Links in Source Code<br>
+--------------------------------------------<br>
+Squeak allows creation of hyperlinks in text, and preserves them
+(and most text styles) in source code and class comments! This
+makes it possible to document Squeak more effectively than
+before, as you will see from the limited examples in the Sample
+Documentation window. Links can be created using CMD-6, and they
+can deactivated by selecting (with an extra leading character, or
+from back to front) and using CMD-0.<br>
+<br>
+If you never put links or emphasis in your source code,
+everything should work just as before. FileOuts may include style
+information after each method. If you need to bring a new fileOut
+into an older system, read the file 'readFileinsWithStyle.cs'
+into your older system first.<br>
+<br>
+<br>
+Sources of Information<br>
+---------------------------<br>
+Basic help information is available in two external media:<br>
+<br>
+(1) The ReadMe.txt file, which contains exactly the content you
+are currently reading.<br>
+<br>
+(2) You will also find lots of other useful and possibly more
+current information on the Georgia Tech Swiki server. We thank
+Mark Guzdial at Georgia Tech for making this server available.
+You can browse it in any web browser using the URL below, or, if
+you enjoy using Squeak for everything, just click on...<br>
+http://minnow.cc.gatech.edu/Squeak.1<br>
+<br>
+In addition, you will likely want to browse other sites on the
+web, including...<br>
+http://www.squeak.org/ -- The Squeak home page and UIUC archive<br>
+http://www.create.ucsb.edu/squeak/ -- Stephen Pope's U.S. mirror
+site at UCSB.<br>
+ftp://st.cs.uiuc.edu/Smalltalk/Squeak/ -- The Squeak archive at
+UIUC.<br>
+http://www.sugarWeb.com -- Smalltalk User Group of Argentina (SUGAR)<br>
+<br>
+<br>
+Text of the Welcome Window<br>
+----------------------------------<br>
+In case you delete your welcome window, and wish to retrieve it
+for one reason or another, here is the text from that window, as
+released...<br>
+</p>
+
+<hr>
+
+<p align="center">Copyright &copy; 2003 ICHIKAWA, Yuji</p>
+</body>
+</html>

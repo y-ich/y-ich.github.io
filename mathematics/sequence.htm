@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>数列、級数</title>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ["\\(","\\)"]] } });
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+<meta http-equiv="X-UA-Compatible" CONTENT="IE=EmulateIE7" />
+
+<script type="text/javascript"><!--
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-510249-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+--></script>
+</head>
+
+<body>
+<h1 align=center style='text-align:center'>数列、級数</h1>
+<p>２０１１年６月４日更新</p>
+<hr size=2 width="100%" align=center>
+<h2>三角数</h2>
+
+<p>数学は数字について色々性質を調べます。数字１つ１つについても調べますが、ある数字の集まりについて性質調べることが多いので、変数というものを使います。変数は普通、アルファベットで表します。具体的な数字の変わりにアルファベットで表すことで、とても多くのことを調べることができます。</p>
+
+<p>変数の便利さを知るために、三角数について調べましょう。三角数というのは、</p>
+$$\begin{align*}
+&1\\
+&1+2=3\\
+&1+2+3=6\\
+&1+2+3+4=10
+\end{align*}$$
+<p>という数字の並び（ちょっと難しい言葉で「数列」と言います。）のことです。どうして三角数と言うかというと、ボーリングのピンのように三角に並べたピンの数を数えた時の数字だからです。</p>
+
+<p>さて、三角数の１００番目の数はいくつでしょう？１から１００まで９９回の足し算をすると答えがわかります。大変ですね。もっと簡単に計算する方法があります。続きを読む前に考えてみてください。</p>
+
+<p><br><br><br><br><br></p>
+
+<p>できました？</p>
+
+<p>１から１００までの足し算式を２つ並べて書いてみましょう。ただし、２つ目の式は逆順に書きます。</p>
+
+$$\begin{align*}
+1+2+3+...+98+99+100\\
+100+99+98+...+3+2+1
+\end{align*}$$
+
+<p>横に足し算する代わりに、縦に足し算をすると、</p>
+
+$$101+101+101+...+101+101+101$$
+
+<p>となります。これは９９回足し算しなくても計算できますね。１０１が１００個あるから、</p>
+
+$$101+101+101+...+101+101+101=101\times 100=10100$$
+
+<p>さて、</p>
+
+$$1+2+3+...+98+99+100+100+99+98+...+3+2+1=10100$$
+
+<p>ということがわかったので、知りたい三角数はその半分、</p>
+
+$$1+2+3+...+98+99+100=\frac{10100}{2}=5050$$
+
+<p>９９回足し算しなくても計算できました。不思議ですね。</p>
+
+<blockquote>ドイツのとても偉い学者Carl Friedrich Gaussさんは小学生の時に上の計算方法を自分の力で発見したという逸話があります。今から２００年以上のことです。</blockquote>
+
+<p>さて、１００番目以外でも同じように計算することができます。毎回上のように計算するのは面倒ですね。具体的な番号の代わりにｎ番目の三角数を調べましょう。数字の代わりに記号を使う場合、その記号のことを変数と呼びます。</p>
+
+$$\begin{align*}
+1+2+3+...+n\\
+n+(n-1)+(n-2)+...+1
+\end{align*}$$
+
+<p>縦に足し算すると、</p>
+
+$$(n+1)+(n+1)+(n+1)+...+(n+1)$$
+
+<p>ｎ＋１がｎ個あるから、（ｎ＋１）×ｎ。だから、</p>
+
+$$1+2+3+...+n=\frac{n(n+1)}{2}$$
+
+<blockquote>（注）変数を使う場合、掛け算の記号×を省略することが多いです。</blockquote>
+
+<p>になります。</p>
+
+<p>８３４１０１番目の三角数は？と聞かれたら、ｎに８３４１０１を代入（ｎの代わりにその数字を使うこと）したらいいです。</p>
+
+$$\frac{834101\times (834101+1)}{2}=417051$$
+
+<p>もうどんな三角数でも、足し算１回、掛け算１回、割り算１回で計算することができます。変数って便利ですね。</p>
+
+<p>実は変数はもっと違った使い方もできます。その話はまたの機会に。</p>
+
+<br>
+
+<p>さて、上で１、２、３と順番に足し算をしてみました。（ちょっと難しい言葉ですが、数列を足し合わせたものを「級数」と言います。）他にどんな級数が考えられるでしょうか？</p>
+
+<p>例えば、
+
+$$1+3+5+7+9+...+(2n-1)$$
+
+<blockquote>（注）奇数は変数を使って２×ｎ−１と書くことができます。</blockquote>
+
+$$2+4+6+8+10+...+2n$$
+
+<blockquote>（注）偶数は変数を使って２×ｎと書くことができます。</blockquote>
+
+</p>
+
+<p>さあ、１＋２＋３＋・・・＋ｎの時と同じように・・・のない式を求めることができるでしょうか？</p>
+
+<p>２番目の式は少し考えるとわかります。</p>
+
+<p><br><br><br><br>わかりました？</p>
+
+$$2+4+6+8+10+...+2n=2\times(1+2+3+...+n)$$
+
+<p>というように２でくくることができます。括弧の中は見たことありますね！だから</p>
+
+$$2+4+6+8+10+...+2n=2\times(1+2+3+...+n)=2\times\frac{n(n+1)}{2}=n(n+1)$$
+
+<p>簡単な式を求めることができました。引き算１回と掛け算１回でたくさんの数字の和が計算できます。</p>
+
+<p>　</p>
+
+<p>１番目の式は、それぞれの数から１を足すと見たことのある式になります。</p>
+
+$$(1+1)+(3+1)+(5+1)+...+(2n-1+1)=2+4+6+8+10+...+2n=n(n+1)$$
+
+<p>さて、それぞれの数に１を足したということは全体でいくつ足したのでしょうか？数はｎ個ですからｎを足したことになります。だから左辺の式は求めたい式よりｎ多いことになります。左と右の式のそれぞれからｎを引くと、</p>
+
+$$1+3+5+7+9+...+(2n-1)=n(n+1)-n=n^2$$
+
+<p>また、簡単な式を求めることができました。掛け算１回でたくさんの数字の和が計算できます。</p>
+
+<p>奇数を順番にｎ個足した答えは、ｎを２回掛けたものと同じです。不思議な式ですね。</p>
+
+<p>でもこれは表を書いてみるとわかりやすいです。</p>
+
+<div align=center>
+
+<table border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-border-alt:solid black 1.5pt;
+ mso-padding-alt:0mm 4.95pt 0mm 4.95pt'>
+ <tr style='mso-yfti-irow:0'>
+  <td width=32 valign=top style='width:24.15pt;border:solid black 1.5pt;
+  padding:0mm 4.95pt 0mm 4.95pt'>
+  <p class=MsoBodyText align=center style='text-align:center;mso-char-indent-size:
+  0mm'><span lang=EN-US>1<o:p></o:p></span></p>
+  </td>
+  <td width=32 valign=top style='width:24.15pt;border-top:solid black 1.5pt;
+  border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.5pt;
+  mso-border-left-alt:solid black 1.5pt;mso-border-alt:solid black 1.5pt;
+  mso-border-bottom-alt:solid black .75pt;padding:0mm 4.95pt 0mm 4.95pt'>
+  <p class=MsoBodyText align=center style='text-align:center;mso-char-indent-size:
+  0mm'><span lang=EN-US>1<o:p></o:p></span></p>
+  </td>
+  <td width=32 valign=top style='width:24.15pt;border-top:solid black 1.5pt;
+  border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.5pt;
+  mso-border-left-alt:solid black 1.5pt;mso-border-alt:solid black 1.5pt;
+  mso-border-bottom-alt:solid black .75pt;padding:0mm 4.95pt 0mm 4.95pt'>
+  <p class=MsoBodyText align=center style='text-align:center;mso-char-indent-size:
+  0mm'><span lang=EN-US>1<o:p></o:p></span></p>
+  </td>
+  <td width=32 valign=top style='width:24.15pt;border-top:solid black 1.5pt;
+  border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.5pt;
+  mso-border-left-alt:solid black 1.5pt;mso-border-alt:solid black 1.5pt;
+  mso-border-bottom-alt:solid black .75pt;padding:0mm 4.95pt 0mm 4.95pt'>
+  <p class=MsoBodyText align=center style='text-align:center;mso-char-indent-size:
+  0mm'><span lang=EN-US>1<o:p></o:p></span></p>
+  </td>
+  <td width=32 valign=top style='width:24.15pt;border-top:solid black 1.5pt;
+  border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.5pt;
+  mso-border-left-alt:solid black 1.5pt;mso-border-alt:solid black 1.5pt;
+  mso-border-bottom-alt:solid black .75pt;padding:0mm 4.95pt 0mm 4.95pt'>
+  <p class=MsoBodyText align=center style='text-align:center;mso-char-indent-size:
+  0mm'><span lang=EN-US>1</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width=32 valign=top style='width:24.15pt;border-top:none;border-left:
+  solid black 1.5pt;border-bottom:solid black 1.5pt;border-right:solid black 1.0pt;
+  mso-border-top-alt:solid black 1.5pt;mso-border-alt:solid black 1.5pt;
+  mso-border-right-alt:solid black .75pt;padding:0mm 4.95pt 0mm 4.95pt'>
+  <p class=MsoBodyText align=center style='text-align:center;mso-char-indent-size:
+  0mm'><span lang=EN-US>3<o:p></o:p></span></p>
+  </td>
+  <td width=32 valign=top style='width:24.15pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.5pt;border-right:solid black 1.5pt;
+  mso-border-top-alt:solid black .75pt;mso-border-left-alt:solid black .75pt;
+  padding:0mm 4.95pt 0mm 4.95pt'>
+  <p class=MsoBodyText align=center style='text-align:center;mso-char-indent-size:
+  0mm'><span lang=EN-US>2<o:p></o:p></span></p>
+  </td>
+  <td width=32 valign=top style='width:24.15pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.5pt;
+  mso-border-top-alt:solid black .75pt;mso-border-left-alt:solid black 1.5pt;
+  mso-border-top-alt:.75pt;mso-border-left-alt:1.5pt;mso-border-bottom-alt:
+  .75pt;mso-border-right-alt:1.5pt;mso-border-color-alt:black;mso-border-style-alt:
+  solid;padding:0mm 4.95pt 0mm 4.95pt'>
+  <p class=MsoBodyText align=center style='text-align:center;mso-char-indent-size:
+  0mm'><span lang=EN-US>2<o:p></o:p></span></p>
+  </td>
+  <td width=32 valign=top style='width:24.15pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.5pt;
+  mso-border-top-alt:solid black .75pt;mso-border-left-alt:solid black 1.5pt;
+  mso-border-top-alt:.75pt;mso-border-left-alt:1.5pt;mso-border-bottom-alt:
+  .75pt;mso-border-right-alt:1.5pt;mso-border-color-alt:black;mso-border-style-alt:
+  solid;padding:0mm 4.95pt 0mm 4.95pt'>
+  <p class=MsoBodyText align=center style='text-align:center;mso-char-indent-size:
+  0mm'><span lang=EN-US>2<o:p></o:p></span></p>
+  </td>
+  <td width=32 valign=top style='width:24.15pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.5pt;
+  mso-border-top-alt:solid black .75pt;mso-border-left-alt:solid black 1.5pt;
+  mso-border-top-alt:.75pt;mso-border-left-alt:1.5pt;mso-border-bottom-alt:
+  .75pt;mso-border-right-alt:1.5pt;mso-border-color-alt:black;mso-border-style-alt:
+  solid;padding:0mm 4.95pt 0mm 4.95pt'>
+  <p class=MsoBodyText align=center style='text-align:center;mso-char-indent-size:
+  0mm'><span lang=EN-US>2</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td width=32 valign=top style='width:24.15pt;border-top:none;border-left:
+  solid black 1.5pt;border-bottom:solid black 1.5pt;border-right:solid black 1.0pt;
+  mso-border-top-alt:solid black 1.5pt;mso-border-alt:solid black 1.5pt;
+  mso-border-right-alt:solid black .75pt;padding:0mm 4.95pt 0mm 4.95pt'>
+  <p class=MsoBodyText align=center style='text-align:center;mso-char-indent-size:
+  0mm'><span lang=EN-US>5<o:p></o:p></span></p>
+  </td>
+  <td width=32 valign=top style='width:24.15pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.5pt;border-right:solid black 1.0pt;
+  mso-border-top-alt:solid black 1.5pt;mso-border-left-alt:solid black .75pt;
+  mso-border-top-alt:1.5pt;mso-border-left-alt:.75pt;mso-border-bottom-alt:
+  1.5pt;mso-border-right-alt:.75pt;mso-border-color-alt:black;mso-border-style-alt:
+  solid;padding:0mm 4.95pt 0mm 4.95pt'>
+  <p class=MsoBodyText align=center style='text-align:center;mso-char-indent-size:
+  0mm'><span lang=EN-US>4<o:p></o:p></span></p>
+  </td>
+  <td width=32 valign=top style='width:24.15pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.5pt;border-right:solid black 1.5pt;
+  mso-border-top-alt:solid black .75pt;mso-border-left-alt:solid black .75pt;
+  padding:0mm 4.95pt 0mm 4.95pt'>
+  <p class=MsoBodyText align=center style='text-align:center;mso-char-indent-size:
+  0mm'><span lang=EN-US>3<o:p></o:p></span></p>
+  </td>
+  <td width=32 valign=top style='width:24.15pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.5pt;
+  mso-border-top-alt:solid black .75pt;mso-border-left-alt:solid black 1.5pt;
+  mso-border-top-alt:.75pt;mso-border-left-alt:1.5pt;mso-border-bottom-alt:
+  .75pt;mso-border-right-alt:1.5pt;mso-border-color-alt:black;mso-border-style-alt:
+  solid;padding:0mm 4.95pt 0mm 4.95pt'>
+  <p class=MsoBodyText align=center style='text-align:center;mso-char-indent-size:
+  0mm'><span lang=EN-US>3<o:p></o:p></span></p>
+  </td>
+  <td width=32 valign=top style='width:24.15pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.5pt;
+  mso-border-top-alt:solid black .75pt;mso-border-left-alt:solid black 1.5pt;
+  mso-border-top-alt:.75pt;mso-border-left-alt:1.5pt;mso-border-bottom-alt:
+  .75pt;mso-border-right-alt:1.5pt;mso-border-color-alt:black;mso-border-style-alt:
+  solid;padding:0mm 4.95pt 0mm 4.95pt'>
+  <p class=MsoBodyText align=center style='text-align:center;mso-char-indent-size:
+  0mm'><span lang=EN-US>3</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td width=32 valign=top style='width:24.15pt;border-top:none;border-left:
+  solid black 1.5pt;border-bottom:solid black 1.5pt;border-right:solid black 1.0pt;
+  mso-border-top-alt:solid black 1.5pt;mso-border-alt:solid black 1.5pt;
+  mso-border-right-alt:solid black .75pt;padding:0mm 4.95pt 0mm 4.95pt'>
+  <p class=MsoBodyText align=center style='text-align:center;mso-char-indent-size:
+  0mm'><span lang=EN-US>7<o:p></o:p></span></p>
+  </td>
+  <td width=32 valign=top style='width:24.15pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.5pt;border-right:solid black 1.0pt;
+  mso-border-top-alt:solid black 1.5pt;mso-border-left-alt:solid black .75pt;
+  mso-border-top-alt:1.5pt;mso-border-left-alt:.75pt;mso-border-bottom-alt:
+  1.5pt;mso-border-right-alt:.75pt;mso-border-color-alt:black;mso-border-style-alt:
+  solid;padding:0mm 4.95pt 0mm 4.95pt'>
+  <p class=MsoBodyText align=center style='text-align:center;mso-char-indent-size:
+  0mm'><span lang=EN-US>6<o:p></o:p></span></p>
+  </td>
+  <td width=32 valign=top style='width:24.15pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.5pt;border-right:solid black 1.0pt;
+  mso-border-top-alt:solid black 1.5pt;mso-border-left-alt:solid black .75pt;
+  mso-border-top-alt:1.5pt;mso-border-left-alt:.75pt;mso-border-bottom-alt:
+  1.5pt;mso-border-right-alt:.75pt;mso-border-color-alt:black;mso-border-style-alt:
+  solid;padding:0mm 4.95pt 0mm 4.95pt'>
+  <p class=MsoBodyText align=center style='text-align:center;mso-char-indent-size:
+  0mm'><span lang=EN-US>5<o:p></o:p></span></p>
+  </td>
+  <td width=32 valign=top style='width:24.15pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.5pt;border-right:solid black 1.5pt;
+  mso-border-top-alt:solid black .75pt;mso-border-left-alt:solid black .75pt;
+  padding:0mm 4.95pt 0mm 4.95pt'>
+  <p class=MsoBodyText align=center style='text-align:center;mso-char-indent-size:
+  0mm'><span lang=EN-US>5<o:p></o:p></span></p>
+  </td>
+  <td width=32 valign=top style='width:24.15pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.5pt;
+  mso-border-top-alt:solid black .75pt;mso-border-left-alt:solid black 1.5pt;
+  mso-border-top-alt:.75pt;mso-border-left-alt:1.5pt;mso-border-bottom-alt:
+  .75pt;mso-border-right-alt:1.5pt;mso-border-color-alt:black;mso-border-style-alt:
+  solid;padding:0mm 4.95pt 0mm 4.95pt'>
+  <p class=MsoBodyText align=center style='text-align:center;mso-char-indent-size:
+  0mm'><span lang=EN-US>4</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4;mso-yfti-lastrow:yes'>
+  <td width=32 valign=top style='width:24.15pt;border-top:none;border-left:
+  solid black 1.5pt;border-bottom:solid black 1.5pt;border-right:solid black 1.0pt;
+  mso-border-top-alt:solid black 1.5pt;mso-border-alt:solid black 1.5pt;
+  mso-border-right-alt:solid black .75pt;padding:0mm 4.95pt 0mm 4.95pt'>
+  <p class=MsoBodyText align=center style='text-align:center;mso-char-indent-size:
+  0mm'><span lang=EN-US>9<o:p></o:p></span></p>
+  </td>
+  <td width=32 valign=top style='width:24.15pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.5pt;border-right:solid black 1.0pt;
+  mso-border-top-alt:solid black 1.5pt;mso-border-left-alt:solid black .75pt;
+  mso-border-top-alt:1.5pt;mso-border-left-alt:.75pt;mso-border-bottom-alt:
+  1.5pt;mso-border-right-alt:.75pt;mso-border-color-alt:black;mso-border-style-alt:
+  solid;padding:0mm 4.95pt 0mm 4.95pt'>
+  <p class=MsoBodyText align=center style='text-align:center;mso-char-indent-size:
+  0mm'><span lang=EN-US>8<o:p></o:p></span></p>
+  </td>
+  <td width=32 valign=top style='width:24.15pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.5pt;border-right:solid black 1.0pt;
+  mso-border-top-alt:solid black 1.5pt;mso-border-left-alt:solid black .75pt;
+  mso-border-top-alt:1.5pt;mso-border-left-alt:.75pt;mso-border-bottom-alt:
+  1.5pt;mso-border-right-alt:.75pt;mso-border-color-alt:black;mso-border-style-alt:
+  solid;padding:0mm 4.95pt 0mm 4.95pt'>
+  <p class=MsoBodyText align=center style='text-align:center;mso-char-indent-size:
+  0mm'><span lang=EN-US>7<o:p></o:p></span></p>
+  </td>
+  <td width=32 valign=top style='width:24.15pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.5pt;border-right:solid black 1.0pt;
+  mso-border-top-alt:solid black 1.5pt;mso-border-left-alt:solid black .75pt;
+  mso-border-top-alt:1.5pt;mso-border-left-alt:.75pt;mso-border-bottom-alt:
+  1.5pt;mso-border-right-alt:.75pt;mso-border-color-alt:black;mso-border-style-alt:
+  solid;padding:0mm 4.95pt 0mm 4.95pt'>
+  <p class=MsoBodyText align=center style='text-align:center;mso-char-indent-size:
+  0mm'><span lang=EN-US>6<o:p></o:p></span></p>
+  </td>
+  <td width=32 valign=top style='width:24.15pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.5pt;border-right:solid black 1.5pt;
+  mso-border-top-alt:solid black .75pt;mso-border-left-alt:solid black .75pt;
+  padding:0mm 4.95pt 0mm 4.95pt'>
+  <p class=MsoBodyText align=center style='text-align:center;mso-char-indent-size:
+  0mm'><span lang=EN-US>5</span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p>左上の四角から見てください。箱が１つなので１と番号を振ってあります。その箱の右側下側を包むように３つの箱をくっつけると、２×２の箱の並びになります。くっつけた箱の数は３ですね。２×２の箱の回りの右側下側を包むように箱をくっつけると、３×３の箱の並びになります。くっつけた箱の数は５ですね。</p>
+
+<p>このように右側下側に箱をくっつける度に奇数個の箱を順番にくっつけることになります。くっつけた箱の数の合計と全体の箱の数は一緒ですから、表を見ただけで、上の式が成り立つことがわかります。</p>
+
+<p><br></p>
+
+<p>他のも色んな級数を計算することができます。自分でオリジナルの級数を作ってみよう！</p>
+
+<p>読んで理解することより、自分で何か創ってみることがとても大切です。</p>
+
+<h2>２乗和、３乗和、・・・</h2>
+
+<p>上で求めた公式</p>
+
+$$1+2+3+...+n=\frac{n(n+1)}{2}\ \ \ (1)$$
+
+を別の方法で求めてみましょう。</p>
+
+<p>その前に、式の中の・・・をまた別の変数を使って表現する方法を見ておきます。</p>
+
+$$1+2+3+...+n=\sum_{k=1}{n}{k}\ \ \ (2)$$
+
+<p>Σ（シグマと呼びます。）は、この場合、変数kについて、1からnまで１つずつ隣の式に代入して足し合わせなさいという意味です。上の式の左辺と右辺は全く同じ意味です。(1)の式は、ｎ−１回の足し算を、足し算１回、掛け算１回、割り算１回に「変換」しているので自明でない「公式」です。(2)の式は同じ式を違う記号で書き直しただけです。</p>
+
+<p>さて、唐突に感じると思いますが、$(k+1)^2-k^2$を展開してみます。</p>
+
+$$(k+1)^2-k^2=k^2+2k+1-k^2=2k+1$$
+
+<p>次にこの式の左辺と右辺をそれぞれk=1からnまで足します。</p>
+
+$$\begin{align*}
+\sum_{k=1}^{n}{((k+1)^2-k^2)}&=\sum_{k=1}^{n}{(2k+1)}&\\
+\sum_{k=2}^{n+1}{k^2}-\sum_{k=1}^{n}{k^2}&=2\sum_{k=1}^{n}{k}+\sum_{k=1}^{n}{1}&\\
+(n+1)^2-1&=2\sum_{k=1}^{n}{k}+n&\ \ (3)\\
+n^2+2n&=2\sum_{k=1}^{n}{k}+n&
+\end{align*}$$
+
+<p>一番最後の式を変形すると、</p>
+
+$$\begin{align*}
+n^2+2n&=2\sum_{k=1}^{n}{k}+n\\
+2\sum_{k=1}^{n}{k}&=n^2+n\\
+\sum_{k=1}^{n}{k}&=\frac{n^2+n}{2}=\frac{n(n+1)}{2}
+\end{align*}$$
+
+<p>式を変形するだけで答えが出てしまいました！</p>
+
+<p>(3)の３番目の変形がとても大切です。２番目の左辺はn-１回の足し算が２回現れていますが、ほとんどの項は互いに打ち消しあいます.だから３番目では２つの項の足し算になります。</p>
+
+<p>公式を求めるこの方法はとても強力です。なぜかというと、同じように、</p>
+
+$$\begin{align*}
+\sum_{k=1}^{n}{k}&=\frac{n(n+1)}{2}\\
+\sum_{k=1}^{n}{k^2}&=\frac{n(n+1)(2n+1)}{6}\\
+\sum_{k=1}^{n}{k^3}&=(\frac{n(n+1)}{2})^2
+\end{align*}$$
+
+<p>と２乗和、３乗和、・・・の公式が計算できてしまうのです。</p>
+
+<hr size=2 width="100%" align=center>
+
+<p align="center">Copyright &copy; 2001-2011 ICHIKAWA, Yuji</p>
+</body>
+</html>

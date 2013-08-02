@@ -1,0 +1,338 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!-- saved from url=(0046)http://www.squeak.org/documentation/index.html --><HTML><HEAD><TITLE>Documentation</TITLE><!-- #BeginTemplate "/Templates/Main Template.dwt" --><!-- #BeginEditable "doctitle" --><!-- #EndEditable -->
+<META http-equiv=Content-Type content="text/html; charset=shift_jis">
+<STYLE type=text/css>A {
+	COLOR: #0000ff; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #0000ff; TEXT-DECORATION: underline
+}
+P {
+	FONT-FAMILY: "Times New Roman", Times, serif
+}
+H2 {
+	FONT-SIZE: 18pt; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+H1 {
+	FONT-SIZE: 36px; BORDER-LEFT-COLOR: black; BORDER-BOTTOM-COLOR: #0000ff; COLOR: #0000ff; BORDER-TOP-COLOR: #0000ff; FONT-STYLE: italic; FONT-FAMILY: Arial, Helvetica, sans-serif; BORDER-RIGHT-COLOR: black
+}
+H3 {
+	FONT-SIZE: 14pt; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+SMALL {
+	FONT-SIZE: xx-small
+}
+STRONG {
+	FONT-WEIGHT: bold; FONT-SIZE: 12pt; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+EM {
+	FONT-SIZE: 12pt; FONT-STYLE: italic; FONT-FAMILY: "Times New Roman", Times, serif
+}
+</STYLE>
+
+<META content="MSHTML 6.00.2800.1141" name=GENERATOR>
+<script type="text/javascript"><!--
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-510249-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+--></script>
+</HEAD>
+<BODY text=#000000 link=#0000ff bgColor=#ffffff>
+<P>２００３年２月１６日更新</P>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD vAlign=top width=100>
+      <TABLE cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD bgColor=#ffffff><IMG height=1 src="documentation.files/1x1.gif" 
+            width=1></TD>
+          <TD bgColor=#ffffff><IMG height=1 src="documentation.files/1x1.gif" 
+            width=1></TD>
+          <TD bgColor=#0000ff><IMG height=1 src="documentation.files/1x1.gif" 
+            width=1></TD>
+          <TD bgColor=#ffffff><IMG height=1 src="documentation.files/1x1.gif" 
+            width=1></TD>
+          <TD bgColor=#ffffff><IMG height=1 src="documentation.files/1x1.gif" 
+            width=1></TD></TR>
+        <TR>
+          <TD vAlign=top bgColor=#ffffff><IMG height=1 
+            src="documentation.files/1x1.gif" width=1></TD>
+          <TD vAlign=top bgColor=#dedeff><IMG height=16 
+            src="documentation.files/menu.top.left.gif" width=19></TD>
+          <TD vAlign=top bgColor=#dedeff><IMG height=1 
+            src="documentation.files/1x1.gif" width=1></TD>
+          <TD vAlign=top bgColor=#dedeff><IMG height=16 
+            src="documentation.files/menu.top.right.gif" width=19></TD>
+          <TD vAlign=top bgColor=#ffffff><IMG height=1 
+            src="documentation.files/1x1.gif" width=1></TD></TR>
+        <TR>
+          <TD bgColor=#0000ff><IMG height=1 src="documentation.files/1x1.gif" 
+            width=1></TD>
+          <TD bgColor=#dedeff><IMG height=1 src="documentation.files/1x1.gif" 
+            width=1></TD>
+          <TD vAlign=top bgColor=#dedeff>
+            <P align=center><IMG height=72 src="documentation.files/topleft.gif" 
+            width=100></P>
+            <DIV align=center><!-- #BeginEditable "Menubar" --><!-- #BeginLibraryItem "/Library/Documentation Menubar.lbi" -->
+            <P align=center><STRONG><A 
+            href="http://www.squeak.org/index.html">HOME</A></STRONG></P>
+            <P align=center><STRONG><A 
+            href="http://www.squeak.org/about/">ABOUT</A></STRONG></P>
+            <P align=center><STRONG><A 
+            href="http://www.squeak.org/features/">FEATURES</A></STRONG></P>
+            <P align=center><A 
+            href="http://www.squeak.org/documentation/"><STRONG>DOCUMENTATION</STRONG></A></P>
+            <P align=center><EM><A 
+            href="http://www.squeak.org/documentation/index.html#tutorials">Tutorials</A><BR><A 
+            href="http://www.squeak.org/documentation/index.html#mailing">Mailing 
+            List</A><BR><A 
+            href="http://www.squeak.org/documentation/index.html#swiki">Swikis</A><BR><A 
+            href="http://www.squeak.org/documentation/index.html#other">Other 
+            Squeak Sites</A><BR><A 
+            href="http://www.squeak.org/documentation/index.html#further">Books 
+            and Papers</A></EM></P>
+            <P align=center><STRONG><A 
+            href="http://www.squeak.org/download">DOWNLOAD</A></STRONG></P><!-- #EndLibraryItem --><!-- #EndEditable --></DIV></TD>
+          <TD bgColor=#dedeff><IMG height=1 src="documentation.files/1x1.gif" 
+            width=1></TD>
+          <TD bgColor=#0000ff><IMG height=1 src="documentation.files/1x1.gif" 
+            width=1></TD></TR>
+        <TR>
+          <TD vAlign=bottom bgColor=#ffffff><IMG height=1 
+            src="documentation.files/1x1.gif" width=1></TD>
+          <TD vAlign=bottom bgColor=#dedeff><IMG height=16 
+            src="documentation.files/menu.bottom.left.gif" width=19></TD>
+          <TD vAlign=bottom bgColor=#dedeff><IMG height=1 
+            src="documentation.files/1x1.gif" width=1></TD>
+          <TD vAlign=bottom bgColor=#dedeff><IMG height=16 
+            src="documentation.files/menu.bottom.right.gif" width=19></TD>
+          <TD vAlign=bottom bgColor=#ffffff><IMG height=1 
+            src="documentation.files/1x1.gif" width=1></TD></TR>
+        <TR>
+          <TD bgColor=#ffffff><IMG height=1 src="documentation.files/1x1.gif" 
+            width=1></TD>
+          <TD bgColor=#ffffff><IMG height=1 src="documentation.files/1x1.gif" 
+            width=1></TD>
+          <TD bgColor=#0000ff><IMG height=1 src="documentation.files/1x1.gif" 
+            width=1></TD>
+          <TD bgColor=#ffffff><IMG height=1 src="documentation.files/1x1.gif" 
+            width=1></TD>
+          <TD bgColor=#ffffff><IMG height=1 src="documentation.files/1x1.gif" 
+            width=1></TD></TR></TBODY></TABLE></TD>
+    <TD vAlign=top>
+      <TABLE cellSpacing=0 cellPadding=10 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD><!-- #BeginEditable "Main%20Contents" -->
+            <H2><A href="http://www.squeak.org/index.html">Home</A> 
+&gt;&gt;</H2>
+            <H1>ドキュメンテーション</H1>
+            <H2><A name=tutorials></A>Squeakチュートリアル</H2>Andrew Greenbergによる<A 
+            href="squeak-qref.html">Squeakユーザーインタフェース</A>のための素晴らしいクイックリファレンスがあります。 
+
+            <P>Please try John Maloney's <A 
+            href="http://www.squeak.org/tutorials/BankAccount.html">BankAccount 
+            tutorial</A>. It starts at the very beginning, and takes you through 
+            defining a class and writing some methods. 
+            <P>If you know how to program, but don't know Squeak or Smalltalk, 
+            try <A 
+            href="http://squeak.cs.uiuc.edu/cphoenix_tutorial/intro.html">Chris 
+            Phoenix's tutorial.</A> 
+            <P>Wolfgang Kreutzer at the University of Canterbury, New Zealand, 
+            has a <A 
+            href="http://kaka.cosc.canterbury.ac.nz/~wolfgang/cosc205/smalltalk1.html#basic">good 
+            tutorial for the Squeak beginner</A>. 
+            <P>John Maloney's <A 
+            href="http://www.squeak.org/tutorials/morphic-tutorial-1.html">Morphic 
+            tutorial</A> is a great introduction to working with the Morphic 
+            graphic system. 
+            <P>Juan Manuel Vuletich's introduction to the <A 
+            href="http://www.sinectis.com.ar/u/jmvuletich/MorphicTutorial/Morphic.html">concepts 
+            and style</A> of the Morphic graphic system. 
+            <P>Another John Maloney <A 
+            href="http://minnow.cc.gatech.edu/squeakdoc/11">tutorial on 
+            Morphic</A>, including Players. 
+            <P>As long as we are discussing the Morphic Graphics System, here is 
+            a great page with many <A 
+            href="http://minnow.cc.gatech.edu/squeak/30">Morphic Links</A> on 
+            the Squeak Swiki at Georgia Tech. 
+            <P>Giovanni Giorgi has written a great tutorial that lets Java 
+            programmers learn Squeak. It is on Stephen Pope's Squeak CD. See the 
+            online version of the <A 
+            href="http://rain.create.ucsb.edu/~stp/CD-ROM/Tutorials/SqueakFromJava/squeak_tutorial.html">SmallTalk 
+            Tutorial for Java Programmers!</A> 
+            <P>
+            <H2><A name=mailing></A>The Squeak Mailing List</H2>The Squeak email 
+            list is very active, reflecting the vibrant Squeak community. New 
+            users are encouraged to ask for help on this list. You will also see 
+            bug reports, bug fixes, and discussions of how to improve Squeak. To 
+            join the list, sign up at: <PRE>	<A href="http://lists.squeakfoundation.org/listinfo/squeak-dev">http://lists.squeakfoundation.org/listinfo/squeak-dev</A><BR>
+	or email <A href="mailto:squeak-dev-request@lists.squeakfoundation.org?subject=subscribe">squeak-dev-request@lists.squeakfoundation.org?subject=subscribe</A></PRE>Once 
+            you are subscribed, you can post (you must be subscribed to the 
+            list) to: <PRE><A href="mailto:squeak-dev@lists.squeakfoundation.org">squeak-dev@lists.squeakfoundation.org</A></PRE>
+            <P>One option on the sign-up page is to receive the list in digest 
+            form. Formerly, we had an announcement-only list with less traffic, 
+            but we have discontinued it. 
+            <P>There are several archives of the Main Squeak List, and some are 
+            searchable: <PRE>     <A href="http://minnow.cc.gatech.edu/squeak/FAQMailingListArchives">Click here for an up-to-date list of mail archives</A> or use
+
+     <A href="http://groups.yahoo.com/group/squeak/">Yahoo Groups Squeak Archive</A></PRE>
+            <P>The Squeak list was first hosted by Stephen Pope at UCSB's CREATE 
+            project. After that, the list was hosted by John Brant and Ralph 
+            Johnson at the Computer Science Department at UIUC (University of 
+            Illinois, Urbana-Champaign.) (We also thank Ralph for hosting the 
+            Squeak ftp file archive at UIUC.) We thank all of them for 
+            supporting the lifeblood of our community. The current list is part 
+            of the Squeak Foundation. 
+            <H2><A name=swiki></A>Squeak Documentation and Discussions on Wiki 
+            Servers</H2>In addition to the mailing list, Squeak is documented 
+            and discussed on a web site that acts like a bulletin board. 
+            <P>Please visit the <A 
+            href="http://minnow.cc.gatech.edu/squeak/1">Squeak Swiki</A> site. 
+            It contains more "live" documentation and information on Squeak than 
+            you'll find anywhere else. This includes a <A 
+            href="http://minnow.cc.gatech.edu/squeak/471">Squeak FAQ</A>, 
+            tutorials, documentation, <A 
+            href="http://minnow.cc.gatech.edu/squeak/683">Screenshots of 
+            Squeak</A>, project discussions, and much more. 
+            <P>How is this "Swiki" site implemented? Well, ... 
+            <P>An exciting new dimension has recently been added to the Squeak 
+            community with Ward Cunningham's Wiki server concept, and its 
+            various implementations. A Wiki server is quick to implement (in 
+            fact Wiki-Wiki means quick in Hawaian Creole): A Wiki server serves 
+            pages just like any other server, except that anyone (even you) can 
+            also change them and create new ones. There are no security or 
+            synchronization checks. If something goes wrong you fix it back 
+            again; if everything goes wrong, someone restores the last saved 
+            copy. 
+            <P>Because it is not sequential like mail, this medium is much 
+            better suited to sharing "gestalts" such as personal profiles and 
+            interests, project descriptions and status, and the like. Because 
+            anyone can make their own changes or new pages, it is an ideal 
+            medium for "hosting" a community. There is no need for everyone to 
+            have a web page with your thoughts on Squeak -- the Squeak Wiki is 
+            waiting right now to host your thoughts. 
+            <P>The internal documentation of Squeak is now being done on a 
+            Squeak-based webserver. Enter the <A 
+            href="http://minnow.cc.gatech.edu/squeakDoc.1">Squeak Documentation 
+            Swiki</A> to see the contents of all the info windows in Squeak. 
+            <P>You may fondly remember Ward Cunningham's Wiki-wiki. It has now 
+            been moved in its entirety to a Swiki at Georgia Tech: start at <A 
+            href="http://minnow.cc.gatech.edu/squeak.127">WelcomeVisitors</A> 
+            <P>Every copy of Squeak now includes Mark Guzdial's Wiki web server. 
+            A <A 
+            href="http://www.cc.gatech.edu/fac/mark.guzdial/squeak/pws/">Swiki</A> 
+            is one of several Pluggable Web Servers based on Georg Gollman's 
+            Squeak web server software. Swikis are available with password 
+            protection for the site or for the individual page. 
+            <H2><A name=other></A>Other Squeak Sites</H2>
+            <P>The main <A href="http://minnow.cc.gatech.edu/squeak.1">Squeak 
+            Discussion Area</A> is at Georgia Tech. 
+            <P>A spectacular magazine about Squeak that comes on CD, <A 
+            href="http://www.squeakonline.com/subscribe.html">Squeak News</A>, 
+            edited by Tansel Ersavas. (You can email him at: <A 
+            href="mailto:editor@squeaknews.com">editor@squeaknews.com</A>). 
+            <P>The <A href="http://www.sugarweb.com/">Smalltalk User Group of 
+            Argentina (SUGAR)</A> has a good site (in English and Spanish). 
+            <P><A href="http://www.create.ucsb.edu/squeak/">Stephen Pope's U.S. 
+            mirror site</A> at CREATE at UCSB. Back online! 
+            <P>European users may wish to use:<BR><A 
+            href="ftp://alix.inria.fr/pub/squeak">Ian Puimarta's site for 
+            Macintosh and Unix versions of Squeak</A> (INRIA, France).<BR><A 
+            href="ftp://ftp.cs.uni-magdeburg.de/pub/Smalltalk/free/squeak/win32">Andreas 
+            Raab's site for Macintosh and Windows versions of Squeak</A> (Univ. 
+            of Magdeburg, Germany). 
+            <P><A href="http://sumeru.stanford.edu/tim/pooters/squeak.html">Tim 
+            Rowledge's Squeak page</A>. 
+            <P>The original Xerox PARC report on <A 
+            href="http://www.2share.com/thinglab/ThingLab%20-%20index.html">ThingLab</A>, 
+            Alan Borning's system for building graphical constraints (1979). 
+            Download the <A 
+            href="ftp://st.cs.uiuc.edu/Smalltalk/Squeak/Goodies/ThingLab/">ThingLab 
+            goodie</A> and run it in Squeak (still has some conflicts with other 
+            Squeak features). 
+            <P><A href="http://www.visualnewt.com/Mac/Squeak124.html">Serg 
+            Koren's Site</A> with sources that can be compiled by Code Warrior 
+            Professional Release 2, and some improved Squeak examples in the 
+            image. 
+            <H2><A name=further></A>Books and Papers (many are online!)</H2>
+            <UL>
+              <LI><A 
+              href="ftp://st.cs.uiuc.edu/Smalltalk/Squeak/docs/OOPSLA.Squeak.html">The 
+              Squeak OOPSLA paper ("Back to the Future")</A> 
+              <LI><I>Smalltalk-80: The Language</I>, by Adele Goldberg and Dave 
+              Robson, Addison Wesley, 1989, ISBN 0-201-13688-0, 585 pages. Just 
+              buy the modern edition, and then see <A 
+              href="http://users.ipa.net/~dwighth/smalltalk/bluebook/bluebook_imp_toc.html">the 
+              missing chapters</A> about how the interperter works. (Thanks to 
+              Dwight Hughes putting these on the web.) 
+              <LI><A 
+              href="http://users.ipa.net/~dwighth/smalltalk/byte_aug81/design_principles_behind_smalltalk.html"><I>Design 
+              Principles Behind Smalltalk</I></A>, by Dan Ingalls, as it 
+              appeared in BYTE Magazine in August 1981. (Thanks to Dwight Hughes 
+              putting this on the web.) 
+              <LI><I><A href="http://guzdial.cc.gatech.edu/squeakbook/">Squeak: 
+              Object-oriented design with Multimedia Applications</A></I>, Mark 
+              Guzdial, 2001, Prentice-Hall. This is a college level Squeak 
+              textbook. 
+              <LI><I><A href="http://coweb.cc.gatech.edu/squeakbook">Squeak, 
+              Open Personal Computing for Multimedia</A></I>, Mark Guzdial and 
+              Kim Rose, editors. 2001, Prentice-Hall. Chapters are available to 
+              read on the website. 
+              <LI><I>Inside Smalltalk, Vol. 1</I>, Wilf LaLonde and John Pugh, 
+              Prentice Hall, 1990 (ISBN: 0134684141). 
+              <LI><I>A Taste of Smalltalk</I>, by Ted Kaehler and Dave 
+              Patterson, W.W. Norton, 1986 (ISBN: 0393955052), out of print. Try 
+              finding it at <A 
+              href="http://www.powells.com/cgi-bin/mk-search.pl">Powell's 
+              Books</A> in Portland. 
+              <LI><A href="http://www.wi2.uni-erlangen.de/sw/smalltalk/">The IBM 
+              Smalltalk Tutorial</A>. 
+              <LI><A 
+              href="http://home.sprynet.com/~jpletzke/booklist.htm">Jonathan's 
+              Smalltalk Book List</A>. <!-- <li  <a href="http://www.oti.com/links/smaltalk.htm"  Jeff McAffer's page of Smalltalk 
+          resources</a   (at Object Technology International). -->
+              <LI><A href="http://www.dnsmith.com/SmallFAQ/index.html">David N. 
+              Smith's Smalltalk Language FAQ</A> . 
+              <LI>We think you should use the Morphic system in Squeak for 
+              graphics, but some people still choose to use the older MVC 
+              (Models, Viewers, and Controllers). See the classic paper on MVC, 
+              <A 
+              href="http://citeseer.nj.nec.com/rd/81169203,246621,1,0.25,Download/http://citeseer.nj.nec.com/cache/papers2/cs/11582/http:zSzzSzwww.ccmrc.ucsb.eduzSz~stpzSzPostScriptzSzmvc.pdf/krasner88description.pdf">A 
+              Description of the Model-View-Controller User Interface Paradigm 
+              in the Smalltalk-80 System</A> by Glenn Krasner and Stephen Pope. 
+              <LI>There is <A 
+              href="http://www.2share.com/squeak/Tutorial-MVC-Top.st">A tutorial 
+              on MVC</A> (Models, Viewers, and Controllers) by Reinier van Loon. 
+
+              <LI>More information on how to use the MVC is in "Applications 
+              Programming in Smalltalk-80(TM): <A 
+              href="http://st-www.cs.uiuc.edu/users/smarch/st-docs/mvc.html">How 
+              to use Model-View-Controller (MVC)</A>" by Steve Burbeck. 
+              <LI>Jerry Archibald's <A 
+              href="http://members.aol.com/JArchibald/Smalltalk/Links.htm">Little 
+              Language List: Smalltalk</A>. 
+              <LI><A 
+              href="http://users.ipa.net/~dwighth/squeak/diy_sq_prims.html">The 
+              Do-It-Yourself Guide to Squeak Primitives</A> by Stephen Travis 
+              Pope. How to create your own special extensions to the Squeak VM 
+              (for advanced users). 
+              <LI><A 
+              href="http://dmoz.org/Computers/Programming/Languages/Smalltalk/Squeak/">Squeak's 
+              relationship to other Object-Oriented Languages</A> by Jerry Fass 
+              at DMOZ, the Netscape Open Direcrory Project. </LI></UL>
+            <P>
+            <P>&nbsp;</P>
+            <P>
+            <P>&nbsp;</P><!-- #EndEditable --></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><!-- #EndTemplate -->
+</BODY></HTML>

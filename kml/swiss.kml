@@ -1,0 +1,1263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+    <gx:Tour>
+        <gx:Playlist>
+        <gx:FlyTo><gx:duration>10</gx:duration><LookAt>
+				<longitude>136.8112974698079</longitude>
+				<latitude>35.30944301563001</latitude>
+				<altitude>0</altitude>
+				<heading>-130.6366388140933</heading>
+				<tilt>45.40319478924757</tilt>
+				<range>441.6551340967085</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt></gx:FlyTo><gx:AnimatedUpdate>
+  <gx:duration>3</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-1">
+        <color>e0ffffff</color>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>  
+<gx:Wait><gx:duration>10</gx:duration></gx:Wait>
+<gx:AnimatedUpdate>
+  <gx:duration>1</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-1">
+        <color>00ffffff</color>
+        <visibility>0</visibility>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>
+<gx:FlyTo><gx:duration>10</gx:duration><LookAt>
+				<longitude>136.9222723633481</longitude>
+				<latitude>35.25586132270316</latitude>
+				<altitude>0</altitude>
+				<heading>62.7914589308262</heading>
+				<tilt>44.99938784424084</tilt>
+				<range>2767.683686547854</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt></gx:FlyTo><gx:AnimatedUpdate>
+  <gx:duration>3</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-2">
+        <color>e0ffffff</color>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>  
+<gx:Wait><gx:duration>10</gx:duration></gx:Wait>
+<gx:AnimatedUpdate>
+  <gx:duration>1</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-2">
+        <color>00ffffff</color>
+        <visibility>0</visibility>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>
+<gx:FlyTo><gx:duration>10</gx:duration><LookAt>
+				<longitude>140.388238964672</longitude>
+				<latitude>35.77355066511478</latitude>
+				<altitude>0</altitude>
+				<heading>-3.601849641001093e-06</heading>
+				<tilt>0</tilt>
+				<range>10075.85998167613</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt></gx:FlyTo><gx:AnimatedUpdate>
+  <gx:duration>3</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-3">
+        <color>e0ffffff</color>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>  
+<gx:Wait><gx:duration>10</gx:duration></gx:Wait>
+<gx:AnimatedUpdate>
+  <gx:duration>1</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-3">
+        <color>00ffffff</color>
+        <visibility>0</visibility>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>
+<gx:FlyTo><gx:duration>10</gx:duration><LookAt>
+				<longitude>8.555893666237761</longitude>
+				<latitude>47.46274515042798</latitude>
+				<altitude>0</altitude>
+				<heading>-0.003635424672377543</heading>
+				<tilt>0</tilt>
+				<range>6770.031898021391</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt></gx:FlyTo><gx:AnimatedUpdate>
+  <gx:duration>3</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-4">
+        <color>e0ffffff</color>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>  
+<gx:Wait><gx:duration>10</gx:duration></gx:Wait>
+<gx:AnimatedUpdate>
+  <gx:duration>1</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-4">
+        <color>00ffffff</color>
+        <visibility>0</visibility>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>
+<gx:FlyTo><gx:duration>10</gx:duration><LookAt>
+				<longitude>8.58948094753697</longitude>
+				<latitude>47.25570179319871</latitude>
+				<altitude>0</altitude>
+				<heading>-154.9730975239839</heading>
+				<tilt>75.91237881414287</tilt>
+				<range>2967.723256569886</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt></gx:FlyTo><gx:AnimatedUpdate>
+  <gx:duration>3</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-5">
+        <color>e0ffffff</color>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>  
+<gx:Wait><gx:duration>10</gx:duration></gx:Wait>
+<gx:AnimatedUpdate>
+  <gx:duration>1</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-5">
+        <color>00ffffff</color>
+        <visibility>0</visibility>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>
+<gx:FlyTo><gx:duration>10</gx:duration><LookAt>
+				<longitude>8.301775408127792</longitude>
+				<latitude>47.05191150055945</latitude>
+				<altitude>0</altitude>
+				<heading>-0.00127839933565904</heading>
+				<tilt>0</tilt>
+				<range>350.4214799291233</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt></gx:FlyTo><gx:AnimatedUpdate>
+  <gx:duration>3</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-6">
+        <color>e0ffffff</color>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>  
+<gx:Wait><gx:duration>10</gx:duration></gx:Wait>
+<gx:AnimatedUpdate>
+  <gx:duration>1</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-6">
+        <color>00ffffff</color>
+        <visibility>0</visibility>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>
+<gx:FlyTo><gx:duration>10</gx:duration><LookAt>
+				<longitude>8.307839273435892</longitude>
+				<latitude>47.05170750172233</latitude>
+				<altitude>0</altitude>
+				<heading>0.003160066398859094</heading>
+				<tilt>0</tilt>
+				<range>381.9402606776051</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt></gx:FlyTo><gx:AnimatedUpdate>
+  <gx:duration>3</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-7">
+        <color>e0ffffff</color>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>  
+<gx:Wait><gx:duration>10</gx:duration></gx:Wait>
+<gx:AnimatedUpdate>
+  <gx:duration>1</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-7">
+        <color>00ffffff</color>
+        <visibility>0</visibility>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>
+<gx:FlyTo><gx:duration>10</gx:duration><LookAt>
+				<longitude>8.31070016613913</longitude>
+				<latitude>47.05824342555401</latitude>
+				<altitude>0</altitude>
+				<heading>0.0001640276639134357</heading>
+				<tilt>11.77251172421883</tilt>
+				<range>235.137122743047</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt></gx:FlyTo><gx:AnimatedUpdate>
+  <gx:duration>3</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-8">
+        <color>e0ffffff</color>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>  
+<gx:Wait><gx:duration>10</gx:duration></gx:Wait>
+<gx:AnimatedUpdate>
+  <gx:duration>1</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-8">
+        <color>00ffffff</color>
+        <visibility>0</visibility>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>
+<gx:FlyTo><gx:duration>10</gx:duration><LookAt>
+				<longitude>8.026807090814842</longitude>
+				<latitude>46.74943260973157</latitude>
+				<altitude>0</altitude>
+				<heading>-122.4075184345702</heading>
+				<tilt>86.90772169704243</tilt>
+				<range>1187.950643545122</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt></gx:FlyTo><gx:AnimatedUpdate>
+  <gx:duration>3</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-9">
+        <color>e0ffffff</color>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>  
+<gx:Wait><gx:duration>10</gx:duration></gx:Wait>
+<gx:AnimatedUpdate>
+  <gx:duration>1</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-9">
+        <color>00ffffff</color>
+        <visibility>0</visibility>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>
+<gx:FlyTo><gx:duration>10</gx:duration><Camera>
+				<longitude>7.866134628473263</longitude>
+				<latitude>46.69093470144971</latitude>
+				<altitude>69.90915058624415</altitude>
+				<heading>70.56684828833788</heading>
+				<tilt>90.91069613567839</tilt>
+				<roll>-6.49442577920518e-07</roll>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</Camera></gx:FlyTo><gx:AnimatedUpdate>
+  <gx:duration>3</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-10">
+        <color>e0ffffff</color>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>  
+<gx:Wait><gx:duration>10</gx:duration></gx:Wait>
+<gx:AnimatedUpdate>
+  <gx:duration>1</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-10">
+        <color>00ffffff</color>
+        <visibility>0</visibility>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>
+<gx:FlyTo><gx:duration>10</gx:duration><LookAt>
+				<longitude>7.854957690029635</longitude>
+				<latitude>46.68508703405441</latitude>
+				<altitude>0</altitude>
+				<heading>-100.6167796628299</heading>
+				<tilt>29.80998916954301</tilt>
+				<range>1428.644895009179</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt></gx:FlyTo><gx:AnimatedUpdate>
+  <gx:duration>3</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-11">
+        <color>e0ffffff</color>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>  
+<gx:Wait><gx:duration>10</gx:duration></gx:Wait>
+<gx:AnimatedUpdate>
+  <gx:duration>1</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-11">
+        <color>00ffffff</color>
+        <visibility>0</visibility>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>
+<gx:FlyTo><gx:duration>10</gx:duration><LookAt>
+				<longitude>7.852653459892198</longitude>
+				<latitude>46.68301327176697</latitude>
+				<altitude>0</altitude>
+				<heading>-176.3404260429589</heading>
+				<tilt>27.07834107229574</tilt>
+				<range>1320.993643639779</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt></gx:FlyTo><gx:AnimatedUpdate>
+  <gx:duration>3</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-12">
+        <color>e0ffffff</color>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>  
+<gx:Wait><gx:duration>10</gx:duration></gx:Wait>
+<gx:AnimatedUpdate>
+  <gx:duration>1</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-12">
+        <color>00ffffff</color>
+        <visibility>0</visibility>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>
+<gx:FlyTo><gx:duration>10</gx:duration><Camera>
+				<longitude>7.907423979991796</longitude>
+				<latitude>46.59962534564648</latitude>
+				<altitude>80.96173660995676</altitude>
+				<heading>158.557948940771</heading>
+				<tilt>95.26845968021678</tilt>
+				<roll>3.517104680534991e-05</roll>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</Camera></gx:FlyTo><gx:AnimatedUpdate>
+  <gx:duration>3</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-13">
+        <color>e0ffffff</color>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>  
+<gx:Wait><gx:duration>10</gx:duration></gx:Wait>
+<gx:AnimatedUpdate>
+  <gx:duration>1</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-13">
+        <color>00ffffff</color>
+        <visibility>0</visibility>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>
+<gx:FlyTo><gx:duration>10</gx:duration><Camera>
+				<longitude>7.910171641785546</longitude>
+				<latitude>46.59000060347079</latitude>
+				<altitude>72.06839327665089</altitude>
+				<heading>-98.13797095014529</heading>
+				<tilt>107.8524298638807</tilt>
+				<roll>-5.113349136396763e-09</roll>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</Camera></gx:FlyTo><gx:AnimatedUpdate>
+  <gx:duration>3</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-14">
+        <color>e0ffffff</color>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>  
+<gx:Wait><gx:duration>10</gx:duration></gx:Wait>
+<gx:AnimatedUpdate>
+  <gx:duration>1</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-14">
+        <color>00ffffff</color>
+        <visibility>0</visibility>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>
+<gx:FlyTo><gx:duration>10</gx:duration><Camera>
+				<longitude>7.960704173360291</longitude>
+				<latitude>46.58490999293446</latitude>
+				<altitude>73.54102565543708</altitude>
+				<heading>170.9845490075595</heading>
+				<tilt>102.9698893087124</tilt>
+				<roll>9.184687317410592e-05</roll>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</Camera></gx:FlyTo><gx:AnimatedUpdate>
+  <gx:duration>3</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-15">
+        <color>e0ffffff</color>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>  
+<gx:Wait><gx:duration>10</gx:duration></gx:Wait>
+<gx:AnimatedUpdate>
+  <gx:duration>1</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-15">
+        <color>00ffffff</color>
+        <visibility>0</visibility>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>
+<gx:FlyTo><gx:duration>10</gx:duration><LookAt>
+				<longitude>8.088368037015332</longitude>
+				<latitude>46.45156421837069</latitude>
+				<altitude>0</altitude>
+				<heading>142.539674222864</heading>
+				<tilt>85.35049198702721</tilt>
+				<range>13433.00127352996</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt></gx:FlyTo><gx:AnimatedUpdate>
+  <gx:duration>3</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-16">
+        <color>e0ffffff</color>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>  
+<gx:Wait><gx:duration>10</gx:duration></gx:Wait>
+<gx:AnimatedUpdate>
+  <gx:duration>1</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-16">
+        <color>00ffffff</color>
+        <visibility>0</visibility>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>
+<gx:FlyTo><gx:duration>10</gx:duration><Camera>
+				<longitude>8.032966334692787</longitude>
+				<latitude>46.62400988530772</latitude>
+				<altitude>81.61959469893523</altitude>
+				<heading>90.99540753212655</heading>
+				<tilt>109.4238497513244</tilt>
+				<roll>-9.890147643818328e-05</roll>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</Camera></gx:FlyTo><gx:AnimatedUpdate>
+  <gx:duration>3</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-17">
+        <color>e0ffffff</color>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>  
+<gx:Wait><gx:duration>10</gx:duration></gx:Wait>
+<gx:AnimatedUpdate>
+  <gx:duration>1</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-17">
+        <color>00ffffff</color>
+        <visibility>0</visibility>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>
+<gx:FlyTo><gx:duration>10</gx:duration><LookAt>
+				<longitude>7.854957690029635</longitude>
+				<latitude>46.68508703405441</latitude>
+				<altitude>0</altitude>
+				<heading>-100.6167796628299</heading>
+				<tilt>29.80998916954301</tilt>
+				<range>1428.644895009179</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt></gx:FlyTo><gx:AnimatedUpdate>
+  <gx:duration>3</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-18">
+        <color>e0ffffff</color>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>  
+<gx:Wait><gx:duration>10</gx:duration></gx:Wait>
+<gx:AnimatedUpdate>
+  <gx:duration>1</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-18">
+        <color>00ffffff</color>
+        <visibility>0</visibility>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>
+<gx:FlyTo><gx:duration>10</gx:duration><LookAt>
+				<longitude>8.207837370385281</longitude>
+				<latitude>46.72067140017935</latitude>
+				<altitude>0</altitude>
+				<heading>92.93059366655395</heading>
+				<tilt>83.81658724556054</tilt>
+				<range>473.3284473194008</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt></gx:FlyTo><gx:AnimatedUpdate>
+  <gx:duration>3</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-19">
+        <color>e0ffffff</color>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>  
+<gx:Wait><gx:duration>10</gx:duration></gx:Wait>
+<gx:AnimatedUpdate>
+  <gx:duration>1</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-19">
+        <color>00ffffff</color>
+        <visibility>0</visibility>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>
+<gx:FlyTo><gx:duration>10</gx:duration><LookAt>
+				<longitude>8.22446044502137</longitude>
+				<latitude>46.70563096972999</latitude>
+				<altitude>0</altitude>
+				<heading>144.381139873207</heading>
+				<tilt>83.68289851457173</tilt>
+				<range>1239.733515869468</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt></gx:FlyTo><gx:AnimatedUpdate>
+  <gx:duration>3</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-20">
+        <color>e0ffffff</color>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>  
+<gx:Wait><gx:duration>10</gx:duration></gx:Wait>
+<gx:AnimatedUpdate>
+  <gx:duration>1</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-20">
+        <color>00ffffff</color>
+        <visibility>0</visibility>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>
+<gx:FlyTo><gx:duration>10</gx:duration><LookAt>
+				<longitude>8.303765422633193</longitude>
+				<latitude>46.56359630188848</latitude>
+				<altitude>0</altitude>
+				<heading>-0.0004137798794824031</heading>
+				<tilt>0</tilt>
+				<range>10985.12718970572</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt></gx:FlyTo><gx:AnimatedUpdate>
+  <gx:duration>3</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-21">
+        <color>e0ffffff</color>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>  
+<gx:Wait><gx:duration>10</gx:duration></gx:Wait>
+<gx:AnimatedUpdate>
+  <gx:duration>1</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-21">
+        <color>00ffffff</color>
+        <visibility>0</visibility>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>
+<gx:FlyTo><gx:duration>10</gx:duration><LookAt>
+				<longitude>7.76904083183611</longitude>
+				<latitude>46.06039870061474</latitude>
+				<altitude>0</altitude>
+				<heading>-157.310478780141</heading>
+				<tilt>22.2559742269198</tilt>
+				<range>13691.91234611897</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt></gx:FlyTo><gx:AnimatedUpdate>
+  <gx:duration>3</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-22">
+        <color>e0ffffff</color>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>  
+<gx:Wait><gx:duration>10</gx:duration></gx:Wait>
+<gx:AnimatedUpdate>
+  <gx:duration>1</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-22">
+        <color>00ffffff</color>
+        <visibility>0</visibility>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>
+<gx:FlyTo><gx:duration>10</gx:duration><LookAt>
+				<longitude>7.747432326616958</longitude>
+				<latitude>46.01907889461485</latitude>
+				<altitude>0</altitude>
+				<heading>-173.8744089712623</heading>
+				<tilt>84.10207233766124</tilt>
+				<range>679.7426041620026</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt></gx:FlyTo><gx:AnimatedUpdate>
+  <gx:duration>3</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-23">
+        <color>e0ffffff</color>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>  
+<gx:Wait><gx:duration>10</gx:duration></gx:Wait>
+<gx:AnimatedUpdate>
+  <gx:duration>1</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-23">
+        <color>00ffffff</color>
+        <visibility>0</visibility>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>
+<gx:FlyTo><gx:duration>10</gx:duration><LookAt>
+				<longitude>7.742978058313539</longitude>
+				<latitude>46.0129722276231</latitude>
+				<altitude>0</altitude>
+				<heading>-0.0009957511942025698</heading>
+				<tilt>0</tilt>
+				<range>795.1833447099589</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt></gx:FlyTo><gx:AnimatedUpdate>
+  <gx:duration>3</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-24">
+        <color>e0ffffff</color>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>  
+<gx:Wait><gx:duration>10</gx:duration></gx:Wait>
+<gx:AnimatedUpdate>
+  <gx:duration>1</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-24">
+        <color>00ffffff</color>
+        <visibility>0</visibility>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>
+<gx:FlyTo><gx:duration>10</gx:duration><LookAt>
+				<longitude>7.747432326616958</longitude>
+				<latitude>46.01907889461485</latitude>
+				<altitude>0</altitude>
+				<heading>-173.8744089712623</heading>
+				<tilt>84.10207233766124</tilt>
+				<range>679.7426041620026</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt></gx:FlyTo><gx:AnimatedUpdate>
+  <gx:duration>3</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-25">
+        <color>e0ffffff</color>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>  
+<gx:Wait><gx:duration>10</gx:duration></gx:Wait>
+<gx:AnimatedUpdate>
+  <gx:duration>1</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-25">
+        <color>00ffffff</color>
+        <visibility>0</visibility>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>
+<gx:FlyTo><gx:duration>10</gx:duration><LookAt>
+				<longitude>7.723516670380275</longitude>
+				<latitude>45.98094391449288</latitude>
+				<altitude>0</altitude>
+				<heading>-93.60813127949514</heading>
+				<tilt>83.69969334445614</tilt>
+				<range>4797.666812612699</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt></gx:FlyTo><gx:AnimatedUpdate>
+  <gx:duration>3</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-26">
+        <color>e0ffffff</color>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>  
+<gx:Wait><gx:duration>10</gx:duration></gx:Wait>
+<gx:AnimatedUpdate>
+  <gx:duration>1</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-26">
+        <color>00ffffff</color>
+        <visibility>0</visibility>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>
+<gx:FlyTo><gx:duration>10</gx:duration><LookAt>
+				<longitude>7.770744907638177</longitude>
+				<latitude>45.98416716146275</latitude>
+				<altitude>0</altitude>
+				<heading>0.01917777699073252</heading>
+				<tilt>2.011362725498484</tilt>
+				<range>1951.959180996804</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt></gx:FlyTo><gx:AnimatedUpdate>
+  <gx:duration>3</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-27">
+        <color>e0ffffff</color>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>  
+<gx:Wait><gx:duration>10</gx:duration></gx:Wait>
+<gx:AnimatedUpdate>
+  <gx:duration>1</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-27">
+        <color>00ffffff</color>
+        <visibility>0</visibility>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>
+<gx:FlyTo><gx:duration>10</gx:duration><LookAt>
+				<longitude>7.742978058313539</longitude>
+				<latitude>46.0129722276231</latitude>
+				<altitude>0</altitude>
+				<heading>-0.0009957511942025698</heading>
+				<tilt>0</tilt>
+				<range>795.1833447099589</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt></gx:FlyTo><gx:AnimatedUpdate>
+  <gx:duration>3</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-28">
+        <color>e0ffffff</color>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>  
+<gx:Wait><gx:duration>10</gx:duration></gx:Wait>
+<gx:AnimatedUpdate>
+  <gx:duration>1</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-28">
+        <color>00ffffff</color>
+        <visibility>0</visibility>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>
+<gx:FlyTo><gx:duration>10</gx:duration><LookAt>
+				<longitude>7.747432326616958</longitude>
+				<latitude>46.01907889461485</latitude>
+				<altitude>0</altitude>
+				<heading>-173.8744089712623</heading>
+				<tilt>84.10207233766124</tilt>
+				<range>679.7426041620026</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt></gx:FlyTo><gx:AnimatedUpdate>
+  <gx:duration>3</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-29">
+        <color>e0ffffff</color>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>  
+<gx:Wait><gx:duration>10</gx:duration></gx:Wait>
+<gx:AnimatedUpdate>
+  <gx:duration>1</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-29">
+        <color>00ffffff</color>
+        <visibility>0</visibility>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>
+<gx:FlyTo><gx:duration>10</gx:duration><LookAt>
+				<longitude>7.76904083183611</longitude>
+				<latitude>46.06039870061474</latitude>
+				<altitude>0</altitude>
+				<heading>-157.310478780141</heading>
+				<tilt>22.2559742269198</tilt>
+				<range>13691.91234611897</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt></gx:FlyTo><gx:AnimatedUpdate>
+  <gx:duration>3</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-30">
+        <color>e0ffffff</color>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>  
+<gx:Wait><gx:duration>10</gx:duration></gx:Wait>
+<gx:AnimatedUpdate>
+  <gx:duration>1</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-30">
+        <color>00ffffff</color>
+        <visibility>0</visibility>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>
+<gx:FlyTo><gx:duration>10</gx:duration><LookAt>
+				<longitude>7.368738487939926</longitude>
+				<latitude>46.23474391553687</latitude>
+				<altitude>0</altitude>
+				<heading>-58.64860320807886</heading>
+				<tilt>33.31054680710695</tilt>
+				<range>984.880322126657</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt></gx:FlyTo><gx:AnimatedUpdate>
+  <gx:duration>3</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-31">
+        <color>e0ffffff</color>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>  
+<gx:Wait><gx:duration>10</gx:duration></gx:Wait>
+<gx:AnimatedUpdate>
+  <gx:duration>1</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-31">
+        <color>00ffffff</color>
+        <visibility>0</visibility>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>
+<gx:FlyTo><gx:duration>10</gx:duration><LookAt>
+				<longitude>6.868771286765845</longitude>
+				<latitude>45.89697102216088</latitude>
+				<altitude>0</altitude>
+				<heading>-173.0498120282469</heading>
+				<tilt>84.36972518261679</tilt>
+				<range>5716.145243366543</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt></gx:FlyTo><gx:AnimatedUpdate>
+  <gx:duration>3</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-32">
+        <color>e0ffffff</color>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>  
+<gx:Wait><gx:duration>10</gx:duration></gx:Wait>
+<gx:AnimatedUpdate>
+  <gx:duration>1</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-32">
+        <color>00ffffff</color>
+        <visibility>0</visibility>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>
+<gx:FlyTo><gx:duration>10</gx:duration><LookAt>
+				<longitude>6.878451038314153</longitude>
+				<latitude>45.86182372058593</latitude>
+				<altitude>0</altitude>
+				<heading>-160.3540467301151</heading>
+				<tilt>89.83165267045354</tilt>
+				<range>2286.952936342997</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt></gx:FlyTo><gx:AnimatedUpdate>
+  <gx:duration>3</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-33">
+        <color>e0ffffff</color>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>  
+<gx:Wait><gx:duration>10</gx:duration></gx:Wait>
+<gx:AnimatedUpdate>
+  <gx:duration>1</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-33">
+        <color>00ffffff</color>
+        <visibility>0</visibility>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>
+<gx:FlyTo><gx:duration>10</gx:duration><LookAt>
+				<longitude>6.106576028604848</longitude>
+				<latitude>46.22448694456948</latitude>
+				<altitude>0</altitude>
+				<heading>1.96926635254879e-08</heading>
+				<tilt>30.7894318569672</tilt>
+				<range>2693.3317500938</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt></gx:FlyTo><gx:AnimatedUpdate>
+  <gx:duration>3</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-34">
+        <color>e0ffffff</color>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>  
+<gx:Wait><gx:duration>10</gx:duration></gx:Wait>
+<gx:AnimatedUpdate>
+  <gx:duration>1</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-34">
+        <color>00ffffff</color>
+        <visibility>0</visibility>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>
+<gx:FlyTo><gx:duration>10</gx:duration><LookAt>
+				<longitude>6.104464995438715</longitude>
+				<latitude>46.23340302649253</latitude>
+				<altitude>0</altitude>
+				<heading>-3.294128313445226e-09</heading>
+				<tilt>0</tilt>
+				<range>5875.314310736118</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt></gx:FlyTo><gx:AnimatedUpdate>
+  <gx:duration>3</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-35">
+        <color>e0ffffff</color>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>  
+<gx:Wait><gx:duration>10</gx:duration></gx:Wait>
+<gx:AnimatedUpdate>
+  <gx:duration>1</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-35">
+        <color>00ffffff</color>
+        <visibility>0</visibility>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>
+<gx:FlyTo><gx:duration>10</gx:duration><LookAt>
+				<longitude>-0.4552698193668624</longitude>
+				<latitude>51.47134744746471</latitude>
+				<altitude>0</altitude>
+				<heading>-2.495418400987893e-07</heading>
+				<tilt>0</tilt>
+				<range>8088.996781048598</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt></gx:FlyTo><gx:AnimatedUpdate>
+  <gx:duration>3</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-36">
+        <color>e0ffffff</color>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>  
+<gx:Wait><gx:duration>10</gx:duration></gx:Wait>
+<gx:AnimatedUpdate>
+  <gx:duration>1</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-36">
+        <color>00ffffff</color>
+        <visibility>0</visibility>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>
+<gx:FlyTo><gx:duration>10</gx:duration><LookAt>
+				<longitude>140.388238964672</longitude>
+				<latitude>35.77355066511478</latitude>
+				<altitude>0</altitude>
+				<heading>-3.601849641001093e-06</heading>
+				<tilt>0</tilt>
+				<range>10075.85998167613</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt></gx:FlyTo><gx:AnimatedUpdate>
+  <gx:duration>3</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-37">
+        <color>e0ffffff</color>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>  
+<gx:Wait><gx:duration>10</gx:duration></gx:Wait>
+<gx:AnimatedUpdate>
+  <gx:duration>1</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-37">
+        <color>00ffffff</color>
+        <visibility>0</visibility>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>
+<gx:FlyTo><gx:duration>10</gx:duration><LookAt>
+				<longitude>136.9222723633481</longitude>
+				<latitude>35.25586132270316</latitude>
+				<altitude>0</altitude>
+				<heading>62.7914589308262</heading>
+				<tilt>44.99938784424084</tilt>
+				<range>2767.683686547854</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt></gx:FlyTo><gx:AnimatedUpdate>
+  <gx:duration>3</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-38">
+        <color>e0ffffff</color>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>  
+<gx:Wait><gx:duration>10</gx:duration></gx:Wait>
+<gx:AnimatedUpdate>
+  <gx:duration>1</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-38">
+        <color>00ffffff</color>
+        <visibility>0</visibility>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>
+<gx:FlyTo><gx:duration>10</gx:duration><LookAt>
+				<longitude>136.8112974698079</longitude>
+				<latitude>35.30944301563001</latitude>
+				<altitude>0</altitude>
+				<heading>-130.6366388140933</heading>
+				<tilt>45.40319478924757</tilt>
+				<range>441.6551340967085</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt></gx:FlyTo><gx:AnimatedUpdate>
+  <gx:duration>3</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-39">
+        <color>e0ffffff</color>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>  
+<gx:Wait><gx:duration>10</gx:duration></gx:Wait>
+<gx:AnimatedUpdate>
+  <gx:duration>1</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="caption-39">
+        <color>00ffffff</color>
+        <visibility>0</visibility>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>
+</gx:Playlist>
+    <name>スイス旅行</name></gx:Tour>
+    <NetworkLink>
+        <name>ロケ地</name>
+        <Link>
+            <href>http://www.h3.dion.ne.jp/~y.ich/kml/swiss.kmz</href>
+        </Link>
+    </NetworkLink>
+</Document>
+</kml>

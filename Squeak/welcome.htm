@@ -1,0 +1,218 @@
+<!-- saved from url=(0061)http://env.civil.yamaguchi-u.ac.jp/~sekine/U/squeak/intro.htm -->
+<html>
+
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=x-sjis">
+<meta name="GENERATOR" content="Microsoft FrontPage Express 2.0">
+<title>Squeak 3.5</title>
+<script type="text/javascript"><!--
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-510249-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+--></script>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<p>２００３年４月２０日更新</p>
+
+<h1 align="center"><font color="#FF00FF">Squeak 3.5</font></h1>
+
+<p>Squeakは、Smalltalk-80をベースにした急速推進中のプロジェクトです。依然としてSmalltalk-80とは適度に互換性があります。Squeakには、非常に統合された開発環境や、ネットワーキング、サウンド合成やサンプリング、音声合成、２次元／３次元グラフィックス、演算とデータ構造ライブラリが含まれます。。Squeakは、自身の仮想マシンのコアコードを生成するためのツールさえ含むので、あなたはあなた自身の<font
+color="#8000FF"><strong>VM</strong></font>を作ることができます。</p>
+
+<blockquote>
+    <p><font color="#8000FF"><strong>Browser openBrower</strong></font></p>
+</blockquote>
+
+<p><font color="#000000">[このウィンドウの中の青色の項目はアクティブテキストです。もし項目がURLを含むなら、クリックして内容を表示するためには、インターネット接続が必要です。また、ロードするのに若干時間がかかるかもしれません。]</font></p>
+
+<p><font color="#000000">すべてのソースコードは、含まれているだけでなく、思うままに変更可能です。また、完全にオープンでフリーです。Squeakシステムイメージはすべてのプラットフォームで全く同様に(bit-identically)動作します。VMは、入手可能なコンピュータとオペレーティングシステムのほぼすべてで利用可能です。Squeakプロジェクトの歴史は、</font></p>
+
+<blockquote>
+    <p><a
+    href="ftp://st.cs.uiuc.edu/Smalltalk/Squeak/docs/OOPSLA_Squeak.html"><font
+    color="#000000">ftp://st.cs.uiuc.edu/Smalltalk/Squeak/docs/OOPSLA_Squeak.html</font></a></p>
+</blockquote>
+
+<p><font color="#000000">で知ることができます。</font></p>
+
+<p><font color="#000000">Squeakライセンスや役立つたいていの情報はSqueakホームページで見つけられます。</font></p>
+
+<blockquote>
+    <p><a href="http://www.Squeak.org/"><font color="#000000">http://www.Squeak.org/</font></a></p>
+</blockquote>
+
+<h2><font color="#000000">SqueakMap</font></h2>
+
+<p>最近利用可能になったエキサイティングな特徴は、Squeakのパッケージカタログシステムである、SqueakMapです。このリリースでは、Squeakコミュニティのメンバーによって、100以上のパッケージ／アプリケーションがSqueakMapに加えられました。SqueakMap
+Package Loaderを使うことで、これらのパッケージを簡単にブラウズしたり、直接Squeakにインストールしたりすることができます。SqueakMap
+Package Loaderは、&quot;open...&quot;/&quot;Package Loader&quot;メニューから（あるいは、<font
+color="#8000FF"><strong>ここ</strong></font>をクリックすることで）起動できます。</p>
+
+<p>SqueakMapに関する情報をもっと知りたい人は、</p>
+
+<p><a href="http://minnow.cc.gatech.edu/squeak/squeakmap">http://minnow.cc.gatech.edu/squeak/squeakmap.</a></p>
+
+<h2><font color="#000000">Morphic</font></h2>
+
+<p><font color="#000000">今回のSqueakのリリースではMorphicグラフィックアーキテクチャを採用しています。MVCプロジェクトの中ではMVCアーキテクチャも利用可能です。（ワールドメニューの'open...'オプションを見てください。）標準のシステムウィンドウのほとんどはどちらのフレームワークでも開くことができます。しかし、メディアサポートは主にMorphicで開発されています。更に、MorphicフレームワークはGenie（精霊）を含んでいます。GenieはペンだけでSqueakのすべてを利用することを可能にする、文字認識、ジェスチャ認識システムです。次の行をクリックしてみてください：</font></p>
+
+<blockquote>
+    <p><font color="#8000FF"><strong>AGenieIntroduction.</strong></font><font
+    color="#000000">　</font></p>
+</blockquote>
+
+<h2>プロジェクト</h2>
+
+<p>プロジェクトはSqueakの中の個別の世界です。インターネット上のウェッブページに似ています。実際、アクティブなプロジェクトは、ちょうどウェッブページのようにインターネット経由で共有することができます。'Worlds
+of Squeak'ウィンドウの中に数多くのデモンストレーションプロジェクトを入れました。スクリーンの底辺にあるNavigatorタブの下の'FIND'ボタンを選択すると、ほかのプロジェクトを見つけることができるでしょう。</p>
+
+<p>一度入ったプロジェクトから元に戻るには、ワールドメニューから'previous
+project'、もしくはナビゲータバーから'&lt; PREV'を選択します。</p>
+
+<h2>カラーグラフィックス</h2>
+
+<p>SqueakのBitBltは可変色数など多くの性能強化が施されてきました。透かしをサポートしたペイントモードや32ビットカラーのためのアルファブレンドモードなどいくつかの機能が追加されました。ワンパスで拡大縮小、回転その他のビットマップ変形を行う”ワープドライブ”変形も組み込まれています。興味があるユーザーは、</p>
+
+<blockquote>
+    <p><font color="#8000FF"><strong>Display restoreAfter: [WarpBlt
+    test1]</strong></font></p>
+</blockquote>
+
+<p>や</p>
+
+<blockquote>
+    <p><font color="#8000FF"><strong>Display restoreAfter: [WarpBlt
+    test3]</strong></font></p>
+</blockquote>
+
+<p>を試してみたくなるでしょう。</p>
+
+<h2>サウンド</h2>
+
+<p>Squeakには、バックグラウンドで音や音楽をリアルタイム生成するためのベースクラスと簡単なプリミティブが含まれています。興味があるユーザーは、Worlds
+of Squeakの中の例や</p>
+
+<blockquote>
+    <p><font color="#8000FF"><strong>AbstractSound
+    stereoBachFugue play.</strong></font></p>
+</blockquote>
+
+<p>を試してみたくなるでしょう。</p>
+
+<h2>Balloon</h2>
+
+<p>今回、Squeakは、Balloonと名付けられた、全く新たなアウトラインベースのグラフィックスサブシステムを搭載しています。Balloonグラフィックスは拡大縮小や回転を考慮せず(is
+independent of)、単に描画するか、２度のアンチエーリアスで描画します。簡単なデモンストレーションを見るには、次をクリックしてください...</p>
+
+<blockquote>
+    <p><font color="#8000FF"><strong>(FlashMorphReader on: (HTTPSocket</strong></font></p>
+    <blockquote>
+        <p><font color="#8000FF"><strong>httpGet: 'http://www.squeak.org/Squeak3.4/areallycoolflash.swf'</strong></font></p>
+        <p><font color="#8000FF"><strong>accept: 'application/x-shockwave-flash'))</strong></font></p>
+    </blockquote>
+    <p><font color="#8000FF"><strong>processFile startPlaying
+    openInWorld.</strong></font></p>
+</blockquote>
+
+<p>（Herves Flores (Ｅメール - herve.flores@free.fr;
+ウェッブサイト - http://herve.flores.online.fr）のご好意による）この例は、SqueakがFlash3グラフィックスファイルフォーマットを（Balloonグラフィカルオブジェクトへ変換することで、まずまず完全に実装していることも示しています。すべてSqueakの中で実装されているので、プレーヤを止めて、morphic
+balloonオブジェクトを分解することができます。（注意：Balloon
+Flashプレーヤは、Flash3ファイルのみ再生します。――Flash4やFlash5は再生できません。）</p>
+
+<h2>ネットワーキング</h2>
+
+<p>Squeakはネットワーク接続をサポートしています。もしウェッブにアクセス可能なら、</p>
+
+<blockquote>
+    <p><font color="#8000FF"><strong>HTTPSocket httpShowGif:</strong></font></p>
+    <blockquote>
+        <p><font color="#8000FF"><strong>'http://squeak.org/Squeak2.0/midi/Squeakers.GIF'.</strong></font></p>
+    </blockquote>
+</blockquote>
+
+<p>を実行してみたくなるでしょう。Socketクラスにはもっとたくさんの例が記述してあります。また、このリリースには完全なWikiWikiサーバが含まれています。WikiWikiに関する付属の情報を見てください。</p>
+
+<p>SqueakのFileListはネットワークアクセスもサポートしています。どのサーバーが利用可能か[
+]ルートで見ることができます。また、'add server...'メニューコマンドで新たなサーバーを追加することができます。</p>
+
+<p>最後に、既にお話したように、Squeakはネット経由でアクティブなプロジェクトをダウンロードできます...</p>
+
+<blockquote>
+    <p><font color="#8000FF"><strong>Project fromUrl:</strong></font></p>
+    <blockquote>
+        <p><font color="#8000FF"><strong>'http://209.143.91.36/super/SuperSwikiProj/FinalFrontier'.</strong></font></p>
+    </blockquote>
+</blockquote>
+
+<h2>開発サポート</h2>
+
+<p>Squeakには、完成度の高いプログラム開発開発システムが含まれています。このシステムの構成要素のほとんどは、ワールドメニューの'open...'オプションの中に見つけることができます。利用可能な機能(function)のほとんどは、色々なメニュー選択やワールドメニューの'help...'
+/ 'command-key help'オプションで見渡すことができます。</p>
+
+<h2>Squeakの縮小化</h2>
+
+<p>もしこのイメージから&quot;Worlds of Squeak&quot;例をアンロードしたいなら、バックアップコピーを作り、以下の５行を実行して、ウィンドウを閉じて、そしてできるイメージを保存してください。</p>
+
+<blockquote>
+    <p>ProjectViewMorph allInstancesDo:</p>
+    <blockquote>
+        <p>[:m | (m hasProperty: #deleteWorldOfSqueak) ifTrue:</p>
+        <blockquote>
+            <p>[Project deletingProject: m project. m delete]].</p>
+        </blockquote>
+        <p>Project rebuildAllProjects.</p>
+        <p>ScriptingSystem spaceReclaimed</p>
+    </blockquote>
+</blockquote>
+
+<p>これによりかなり縮小化することができます。Squeakの以前のリリースでは、特別に用意された、&quot;MajorShrinkFor3.0.cs&quot;のような名前のファイルインが一緒に配布されていました。それは、同封の説明書に書かれているように使うと、1MB以下サイズのイメージを生成します。Squeak
+3.2ではこのようなmajorShrinkファイルインは用意されていませんが、出発点として以前のバージョンのmajorShrinkを使うことができます。あるいは、Squeak
+swiki上で縮小化に関する最新情報を探したほうがよいかもしれません。よい出発点として下記のページを参照してください：</p>
+
+<blockquote>
+    <p><a href="http://minnow.cc.gatech.edu/squeak/majorshrink"><strong>http://minnow.cc.gatech.edu/squeak/majorshrink</strong></a></p>
+</blockquote>
+
+<h2>ドキュメンテーションの続き</h2>
+
+<p>Georgia TechのSqueak Swikiは、現在、Squeakに関するオンラインドキュメンテーションとコミュニティ情報の主要なソースです。FAQやチュートリアルを始め、たくさんの情報があります。下記のページを訪問してください：</p>
+
+<blockquote>
+    <p><a href="http://minnow.cc.gatech.edu/squeak"><strong>http://minnow.cc.gatech.edu/squeak</strong></a></p>
+</blockquote>
+
+<h2>Squeakライセンス</h2>
+
+<p>Squeakは、自由なオープンソースライセンスに従って、使用と改良のため、配布されています。<a
+href="http://squeak.org/license.html"><strong>http://squeak.org/license.html.</strong></a>
+断りがない限り、Squeakに組み込んだり、一緒に配布したりするために提供された作品は、同様のライセンスに従うとみなされます。</p>
+
+<p>Squeakの一部は：</p>
+
+<p>Copyright (c) 1996 Apple Computer, Inc.</p>
+
+<p>Copyright (c) 1997-2001 Walt Disney Company, and/or</p>
+
+<p>Copyrighted works of other contributors.</p>
+
+<p>All rights reserved.</p>
+
+<hr>
+
+<p align="center">Copyright &copy; 2003 ICHIKAWA, Yuji</p>
+
+<p align="left">翻訳に際して、山口大学助教授の関根雅彦さんの<a
+href="http://env.civil.yamaguchi-u.ac.jp/~sekine/U/squeak/intro.htm">ページ</a>を利用させていただきました。</p>
+</body>
+</html>

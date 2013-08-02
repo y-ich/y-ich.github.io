@@ -1,0 +1,43 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 90%; /* 100%にするとスクロールバーが出る(chrome)。 */
+    background-image: url("http://www.aribrownest.com/wp-content/uploads/2011/03/sculpture-garden-tree-wall.jpg");
+    background-repeat: no-repeat;
+    -webkit-background-size: 100% 100%;
+}
+
+div#global-navi {
+    position: relative;
+}
+
+span#logo {
+    color: white;
+}
+
+form#search-form {
+    display: inline-block;
+}
+
+div#aboutus {
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+div#main {
+    height: 100%;
+}
+
+div#caption {
+    position: absolute;
+    width: 400px;
+    height: 80px;
+    top: 50%;
+    left: 50%;
+    margin-left: -200px;
+    margin-top: -40px;
+}

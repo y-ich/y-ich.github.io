@@ -1,0 +1,148 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=x-sjis">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="GENERATOR" content="Microsoft FrontPage Express 2.0">
+<title>月は見続ける</title>
+<!--
+<bgsound src="sakurazaka.mid" loop="1">
+-->
+<script type="text/javascript"><!--
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-510249-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+--></script>
+</head>
+
+<body onload="Init()">
+<script language="javascript" type="text/javascript">
+<!--
+var Laymax = 8;	//レイヤーの最大数
+var actT = 200;	//移動時間：速＝小
+var waitT = 25000;
+
+var Comments = new Array();
+Comments[1] = "<p>　<\/p>\
+<p align=\"center\"><em>好意と憎悪のあいだをゆれうごき、つむいだ愛情に気づいていないひと達にささぐ<\/em><\/p>";
+Comments[2] = "<p>そこは、まっくらな　かれいどのなかでした。<\/p>\
+<p>こねこはからだ中、きずついていました。かれいどは、のぼるには　かべがぎざぎざしていて、とてもふかく、とてもふかく・・・<\/p>\
+<p>こねこは　くらくふかいいどを　おりてゆきました。どうしておりてゆくのか　わかりませんでした。うえをみあげると　ただただ気分がわるかったのです。<\/p>\
+<p align=\"center\"><img width=320 height=240 src=\"hurt.jpg\"><\/p>";
+Comments[3] = "<p>かれいどのそとでは　もう一匹のこねこが　心配そうに　いどをずっとのぞいていました。<\/p>\
+<p>気がつくと、すでによるでした。のぞいていたこねこのせなかには　つきがかがやきはじめていました。<\/p>\
+<p>こねこは心配のあまりなきだしました。なみだは　かれいどへながれてゆきました。どんどんながれてゆきました。<\/p>\
+<p align=\"center\"><img width=320 height=240 src=\"tear.jpg\"><\/p>";
+Comments[4] = "<p>いどのなかのこねこは　ぼんやりと　あしもとをみていました。あしもとには　みずがたまりはじめていました。はじめはゆっくりしずかに、やがて、どんどんどんどん　みずかさがふえてきました。<\/p>\
+<p>こねこはおよげませんでした。恐怖のあまり、こねこは　いどのかべをかきむしりました。つめから　ちがでるまでかきむしりました。<\/p>\
+<p>みずは容赦なくふえていきます。<\/p>\
+<p>みずはこねこをのみこみ、こねこはなん度もみずをのんでは　しぬほどくるしいおもいでした。<\/p>";
+Comments[5] = "<p>やがてこねこはつかれはてて、もがくのをやめてしずかにうえをみました。ちいさないどのくちから　ちいさなつきがみえました。<\/p>\
+<p>「こんないどふかくからも　つきがみえる・・・」<\/p>\
+<p>　<\/p>\
+<p>つきはいどのくちをとおりすぎ、またあらわれました。またとおりすぎあらわれました。<\/p>\
+<p align=\"center\"><img width=320 height=240 src=\"resignation.jpg\"><\/p>";
+Comments[6] = "<p>どんなにながいあいだ、こねこはおぼれていることをわすれていたのでしょう。<\/p>\
+<p>こねこは　ながいあいだ　みずにうかんでいました。気がつくと、こねこには　満天のほしぞらがみえていました。<\/p>\
+<p>そうです。みずは　こねこをゆっくりゆっくり　いどのいりぐちまではこんでいたのでした。<\/p>";
+Comments[7] = "<p>われにかえったこねこは　あわてていどからでると、もりのなかへにげてゆきました。すごいはやさではしりました。ないていたこねこも　びっくりしながらおいかけてゆきました。<\/p>\
+<p>　<\/p>\
+<p>おおきなつきが二匹のこねこをみまもっていました。<\/p>\
+<p align=\"center\"><img width=320 height=240 src=\"grove.jpg\"><\/p>";
+Comments[8] = "<p>　<\/p>\
+<p align=\"center\">おしまい<\/p>\
+<p align=\"center\"><img width=320 height=240 src=\"lantana.jpg\"><\/p>";
+Comments[9] = "<p>IE4<\/p>";
+Comments[10] = "<p>NS4<\/p>";
+Comments[11] = "<p>NS6<\/p>";
+Comments[12] = "<p>OPERA6<\/p>";
+
+ColorPLT = "fedcba9876543210";
+var Count = 0;
+var Com = 1;
+var ColorF;
+var InFlag = 1;
+
+function Init(){
+	SetText(Com);
+	Fade();
+}
+
+function Fade(){
+	if (Count < ColorPLT.length){
+		z = ColorPLT.charAt(Count);
+		ColorF = z+z+z+z+z+z;
+		SetColor(ColorF);
+		Count++;
+		setTimeout("Fade()",actT);
+	}
+	else if (InFlag == 1) {
+		if (Com < Laymax) {
+			ColorPLT = "0123456789abcdef";
+			InFlag = 0;
+			Count = 0;
+			setTimeout("Fade()",waitT);
+		}
+	}
+	else {
+		Com++;
+		ColorPLT = "fedcba9876543210";
+		InFlag = 1;
+		Count = 0;
+		SetText(Com);
+		setTimeout("Fade()",actT);
+	}
+}
+
+function SetText(kkk) {
+	if (document.getElementById) {
+		document.getElementById("content1").innerHTML = Comments[kkk];
+	}
+	else if (document.all) {
+		document.all("content1").innerHTML = Comments[kkk];
+	}
+//	else if (document.layers) {
+//		document.layers["content1"].document.open();
+//		document.layers["content1"].document.write(Comments[kkk]);
+//		document.layers["content1"].document.close();
+//	}
+}
+
+function SetColor(kkk){
+	if (document.getElementById) {
+		document.getElementById("content1").style.color = kkk;
+	}
+	else if (document.all) {
+		document.all("content1").style.color = ColorF;
+	}
+//	else if (document.layers) {
+//		document.layers["content1"].document.open();
+//		document.layers["content1"].document.fgColor = kkk;
+//		document.layers["content1"].document.close();
+//	}
+}
+// -->
+</script>
+
+<h1 align="center">月は見続ける</h1>
+
+<p>２００６年６月４日更新</p>
+<p>しばらく待つと物語が始まります。</p>
+<hr>
+<DIV ID="content1"><p>ブラウザが対応していません。</p></DIV>
+<DIV STYLE="position:absolute; top:90%">
+<hr>
+<p align="center">Copyright &copy; 2002-2006 ICHIKAWA, Yuji</p>
+</DIV>
+</body>
+</html>

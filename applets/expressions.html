@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+<title>Expressions</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<link rel="apple-touch-icon" href="expressions.png" />
+<link rel="shortcut icon" href="expressions.png" />
+<link rel="icon" href="expressions.png" />
+<link rel="stylesheet" type="text/css" href="expressions.css" />
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ["\\(","\\)"]] } });
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+<meta http-equiv="X-UA-Compatible" CONTENT="IE=EmulateIE7" />
+
+<script type="text/javascript" src="webkitdragdrop.js"></script>
+<!--
+<script type="text/javascript" src="fixOnMouseOut.js"></script>
+-->
+<script type="text/javascript" src="expressions.js"></script>
+<script type="text/javascript"><!--
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-510249-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+--></script>
+</head>
+
+<body>
+<!-- フローティングメニュー -->
+<div id="popupmenu" style="position:absolute; display:none;" onmouseout="fixOnMouseOut(this, event, handleMouseOut)">
+<table border="1" cellpadding="1" cellspacing="1">
+<tr><td>
+<span onclick="maxima_evaluate(event)">evaluate</span>
+</td></tr>
+</table>
+</div>
+<ul id="pulldownmenu">
+  <li>Constants
+    <ul>
+      <li><div class="math" title="1">$1$</div></li>
+      <li><div class="math" title="0.1">$0.1$</div></li>
+      <li><div class="math" title="%pi">$\pi$</div></li>
+    </ul>
+  </li>
+  <li>Variables
+    <ul>
+      <li><div class="math" title="a">$a$</div></li>
+      <li><div class="math" title="i">$i$</div></li>
+      <li><div class="math" title="x">$x$</div></li>
+      <li><div class="math" title="alpha">$\alpha$</div></li>
+      <li><div class="math" title="Gamma">$\Gamma$</div></li>
+    </ul>
+  </li>
+  <li>Operators
+    <ul>
+      <li><div class="math" title="a1 + a2"><span class="argument1">□</span>$+$<span class="argument2">□</span></div></li>
+      <li><div class="math" title="a1 - a2"><span class="argument1">□</span>$-$<span class="argument2">□</span></div></li>
+      <li><div class="math" title="a1 * a2"><span class="argument1">□</span>$\times$<span class="argument2">□</span></div></li>
+      <li><div class="math" title="a1 / a2"><span class="argument1">□</span>$/$<span class="argument2">□</span></div></li>
+      <li><div class="math" title="a1 ^ a2"><span class="argument1">□</span>$^$<span class="argument2">□</span></div></li>
+    </ul>
+  </li>
+  <li>Functions
+    <ul>
+      <li><div class="math" title="sin(a1)">$\sin$<span class="argument1">□</span></div></li>
+    </ul>
+  </li>
+</ul>
+<p style="position: absolute; right: 0px; bottom: 0px;">
+This page is designed for iPad.<br>
+Touch words on the top. those are a menu.<br>
+It uses MathJax, and Mr. Tommaso Buvoli's
+<a href="http://www.gotproject.com/blog/post2.html">Drag Drop Library for Ipad & Iphone
+</a>.<br>I appreciate their works very much.
+</p>
+</body>
+</html>

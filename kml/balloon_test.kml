@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>balloon_test.kml</name>
+	<Placemark>
+		<name>Touch me to display ballon</name>
+		<description>Hello world</description>
+		<LookAt>
+			<longitude>-122.0846159298017</longitude>
+			<latitude>37.42226600604837</latitude>
+			<altitude>0</altitude>
+			<heading>-148.4120897046941</heading>
+			<tilt>40.55197121787752</tilt>
+			<range>114.0673000189298</range>
+			<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+		</LookAt>
+		<Point>
+			<coordinates>-122.0846159298017,37.42226600604836,0</coordinates>
+		</Point>
+	</Placemark>
+</Document>
+</kml>

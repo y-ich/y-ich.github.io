@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Slinky Thing</title>
+<script type="text/javascript" src="slinky.js"></script>
+<script type="text/javascript"><!--
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-510249-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+--></script>
+</head>
+<body>
+  <h1>Slinky Thing</h1>
+  <div id="canvas_position" style="display: inline-block; float: left">
+    <canvas id="graph" width="400px" height="500px"></canvas>
+  </div>
+<p></p>
+  <table style="display: inline-block; float: left">
+    <tr><td>e</td><td><input type="range" id="e" min="1" max="80" value="1"></td><td id="e_value">1</td></tr>
+    <tr><td>f</td><td><input type="range" id="f" min="1" max="80" value="80"></td><td id="f_value">80</td></tr>
+    <tr><td>g</td><td><input type="range" id="g" min="1" max="80" value="1"></td><td id="g_value">1</td></tr>
+    <tr><td>h</td><td><input type="range" id="h" min="1" max="80" value="1"></td><td id="h_value">1</td></tr>
+    <tr><td>i</td><td><input type="range" id="i" min="1" max="80" value="80"></td><td id="i_value">80</td></tr>
+  </table>
+</body>
+</html>

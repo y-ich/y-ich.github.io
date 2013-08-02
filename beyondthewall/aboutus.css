@@ -1,0 +1,46 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 99%; /* 100%にするとスクロールバーが出る(chrome)。 */
+    background-image: url("http://papageno1.blog.ocn.ne.jp/photos/uncategorized/dsc050492bl0731_1.jpg");
+    background-repeat: no-repeat;
+    -webkit-background-size: 100% 100%;
+}
+
+div#global-navi {
+    position: relative;
+}
+
+span#logo {
+    color: white;
+}
+
+form#search-form {
+    display: inline-block;
+}
+
+div#aboutus {
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+div#caption {
+    position: absolute;
+    width: 400px;
+    height: 80px;
+    top: 40%;
+    left: 50%;
+    margin-left: -200px;
+    margin-top: -40px;
+}
+
+div#caution {
+    font-size: 6pt;
+    position: absolute;
+    top: 65%;
+    right: 10px;
+}

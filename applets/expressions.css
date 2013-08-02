@@ -1,0 +1,49 @@
+body {
+  padding: 0px; 
+  margin: 0px;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+#pulldownmenu{
+	list-style:none;
+	font-weight:bold;
+	margin-bottom:10px;
+	/* Clear floats */
+	float:left;
+	width:100%;
+	/* Bring the nav above everything else--uncomment if needed.
+	position:relative;
+	z-index:5;
+	*/
+}
+#pulldownmenu li{
+	float:left;
+	margin-right:10px;
+	position:relative;
+	font-size: 200%;
+}
+
+/*--- DROPDOWN ---*/
+#pulldownmenu ul{
+	list-style:none;
+	position:absolute;
+	left:-9999px; /* Hide off-screen when not needed (this is more accessible than display:none;) */
+}
+#pulldownmenu ul li{
+	padding-top:1px; /* Introducing a padding between the li and the a give the illusion spaced items */
+	float:none;
+}
+#pulldownmenu ul li div{
+  position: relative;
+  font-size: 100%;
+  display: inline-block;
+}
+#pulldownmenu li:hover ul{ /* Display the dropdown on hover */
+	left:0; /* Bring back on-screen when needed */
+}
+
+div.math {
+  position: absolute;
+  font-size: 400%;
+  display: inline-block;
+}

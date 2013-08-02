@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>development.kml</name>
+	<Style id="sn_mechanic">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/mechanic.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+		<ListStyle>
+		</ListStyle>
+	</Style>
+	<Style id="sh_mechanic">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/mechanic.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+		<ListStyle>
+		</ListStyle>
+	</Style>
+	<StyleMap id="msn_mechanic">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_mechanic</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_mechanic</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Placemark>
+		<name>開発ツール</name>
+		<description><![CDATA[<html>
+<head>
+<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+var addUrl = function() {
+  var url = $('#url').val();
+  $('#history').append($('<li>').append($('<a>').attr('href', url).text(url)));
+};
+</script>
+</head>
+<body>
+<h3>JavaScript</h3>
+<form onsubmit="$('#output').text(eval($('#oneliner').val()));">
+<input id="oneliner" type="text" cols="80"></input>
+<input type="submit" value="Eval"></input>
+</form>
+<div id="output" height="1em" width="100%">結果</div>
+<p>JavaScriptを入力して
+Evalボタンをタッチすると、評価結果が「結果」欄に表示されます。</p>
+<h3>ブラウズ</h3>
+<form>
+<input id="url" type="text" cols="80"></input>
+<input type="button" value="Go" onclick="location.href = $('#url').val();"></input>
+<input type="button" value="Add" onclick="addUrl();"></input>
+</form>
+<h4>リスト</h4>
+<ol id="history">
+</ol>
+<p>URLを入力してGoボタンをタッチすると、バルーンの内容
+がそのページに変わります。
+<p>Addボタンをタッチすると、リストにそのページへのアンカータグが追加されます。アンカータグをタッチすると大きなウィンドウでそのページが表示されます。</p>
+</p>
+</body>
+</html>]]></description>
+		<LookAt>
+			<longitude>-122.0845506987595</longitude>
+			<latitude>37.4221581265862</latitude>
+			<altitude>0</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<range>1004.872327294234</range>
+			<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+		</LookAt>
+		<styleUrl>#msn_mechanic</styleUrl>
+		<Point>
+			<coordinates>-122.0845506987595,37.4221581265862,0</coordinates>
+		</Point>
+	</Placemark>
+</Document>
+</kml>

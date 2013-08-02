@@ -1,0 +1,3315 @@
+<!-- saved from url=(0042)http://www.mucow.com/SqueakClassesRef.html -->
+<html>
+
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=x-sjis">
+<meta name="GENERATOR" content="Microsoft FrontPage Express 2.0">
+<title>Squeak Smalltalk: Classes Reference</title>
+<link rev="made"
+href="mailto:werdna@mucow.com%20(Andrew%20Greenberg)">
+<!--This file created 2001.04.27 1:43 by Claris Home Page version 3.0-->
+<script type="text/javascript"><!--
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-510249-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+--></script>
+</head>
+
+<body bgcolor="#E6E1B8">
+
+<h1 align="center">Squeak Smalltalk: クラスリファレンス</h1>
+
+<hr>
+
+<p><font size="2"><i>Version 0.0, 20 November 1999, by Andrew C.
+Greenberg, </i></font><a href="mailto:werdna@mucow.com"><font
+size="2"><i>werdna@mucow.com</i></font></a><font size="2"><i><br>
+Version 1.2, 26 April 2001, by Andrew P. Black, </i></font><a
+href="http://www.cse.ogi.edu/~black"><font size="2"><i>black@cse.ogi.edu</i></font></a>
+<br>
+<font size="2"><i>Version 0.2, 18 January 2004, by ICHIKAWA,
+Yuji,</i></font></p>
+
+<p><font size="2">Based on:</font><br>
+<font size="2">&nbsp;&nbsp;&nbsp; Smalltalk-80: The Language and
+Its Implementation, Author: Adele Goldberg and David Robson</font><br>
+<font size="2">&nbsp;&nbsp;&nbsp; Squeak Source Code, and the
+readers of the Squeak mailing list.</font></p>
+
+<p><font size="2">Squeak site: </font><a
+href="http://www.squeak.org/"><font size="2">http://www.squeak.org</font></a></p>
+
+<hr>
+
+<h2>目次</h2>
+
+<menu>
+    <li><a href="#FundamentalClasses">基本的なクラスとメソッド</a>
+    </li>
+    <li><a href="#NumericClasses">数値関係のクラスとメソッド</a>
+    </li>
+    <li><a href="#CollectionClasses">集合関係のクラスとメソッド</a>
+    </li>
+    <li><a href="#StreamClasses">ストリーミングクラスとメソッド</a>
+    </li>
+    <li><a href="#Exceptions">ANSI準拠の例外処理</a> </li>
+    <li><a href="#Hierarchy">Squeakクラス階層</a> </li>
+    <li><a href="#Other">他のカテゴリのSqueakクラス</a>
+    </li>
+</menu>
+
+<p><a href="squeak-qref.html"><font size="2">Squeak言語リファレンス</font></a><font
+size="2">も見てください。</font></p>
+
+<hr>
+
+<h2><a name="FundamentalClasses"></a>基本的なクラスとメソッド</h2>
+
+<menu>
+    <li><a href="#FundamentalObject">Objectクラス</a> </li>
+    <li><a href="#FundamentalBoolean">Booleanクラス</a> </li>
+    <li><a href="#FundamentalMagnitude">Magnitudeクラス</a> </li>
+    <li><a href="#FundamentalCharacter">Characterクラス</a> </li>
+</menu>
+
+<h3><a name="FundamentalObject"></a>Objectクラス（すべてのオブジェクトに関する操作）</h3>
+
+<h4>インスタンス生成(クラス側)</h4>
+<div align="center"><center>
+
+<table border="1" cellpadding="3" width="85%" bgcolor="#FFFFCC">
+<TBODY>    <tr>
+        <td bgcolor="#FFCC99"><b>メッセージ</b></td>
+        <td bgcolor="#FFCC99"><p align="center"><b>記述</b></p>
+        </td>
+        <td bgcolor="#FFCC99"><b>備考</b></td>
+    </tr>
+    <tr>
+        <td bgcolor="#FFCC99"><b>new</b></td>
+        <td bgcolor="#FFCC99">レシーバ（クラスです）の新たなインスタンスを返します。これはAnswer
+        a new instance of the receiver (which is a class). This
+        is the usual way of creating a new object. <b>new</b> is
+        often overridden in subclasses to provide class-specific
+        behavior.</td>
+        <td bgcolor="#FFCC99">1, 2</td>
+    </tr>
+    <tr>
+        <td bgcolor="#FFCC99"><b>basicNew</b></td>
+        <td bgcolor="#FFCC99">This is the primitive that is
+        ultimately called to implement <b>new</b>.</td>
+        <td bgcolor="#FFCC99">3</td>
+    </tr>
+    <tr>
+        <td bgcolor="#FFCC99"><b>new:</b> anInteger</td>
+        <td bgcolor="#FFCC99">Answer an instance of the receiver
+        (which is a class) with size given by anInteger. Only
+        allowed if it makes sense to specify a size.</td>
+        <td bgcolor="#FFCC99">4</td>
+    </tr>
+</TBODY></table>
+</center></div>
+
+<p>Notes:</p>
+
+<ol>
+    <li>The usual body for a <b>new</b> method is <code>^ super
+        new initialize</code>. Remember to put it on the class
+        side, remember to type the <code>^</code>, and remember
+        to say <code>super</code>, not <code>self</code>! </li>
+    <li>Do<i> not</i> implement new if it makes no sense, For
+        example, look at Boolean class&gt;&gt;new and
+        MappedCollection class&gt;&gt;new. </li>
+    <li><b>basicNew</b> is there so you can still make instances
+        even if a superclass has overridden <b>new</b>.
+        Consequently, never override <b>basicNew</b>, until you
+        become a wizard. </li>
+    <li>If you need an initialization parameter other than a
+        size, choose a more meaningful name than <b>new: </b>For
+        example, look at the instance creation protocol for Pen
+        class and Rectangle class. </li>
+</ol>
+
+<h4>Comparing Objects</h4>
+<div align="center"><center>
+
+<table border="1" cellpadding="3" width="85%" bgcolor="#FFFFCC">
+<TBODY>    <tr>
+        <td bgcolor="#FFCC99"><b>Message</b></td>
+        <td bgcolor="#FFCC99"><p align="center"><b>Description</b></p>
+        </td>
+        <td bgcolor="#FFCC99"><b>Notes</b></td>
+    </tr>
+    <tr>
+        <td bgcolor="#FFCC99"><code>==</code> anObject</td>
+        <td bgcolor="#FFCC99">Are the receiver and the argument
+        the same object? (Answer is <b>true</b> or <b>false</b>)</td>
+        <td bgcolor="#FFCC99">1</td>
+    </tr>
+    <tr>
+        <td bgcolor="#FFCC99"><code>~~ </code>anObject</td>
+        <td bgcolor="#FFCC99">Are the receiver and the argument
+        different objects?</td>
+        <td bgcolor="#FFCC99">1</td>
+    </tr>
+    <tr>
+        <td bgcolor="#FFCC99"><code>=</code> anObject</td>
+        <td bgcolor="#FFCC99">Are the receiver and the argument
+        equal? The exact meaning of equality depends on the class
+        of the receiver.</td>
+        <td bgcolor="#FFCC99">2</td>
+    </tr>
+    <tr>
+        <td bgcolor="#FFCC99"><code>~= </code>anObject</td>
+        <td bgcolor="#FFCC99">Are the receiver and the argument
+        unequal?</td>
+        <td bgcolor="#FFCC99">2</td>
+    </tr>
+    <tr>
+        <td bgcolor="#FFCC99"><b>hash</b></td>
+        <td bgcolor="#FFCC99">Answer a SmallInteger whose value
+        is related to the receiver's value.</td>
+        <td bgcolor="#FFCC99">2</td>
+    </tr>
+</TBODY></table>
+</center></div>
+
+<p>Notes:</p>
+
+<ol>
+    <li><code>==</code> and <code>~~</code> should not normally
+        be redefined in any other class. </li>
+    <li>Since various classes (particularly Sets and Dictionaries)
+        rely on the property that equal objects have equal
+        hashes, you should override <code>hash </code>whenever
+        you override =. It must be true that <code>(a = b)</code>
+        implies <code>(a hash = b hash)</code>. The
+        contrapositive and the converse will not generally hold. </li>
+</ol>
+
+<h4>Testing Objects</h4>
+<div align="center"><center>
+
+<table border="1" cellpadding="3" width="85%" bgcolor="#FFFFCC">
+<TBODY>    <tr>
+        <td bgcolor="#FFCC99"><b>Message</b></td>
+        <td bgcolor="#FFCC99"><p align="center"><b>Description</b></p>
+        </td>
+        <td bgcolor="#FFCC99"><b>Notes</b></td>
+    </tr>
+    <tr>
+        <td bgcolor="#FFCC99"><b>isNil</b></td>
+        <td bgcolor="#FFCC99">Is the receiver nil? (Answer is <b>true</b>
+        or <b>false</b>)</td>
+        <td bgcolor="#FFCC99">1</td>
+    </tr>
+    <tr>
+        <td bgcolor="#FFCC99"><b>notNil</b></td>
+        <td bgcolor="#FFCC99">Is the receiver not nil?</td>
+        <td bgcolor="#FFCC99">1</td>
+    </tr>
+    <tr>
+        <td bgcolor="#FFCC99"><b>ifNil:</b> aBlock</td>
+        <td bgcolor="#FFCC99">Evaluate aBlock if the receiver is
+        nil, and answer the value of aBlock. Otherwise answers
+        the receiver.</td>
+        <td bgcolor="#FFCC99">2</td>
+    </tr>
+    <tr>
+        <td bgcolor="#FFCC99"><b>ifNotNil: </b>aBlock</td>
+        <td bgcolor="#FFCC99">Evaluate aBlock if the receiver is
+        not nil, and answer the value of aBlock. Otherwise
+        answers the receiver, <i>i.e.</i>, nil</td>
+        <td bgcolor="#FFCC99">2</td>
+    </tr>
+    <tr>
+        <td bgcolor="#FFCC99"><b>ifNotNilDo:</b> aBlock</td>
+        <td bgcolor="#FFCC99">If the receiver is not nil,
+        evaluate aBlock with the receiver as argument. Answers
+        the receiver.</td>
+        <td bgcolor="#FFCC99">3</td>
+    </tr>
+</TBODY></table>
+</center></div>
+
+<p>Notes:</p>
+
+<ol>
+    <li><code>anObject isNil </code>is preferred to <code>anObject
+        == nil</code>, and similarly for <code>anObject ~~ nil</code>.
+    </li>
+    <li><code>anobject ifNil: [ ... ] </code>is preferred to <code>anObject
+        isNil ifTrue: [ ... ]</code>. </li>
+    <li><code>ifNotNilDo: aBlock</code> is useful if the receiver
+        is a complex expression, for example<br>
+        <code>self leftChild rightChild ifNotNilDo: [ :node |
+        node balance ]</code> </li>
+</ol>
+
+<h4>Copying Objects</h4>
+<div align="center"><center>
+
+<table border="1" cellpadding="3" width="85%" bgcolor="#FFFFCC">
+<TBODY>    <tr>
+        <td bgcolor="#FFCC99"><b>Message</b></td>
+        <td bgcolor="#FFCC99"><p align="center"><b>Description</b></p>
+        </td>
+        <td bgcolor="#FFCC99"><b>Notes</b></td>
+    </tr>
+    <tr>
+        <td bgcolor="#FFCC99"><b>copy</b></td>
+        <td bgcolor="#FFCC99">Answer another instance just like
+        the receiver. Subclasses typically override this method;
+        they typically do not override shallowCopy.</td>
+        <td bgcolor="#FFCC99">　</td>
+    </tr>
+    <tr>
+        <td bgcolor="#FFCC99"><b>shallowCopy</b></td>
+        <td bgcolor="#FFCC99">Answer a copy of the receiver which
+        shares the receiver's instance variables.</td>
+        <td bgcolor="#FFCC99">　</td>
+    </tr>
+    <tr>
+        <td bgcolor="#FFCC99"><b>deepCopy</b></td>
+        <td bgcolor="#FFCC99">Answer a copy of the receiver with
+        its own copy of each instance variable.</td>
+        <td bgcolor="#FFCC99">　</td>
+    </tr>
+    <tr>
+        <td bgcolor="#FFCC99"><b>veryDeepCopy</b></td>
+        <td bgcolor="#FFCC99">Do a complete tree copy using a
+        dictionary. An object in the tree twice is copied once
+        and shared by both referents.</td>
+        <td bgcolor="#FFCC99">　</td>
+    </tr>
+</TBODY></table>
+</center></div>
+
+<h4>Sending Messages to Objects</h4>
+<div align="center"><center>
+
+<table border="1" cellpadding="3" width="85%" bgcolor="#FFFFCC">
+<TBODY>    <tr>
+        <td bgcolor="#FFCC99"><b>Message</b></td>
+        <td bgcolor="#FFCC99"><p align="center"><b>Description</b></p>
+        </td>
+        <td bgcolor="#FFCC99"><b>Notes</b></td>
+    </tr>
+    <tr>
+        <td bgcolor="#FFCC99"><b>perform:</b> aSymbol</td>
+        <td bgcolor="#FFCC99">Send the unary selector, aSymbol,
+        to the receiver. Signal an error if the number of
+        arguments expected by the selector is not zero.</td>
+        <td bgcolor="#FFCC99">　</td>
+    </tr>
+    <tr>
+        <td bgcolor="#FFCC99"><b>perform:</b> aSymbol <b>with:</b>
+        anObject</td>
+        <td bgcolor="#FFCC99">Send the selector aSymbol to the
+        receiver with anObject as its argument. Fail if the
+        number of arguments expected by the selector is not one.</td>
+        <td bgcolor="#FFCC99">1</td>
+    </tr>
+    <tr>
+        <td bgcolor="#FFCC99"><b>perform:</b> selector <b>withArguments:</b>
+        argArray</td>
+        <td bgcolor="#FFCC99">Send the selector, aSymbol, to the
+        receiver with arguments in argArray. Fail if the number
+        of arguments expected by the selector does not match the
+        size of argArray.</td>
+        <td bgcolor="#FFCC99">　</td>
+    </tr>
+</TBODY></table>
+</center></div>
+
+<p>Note:</p>
+
+<ol>
+    <li>Squeak objects also recognize <code>#perform:with:with:</code>
+        and <code>#perform:with:with:with</code> </li>
+</ol>
+
+<h4>Indexing Objects</h4>
+<div align="center"><center>
+
+<table border="1" cellpadding="3" width="85%" bgcolor="#FFFFCC">
+<TBODY>    <tr>
+        <td bgcolor="#FFCC99"><b>Message</b></td>
+        <td bgcolor="#FFCC99"><p align="center"><b>Description</b></p>
+        </td>
+        <td bgcolor="#FFCC99"><b>Notes</b></td>
+    </tr>
+    <tr>
+        <td bgcolor="#FFCC99"><b>at:</b> index</td>
+        <td bgcolor="#FFCC99">Answer the value of the index'th
+        element of the receiver. Signal an Error if index is not
+        an Integer or is out of bounds.</td>
+        <td bgcolor="#FFCC99">　</td>
+    </tr>
+    <tr>
+        <td bgcolor="#FFCC99"><b>at:</b> index <b>put:</b>
+        anObject</td>
+        <td bgcolor="#FFCC99">Store anObject in the receiver at
+        the element index. Signal an Error if index is not an
+        Integer or is out of bounds. Answer anObject.</td>
+        <td bgcolor="#FFCC99">　</td>
+    </tr>
+    <tr>
+        <td bgcolor="#FFCC99"><b>at:</b> index <b>modify:</b>
+        aBlock</td>
+        <td bgcolor="#FFCC99">Replace the element at index of the
+        receiver with that element transformed by the block.</td>
+        <td bgcolor="#FFCC99">　</td>
+    </tr>
+    <tr>
+        <td bgcolor="#FFCC99"><b>size</b></td>
+        <td bgcolor="#FFCC99">Answer the number of indexable
+        elements in the receiver. This value is the same as the
+        largest legal subscript.</td>
+        <td bgcolor="#FFCC99">　</td>
+    </tr>
+</TBODY></table>
+</center></div>
+
+<h4>Displaying and Storing Objects</h4>
+<div align="center"><center>
+
+<table border="1" cellpadding="3" width="85%" bgcolor="#FFFFCC">
+<TBODY>    <tr>
+        <td bgcolor="#FFCC99"><b>Message</b></td>
+        <td bgcolor="#FFCC99"><p align="center"><b>Description</b></p>
+        </td>
+        <td bgcolor="#FFCC99"><b>Notes</b></td>
+    </tr>
+    <tr>
+        <td bgcolor="#FFCC99"><b>printString</b></td>
+        <td bgcolor="#FFCC99">Answer a String whose characters
+        describe the receiver.</td>
+        <td bgcolor="#FFCC99">　</td>
+    </tr>
+    <tr>
+        <td bgcolor="#FFCC99"><b>printOn:</b> aStream</td>
+        <td bgcolor="#FFCC99">Append to aStream a String whose
+        characters describe the receiver.</td>
+        <td bgcolor="#FFCC99">　</td>
+    </tr>
+    <tr>
+        <td bgcolor="#FFCC99"><b>storeString</b></td>
+        <td bgcolor="#FFCC99">Answer a String from which the
+        receiver can be reconstructed.</td>
+        <td bgcolor="#FFCC99">　</td>
+    </tr>
+    <tr>
+        <td bgcolor="#FFCC99"><b>storeOn:</b> aStream</td>
+        <td bgcolor="#FFCC99">Append to aStream a String from
+        which the receiver can be reconstructed</td>
+        <td bgcolor="#FFCC99">　</td>
+    </tr>
+</TBODY></table>
+</center></div>
+
+<h4>Interrogating Objects</h4>
+<div align="center"><center>
+
+<table border="1" cellpadding="3" width="85%" bgcolor="#FFFFCC">
+<TBODY>    <tr>
+        <td bgcolor="#FFCC99"><b>Message</b></td>
+        <td bgcolor="#FFCC99"><p align="center"><b>Description</b></p>
+        </td>
+        <td bgcolor="#FFCC99"><b>Notes</b></td>
+    </tr>
+    <tr>
+        <td bgcolor="#FFCC99"><b>class</b></td>
+        <td bgcolor="#FFCC99">Answers the receiver's class (an
+        object).</td>
+        <td bgcolor="#FFCC99">　</td>
+    </tr>
+    <tr>
+        <td bgcolor="#FFCC99"><b>isKindOf:</b> aClass</td>
+        <td bgcolor="#FFCC99">Is the receiver an instance of
+        aClass or one of its subclasses?</td>
+        <td bgcolor="#FFCC99">　</td>
+    </tr>
+    <tr>
+        <td bgcolor="#FFCC99"><b>isMemberOf:</b> aClass</td>
+        <td bgcolor="#FFCC99">Is the receiver an instance of
+        aClass? (Same as <code>rcvr class == aClass</code>)</td>
+        <td bgcolor="#FFCC99">　</td>
+    </tr>
+    <tr>
+        <td bgcolor="#FFCC99"><b>respondsTo:</b> aSelector</td>
+        <td bgcolor="#FFCC99">Can the receiver find a method for
+        aSelector, either in the receiver's class or in one of
+        its superclasses?</td>
+        <td bgcolor="#FFCC99">　</td>
+    </tr>
+    <tr>
+        <td bgcolor="#FFCC99"><b>canUnderstand:</b> aSelector</td>
+        <td bgcolor="#FFCC99">Does the receiver, which must be a
+        class, have a method for aSelector? The method can belong
+        to the receiver or to any of its superclasses.</td>
+        <td bgcolor="#FFCC99">　</td>
+    </tr>
+</TBODY></table>
+</center></div>
+
+<h4>Miscellaneous Messages on Objects</h4>
+<div align="center"><center>
+
+<table border="1" cellpadding="3" width="85%" bgcolor="#FFFFCC">
+<TBODY>    <tr>
+        <td bgcolor="#FFCC99"><b>Message</b></td>
+        <td bgcolor="#FFCC99"><p align="center"><b>Description</b></p>
+        </td>
+        <td bgcolor="#FFCC99"><b>Notes</b></td>
+    </tr>
+    <tr>
+        <td bgcolor="#FFCC99"><b>yourself</b></td>
+        <td bgcolor="#FFCC99">Answers self.</td>
+        <td bgcolor="#FFCC99">1</td>
+    </tr>
+    <tr>
+        <td bgcolor="#FFCC99"><b>asString</b></td>
+        <td bgcolor="#FFCC99">Answers the receiver's printString.</td>
+        <td bgcolor="#FFCC99">　</td>
+    </tr>
+    <tr>
+        <td bgcolor="#FFCC99"><b>doesNotUnderstand:</b> aSymbol</td>
+        <td bgcolor="#FFCC99">Report that the receiver does not
+        understand aSymbol as a message.</td>
+        <td bgcolor="#FFCC99">　</td>
+    </tr>
+    <tr>
+        <td bgcolor="#FFCC99"><b>error:</b> aString</td>
+        <td bgcolor="#FFCC99">Signal an Error.</td>
+        <td bgcolor="#FFCC99">　</td>
+    </tr>
+    <tr>
+        <td bgcolor="#FFCC99"><b>halt</b></td>
+        <td bgcolor="#FFCC99">Stops execution.</td>
+        <td bgcolor="#FFCC99">2</td>
+    </tr>
+</TBODY></table>
+</center></div>
+
+<p>Notes:</p>
+
+<ol>
+    <li>the message <code>yourself</code> is mostly used as the
+        last message in a cascade, when the previous message
+        answered some object other than the receiver. For
+        example,<br>
+        <code>#(1 2 3 5) at: 4 put: 4</code>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;answers
+        <code>4</code>, the object that was put, whereas<br>
+        <code>#(1 2 3 5) at: 4 put: 4</code>; <code>yourself</code>&nbsp;&nbsp;&nbsp;&nbsp;answers
+        <code>#(1 2 3 4)</code>, the receiver. </li>
+    <li><code>self halt </code>is the usual way of forcing entry
+        to the debugger. The halt can be resumed. </li>
+</ol>
+
+<h3><a name="FundamentalBoolean"></a>Class Boolean</h3>
+
+<p>This abstract class represents logical values, providing
+Boolean operations and conditional control structures. It has two
+subclasses, True and False, each of which have singleton
+instances represented by the Squeak keywords <b>true</b> and <b>false</b>,
+respectively.</p>
+
+<h4>Evaluating and Non-Evaluating Logical Operations for Boolean</h4>
+<div align="center"><center>
+
+<table border="1" cellpadding="3" width="85%" bgcolor="#FFFFCC">
+<TBODY>    <tr>
+        <td bgcolor="#FFCC99"><b>Message</b></td>
+        <td bgcolor="#FFCC99"><p align="center"><b>Description</b></p>
+        </td>
+        <td bgcolor="#FFCC99"><b>Notes</b></td>
+    </tr>
+    <tr>
+        <td bgcolor="#FFCC99"><b>&amp;</b> aBoolean</td>
+        <td bgcolor="#FFCC99">Evaluating conjunction (AND).
+        Evaluate the argument. Then answer true if both the
+        receiver and the argument are true.</td>
+        <td bgcolor="#FFCC99">　</td>
+    </tr>
+    <tr>
+        <td bgcolor="#FFCC99"><b>|</b> aBoolean</td>
+        <td bgcolor="#FFCC99">Evaluating disjunction (OR).
+        Evaluate the argument. Then answer true if either the
+        receiver or the argument is true.</td>
+        <td bgcolor="#FFCC99">　</td>
+    </tr>
+    <tr>
+        <td bgcolor="#FFCC99"><b>eqv:</b> aBoolean</td>
+        <td bgcolor="#FFCC99">Answer true if the receiver is
+        equivalent to aBoolean.</td>
+        <td bgcolor="#FFCC99">　</td>
+    </tr>
+    <tr>
+        <td bgcolor="#FFCC99"><b>not</b></td>
+        <td bgcolor="#FFCC99">Negation. Answer true if the
+        receiver is false, answer false if the receiver is true.</td>
+        <td bgcolor="#FFCC99">　</td>
+    </tr>
+    <tr>
+        <td bgcolor="#FFCC99"><b>xor:</b> aBoolean</td>
+        <td bgcolor="#FFCC99">Exclusive OR. Answer true if the
+        receiver is not equivalent to aBoolean.</td>
+        <td bgcolor="#FFCC99">　</td>
+    </tr>
+    <tr>
+        <td bgcolor="#FFCC99"><b>and:</b> alternativeBlock</td>
+        <td bgcolor="#FFCC99">Nonevaluating conjunction. If the
+        receiver is true, answer the <i>value</i> of
+        alternativeBlock; otherwise answer false without
+        evaluating alternativeBlock.</td>
+        <td bgcolor="#FFCC99">　</td>
+    </tr>
+    <tr>
+        <td bgcolor="#FFCC99"><b>or:</b> alternativeBlock</td>
+        <td bgcolor="#FFCC99">Nonevaluating disjunction. If the
+        receiver is false, answer the <i>value</i> of
+        alternativeBlock; otherwise answer true without
+        evaluating alternativeBlock.</td>
+        <td bgcolor="#FFCC99">　</td>
+    </tr>
+</TBODY></table>
+</center></div>
+
+<h3><a name="FundamentalMagnitude"></a>Class Magnitude</h3>
+
+<p>This abstract class embraces, among other classes, Numbers,
+Characters, Date and Time. It addresses classes whose instances
+can be linearly ordered.</p>
+<div align="center"><center>
+
+<table border="1" cellpadding="3" width="85%" bgcolor="#FFFFCC">
+<TBODY>    <tr>
+        <td bgcolor="#FFCC99"><b>Message</b></td>
+        <td bgcolor="#FFCC99"><p align="center"><b>Description</b></p>
+        </td>
+        <td bgcolor="#FFCC99"><b>Notes</b></td>
+    </tr>
+    <tr>
+        <td bgcolor="#FFCC99">&lt; aMagnitude</td>
+        <td bgcolor="#FFCC99">Answer whether the receiver is
+        strictly less than the argument.</td>
+        <td bgcolor="#FFCC99">　</td>
+    </tr>
+    <tr>
+        <td bgcolor="#FFCC99">&gt; aMagnitude</td>
+        <td bgcolor="#FFCC99">Answer whether the receiver is
+        strictly greater than the argument.</td>
+        <td bgcolor="#FFCC99">　</td>
+    </tr>
+    <tr>
+        <td bgcolor="#FFCC99">&lt;= aMagnitude</td>
+        <td bgcolor="#FFCC99">Answer whether the receiver is less
+        than or equal to the argument.</td>
+        <td bgcolor="#FFCC99">　</td>
+    </tr>
+    <tr>
+        <td bgcolor="#FFCC99">&gt;= aMagnitude</td>
+        <td bgcolor="#FFCC99">Answer whether the receiver is
+        greater than or equal to the argument.</td>
+        <td bgcolor="#FFCC99">　</td>
+    </tr>
+    <tr>
+        <td bgcolor="#FFCC99"><b>between:</b> min <b>and:</b> max</td>
+        <td bgcolor="#FFCC99">Answer whether the receiver is
+        greater than or equal to the argument, min, and less than
+        or equal to the argument, max.</td>
+        <td bgcolor="#FFCC99">　</td>
+    </tr>
+    <tr>
+        <td bgcolor="#FFCC99"><b>min:</b> aMagnitude</td>
+        <td bgcolor="#FFCC99">Answer the receiver or the
+        argument, whichever is the lesser magnitude.</td>
+        <td bgcolor="#FFCC99">　</td>
+    </tr>
+    <tr>
+        <td bgcolor="#FFCC99"><b>max:</b> aMagnitude</td>
+        <td bgcolor="#FFCC99">Answer the receiver or the
+        argument, whichever is the greater magnitude.</td>
+        <td bgcolor="#FFCC99">　</td>
+    </tr>
+    <tr>
+        <td bgcolor="#FFCC99"><b>min:</b> firstMagnitude <b>max:</b>
+        secondMagnitude</td>
+        <td bgcolor="#FFCC99">Take the receiver or the argument,
+        firstMagnitude, whichever is the lesser magnitude, and
+        answer that or the argument, secondMagnitude, whichever
+        is the greater magnitude.</td>
+        <td bgcolor="#FFCC99">　</td>
+    </tr>
+</TBODY></table>
+</center></div>
+
+<h3><a name="FundamentalCharacter"></a>Class Character</h3>
+
+<p>Squeak has its own set of 256 characters, which may differ
+from that of the host platform. Instances of class Character
+store an 8-bit character code.</p>
+
+<ul>
+    <li>The characters 0-127 are the same as the corresponding
+        ASCII characters, with a few exceptions: the assignment
+        arrow replaces underscore, and characters for the enter,
+        insert, page up, page down, home, and the 4 arrow keys
+        replace some of the ACSII control characters. These
+        characters can be accessed from Squeak using methods in
+        class Character. </li>
+    <li>The characters 128-255 are sparsely populated. Various
+        symbols, such as bullets, trademark, copyright, cent,
+        Euro and Yen, diphthongs and a fair number of accented
+        characters as well as non-breaking space (Character nbsp)
+        are available at the same codes as in the Macintosh
+        character set, but fewer characters are assigned than on
+        the Macintosh. </li>
+    <li>The full character set can be viewed by doing a printIt
+        on <code>Character allCharacters</code>. </li>
+</ul>
+
+<h4>Methods for instance creation (Class side)</h4>
+
+<p>Most of the time, characters literals <code>$a</code>, <code>$b</code>,
+<i>etc.</i> are used in preference to class methods. The
+principal exceptions are the non-printing characters listed here.
+Programs should never need to depend on the details of the
+character encoding.</p>
+<div align="center"><center>
+
+<table border="1" cellpadding="3" width="85%" bgcolor="#FFFFCC">
+<TBODY>    <tr>
+        <td bgcolor="#FFCC99"><b>Message</b></td>
+        <td bgcolor="#FFCC99"><p align="center"><b>Description</b></p>
+        </td>
+        <td bgcolor="#FFCC99"><b>Notes</b></td>
+    </tr>
+    <tr>
+        <td bgcolor="#FFCC99"><b>value:</b> n</td>
+        <td bgcolor="#FFCC99">n must be an integer in the range 0
+        to 255. Answer the Character with code n</td>
+        <td bgcolor="#FFCC99">&nbsp;1</td>
+    </tr>
+    <tr>
+        <td bgcolor="#FFCC99"><b>digitValue: </b>x</td>
+        <td bgcolor="#FFCC99">Answer the Character whose digit
+        value is x. For example, answer $9 for x=9, $0 for x=0,
+        $A for x=10, $Z for x=35.</td>
+        <td bgcolor="#FFCC99">　</td>
+    </tr>
+    <tr>
+        <td bgcolor="#FFCC99"><b>arrowDown arrowLeft arrowRight
+        arrowUp backspace cr delete end enter escape euro home
+        insert lf linefeed nbsp newPage pageDown pageUp space tab</b></td>
+        <td bgcolor="#FFCC99">Answer the appropriate character</td>
+        <td bgcolor="#FFCC99">　</td>
+    </tr>
+</TBODY></table>
+</center></div>
+
+<p>Note:</p>
+
+<ol>
+    <li>The invariant <code>(Character value: n) asciiValue = n</code>
+        holds for all <code>n</code> in the range [0..255]. </li>
+</ol>
+
+<h4>Methods for accessing Characters</h4>
+<div align="center"><center>
+
+<table border="1" cellpadding="3" width="85%" bgcolor="#FFFFCC">
+<TBODY>    <tr>
+        <td bgcolor="#FFCC99"><b>Message</b></td>
+        <td bgcolor="#FFCC99"><p align="center"><b>Description</b></p>
+        </td>
+        <td bgcolor="#FFCC99"><b>Notes</b></td>
+    </tr>
+    <tr>
+        <td bgcolor="#FFCC99"><b>asciiValue</b></td>
+        <td bgcolor="#FFCC99">Answer the value used in the
+        receiver's encoding. This is not really ASCII, despite
+        the name!</td>
+        <td bgcolor="#FFCC99">&nbsp;1</td>
+    </tr>
+    <tr>
+        <td bgcolor="#FFCC99"><b>digitValue</b></td>
+        <td bgcolor="#FFCC99">Answer 0-9 if the receiver is $0-$9,
+        10-35 if it is $A-$Z, and &lt; 0 otherwise. This is used
+        to parse literal numbers of radix 2-36.</td>
+        <td bgcolor="#FFCC99">　</td>
+    </tr>
+</TBODY></table>
+</center></div>
+
+<p>Note:</p>
+
+<ol>
+    <li>Character has the unique instance property, so that all
+        equal (&quot;=&quot;) instances of a character are
+        identical (&quot;==&quot;). That is, <tt>a asciiValue ==
+        b asciiValue</tt> if and only if <tt>a == b</tt>. </li>
+</ol>
+
+<h4>Methods for testing Characters</h4>
+<div align="center"><center>
+
+<table border="1" cellpadding="3" width="85%" bgcolor="#FFFFCC">
+<TBODY>    <tr>
+        <td bgcolor="#FFCC99"><b>Message</b></td>
+        <td bgcolor="#FFCC99"><p align="center"><b>Description</b></p>
+        </td>
+        <td bgcolor="#FFCC99"><b>Notes</b></td>
+    </tr>
+    <tr>
+        <td bgcolor="#FFCC99"><b>isAlphaNumeric</b></td>
+        <td bgcolor="#FFCC99">Answer whether the receiver is a
+        letter or a digit.</td>
+        <td bgcolor="#FFCC99">　</td>
+    </tr>
+    <tr>
+        <td bgcolor="#FFCC99"><b>isDigit</b></td>
+        <td bgcolor="#FFCC99">Answer whether the receiver is a
+        digit.</td>
+        <td bgcolor="#FFCC99">　</td>
+    </tr>
+    <tr>
+        <td bgcolor="#FFCC99"><b>isLetter</b></td>
+        <td bgcolor="#FFCC99">Answer whether the receiver is a
+        letter.</td>
+        <td bgcolor="#FFCC99">　</td>
+    </tr>
+    <tr>
+        <td bgcolor="#FFCC99"><b>isLowercase</b></td>
+        <td bgcolor="#FFCC99">Answer whether the receiver is a
+        lowercase letter.</td>
+        <td bgcolor="#FFCC99">　</td>
+    </tr>
+    <tr>
+        <td bgcolor="#FFCC99"><b>isSeparator</b></td>
+        <td bgcolor="#FFCC99">Answer whether the receiver is one
+        of the separator characters: space, cr, tab, line feed,
+        or form feed.</td>
+        <td bgcolor="#FFCC99">　</td>
+    </tr>
+    <tr>
+        <td bgcolor="#FFCC99"><b>isSpecial</b></td>
+        <td bgcolor="#FFCC99">Answer whether the receiver is one
+        of the special characters</td>
+        <td bgcolor="#FFCC99">　</td>
+    </tr>
+    <tr>
+        <td bgcolor="#FFCC99"><b>isUppercase</b></td>
+        <td bgcolor="#FFCC99">Answer whether the receiver is an
+        uppercase letter.</td>
+        <td bgcolor="#FFCC99">　</td>
+    </tr>
+    <tr>
+        <td bgcolor="#FFCC99"><b>isVowel</b></td>
+        <td bgcolor="#FFCC99">Answer whether the receiver is one
+        of the vowels, AEIOU, in upper or lower case.</td>
+        <td bgcolor="#FFCC99">　</td>
+    </tr>
+    <tr>
+        <td bgcolor="#FFCC99"><b>tokenish</b></td>
+        <td bgcolor="#FFCC99">Answer whether the receiver is a
+        valid token-character?letter, digit, or colon.</td>
+        <td bgcolor="#FFCC99">　</td>
+    </tr>
+</TBODY></table>
+</center></div>
+
+<h4>Methods for converting Characters</h4>
+<div align="center"><center>
+
+<table border="1" cellpadding="3" width="85%" bgcolor="#FFFFCC">
+<TBODY>    <tr>
+        <td bgcolor="#FFCC99"><b>Message</b></td>
+        <td bgcolor="#FFCC99"><p align="center"><b>Description</b></p>
+        </td>
+        <td bgcolor="#FFCC99"><b>Notes</b></td>
+    </tr>
+    <tr>
+        <td bgcolor="#FFCC99"><b>asLowercase</b></td>
+        <td bgcolor="#FFCC99">If the receiver is uppercase,
+        answer its matching lowercase Character.</td>
+        <td bgcolor="#FFCC99">　</td>
+    </tr>
+    <tr>
+        <td bgcolor="#FFCC99"><b>asUppercase</b></td>
+        <td bgcolor="#FFCC99">If the receiver is lowercase,
+        answer its matching uppercase Character.</td>
+        <td bgcolor="#FFCC99">　</td>
+    </tr>
+</TBODY></table>
+</center></div>
+
+<hr>
+
+<table border="0" width="100%">
+<TBODY>    <tr>
+        <td><h2><a name="NumericClasses"></a>Numeric Classes and
+        Methods</h2>
+        <h3>Class Number</h3>
+        <p>This abstract class embraces Integers, Floats and
+        Fractions. Number is a subclass of Magnitude.</p>
+        </td>
+    </tr>
+    <tr>
+        <td><h4>Methods for arithmetic on all Numeric Classes</h4>
+        <div align="center"><center><table border="1"
+        cellpadding="3" width="85%" bgcolor="#FFFFCC">
+<TBODY>            <tr>
+                <td bgcolor="#FFCC99"><b>Message</b></td>
+                <td bgcolor="#FFCC99"><p align="center"><b>Description</b></p>
+                </td>
+                <td bgcolor="#FFCC99"><b>Notes</b></td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99">+ aNumber</td>
+                <td bgcolor="#FFCC99">Answer the sum of the
+                receiver and aNumber.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99">- aNumber</td>
+                <td bgcolor="#FFCC99">Answer the difference of
+                the receiver and aNumber.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99">* aNumber</td>
+                <td bgcolor="#FFCC99">Answer the product of the
+                receiver and aNumber.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99">/ aNumber</td>
+                <td bgcolor="#FFCC99">Answer the result of
+                dividing the receiver by aNumber, retaining as
+                much precision as possible. If the result is not
+                exact, the answer will be a Fraction or Float, as
+                appropriate. Signal ZeroDivide if aNumber is Zero.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99">// aNumber</td>
+                <td bgcolor="#FFCC99">Answer the result of
+                dividing the receiver by aNumber, truncating
+                toward negative infinity. Signal ZeroDivide if
+                aNumber is Zero.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99">\\ aNumber</td>
+                <td bgcolor="#FFCC99">Answer the remainder left
+                when dividing the receiver by aNumber, truncating
+                toward negative infinity. This is the modulus
+                operator. Signal ZeroDivide if aNumber is Zero.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>quo:</b> aNumber</td>
+                <td bgcolor="#FFCC99">Answer the result of
+                dividing the receiver by aNumber, truncating
+                toward zero. Signal ZeroDivide if aNumber is Zero.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>rem:</b> aNumber</td>
+                <td bgcolor="#FFCC99">Answer the remainder left
+                when dividing the receiver by aNumber, truncating
+                toward zero. Signal ZeroDivide if aNumber is Zero.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>abs</b></td>
+                <td bgcolor="#FFCC99">Answer the absolute value
+                of the receiver.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>negated</b></td>
+                <td bgcolor="#FFCC99">Answer the negation of the
+                receiver.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>reciprocal</b></td>
+                <td bgcolor="#FFCC99">Answer 1 divided by the
+                receiver. Signal ZeroDivide if the receiver is
+                zero.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+</TBODY>        </table>
+        </center></div><h4>Methods implementing mathematical
+        functions for Numbers</h4>
+        <div align="center"><center><table border="1"
+        cellpadding="3" width="85%" bgcolor="#FFFFCC">
+<TBODY>            <tr>
+                <td bgcolor="#FFCC99"><b>Message</b></td>
+                <td bgcolor="#FFCC99"><p align="center"><b>Description</b></p>
+                </td>
+                <td bgcolor="#FFCC99"><b>Notes</b></td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>exp</b></td>
+                <td bgcolor="#FFCC99">Answer a floating point
+                number that is the exponential of the receiver</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>ln</b></td>
+                <td bgcolor="#FFCC99">Answer the natural log of
+                the receiver.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>log:</b> aNumber</td>
+                <td bgcolor="#FFCC99">Answer the logarithm base
+                aNumber of the receiver.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>floorLog:</b> aNumber</td>
+                <td bgcolor="#FFCC99">Take the logarithm base
+                aNumber of the receiver, and answer the integer
+                nearest that value towards negative infinity.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>raisedTo:</b> aNumber</td>
+                <td bgcolor="#FFCC99">Answer the receiver raised
+                to the power of aNumber.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>raisedToInteger:</b>
+                anInteger</td>
+                <td bgcolor="#FFCC99">Answer the receiver raised
+                to the power of anInteger. Signal an Error if
+                anInteger is not an integer!</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>sqrt</b></td>
+                <td bgcolor="#FFCC99">Answer a floating point
+                number that is the positive square root of the
+                receiver.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>squared</b></td>
+                <td bgcolor="#FFCC99">Answer the receiver
+                multiplied by itself.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+</TBODY>        </table>
+        </center></div><h4>Methods for testing Numbers</h4>
+        <div align="center"><center><table border="1"
+        cellpadding="3" width="85%" bgcolor="#FFFFCC">
+<TBODY>            <tr>
+                <td bgcolor="#FFCC99"><b>Message</b></td>
+                <td bgcolor="#FFCC99"><p align="center"><b>Description</b></p>
+                </td>
+                <td bgcolor="#FFCC99"><b>Notes</b></td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>even</b></td>
+                <td bgcolor="#FFCC99">Answer whether the receiver
+                is even.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>odd</b></td>
+                <td bgcolor="#FFCC99">Answer whether the receiver
+                is odd.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>negative</b></td>
+                <td bgcolor="#FFCC99">Answer whether the receiver
+                is less than zero.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>positive</b></td>
+                <td bgcolor="#FFCC99">Answer whether the receiver
+                is greater than or equal to zero.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>strictlyPositive</b></td>
+                <td bgcolor="#FFCC99">Answer whether the receiver
+                is greater than zero.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>sign</b></td>
+                <td bgcolor="#FFCC99">Answer 1 if the receiver is
+                strictly positive, zero if the receiver is zero,
+                and -1 if the receiver is strictly negative.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>isZero</b></td>
+                <td bgcolor="#FFCC99">Answer whether the receiver
+                is zero.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+</TBODY>        </table>
+        </center></div><h4>Methods for truncating and rounding
+        Numbers</h4>
+        <div align="center"><center><table border="1"
+        cellpadding="3" width="85%" bgcolor="#FFFFCC">
+<TBODY>            <tr>
+                <td bgcolor="#FFCC99"><b>Message</b></td>
+                <td bgcolor="#FFCC99"><p align="center"><b>Description</b></p>
+                </td>
+                <td bgcolor="#FFCC99"><b>Notes</b></td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>ceiling</b></td>
+                <td bgcolor="#FFCC99">Answer the Integer nearest
+                the receiver toward positive infinity.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>floor</b></td>
+                <td bgcolor="#FFCC99">Answer the Integer nearest
+                the receiver toward negative infinity.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>truncated</b></td>
+                <td bgcolor="#FFCC99">Answer an integer nearest
+                the receiver toward zero.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>truncateTo:</b> aNumber</td>
+                <td bgcolor="#FFCC99">Answer the multiple of
+                aNumber that is nearest the receiver toward zero.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>rounded</b></td>
+                <td bgcolor="#FFCC99">Answer the integer nearest
+                the receiver.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>roundTo:</b> quantum</td>
+                <td bgcolor="#FFCC99">Answer the nearest number
+                to the receiver that is a multiple of quantum.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>roundUpTo:</b> quantum</td>
+                <td bgcolor="#FFCC99">Answer the multiple of
+                quantum that is nearest the receiver toward
+                infinity</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+</TBODY>        </table>
+        </center></div><h4>Methods for trigonometry on Numbers</h4>
+        <div align="center"><center><table border="1"
+        cellpadding="3" width="85%" bgcolor="#FFFFCC">
+<TBODY>            <tr>
+                <td bgcolor="#FFCC99"><b>Message</b></td>
+                <td bgcolor="#FFCC99"><p align="center"><b>Description</b></p>
+                </td>
+                <td bgcolor="#FFCC99"><b>Notes</b></td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>sin</b></td>
+                <td bgcolor="#FFCC99">Answer the sine of the
+                receiver taken as an angle in radians.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>cos</b></td>
+                <td bgcolor="#FFCC99">Answer the cosine of the
+                receiver taken as an angle in radians.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>tan</b></td>
+                <td bgcolor="#FFCC99">Answer the tangent of the
+                receiver taken as an angle in radians.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>degreeSin</b></td>
+                <td bgcolor="#FFCC99">Answer the sin of the
+                receiver taken as an angle in degrees.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>degreeCos</b></td>
+                <td bgcolor="#FFCC99">Answer the cosine of the
+                receiver taken as an angle in degrees.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>arcSin</b></td>
+                <td bgcolor="#FFCC99">Answer an angle in radians
+                whose sine is the receiver.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>arcCos</b></td>
+                <td bgcolor="#FFCC99">Answer an angle in radians
+                whose cosine is the receiver.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>arcTan</b></td>
+                <td bgcolor="#FFCC99">Answer an angle in radians
+                whose tangent is the receiver.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>arcTan:</b> denominator</td>
+                <td bgcolor="#FFCC99">Answer the angle in radians
+                whose tan is the receiver divided by denominator.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>degreesToRadians</b></td>
+                <td bgcolor="#FFCC99">Answer the receiver in
+                radians. Assumes the receiver is in degrees.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>radiansToDegrees</b></td>
+                <td bgcolor="#FFCC99">Answer the receiver in
+                degrees. Assumes the receiver is in radians.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+</TBODY>        </table>
+        </center></div><h3>Class Integer</h3>
+        <h4>Methods for arithmetic on Integers</h4>
+        <div align="center"><center><table border="1"
+        cellpadding="3" width="85%" bgcolor="#FFFFCC">
+<TBODY>            <tr>
+                <td bgcolor="#FFCC99"><b>Message</b></td>
+                <td bgcolor="#FFCC99"><p align="center"><b>Description</b></p>
+                </td>
+                <td bgcolor="#FFCC99"><b>Notes</b></td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>isPowerOfTwo</b></td>
+                <td bgcolor="#FFCC99">Answer whether the receiver
+                is a power of two.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>factorial</b></td>
+                <td bgcolor="#FFCC99">Answer the factorial of the
+                receiver.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>gcd:</b> anInteger</td>
+                <td bgcolor="#FFCC99">Answer the greatest common
+                denominator of the receiver and the argument.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>lcm:</b> anInteger</td>
+                <td bgcolor="#FFCC99">Answer the least common
+                multiple of the receiver and the argument.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>take:</b> r</td>
+                <td bgcolor="#FFCC99">Answer the number of
+                combinations of the receiver, taken r at a time.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+</TBODY>        </table>
+        </center></div><h4>Methods for bit manipulation on
+        Integers</h4>
+        <p>A range of bit manipulation operations are available
+        on Integers. They are rarely needed, however, so they are
+        not described here. Of course, they can be viewed using
+        the browser.</p>
+        <hr>
+        </td>
+    </tr>
+</TBODY></table>
+
+<table border="0" width="100%">
+<TBODY>    <tr>
+        <td><h2><a name="CollectionClasses"></a>Collection
+        Classes and Methods</h2>
+        <h3>The Collection Hierarchy</h3>
+        <div align="center"><center><table border="1"
+        cellpadding="3" width="85%" bgcolor="#FFFFCC">
+<TBODY>            <tr>
+                <td bgcolor="#FFCC99"><b>Class</b></td>
+                <td bgcolor="#FFCC99"><p align="center"><b>Description</b></p>
+                </td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99">Collection</td>
+                <td bgcolor="#FFCC99">Abstract Class for
+                Collections</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99">&nbsp;&nbsp;&nbsp;&nbsp;Bag</td>
+                <td bgcolor="#FFCC99">Unordered, unindexed
+                collection of objects</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99">&nbsp;&nbsp;&nbsp;&nbsp;Set</td>
+                <td bgcolor="#FFCC99">Unordered, unindexed
+                collection of unique objects</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dictionary</td>
+                <td bgcolor="#FFCC99">Set of associations (values
+                are indexable by keys)</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IdentityDictionary</td>
+                <td bgcolor="#FFCC99">Dictionary, but comparisons
+                are done using ==</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IdentitySet</td>
+                <td bgcolor="#FFCC99">Set, but comparisons are
+                done using ==</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99">&nbsp;&nbsp;&nbsp;&nbsp;SequenceableCollection</td>
+                <td bgcolor="#FFCC99">Ordered collection, indexed
+                by integers</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OrderedCollection</td>
+                <td bgcolor="#FFCC99">Ordered according to manner
+                elements are added and removed</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SortedCollection</td>
+                <td bgcolor="#FFCC99">Ordered according to value
+                of a &quot;sortBlock&quot;</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LinkedList</td>
+                <td bgcolor="#FFCC99">Homogeneous
+                SequenceableCollection of Links</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Interval</td>
+                <td bgcolor="#FFCC99">Homogeneous sequence of
+                arithmetic progression of Integers</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ArrayedCollection</td>
+                <td bgcolor="#FFCC99">Ordered collection, indexed
+                by fixed range of Integers</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Array</td>
+                <td bgcolor="#FFCC99">ArrayedCollection of
+                arbitrary Objects</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Array2D</td>
+                <td bgcolor="#FFCC99">Homogeneous
+                ArrayedCollection of Arrays</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ByteArray</td>
+                <td bgcolor="#FFCC99">Homogeneous
+                ArrayedCollection of Bytes (Integers -128..255)</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FloatArray</td>
+                <td bgcolor="#FFCC99">Homogeneous
+                ArrayedCollection of Floating point numbers</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IntegerArray</td>
+                <td bgcolor="#FFCC99">Homogeneous
+                ArrayedCollection of Signed 32-bit Integers</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PointArray</td>
+                <td bgcolor="#FFCC99">Homogeneous
+                ArrayedCollection of Points (with 32-bit values)</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RunArray</td>
+                <td bgcolor="#FFCC99">Homogeneous
+                ArrayedCollection of Integers (sparse RLE
+                representation)</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ShortIntegerArray</td>
+                <td bgcolor="#FFCC99">Homogeneous
+                ArrayedCollection of Signed 16-bit Integers</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ShortPointArray</td>
+                <td bgcolor="#FFCC99">Homogeneous
+                ArrayedCollection of Points (with 16-bit values)</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ShortRunArray</td>
+                <td bgcolor="#FFCC99">Homogeneous
+                ArrayedCollection of Signed 16-bit Ints (sparse
+                RLE rep)</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String</td>
+                <td bgcolor="#FFCC99">Homogeneous
+                ArrayedCollection of Characters</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Symbol</td>
+                <td bgcolor="#FFCC99">Homogeneous
+                ArrayedCollection of Characters (with unique
+                instance property)</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Text</td>
+                <td bgcolor="#FFCC99">Homogeneous
+                ArrayedCollection of Characters with associated
+                text attributes</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;WordArray</td>
+                <td bgcolor="#FFCC99">Homogeneous
+                ArrayedCollection of Unsigned 32-bit Integers</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Heap</td>
+                <td bgcolor="#FFCC99">Like SortedCollection, but
+                stores information as a heap. (see Heapsort)</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MappedCollection</td>
+                <td bgcolor="#FFCC99">Means for accessing an
+                indexable Collection, using a mapping from a
+                collection of &quot;external&quot; keys to the
+                accessed collection's &quot;indexing&quot; keys.
+                The MappedCollection can then be used directly,
+                indexing and changing the accessed collection via
+                the external keys.</td>
+            </tr>
+</TBODY>        </table>
+        </center></div><h3>Class Collection</h3>
+        <h4>Methods for creating Collections (Class Side)</h4>
+        <div align="center"><center><table border="1"
+        cellpadding="3" width="85%" bgcolor="#FFFFCC">
+<TBODY>            <tr>
+                <td bgcolor="#FFCC99"><b>Message</b></td>
+                <td bgcolor="#FFCC99"><p align="center"><b>Description</b></p>
+                </td>
+                <td bgcolor="#FFCC99"><b>Notes</b></td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>with:</b> anObject</td>
+                <td bgcolor="#FFCC99">Answer an instance of the
+                receiver containing anObject</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>with:</b> firstObject <b>with:</b>
+                secondObject</td>
+                <td bgcolor="#FFCC99">Answer an instance of the
+                receiver containing all the arguments as elements.
+                (Squeak recognizes instantiators of this type up
+                to six &quot;with:&quot; clauses).</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>withAll:</b> aCollection</td>
+                <td bgcolor="#FFCC99">Answer an instance of the
+                receiver containing all the elements from
+                aCollection.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+</TBODY>        </table>
+        </center></div><h4>Methods for testing Collections</h4>
+        <div align="center"><center><table border="1"
+        cellpadding="3" width="85%" bgcolor="#FFFFCC">
+<TBODY>            <tr>
+                <td bgcolor="#FFCC99"><b>Message</b></td>
+                <td bgcolor="#FFCC99"><p align="center"><b>Description</b></p>
+                </td>
+                <td bgcolor="#FFCC99"><b>Notes</b></td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>isEmpty</b></td>
+                <td bgcolor="#FFCC99">Answer whether the receiver
+                contains any elements.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>occurrencesOf:</b>
+                anObject</td>
+                <td bgcolor="#FFCC99">Answer how many of the
+                receiver's elements are equal to anObject.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>anySatisfy:</b> aBlock</td>
+                <td bgcolor="#FFCC99">Evaluate aBlock with the
+                elements of the receiver. If aBlock returns true
+                for any element return true. Otherwise return
+                false</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>allSatisfy:</b> aBlock</td>
+                <td bgcolor="#FFCC99">Evaluate aBlock with the
+                elements of the receiver. If aBlock returns true
+                for all elements return true. Otherwise return
+                false</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>includes:</b> anObject</td>
+                <td bgcolor="#FFCC99">Answer whether anObject is
+                one of the receiver's elements.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>includesAllOf:</b>
+                aCollection</td>
+                <td bgcolor="#FFCC99">Answer whether all the
+                elements of aCollection are in the receiver.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>includesAnyOf:</b>
+                aCollection</td>
+                <td bgcolor="#FFCC99">Answer whether any element
+                of aCollection is one of the receiver's elements.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+</TBODY>        </table>
+        </center></div><h4><a
+        name="adding and removing Collection"></a>Methods for
+        adding and removing Collection elements</h4>
+        <div align="center"><center><table border="1"
+        cellpadding="3" width="85%" bgcolor="#FFFFCC">
+<TBODY>            <tr>
+                <td bgcolor="#FFCC99"><b>Message</b></td>
+                <td bgcolor="#FFCC99"><p align="center"><b>Description</b></p>
+                </td>
+                <td bgcolor="#FFCC99"><b>Notes</b></td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>anyOne</b></td>
+                <td bgcolor="#FFCC99">Answer a specimen element
+                of the receiver (any one at all). Signal an error
+                if the receiver is empty.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>add:</b> newObject</td>
+                <td bgcolor="#FFCC99">Include newObject as one of
+                the receiver's elements. Answer newObject.
+                ArrayedCollections cannot respond to this message.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>addAll:</b> newObject</td>
+                <td bgcolor="#FFCC99">Include all the elements of
+                aCollection as the receiver's elements. Answer
+                aCollection.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>remove:</b> oldObject</td>
+                <td bgcolor="#FFCC99">Remove oldObject as one of
+                the receiver's elements. Answer oldObject unless
+                no element is equal to oldObject, in which case,
+                signal an Error.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>remove:</b> oldObject <b>ifAbsent:</b>
+                anExceptionBlock</td>
+                <td bgcolor="#FFCC99">Remove oldObject as one of
+                the receiver's elements. If several of the
+                elements are equal to oldObject, only one is
+                removed. If no element is equal to oldObject,
+                answer the result of evaluating anExceptionBlock.
+                Otherwise, answer oldObject.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>removeAll:</b>
+                aCollection</td>
+                <td bgcolor="#FFCC99">Remove each element of
+                aCollection from the receiver. If successful for
+                each, answer aCollection. Otherwise signal an
+                Error.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>removeAllFoundIn:</b>
+                aCollection</td>
+                <td bgcolor="#FFCC99">Remove from the receiver
+                each element of aCollection that is present in
+                the receiver.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>removeAllSuchThat:</b>
+                aBlock</td>
+                <td bgcolor="#FFCC99">Evaluate aBlock with each
+                element as argument, and remove that element if
+                the answer is true.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>difference:</b>
+                secondCollection</td>
+                <td bgcolor="#FFCC99">Answer a new collection
+                that is computed by copying the receiver and
+                removing all the elements found in
+                secondCollection.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+</TBODY>        </table>
+        </center></div><h4><a name="Enumerating Collections"></a>Methods
+        for enumerating Collections</h4>
+        <div align="center"><center><table border="1"
+        cellpadding="3" width="85%" bgcolor="#FFFFCC">
+<TBODY>            <tr>
+                <td bgcolor="#FFCC99"><b>Message</b></td>
+                <td bgcolor="#FFCC99"><p align="center"><b>Description</b></p>
+                </td>
+                <td bgcolor="#FFCC99"><b>Notes</b></td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>do:</b> aBlock</td>
+                <td bgcolor="#FFCC99">Evaluate aBlock with each
+                of the receiver's elements as the argument.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>do:</b> aBlock <b>separatedBy:</b>
+                separatorBlock</td>
+                <td bgcolor="#FFCC99">Evaluate aBlock for all
+                elements in the receiver, and if there is more
+                than one element, evaluate the separatorBlock
+                between each pair of elements in the receiver.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>select:</b>
+                aPredicateBlock</td>
+                <td bgcolor="#FFCC99">Evaluate aPredicateBlock
+                with each of the receiver's elements as the
+                argument. Collect into a new collection like the
+                receiver, only those elements for which
+                aPredicateBlock evaluates to true. Answer the new
+                collection.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>reject:</b>
+                aPredicateBlock</td>
+                <td bgcolor="#FFCC99">Evaluate aPredicateBlock
+                with each of the receiver's elements as the
+                argument. Collect into a new collection like the
+                receiver only those elements for which
+                aPredicateBlock evaluates to false. Answer the
+                new collection.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>collect:</b>
+                aMappingBlock</td>
+                <td bgcolor="#FFCC99">Evaluate aMappingBlock with
+                each of the receiver's elements as the argument.
+                Collect the resulting values into a collection
+                like the receiver. Answer the new collection.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>detect:</b>
+                aPredicateBlock</td>
+                <td bgcolor="#FFCC99">Evaluate aPredicateBlock
+                with each of the receiver's elements as the
+                argument. Answer the first element for which
+                aPredicateBlock answers true. Signal an Error if
+                none are found.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>detect:</b>
+                aPredicateBlock <b>ifNone:</b> exceptionBlock</td>
+                <td bgcolor="#FFCC99">Evaluate aPredicateBlock
+                with each of the receiver's elements as the
+                argument. Answer the first element for which
+                aPredicateBlock evaluates to true. If there is
+                none, answer the result of evaluating
+                exceptionBlock.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>inject:</b> initialValue
+                <b>into:</b> binaryBlock</td>
+                <td bgcolor="#FFCC99">Accumulate a running value
+                associated with evaluating binaryBlock. The
+                running value is initialized to initialValue. The
+                current running value and the next element of the
+                receiver are provided as the arguments to
+                binaryBlock. For example, to compute the sum of
+                the elements of a numeric collection, aCollection
+                <b>inject:</b> 0 <b>into:</b> [:subTotal :next |
+                subTotal + next].</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>collect:</b>
+                aMappingBlock <b>thenSelect:</b> aPredicateBlock</td>
+                <td bgcolor="#FFCC99">Evaluate aMappingBlock with
+                each of the receiver's elements as the argument.
+                Collect the resulting values that satisfy
+                aPredicateBlock into a collection like the
+                receiver. Answer the new collection.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>select:</b>
+                aPredicateBlock <b>thenCollect:</b> aMappingBlock</td>
+                <td bgcolor="#FFCC99">Evaluate aMappingBlock with
+                each of the receiver's elements for which
+                aPredicateBlock answers true as the argument.
+                Collect the resulting values into a collection
+                like the receiver. Answer the new collection.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>count:</b>
+                aPredicateBlock</td>
+                <td bgcolor="#FFCC99">Evaluate aPredicateBlock
+                with each of the receiver's elements as the
+                argument. Return the number that answered true.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+</TBODY>        </table>
+        </center></div><h3>Bag</h3>
+        <h4>Methods for accessing Bags</h4>
+        <div align="center"><center><table border="1"
+        cellpadding="3" width="85%" bgcolor="#FFFFCC">
+<TBODY>            <tr>
+                <td bgcolor="#FFCC99"><b>Message</b></td>
+                <td bgcolor="#FFCC99"><p align="center"><b>Description</b></p>
+                </td>
+                <td bgcolor="#FFCC99"><b>Notes</b></td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>add:</b> newObject <b>withOccurrences:</b>
+                anInteger</td>
+                <td bgcolor="#FFCC99">Add the element newObject
+                to the receiver. Do so as though the element were
+                added anInteger number of times. Answer newObject.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+</TBODY>        </table>
+        </center></div><h3>Dictionary and IdentityDictionary</h3>
+        <h4>Methods for Accessing Dictionaries</h4>
+        <p>Dictionaries are homogenous Sets of key and value
+        pairs. These pairs are called Associations: key and value
+        can be any object. Instances of Association are created
+        by sending the binary message &quot;<code>key -&gt; value</code>&quot;
+        (<code>-&gt;</code> is defined in Object). Dictionaries
+        have the property that each key occurs at most once.
+        IdentityDictionaries have the same property, but
+        determine uniqueness of keys using == instead of =. In
+        ordinary use, both kinds of Dictionary are indexed using
+        the unique key to obtain the corresponding value.</p>
+        <div align="center"><center><table border="1"
+        cellpadding="3" width="85%" bgcolor="#FFFFCC">
+<TBODY>            <tr>
+                <td bgcolor="#FFCC99"><b>Message</b></td>
+                <td bgcolor="#FFCC99"><p align="center"><b>Description</b></p>
+                </td>
+                <td bgcolor="#FFCC99"><b>Notes</b></td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>at:</b> aKey</td>
+                <td bgcolor="#FFCC99">Answer the value associated
+                with aKey. Signal an Error if no value is
+                associated with aKey.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>at:</b> aKey <b>ifAbsent:</b>
+                aBlock</td>
+                <td bgcolor="#FFCC99">Answer the value associated
+                with aKey. If no value is associated with aKey,
+                answer the value of aBlock.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>associationAt:</b> aKey</td>
+                <td bgcolor="#FFCC99">Answer the association
+                whose key is aKey. If there is none, signal an
+                Error</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>associationAt:</b> aKey <b>ifAbsent:</b>
+                aBlock</td>
+                <td bgcolor="#FFCC99">Answer the association
+                whose key is aKey. If there is none, answer the
+                value of aBlock.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>keyAtValue:</b> aValue</td>
+                <td bgcolor="#FFCC99">Answer the key of the first
+                association having aValue as its value. If there
+                is none, signal an Error.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>keyAtValue:</b> aValue <b>ifAbsent:</b>
+                exceptionBlock</td>
+                <td bgcolor="#FFCC99">Answer the key of the first
+                association having aValue as its value. If there
+                is none, answer the result of evaluating
+                exceptionBlock.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>keys</b></td>
+                <td bgcolor="#FFCC99">Answer a Set containing the
+                receiver's keys.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>values</b></td>
+                <td bgcolor="#FFCC99">Answer an Array containing
+                the receiver's values.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>includes:</b> aValue</td>
+                <td bgcolor="#FFCC99">Does the receiver contain a
+                value equal to aValue?</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>includesKey:</b>
+                aKey&gt;</td>
+                <td bgcolor="#FFCC99">Does the receiver have a
+                key equal to aKey?</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>do:</b> aBlock</td>
+                <td bgcolor="#FFCC99">Evaluate aBlock with each
+                of the receiver's values as argument.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>keysDo:</b> aBlock</td>
+                <td bgcolor="#FFCC99">Evaluate aBlock with each
+                of the receiver's keys as argument.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>valuesDo:</b> aBlock</td>
+                <td bgcolor="#FFCC99">same as <b>do:</b></td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>keysAndValuesDo:</b>
+                aBinaryBlock</td>
+                <td bgcolor="#FFCC99">Evaluate aBinaryBlock with
+                each of the receiver's keys and the associated
+                value as the <em>two</em> arguments.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>associationsDo:</b>
+                aBlock</td>
+                <td bgcolor="#FFCC99">Evaluate aBlock with each
+                of the receiver's elements (key/value
+                associations) as the argument.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+</TBODY>        </table>
+        </center></div><h3>Sequenceable Collection</h3>
+        <h4>Methods for accessing SequenceableCollections</h4>
+        <div align="center"><center><table border="1"
+        cellpadding="3" width="85%" bgcolor="#FFFFCC">
+<TBODY>            <tr>
+                <td bgcolor="#FFCC99"><b>Message</b></td>
+                <td bgcolor="#FFCC99"><p align="center"><b>Description</b></p>
+                </td>
+                <td bgcolor="#FFCC99"><b>Notes</b></td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>atAll:</b>
+                indexCollection</td>
+                <td bgcolor="#FFCC99">Answer a collection
+                containing the elements of the receiver specified
+                by the integer elements of the argument,
+                indexCollection.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>atAll:</b> aCollection <b>put:</b>
+                anObject</td>
+                <td bgcolor="#FFCC99">Put anObject at every index
+                specified by the integer elements of the
+                argument, aCollection.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>atAllPut:</b> anObject</td>
+                <td bgcolor="#FFCC99">Put anObject at every one
+                of the receiver's indices.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>first</b></td>
+                <td bgcolor="#FFCC99">Answer the first element of
+                the receiver. (Squeak also recognizes second,
+                third, fourth, fifth and sixth). Signal an error
+                if there aren't sufficient elements in the
+                receiver.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>middle</b></td>
+                <td bgcolor="#FFCC99">Answer the median element
+                of the receiver. Signal an error if the receiver
+                is empty.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>last</b></td>
+                <td bgcolor="#FFCC99">Answer the last element of
+                the receiver. Signal an error if the receiver is
+                empty.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>allButFirst</b></td>
+                <td bgcolor="#FFCC99">Answer a collection equal
+                to the receiver, but without the first element.
+                Signal an error if the receiver is empty.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>allButLast</b></td>
+                <td bgcolor="#FFCC99">Answer a collection equal
+                to the receiver, but without the last element.
+                Signal an error if the receiver is empty.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>indexOf:</b> anElement</td>
+                <td bgcolor="#FFCC99">Answer the index of
+                anElement within the receiver. If the receiver
+                does not contain anElement, answer 0.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>indexOf:</b> anElement <b>ifAbsent:</b>
+                exceptionBlock</td>
+                <td bgcolor="#FFCC99">Answer the index of
+                anElement within the receiver. If the receiver
+                does not contain anElement, answer the result of
+                evaluating the argument, exceptionBlock.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>indexOfSubCollection:</b>
+                aSubCollection <b>startingAt:</b> anIndex</td>
+                <td bgcolor="#FFCC99">Answer the index of the
+                receiver's first element, such that that element
+                equals the first element of aSubCollection, and
+                the next elements equal the rest of the elements
+                of aSubCollection. Begin the search at element
+                anIndex of the receiver. If no such match is
+                found, answer 0.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>indexOfSubCollection:</b>
+                aSubCollection <b>startingAt:</b> anIndex <b>ifAbsent:</b>
+                exceptionBlock</td>
+                <td bgcolor="#FFCC99">Answer the index of the
+                receiver's first element, such that that element
+                equals the first element of sub, and the next
+                elements equal the rest of the elements of sub.
+                Begin the search at element start of the receiver.
+                If no such match is found, answer the result of
+                evaluating argument, exceptionBlock.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>replaceFrom:</b> start <b>to:</b>
+                stop <b>with:</b> replacementCollection</td>
+                <td bgcolor="#FFCC99">This destructively replaces
+                elements from start to stop in the receiver.
+                Answer the receiver itself. Use <b>copyReplaceFrom:to:with:</b>
+                for insertion/deletion that may alter the size of
+                the result.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>replaceFrom:</b> start <b>to:</b>
+                <b>stop:</b> <b>with:</b> replacementCollection <b>startingAt:</b>
+                repStart</td>
+                <td bgcolor="#FFCC99">This destructively replaces
+                elements from start to stop in the receiver
+                starting at index, repStart, in the sequenceable
+                collection, replacementCollection. Answer the
+                receiver. No range checks are performed.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+</TBODY>        </table>
+        </center></div><h4>Methods for copying
+        SequenceableCollections</h4>
+        <div align="center"><center><table border="1"
+        cellpadding="3" width="85%" bgcolor="#FFFFCC">
+<TBODY>            <tr>
+                <td bgcolor="#FFCC99"><b>Message</b></td>
+                <td bgcolor="#FFCC99"><p align="center"><b>Description</b></p>
+                </td>
+                <td bgcolor="#FFCC99"><b>Notes</b></td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99">, otherCollection</td>
+                <td bgcolor="#FFCC99">Answer a new collection
+                comprising the receiver concatenated with the
+                argument, otherCollection.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>copyFrom:</b> start <b>to:</b>
+                stop</td>
+                <td bgcolor="#FFCC99">Answer a copy of a subset
+                of the receiver that contains all the elements
+                between index start and index stop, inclusive of
+                both.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>copyReplaceAll:</b>
+                oldSubCollection <b>with:</b> newSubCollection</td>
+                <td bgcolor="#FFCC99">Answer a copy of the
+                receiver in which all occurrences of oldSubstring
+                have been replaced by newSubstring.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>copyReplaceFrom:</b>
+                start <b>to:</b> stop <b>with:</b>
+                replacementCollection</td>
+                <td bgcolor="#FFCC99">Answer a copy of the
+                receiver satisfying the following conditions: If
+                stop is less than start, then this is an
+                insertion; stop should be exactly start-1. start
+                = 1 means insert before the first character,
+                start = size+1 means append after last character.
+                Otherwise, this is a replacement; start and stop
+                have to be within the receiver's bounds.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>copyWith:</b> newElement</td>
+                <td bgcolor="#FFCC99">Answer a copy of the
+                receiver that is 1 bigger than the receiver and
+                has newElement at the last element.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>copyWithout:</b>
+                oldElement</td>
+                <td bgcolor="#FFCC99">Answer a copy of the
+                receiver from which all occurrences of oldElement
+                have been left out.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>copyWithoutAll:</b>
+                aCollection</td>
+                <td bgcolor="#FFCC99">Answer a copy of the
+                receiver from which all occurrences of all
+                elements in aCollection have been removed.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>forceTo:</b> length <b>paddingWith:</b>
+                anElement</td>
+                <td bgcolor="#FFCC99">Answer a copy of the
+                receiver with the specified length. If necessary,
+                pad with anElement</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>reversed</b></td>
+                <td bgcolor="#FFCC99">Answer a copy of the
+                receiver in which the sequencing of all the
+                elements has been reversed.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>shuffled</b></td>
+                <td bgcolor="#FFCC99">Answer a copy of the
+                receiver in which the elements have been permuted
+                randomly.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>sortBy:</b> aBinaryBlock</td>
+                <td bgcolor="#FFCC99">Answer a copy that is
+                sorted. Sort criteria is aBinaryBlock. When the
+                block is true, the first arg goes first (so [:a :b
+                | a &gt; b] sorts in descending order).</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+</TBODY>        </table>
+        </center></div><h4>Methods for enumerating
+        SequenceableCollections</h4>
+        <div align="center"><center><table border="1"
+        cellpadding="3" width="85%" bgcolor="#FFFFCC">
+<TBODY>            <tr>
+                <td bgcolor="#FFCC99"><b>Message</b></td>
+                <td bgcolor="#FFCC99"><p align="center"><b>Description</b></p>
+                </td>
+                <td bgcolor="#FFCC99"><b>Notes</b></td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>findFirst:</b> aBlock</td>
+                <td bgcolor="#FFCC99">Return the index of the
+                receiver's first element for which aBlock
+                evaluates as true.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>findLast:</b> aBlock</td>
+                <td bgcolor="#FFCC99">Return the index of the
+                receiver's last element for which aBlock
+                evaluates as true.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>keysAndValuesDo:</b>
+                aBinaryBlock</td>
+                <td bgcolor="#FFCC99">Evaluate aBinaryBlock once
+                with each valid index for the receiver in order,
+                along with the corresponding value in the
+                receiver for that index.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>reverseDo:</b> aBlock</td>
+                <td bgcolor="#FFCC99">Evaluate aBlock with each
+                of the receiver's elements as the argument,
+                starting with the last element and taking each in
+                sequence up to the first. For
+                SequenceableCollections, this is the reverse of
+                the enumeration for #do:.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>with:</b>
+                otherCollection <b>do:</b> binaryBlock</td>
+                <td bgcolor="#FFCC99">Evaluate binaryBlock with
+                corresponding elements from this collection and
+                otherCollection.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>reverseWith:</b>
+                otherCollection <b>do:</b> aBinaryBlock</td>
+                <td bgcolor="#FFCC99">Evaluate aBinaryBlock with
+                each of the receiver's elements, in reverse
+                order, along with the corresponding element, also
+                in reverse order, from otherCollection.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+</TBODY>        </table>
+        </center></div><h3>OrderedCollections</h3>
+        <h4>Methods for accessing OrderedCollections</h4>
+        <div align="center"><center><table border="1"
+        cellpadding="3" width="85%" bgcolor="#FFFFCC">
+<TBODY>            <tr>
+                <td bgcolor="#FFCC99"><b>Message</b></td>
+                <td bgcolor="#FFCC99"><p align="center"><b>Description</b></p>
+                </td>
+                <td bgcolor="#FFCC99"><b>Notes</b></td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>add:</b> newObject <b>before:</b>
+                oldObject</td>
+                <td bgcolor="#FFCC99">Add the argument,
+                newObject, as an element of the receiver. Put it
+                in the sequence just preceding oldObject. Answer
+                newObject.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>add:</b> newObject <b>after:</b>
+                oldObject</td>
+                <td bgcolor="#FFCC99">Add the argument,
+                newObject, as an element of the receiver. Put it
+                in the sequence just succeeding oldObject. Answer
+                newObject.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>add:</b> newObject <b>afterIndex:</b>
+                index</td>
+                <td bgcolor="#FFCC99">Add the argument,
+                newObject, as an element of the receiver. Put it
+                in the sequence just after index. Answer
+                newObject.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>addFirst:</b> anElement</td>
+                <td bgcolor="#FFCC99">Add newObject to the
+                beginning of the receiver. Answer newObject.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>addAllFirst:</b>
+                anOrderedCollection</td>
+                <td bgcolor="#FFCC99">Add each element of
+                anOrderedCollection at the beginning of the
+                receiver. Answer anOrderedCollection.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>addLast:</b> anElement</td>
+                <td bgcolor="#FFCC99">Add newObject to the end of
+                the receiver. Answer newObject.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>addAllLast:</b>
+                anOrderedCollection</td>
+                <td bgcolor="#FFCC99">Add each element of
+                anOrderedCollection at the end of the receiver.
+                Answer anOrderedCollection.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>removeAt:</b> anIndex</td>
+                <td bgcolor="#FFCC99">remove the element of the
+                receiver at location anIndex. Answers the element
+                removed.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>removeFirst</b></td>
+                <td bgcolor="#FFCC99">Remove the first element of
+                the receiver and answer it. If the receiver is
+                empty, signal an Error.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>removeLast</b></td>
+                <td bgcolor="#FFCC99">Remove the last element of
+                the receiver and answer it. If the receiver is
+                empty, signal an Error.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+</TBODY>        </table>
+        </center></div><h3>Strings</h3>
+        <p>String is an extensive class, built over the ages in
+        something of an <i>ad hoc</i> manner. We describe here
+        only a small fraction of the methods provided (there are
+        about 300!)</p>
+        </td>
+    </tr>
+    <tr>
+        <td><h4>Methods for accessing Strings</h4>
+        <div align="center"><center><table border="1"
+        cellpadding="3" width="85%" bgcolor="#FFFFCC">
+<TBODY>            <tr>
+                <td bgcolor="#FFCC99"><b>Message</b></td>
+                <td bgcolor="#FFCC99"><p align="center"><b>Description</b></p>
+                </td>
+                <td bgcolor="#FFCC99"><b>Notes</b></td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>findAnySubStr:</b>
+                delimiters <b>startingAt:</b> start</td>
+                <td bgcolor="#FFCC99">Answer the index of the
+                character within the receiver, starting at start,
+                that begins a substring matching one of the
+                delimiters; delimiters is an Array of Strings and/or
+                Characters. If the receiver does not contain any
+                of the delimiters, answer size + 1.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>findBetweenSubStrs:</b>
+                delimiters</td>
+                <td bgcolor="#FFCC99">Answer the collection of
+                tokens that results from parsing the receiver.
+                And of the Strings (or Characters) in the Array
+                delimiters is recognized as separating tokens.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>findDelimiters:</b>
+                delimiters <b>startingAt:</b> start</td>
+                <td bgcolor="#FFCC99">Answer the index of the
+                character within the receiver, starting at start,
+                that matches one of the delimiters. If the
+                receiver does not contain any of the delimiters,
+                answer size + 1.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>findString:</b>
+                subString</td>
+                <td bgcolor="#FFCC99">Answer the first index of
+                subString within the receiver. If the receiver
+                does not contain subString, answer 0.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>findString:</b>
+                subString <b>startingAt:</b> start</td>
+                <td bgcolor="#FFCC99">Answer the index of
+                subString within the receiver, starting at start.
+                If the receiver does not contain subString,
+                answer 0.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>findTokens:</b>
+                delimiters</td>
+                <td bgcolor="#FFCC99">Answer the collection of
+                tokens that results from parsing the receiver.
+                Any character in the argument, delimiters, marks
+                a border. Several delimiters in a row are
+                considered as just one separator</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>indexOf:</b> aCharacter</td>
+                <td bgcolor="#FFCC99">Answer the index of the
+                first occurrence of aCharacter in the receiver. 0
+                Otherwise.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>indexOf:</b> aCharacter <b>startingAt:</b>
+                start</td>
+                <td bgcolor="#FFCC99">Answer the index of the
+                first occurrence of aCharacter in the receiver,
+                beginning at index start. 0 Otherwise.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>indexOf:</b> aCharacter <b>startingAt:</b>
+                start <b>ifAbsent:</b> aBlock</td>
+                <td bgcolor="#FFCC99">Answer the index of the
+                first occurrence of aCharacter in the receiver,
+                beginning at index start. If not present, answer
+                the value of aBlock.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>indexOfAnyOf:</b>
+                aCharacterSet</td>
+                <td bgcolor="#FFCC99">Answers the index of the
+                first occurrence in the receiver of any character
+                in the given set. Returns 0 if none is found.</td>
+                <td bgcolor="#FFCC99">&nbsp;1</td>
+            </tr>
+</TBODY>        </table>
+        </center></div><p>Notes</p>
+        <ol>
+            <li>As with #indexOf:, there are corresponding
+                messages #indexOfAnyOf:ifAbsent:, #indexOfAnyOf:startingAt:
+                and #indexOfAnyOf:startingAt:ifAbsent:) </li>
+        </ol>
+        <h4>Methods for comparing Strings</h4>
+        <div align="center"><center><table border="1"
+        cellpadding="3" width="85%" bgcolor="#FFFFCC">
+<TBODY>            <tr>
+                <td bgcolor="#FFCC99"><b>Message</b></td>
+                <td bgcolor="#FFCC99"><p align="center"><b>Description</b></p>
+                </td>
+                <td bgcolor="#FFCC99"><b>Notes</b></td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99">= aString</td>
+                <td bgcolor="#FFCC99">Answer whether the receiver
+                is equal to aString.The comparison is case-sensitive,</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99">&lt; aString,<br>
+                &lt;= aString<br>
+                &gt; aString<br>
+                &gt;= aString</td>
+                <td bgcolor="#FFCC99">Answer whether the receiver
+                sorts as indicated with aString. The collation
+                order is that of the Squeak character set, and
+                therefore case-sensitive,</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>sameAs:</b> aString</td>
+                <td bgcolor="#FFCC99">Answer whether the receiver
+                is equal to aString, ignoring differences of case.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>compare:</b> aString</td>
+                <td bgcolor="#FFCC99">Answer a code defining how
+                the receiver sorts relative to the argument,
+                aString. 1 - receiver before aString; 2 -
+                receiver equal to aString; and 3 - receiver after
+                aString. The collation sequence is that of the
+                Squeak character set and is case insensitive.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>match:</b> text</td>
+                <td bgcolor="#FFCC99">Answer whether text matches
+                the pattern in the receiver. Matching ignores
+                upper/lower case differences. Where the receiver
+                contains #, text may contain any character. Where
+                the receiver contains *, text may contain any
+                sequence of characters.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>beginsWith:</b> prefix</td>
+                <td bgcolor="#FFCC99">Answer whether the receiver
+                begins with the argument, prefix.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>endsWith:</b> prefix</td>
+                <td bgcolor="#FFCC99">Answer whether the receiver
+                ends with the argument, prefix.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>alike:</b> aString</td>
+                <td bgcolor="#FFCC99">Answer a non-negative
+                integer indicating how similar the receiver is to
+                aString. 0 means &quot;not at all alike&quot;.
+                The best score is <code>aString size * 2.</code></td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+</TBODY>        </table>
+        </center></div><h4>Methods for converting Strings</h4>
+        <div align="center"><center><table border="1"
+        cellpadding="3" width="85%" bgcolor="#FFFFCC">
+<TBODY>            <tr>
+                <td bgcolor="#FFCC99"><b>Message</b></td>
+                <td bgcolor="#FFCC99"><p align="center"><b>Description</b></p>
+                </td>
+                <td bgcolor="#FFCC99"><b>Notes</b></td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>asLowercase</b></td>
+                <td bgcolor="#FFCC99">Answer a new String that
+                matches the receiver but without any upper case
+                characters.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>asUppercase</b></td>
+                <td bgcolor="#FFCC99">Answer a new String that
+                matches the receiver but without any lower case
+                characters.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>capitalized</b></td>
+                <td bgcolor="#FFCC99">Answer a copy of the
+                receiver with the first character capitalized if
+                it is a letter.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>asDisplayText</b></td>
+                <td bgcolor="#FFCC99">Answer a copy of the
+                receiver with default font and style information.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>asInteger</b></td>
+                <td bgcolor="#FFCC99">Attempts to parse the
+                receiver as an Integer. Answers the Integer, or
+                nil if the receiver does not start with a digit.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>asNumber</b></td>
+                <td bgcolor="#FFCC99">Attempts to parse the
+                receiver as a Number. It is an error if the
+                receiver does not start with a digit.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>asDate</b></td>
+                <td bgcolor="#FFCC99">Attempts to parse the
+                receiver as a date, and answers an appropriate
+                instance of class Date. Many formats are
+                recognized.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+</TBODY>        </table>
+        </center></div><hr>
+        <h2><a name="StreamClasses"></a>Streaming Classes and
+        Methods</h2>
+        <h3>The Stream Hierarchy</h3>
+        <div align="center"><center><table border="1"
+        cellpadding="3" width="85%" bgcolor="#FFFFCC">
+<TBODY>            <tr>
+                <td bgcolor="#FFCC99"><b>Class</b></td>
+                <td bgcolor="#FFCC99"><p align="center"><b>Description</b></p>
+                </td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99">Stream</td>
+                <td bgcolor="#FFCC99">Abstract Class for
+                Accessors</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99">&nbsp;&nbsp;&nbsp;&nbsp;PositionableStream</td>
+                <td bgcolor="#FFCC99">Accessors for Collections
+                Indexable by an Integer</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ReadStream</td>
+                <td bgcolor="#FFCC99">Read-Only</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;WriteStream</td>
+                <td bgcolor="#FFCC99">Write-Only</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ReadWriteStream</td>
+                <td bgcolor="#FFCC99">Read and/or Write</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FileStream</td>
+                <td bgcolor="#FFCC99">Accessors for collections
+                whose elements are &quot;paged in&quot;</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;StandardFileStream</td>
+                <td bgcolor="#FFCC99">Accessors for files
+                accessed from a file system</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CrLfFileStream</td>
+                <td bgcolor="#FFCC99">Automatically handles
+                system-specific line endings</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99">&nbsp;&nbsp;&nbsp;&nbsp;DummyStream</td>
+                <td bgcolor="#FFCC99">Like /dev/null</td>
+            </tr>
+</TBODY>        </table>
+        </center></div><h3>Class Stream</h3>
+        <p>Stream is an abstract class for an accessor to a
+        sequence of objects, called the contents. The stream is
+        said to be &quot;advanced&quot; when the stream is
+        configured to access a later element of the contents.</p>
+        <h4>Methods for accessing Streams</h4>
+        <div align="center"><center><table border="1"
+        cellpadding="3" width="85%" bgcolor="#FFFFCC">
+<TBODY>            <tr>
+                <td bgcolor="#FFCC99"><b>Message</b></td>
+                <td bgcolor="#FFCC99"><p align="center"><b>Description</b></p>
+                </td>
+                <td bgcolor="#FFCC99"><b>Notes</b></td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>contents</b></td>
+                <td bgcolor="#FFCC99">Answer the entire contents
+                of the receiver.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>next</b></td>
+                <td bgcolor="#FFCC99">Answer the next object
+                accessible by the receiver.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>next:</b> anInteger</td>
+                <td bgcolor="#FFCC99">Answer the next anInteger
+                number of objects accessible by the receiver.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>next:</b> n <b>put:</b>
+                anObject</td>
+                <td bgcolor="#FFCC99">Make the next n objects
+                accessible by the receiver anObject. Answer
+                anObject.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>nextMatchAll:</b> aColl</td>
+                <td bgcolor="#FFCC99">Answer true if next N
+                objects are the ones in aColl, else false.
+                Advance stream if true, leave as was if false.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>nextMatchFor:</b>
+                anObject</td>
+                <td bgcolor="#FFCC99">Answer whether the next
+                object is equal to the argument, anObject,
+                advancing the stream.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>nextPut:</b> anObject</td>
+                <td bgcolor="#FFCC99">Insert the argument,
+                anObject, as the next object accessible by the
+                receiver. Answer anObject.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>nextPutAll:</b>
+                aCollection</td>
+                <td bgcolor="#FFCC99">Append the elements of
+                aCollection to the sequence of objects accessible
+                by the receiver. Answer aCollection.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>upToEnd</b></td>
+                <td bgcolor="#FFCC99">Answer the remaining
+                elements in the string</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>flush</b></td>
+                <td bgcolor="#FFCC99">Ensure that any objects
+                buffered in the receiver are sent to their final
+                destination.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+</TBODY>        </table>
+        </center></div><h4>Methods for testing Streams</h4>
+        <div align="center"><center><table border="1"
+        cellpadding="3" width="85%" bgcolor="#FFFFCC">
+<TBODY>            <tr>
+                <td bgcolor="#FFCC99"><b>Message</b></td>
+                <td bgcolor="#FFCC99"><p align="center"><b>Description</b></p>
+                </td>
+                <td bgcolor="#FFCC99"><b>Notes</b></td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>atEnd</b></td>
+                <td bgcolor="#FFCC99">Answer whether the receiver
+                can access any more objects.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+</TBODY>        </table>
+        </center></div><h4>Methods for enumerating Streams</h4>
+        <div align="center"><center><table border="1"
+        cellpadding="3" width="85%" bgcolor="#FFFFCC">
+<TBODY>            <tr>
+                <td bgcolor="#FFCC99"><b>Message</b></td>
+                <td bgcolor="#FFCC99"><p align="center"><b>Description</b></p>
+                </td>
+                <td bgcolor="#FFCC99"><b>Notes</b></td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>do:</b> aBlock</td>
+                <td bgcolor="#FFCC99">Evaluate aBlock for each of
+                the remaining objects accessible by receiver.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+</TBODY>        </table>
+        </center></div><h3>Class PositionableStream</h3>
+        <p>PositionableStream is an abstract class for accessors
+        to sequences of objects that can be externally named by
+        indices so that the point of access can be repositioned.
+        Concrete classes ReadStream, WriteStream and
+        ReadWriteStream are typically used to instantiate a
+        PositionableStream on Collections, depending upon the
+        access mode. StandardFileStream and CRLFFileStream are
+        typically used for instantiating PositionableStreams for
+        Files.</p>
+        <h4>Methods for accessing PositionableStreams</h4>
+        <div align="center"><center><table border="1"
+        cellpadding="3" width="85%" bgcolor="#FFFFCC">
+<TBODY>            <tr>
+                <td bgcolor="#FFCC99"><b>Message</b></td>
+                <td bgcolor="#FFCC99"><p align="center"><b>Description</b></p>
+                </td>
+                <td bgcolor="#FFCC99"><b>Notes</b></td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>contentsOfEntireFile</b></td>
+                <td bgcolor="#FFCC99">Answer a collection
+                containing the remainder of the receiver.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>last</b></td>
+                <td bgcolor="#FFCC99">Return the final element of
+                the receiver.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>nextDelimited:</b>
+                terminator</td>
+                <td bgcolor="#FFCC99">Answer the contents of the
+                receiver, from the current position up to the
+                next terminator character; provided, however,
+                that doubled terminators will be included as a
+                single element.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>nextInto:</b> buffer</td>
+                <td bgcolor="#FFCC99">Given buffer, an indexable
+                object of size n, fill buffer with the next n
+                objects of the receiver.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>nextLine</b></td>
+                <td bgcolor="#FFCC99">Answer next line (may be
+                empty), or nil if at end</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>originalContents</b></td>
+                <td bgcolor="#FFCC99">Answer the receiver's
+                actual contents collection. (<b>contents</b>
+                returns a copy)</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>peek</b></td>
+                <td bgcolor="#FFCC99">Answer what would be
+                returned if the message <b>next</b> were sent to
+                the receiver, but don't advance the receiver. If
+                the receiver is at the end, answer nil.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>peekFor:</b> anObject</td>
+                <td bgcolor="#FFCC99">Answer false and do not
+                move over the next element if it is not equal to
+                anObject, or if the receiver is at the end.
+                Answer true and advance the stream if the next
+                element is equal to anObject.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>upTo:</b> anObject</td>
+                <td bgcolor="#FFCC99">Answer a subcollection from
+                the current access position to the occurrence (if
+                any, but not inclusive) of anObject in the
+                receiver. If anObject is not in the collection,
+                answer the entire rest of the receiver.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>upToAll:</b> aCollection</td>
+                <td bgcolor="#FFCC99">Answer a subcollection from
+                the current access position to the occurrence (if
+                any, but not inclusive) of aCollection. If
+                aCollection is not in the stream, answer the
+                entire rest of the stream.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+</TBODY>        </table>
+        </center></div><h4>Methods for testing
+        PositionableStreams</h4>
+        <div align="center"><center><table border="1"
+        cellpadding="3" width="85%" bgcolor="#FFFFCC">
+<TBODY>            <tr>
+                <td bgcolor="#FFCC99"><b>Message</b></td>
+                <td bgcolor="#FFCC99"><p align="center"><b>Description</b></p>
+                </td>
+                <td bgcolor="#FFCC99"><b>Notes</b></td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>isEmpty</b></td>
+                <td bgcolor="#FFCC99">Answer whether the
+                receiver's contents has no elements.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+</TBODY>        </table>
+        </center></div><h4>Methods for positioning
+        PositionableStreams</h4>
+        <div align="center"><center><table border="1"
+        cellpadding="3" width="85%" bgcolor="#FFFFCC">
+<TBODY>            <tr>
+                <td bgcolor="#FFCC99"><b>Message</b></td>
+                <td bgcolor="#FFCC99"><p align="center"><b>Description</b></p>
+                </td>
+                <td bgcolor="#FFCC99"><b>Notes</b></td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>match:</b> subCollection</td>
+                <td bgcolor="#FFCC99">Set the access position of
+                the receiver to be past the next occurrence of
+                the subCollection. Answer whether subCollection
+                is found. No wildcards, case sensitive.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>padTo:</b> nBytes <b>put:</b>
+                aCharacter</td>
+                <td bgcolor="#FFCC99">Pad, using aCharacter, to
+                the next boundary of nBytes.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>padToNextLongPut:</b>
+                char</td>
+                <td bgcolor="#FFCC99">Make position be on long
+                word boundary, writing the padding character,
+                char, if necessary.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>position</b></td>
+                <td bgcolor="#FFCC99">Answer the current position
+                of accessing the sequence of objects.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>position:</b> anInteger</td>
+                <td bgcolor="#FFCC99">Set the current position
+                for accessing the objects to be anInteger, as
+                long as anInteger is within the bounds of the
+                receiver's contents. If it is not, create an
+                error notification.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>reset</b></td>
+                <td bgcolor="#FFCC99">Set the receiver's position
+                to the beginning of the sequence of objects.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>resetContents</b></td>
+                <td bgcolor="#FFCC99">Set the position and limits
+                to 0.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>setToEnd</b></td>
+                <td bgcolor="#FFCC99">Set the position of the
+                receiver to the end of the sequence of objects.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>skip:</b> anInteger</td>
+                <td bgcolor="#FFCC99">Set the receiver's position
+                to be the current position+anInteger. A subclass
+                might choose to be more helpful and select the
+                minimum of the receiver's size and position+anInteger,
+                or the maximum of 1 and position+anInteger for
+                the repositioning.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>skipTo:</b> anObject</td>
+                <td bgcolor="#FFCC99">Set the access position of
+                the receiver to be past the next occurrence of
+                anObject. Answer whether anObject is found.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+</TBODY>        </table>
+        </center></div><h3>Class WriteStream</h3>
+        <h4>Methods for writing characters on WriteStreams</h4>
+        <div align="center"><center><table border="1"
+        cellpadding="3" width="85%" bgcolor="#FFFFCC">
+<TBODY>            <tr>
+                <td bgcolor="#FFCC99"><b>Message</b></td>
+                <td bgcolor="#FFCC99"><p align="center"><b>Description</b></p>
+                </td>
+                <td bgcolor="#FFCC99"><b>Notes</b></td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>cr</b></td>
+                <td bgcolor="#FFCC99">Append a return character
+                to the receiver.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>crtab</b></td>
+                <td bgcolor="#FFCC99">Append a return character,
+                followed by a single tab character, to the
+                receiver.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>crtab:</b> anInteger</td>
+                <td bgcolor="#FFCC99">Append a return character,
+                followed by anInteger tab characters, to the
+                receiver.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>space</b></td>
+                <td bgcolor="#FFCC99">Append a space character to
+                the receiver.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>tab</b></td>
+                <td bgcolor="#FFCC99">Append a tab character to
+                the receiver.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+</TBODY>        </table>
+        </center></div><h2><a name="Exceptions"></a>ANSI-Compatible
+        Exceptions</h2>
+        <h3>Evaluating Blocks with Exceptions</h3>
+        <h4>Methods for handling Exceptions raised in a
+        BlockContext</h4>
+        <div align="center"><center><table border="1"
+        cellpadding="3" width="85%" bgcolor="#FFFFCC">
+<TBODY>            <tr>
+                <td bgcolor="#FFCC99"><b>Message</b></td>
+                <td bgcolor="#FFCC99"><p align="center"><b>Description</b></p>
+                </td>
+                <td bgcolor="#FFCC99"><b>Notes</b></td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>ensure:</b>
+                aTerminationBlock</td>
+                <td bgcolor="#FFCC99">Evaluate aTerminationBlock
+                after evaluating the receiver, regardless of
+                whether the receiver's evaluation completes.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>ifCurtailed:</b>
+                aTerminationBlock</td>
+                <td bgcolor="#FFCC99">Evaluate the receiver. If
+                it terminates abnormally, evaluate
+                aTerminationBlock.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>on:</b> exception <b>do:</b>
+                handlerActionBlock</td>
+                <td bgcolor="#FFCC99">Evaluate the receiver in
+                the scope of an exception handler,
+                handlerActionBlock.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+</TBODY>        </table>
+        </center></div><h4>Examples </h4>
+        <blockquote>
+            <pre>[&quot;target code, which may abort&quot;]
+    ensure:
+        [&quot;code that will always be executed 
+            after the target code, 
+            whatever whatever may happen&quot;]
+        
+[&quot;target code, which may abort&quot;]
+    ifCurtailed:
+        [&quot;code that will be executed
+            whenever the target code terminates 
+            without a normal return&quot;]
+            
+[&quot;target code, which may abort&quot;]
+    on: Exception
+    do: [:exception |
+            &quot;code that will be executed whenever
+            the identified Exception is signaled.&quot;]</pre>
+        </blockquote>
+        <pre>            </pre>
+        <h3>Exceptions</h3>
+        <p>Exception is an abstract class; instances should
+        neither be created nor trapped. There are two common
+        subclasses of Exception, Error and Notification, from
+        which subclasses normally inherit. Errors are not
+        resumable; a Notification is an indication that something
+        interesting has occurred; if it is not handled, it will
+        pass by without effect.</p>
+        <p>Exceptions play two distinct roles: that of the
+        exception, and that of the exception handler.</p>
+        <h4>Methods for describing Exceptions</h4>
+        <div align="center"><center><table border="1"
+        cellpadding="3" width="85%" bgcolor="#FFFFCC">
+<TBODY>            <tr>
+                <td bgcolor="#FFCC99"><b>Message</b></td>
+                <td bgcolor="#FFCC99"><p align="center"><b>Description</b></p>
+                </td>
+                <td bgcolor="#FFCC99"><b>Notes</b></td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>defaultAction</b></td>
+                <td bgcolor="#FFCC99">The default action taken if
+                the exception is signaled.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>description</b></td>
+                <td bgcolor="#FFCC99">Return a textual
+                description of the exception.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>isResumable</b></td>
+                <td bgcolor="#FFCC99">Determine whether an
+                exception is resumable.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>messageText</b></td>
+                <td bgcolor="#FFCC99">Return an exception's
+                message text.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>tag</b></td>
+                <td bgcolor="#FFCC99">Return an exception's tag
+                value.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+</TBODY>        </table>
+        </center></div><h4>Methods for signalling Exceptions</h4>
+        <div align="center"><center><table border="1"
+        cellpadding="3" width="85%" bgcolor="#FFFFCC">
+<TBODY>            <tr>
+                <td bgcolor="#FFCC99"><b>Message</b></td>
+                <td bgcolor="#FFCC99"><p align="center"><b>Description</b></p>
+                </td>
+                <td bgcolor="#FFCC99"><b>Notes</b></td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>signal</b></td>
+                <td bgcolor="#FFCC99">Signal the occurrence of an
+                exceptional condition.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>signal:</b> signalerText</td>
+                <td bgcolor="#FFCC99">Signal the occurrence of an
+                exceptional condition with a specified textual
+                description.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+</TBODY>        </table>
+        </center></div><h4>Methods for dealing with a signaled
+        Exception</h4>
+        <div align="center"><center><table border="1"
+        cellpadding="3" width="85%" bgcolor="#FFFFCC">
+<TBODY>            <tr>
+                <td bgcolor="#FFCC99"><b>Message</b></td>
+                <td bgcolor="#FFCC99"><p align="center"><b>Description</b></p>
+                </td>
+                <td bgcolor="#FFCC99"><b>Notes</b></td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>isNested</b></td>
+                <td bgcolor="#FFCC99">Determine whether the
+                current exception handler is within the scope of
+                another handler for the same exception.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>outer</b></td>
+                <td bgcolor="#FFCC99">Evaluate the enclosing
+                exception action for the receiver and return.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>pass</b></td>
+                <td bgcolor="#FFCC99">Yield control to the
+                enclosing exception action for the receiver.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>resignalAs:</b>
+                replacementException</td>
+                <td bgcolor="#FFCC99">Signal an alternative
+                exception in place of the receiver.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>resume</b></td>
+                <td bgcolor="#FFCC99">Return from the message
+                that signaled the receiver.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>resume:</b>
+                resumptionValue</td>
+                <td bgcolor="#FFCC99">Return the argument as the
+                value of the message that signaled the receiver.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>retry</b></td>
+                <td bgcolor="#FFCC99">Abort an exception handler
+                and re-evaluate its protected block.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>retryUsing:</b>
+                alternativeBlock</td>
+                <td bgcolor="#FFCC99">Abort an exception handler
+                and evaluate a new block in place of the
+                handler's protected block.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>return</b></td>
+                <td bgcolor="#FFCC99">Return nil as the value of
+                the block protected by the active exception
+                handler.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>return:</b> returnValue</td>
+                <td bgcolor="#FFCC99">Return the argument as the
+                value of the block protected by the active
+                exception handler.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+</TBODY>        </table>
+        </center></div><h3>Class ExceptionSet</h3>
+        <p>An ExceptionSet is used to specify a set of exceptions
+        for an exception handler.</p>
+        <h4>Creating ExceptionSet</h4>
+        <div align="center"><center><table border="1"
+        cellpadding="3" width="85%" bgcolor="#FFFFCC">
+<TBODY>            <tr>
+                <td bgcolor="#FFCC99"><b>Message</b></td>
+                <td bgcolor="#FFCC99"><p align="center"><b>Description</b></p>
+                </td>
+                <td bgcolor="#FFCC99"><b>Notes</b></td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99"><b>,</b> anException</td>
+                <td bgcolor="#FFCC99">Receiver may be an
+                Exception class or an ExceptionSet. Answers an
+                exception set that contains the receiver and
+                anException.</td>
+                <td bgcolor="#FFCC99">　</td>
+            </tr>
+</TBODY>        </table>
+        </center></div><h4>Example</h4>
+        <blockquote>
+            <pre>[&quot;target code, which may abort&quot;]
+    on: Exception, Error, ZeroDivide
+    do:
+        [:exception |
+            &quot;code that will be executed whenever
+            one of the identified Exceptions is 
+            signaled.&quot;]
+</pre>
+        </blockquote>
+        <hr>
+        <h2><a name="Hierarchy"></a>The Squeak Class Hierarchy</h2>
+        <p>In Smalltalk, &quot;everything is an object.&quot;
+        That is, everything is an instance of class Object or an
+        instance of some subclass of class Object. Everything.
+        Numbers, Classes, Metaclasses, everything. I refer to
+        this as the &quot;Object rule.&quot;</p>
+        <p>Actually, Squeak bends this rule a little bit; the
+        Object rule does not apply for certain system objects,
+        which derive from class ProtoObject. Nevertheless, except
+        for these few system objects, the vast majority of Squeak
+        objects, which I call, &quot;proper objects,&quot;
+        satisfy the Object Rule. Proper Objects and their classes
+        and metaclasses, satisfy the following properties.</p>
+        <h3>The Laws of Proper (Smalltalk) Classes</h3>
+        <ul>
+            <li>Every proper class is a subclass of class Object,
+                except for Object itself, which has no proper
+                superclass. In particular, Class is a subclass of
+                ClassDescription, which is a subclass of Behavior
+                which is a subclass of Object. </li>
+            <li>Every object is an instance of a class. </li>
+            <li>Every class is an instance of a metaclass. </li>
+            <li>All metaclasses are (ultimately) subclasses of
+                Class. </li>
+            <li>Every metaclass is an instance of MetaClass. </li>
+            <li>The methods of Class and its superclasses support
+                the behavior common to those objects that are
+                classes. </li>
+            <li>The methods of instances of MetaClass add the
+                behavior specific to particular classes. </li>
+        </ul>
+        <h3>Class ProtoObject</h3>
+        <p>Squeak additionally supports an improper class
+        ProtoObject, from which object hierarchies other than
+        proper instances and proper classes can inherit.
+        ProtoObject is the superclass of class Object and has no
+        instances. Presently, there are two subclasses of
+        ProtoObject besides Object: ObjectOut and
+        ImageSegmentRootStub, both of which are used to do magic
+        involving objects that have been moved out of memory onto
+        an external medium. You might need to subclass
+        ProtoObject if you are doing something like implementing
+        a remote message send system where you have proxies for
+        remote objects (those on another computer).</p>
+        <p>However, as with proper classes, ProtoObject, is an
+        instance of a metaclass, ProtoObject class, which in turn
+        is an instance of class MetaClass. </p>
+        <hr>
+        <h2><a name="Other"></a>Categories of Squeak Classes</h2>
+        <p>This quick reference only scratches the surface of the
+        functionality available through Squeak. To assist the
+        beginner in surveying the system, the following outline
+        of the major Squeak <i>packages</i> is provided.</p>
+        <div align="center"><center><table border="1"
+        cellpadding="3" width="85%" bgcolor="#FFFFCC">
+<TBODY>            <tr>
+                <td bgcolor="#FFCC99"><b>Category</b></td>
+                <td bgcolor="#FFCC99"><p align="center"><b>Description</b></p>
+                </td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99">Kernel</td>
+                <td bgcolor="#FFCC99">Primary Smalltalk classes
+                for creating and manipulating Smalltalk objects,
+                the Object hierarchy, coroutines and parallel
+                processes. Subcategories include: Objects,
+                Classes, Methods and Processes.</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99">Numeric</td>
+                <td bgcolor="#FFCC99">Classes for numeric
+                operations, including date and time operations.
+                Subcategories include Magnitudes and Numbers</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99">Collections</td>
+                <td bgcolor="#FFCC99">Classes for aggregations of
+                Smalltalk objects.</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99">Graphics</td>
+                <td bgcolor="#FFCC99">Core classes for Smalltalk
+                graphic objects as well as facilities and
+                applications for operating on graphic objects.
+                Key classes include Form and BitBlt.</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99">Interface</td>
+                <td bgcolor="#FFCC99">The &quot;traditional&quot;
+                MVC User Interface Framework. Also found here are
+                a number of useful Smalltalk applications,
+                including: Squeak browsers, a mail client, a web
+                browser, IRC chat client and facilities for
+                operating on &quot;projects.&quot;</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99">Morphic</td>
+                <td bgcolor="#FFCC99">Squeak's Morphic User
+                Interface Framework</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99">Music</td>
+                <td bgcolor="#FFCC99">Classes supporting Squeak's
+                Sound Synthesis capabilities. Also found here are
+                several useful facilities and applications for
+                manipulating MIDI data and other representations
+                of musical scores.</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99">System</td>
+                <td bgcolor="#FFCC99">Key System Facilities.
+                Subclasses include: Compiler (Smalltalk compiler);
+                Object Storage (virtual memory for Smalltalk
+                objects); File facilities; Compression; Serial
+                Data Transmission; Basic network facilities.</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99">Exceptions</td>
+                <td bgcolor="#FFCC99">Class supporting Squeak's
+                ANSI-compliant exceptions facilities.</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99">Network</td>
+                <td bgcolor="#FFCC99">Classes implementing
+                various Internet and Squeak related network
+                protocols.</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99">PluggableWebServer</td>
+                <td bgcolor="#FFCC99">A complete web-server
+                application, including an implementation of
+                Swiki, a collaborative world-wide-web environment.
+                Key classes include: PWS</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99">HTML</td>
+                <td bgcolor="#FFCC99">Classes for manipulating
+                HTML data.</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99">Squeak</td>
+                <td bgcolor="#FFCC99">Here lives the mouse. Key
+                classes include: the Squeak VM and an
+                interpreter; the Squeak Smalltalk Subset (Slang)
+                to C translator; and facilities for developing
+                native plugins (pluggable primitives).</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99">Balloon</td>
+                <td bgcolor="#FFCC99">Classes for complex 2-D
+                graphic objects and fast 2-D graphics rendering.</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99">Balloon-3D</td>
+                <td bgcolor="#FFCC99">Classes for complex 3-D
+                graphics objects and fast 3-D graphics rendering.</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99">TrueType</td>
+                <td bgcolor="#FFCC99">Classes for manipulating
+                and displaying TrueType data.</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99">MM-Flash</td>
+                <td bgcolor="#FFCC99">Classes for manipulating
+                and displaying Flash file data.</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFCC99">Alice &amp; Wonderland</td>
+                <td bgcolor="#FFCC99">A remarkable interactive 3-D
+                graphics environment.</td>
+            </tr>
+</TBODY>        </table>
+        </center></div></td>
+    </tr>
+</table>
+</body>
+</html>
