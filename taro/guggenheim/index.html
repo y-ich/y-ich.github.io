@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<meta charset="UTF-8" />
+    	<meta  http-equiv="Expires" content="0">
+        <title>Solomon R. Guggenheim Museum</title>
+        <meta name="viewport" content="initial-scale=1, user-scalable=0"> 
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300,300italic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="../css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="../css/style.css" />
+<style>
+.page.cover .front .content{
+	background: #ddd url(http://www.momat.go.jp/campus/images/newsd_1698_1.jpg) no-repeat center center;
+}
+.img-1{
+	background-image: url(http://www.taromuseum.jp/introduction/okamotos/taro/tsukuru/image/4o01010a.jpg);
+}
+</style>
+		<script type="text/javascript" src="../js/modernizr.custom.08464.js"></script>
+		<script id="pageTmpl" type="text/x-jquery-tmpl">
+			<div class="${theClass}" style="${theStyle}">
+				<div class="front">
+					<div class="outer">
+						<div class="content" style="${theContentStyleFront}">
+							<div class="inner">{{html theContentFront}}</div>
+						</div>
+					</div>
+				</div>
+				<div class="back">
+					<div class="outer">
+						<div class="content" style="${theContentStyleBack}">
+							<div class="inner">{{html theContentBack}}</div>
+						</div>
+					</div>
+				</div>
+			</div>			
+		</script>
+    </head>
+    <body>
+		
+		<header class="main-title">
+			<h1>岡本太郎に<br />会いに行こう</h1>
+		</header>
+		
+		<div id="flip" class="container">
+		
+			<div class="f-page f-cover">
+				<div class="cover-elements">
+<!--					<div class="logo">
+						Pageflip
+						<a class="f-ref" href="http://www.flickr.com/photos/nasahqphoto/">Images by NASA HQ Photo</a>
+					</div>
+				-->
+					<h1>Solomon R. Guggenheim Museum</h1>
+					<div class="f-cover-story"><span></span></div>
+				</div>
+				<div class="f-cover-flip">&lt; Flip</div>
+			</div>
+			
+			<div class="f-page">
+				<div class="f-title">
+					<a href="http://tympanus.net/Tutorials/CSS3FluidParallaxSlideshow/">Previous Demo</a>
+					<h2>Solomon R. Guggenheim Museum</h2>
+					<a href="http://tympanus.net/codrops/2012/05/07/experimental-page-layout-inspired-by-flipboard/">次の場所</a>
+				</div>
+				<div class="box w-100 h-100">
+					<div class="img-cont img-1"></div>
+					<h3>露店 <span>1937年</span></h3>
+				</div>
+			</div>
+						
+			<div class="f-page f-cover-back">
+				<div id="codrops-ad-wrapper">
+					<a href="http://www.guggenheim.org/">Solomon R. Guggenheim Museum</a>
+				</div>
+			</div>
+		</div>
+	
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script type="text/javascript">
+				
+			var $container 	= $( '#flip' ),
+				$pages		= $container.children().hide();
+			
+			Modernizr.load({
+				test: Modernizr.csstransforms3d && Modernizr.csstransitions,
+				yep : ['../js/jquery.tmpl.min.js','../js/jquery.history.js','../js/core.string.js','../js/jquery.touchSwipe-1.2.5.js','../js/jquery.flips.js'],
+				nope: '../css/fallback.css',
+				callback : function( url, result, key ) {
+					
+					if( url === '../css/fallback.css' ) {
+						$pages.show();
+					}
+					else if( url === '../js/jquery.flips.js' ) {
+						$container.flips();
+					}
+			
+				}
+			});
+				
+		</script>
+    </body>
+</html>

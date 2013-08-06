@@ -1,0 +1,16 @@
+# -*- coding: utf-8 -*-
+
+# task :default => ['taro.kmz']
+task :default => ['doc.kml']
+
+task :install => ['taro.kmz'] do |t|
+    copy t.prerequisites, File.expand_path('~/Sites/kml')
+end
+
+file 'doc.kml' => ['岡本太郎.kml'] do |t|
+    sh "gsed -e \"s/\\/Users\\/yuji\\/Library\\/Application Support\\/Google Earth\\///g\" #{t.prerequisites[0]} > doc.kml"
+end
+
+file 'taro.kmz' => ['doc.kml', 'css/style.css'] do |t|
+    sh "zip #{t.name} doc.kml css/* images/* js/* kawasaki/* kawasaki/images/*"
+end

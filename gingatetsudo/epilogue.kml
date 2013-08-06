@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<NetworkLinkControl>
+    <Update>
+        <targetHref>http://dl.dropbox.com/u/8719413/y_ichikawa/gingatetsudo/doc.kml</targetHref>
+        <Change>
+            <Document targetId="document">
+                <gx:balloonVisibility>0</gx:balloonVisibility>
+            </Document>
+            <Folder targetId="prologue">
+                <visibility>0</visibility>
+            </Folder>
+            <Folder targetId="main">
+                <visibility>0</visibility>
+            </Folder>
+            <Folder targetId="flashback">
+                <visibility>0</visibility>
+            </Folder>
+            <Folder targetId="main2">
+                <visibility>0</visibility>
+            </Folder>
+            <Folder targetId="epilogue">
+                <visibility>1</visibility>
+            </Folder>
+            <Placemark targetId="hill2">
+                <gx:balloonVisibility>1</gx:balloonVisibility>
+            </Placemark>
+        </Change>
+    </Update>
+    <!-- 黒い丘 -->
+    <LookAt>
+        <TimeStamp>
+          <when>2012-06-24T21:30:00+02:00</when>
+        </TimeStamp>
+        <longitude>11.26391979206204</longitude>
+        <latitude>43.76272918692487</latitude>
+        <altitude>0</altitude>
+        <heading>92.6639443261878</heading>
+        <tilt>70.34027927146424</tilt>
+        <range>358.3630416606728</range>
+        <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+    </LookAt>
+</NetworkLinkControl>
+</kml>

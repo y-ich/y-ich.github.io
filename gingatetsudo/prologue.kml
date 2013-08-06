@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<NetworkLinkControl>
+    <Update>
+        <targetHref>http://dl.dropbox.com/u/8719413/y_ichikawa/gingatetsudo/doc.kml</targetHref>
+        <Change>
+            <Document targetId="document">
+                <gx:balloonVisibility>0</gx:balloonVisibility>
+            </Document>
+            <Folder targetId="prologue">
+                <visibility>1</visibility>
+            </Folder>
+            <Folder targetId="main">
+                <visibility>0</visibility>
+            </Folder>
+            <Folder targetId="flashback">
+                <visibility>0</visibility>
+            </Folder>
+            <Folder targetId="main2">
+                <visibility>0</visibility>
+            </Folder>
+            <Folder targetId="epilogue">
+                <visibility>0</visibility>
+            </Folder>
+            <Placemark targetId="school">
+                <gx:balloonVisibility>1</gx:balloonVisibility>
+            </Placemark>
+        </Change>
+    </Update>
+    <!-- 学校 -->
+    <LookAt>
+        <TimeStamp>
+          <when>2012-06-24T14:45:00+02:00</when>
+        </TimeStamp>
+        <longitude>11.25802518195315</longitude>
+        <latitude>43.7738592690493</latitude>
+        <altitude>0</altitude>
+        <heading>70.43903424748977</heading>
+        <tilt>72.14545520857088</tilt>
+        <range>822.4364786492165</range>
+        <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+    </LookAt>
+</NetworkLinkControl>
+</kml>

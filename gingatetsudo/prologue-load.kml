@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<NetworkLink>
+    <name>プロローグ</name>
+    <refreshVisibility>1</refreshVisibility>
+    <flyToView>1</flyToView>
+    <Link>
+        <href>http://dl.dropbox.com/u/8719413/y_ichikawa/gingatetsudo/prologue.kml</href>
+    </Link>
+</NetworkLink>
+</kml>

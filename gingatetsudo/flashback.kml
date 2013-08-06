@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<NetworkLinkControl>
+    <Update>
+        <targetHref>http://dl.dropbox.com/u/8719413/y_ichikawa/gingatetsudo/doc.kml</targetHref>
+        <Change>
+            <Document targetId="document">
+                <gx:balloonVisibility>0</gx:balloonVisibility>
+            </Document>
+            <Folder targetId="prologue">
+                <visibility>0</visibility>
+            </Folder>
+            <Folder targetId="main">
+                <visibility>0</visibility>
+            </Folder>
+            <Folder targetId="flashback">
+                <visibility>1</visibility>
+            </Folder>
+            <Folder targetId="main2">
+                <visibility>0</visibility>
+            </Folder>
+            <Folder targetId="epilogue">
+                <visibility>0</visibility>
+            </Folder>
+            <Placemark targetId="titanic">
+                <gx:balloonVisibility>1</gx:balloonVisibility>
+            </Placemark>
+        </Change>
+    </Update>
+    <!-- タイタニック号 -->
+    <LookAt>
+        <longitude>-49.94712760475316</longitude>
+        <latitude>41.73177902253526</latitude>
+        <altitude>0</altitude>
+        <heading>12.23024760091403</heading>
+        <tilt>86.64259709585083</tilt>
+        <range>678.403982938999</range>
+        <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+    </LookAt>
+</NetworkLinkControl>
+</kml>

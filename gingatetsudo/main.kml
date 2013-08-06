@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<NetworkLinkControl>
+    <message>「場所」ペインの「銀河鉄道」を右クリックして「更新」を実行して下さい。</message>
+    <Update>
+        <targetHref>http://dl.dropbox.com/u/8719413/y_ichikawa/gingatetsudo/doc.kml</targetHref>
+        <Change>
+            <Document targetId="document">
+                <gx:balloonVisibility>0</gx:balloonVisibility>
+            </Document>
+            <Folder targetId="prologue">
+                <visibility>0</visibility>
+            </Folder>
+            <Folder targetId="main">
+                <visibility>1</visibility>
+            </Folder>
+            <Folder targetId="flashback">
+                <visibility>0</visibility>
+            </Folder>
+            <Folder targetId="main2">
+                <visibility>0</visibility>
+            </Folder>
+            <Folder targetId="epilogue">
+                <visibility>0</visibility>
+            </Folder>
+            <Placemark targetId="station">
+                <gx:balloonVisibility>1</gx:balloonVisibility>
+            </Placemark>
+        </Change>
+    </Update>
+    <!-- 銀河ステーション -->
+    <LookAt>
+        <longitude>141.1467309823333</longitude>
+        <latitude>39.72172300361945</latitude>
+        <altitude>0</altitude>
+        <heading>-1.162302856960432e-08</heading>
+        <tilt>0</tilt>
+        <range>16223.29788056405</range>
+        <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+    </LookAt>
+</NetworkLinkControl>
+</kml>

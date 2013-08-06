@@ -1,0 +1,913 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<NetworkLinkControl>
+	<!-- 表紙 -->
+	<LookAt>
+		<longitude>141.1523863159998</longitude>
+		<latitude>39.71076760785781</latitude>
+		<altitude>0</altitude>
+		<heading>9.334171595356035e-05</heading>
+		<tilt>0</tilt>
+		<range>11744293.10089218</range>
+		<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+	</LookAt>
+</NetworkLinkControl>
+<Document id="document">
+    <atom:author><atom:name>市川雄二</atom:name></atom:author>    
+	<name>銀河鉄道の夜</name>
+	<StyleMap id="msn_star0">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_star1</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_star0</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_star1">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+		<BalloonStyle>
+			<text><![CDATA[<html>
+<head>
+<base
+ href="http://dl.dropbox.com/u/8719413/y_ichikawa/gingatetsudo/">
+</head>
+<body style="width: 320px; height: 50px;">
+$[description]
+</body>
+</html>]]></text>
+			<bgColor>00ffffff</bgColor>
+		</BalloonStyle>
+	</Style>
+	<Style id="sh_star0">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+		<BalloonStyle>
+			<text><![CDATA[<html>
+<head>
+<base
+ href="http://dl.dropbox.com/u/8719413/y_ichikawa/gingatetsudo/">
+</head>
+<body style="width: 320px; height: 50px;">
+$[description]
+</body>
+</html>]]></text>
+			<bgColor>00ffffff</bgColor>
+		</BalloonStyle>
+	</Style>
+	<StyleMap id="msn_star1">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_star3</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_star2</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_star3">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+		<BalloonStyle>
+			<text><![CDATA[<html>
+<head>
+<base
+ href="http://dl.dropbox.com/u/8719413/y_ichikawa/gingatetsudo/">
+</head>
+$[description]
+</html>]]></text>
+			<bgColor>ff000000</bgColor>
+		</BalloonStyle>
+	</Style>
+	<Style id="sh_star2">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+		<BalloonStyle>
+			<bgColor>ff000000</bgColor>
+			<text><![CDATA[<html>
+<head>
+<base
+ href="http://dl.dropbox.com/u/8719413/y_ichikawa/gingatetsudo/">
+</head>
+$[description]
+</html>]]></text>
+		</BalloonStyle>
+	</Style>
+	<StyleMap id="msn_star2">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_star5</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_star4</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_star5">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+		<BalloonStyle>
+			<text><![CDATA[<html>
+<head>
+<base
+ href="http://dl.dropbox.com/u/8719413/y_ichikawa/gingatetsudo/">
+</head>
+<body style="width: 320px; height: 50px; background-color: black;">
+$[description]
+</body>
+</html>]]></text>
+			<bgColor>00000000</bgColor>
+		</BalloonStyle>
+	</Style>
+	<Style id="sh_star4">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+		<BalloonStyle>
+			<text><![CDATA[<html>
+<head>
+<base
+ href="http://dl.dropbox.com/u/8719413/y_ichikawa/gingatetsudo/">
+</head>
+<body style="width: 320px; height: 50px; background-color: black;">
+$[description]
+</body>
+</html>]]></text>
+			<bgColor>00000000</bgColor>
+		</BalloonStyle>
+	</Style>
+	<gx:balloonVisibility>1</gx:balloonVisibility>
+	<styleUrl>#msn_star1</styleUrl>
+	<description><![CDATA[<body style="background-color: black; background-position: right; background-repeat: no-repeat; background-size: auto 100%; background-image: url(http://ykaneiso.homeip.net:8080/ytenmon/2009/03/04/GalaxyCenter.jpg)" onload="maxBalloonSize();">
+<style style="text/css">
+h1,h2,h3 {
+  color: white;
+}
+.usage {
+	color: white;
+	width: 512px;
+}
+.copyright {
+  color: white;
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+}
+</style>
+<p>ジオブラウザ上で読む</p>
+<h1>銀河鉄道の夜</h1>
+<h2>宮沢賢治</h2>
+<h3>目次</h3>
+<ul>
+	<li><a href="prologue-load.kml">一　午後の授業</a></li>
+	<li><a href="main-load.kml">六　銀河ステーション</a></li>
+	<li><a href="flashback-load.kml">九　ジョバンニの切符（タイタニック号）</a></li>
+	<li><a href="main2-load.kml">九　ジョバンニの切符（りんご）</a></li>
+	<li><a href="epilogue-load.kml">九　ジョバンニの切符（黒い丘）</a></li>
+</ul>
+<h3>楽しみ方</h3>
+<div class="usage">
+<p>
+読み始める前にレイヤを選択しましょう。
+地上では「建物の3D表示」の「立体写真モデル」と「木」を選択し他はチェックを外すことをお勧めします。
+星空では「Skyデータベース」の「画像」と「身近な天文学」の「星座」を選択し他はチェックを外すことをお勧めします。
+</p>
+<p>
+目次の「一　午後の授業」をクリックしてください。イメージのシーンに飛びます。
+シーンではバルーンが表示されますので、その中に表示されるリンクをクリックしてください。本文が表示されます。
+本文の最後には「次へ」というリンクがあります。これをクリックすると次のシーンに進みます。
+</p>
+<dl>
+<dt>履歴</dt>
+<dd>
+2012年6月28日: 初版(地上篇が盛岡市)<br/>
+2012年6月29日: 第二版(地上篇の場所をフィレンツェに変更)<br/>
+2012年7月2日: 第二.一版(日照表示)<br/>
+</dd>
+</dl>
+</div>
+<p class="copyright">本写真の著作権は
+<a href="http://ykaneiso.homeip.net:8080/ytenmon/">多摩陽光台天文クラブ</a>にあります</p>
+<script type="text/javascript">
+function maxBalloonSize() {
+  window.div = document.createElement('div');
+  div.style.position = 'absolute';
+  div.style.top = '0';
+  div.style.left = '0';
+  div.style.zIndex = '-1';
+  div.style.width = '3000px';
+  div.style.height = '2000px';
+  document.body.appendChild(div);
+  var result = window.innerHeight;
+  setTimeout(function()  {
+  div.style.width = window.innerWidth - 100 + 'px';
+  div.style.height = window.innerHeight - 100 + 'px';
+}, 0);
+}
+</script>
+</body>]]></description>
+	<Folder>
+		<name>目次</name>
+		<open>1</open>
+		<Folder id="prologue">
+			<name>プロローグ</name>
+			<Placemark id="school">
+				<name>学校</name>
+		        <TimeStamp>
+		          <when>2012-06-24T14:45:00+02:00</when>
+		        </TimeStamp>
+				<description><![CDATA[<a href="afternoon_class.html">一　午後の授業</a>]]></description>
+				<LookAt>
+			        <TimeStamp>
+			          <when>2012-06-24T14:45:00+02:00</when>
+			        </TimeStamp>
+					<longitude>11.25802518195315</longitude>
+					<latitude>43.7738592690493</latitude>
+					<altitude>0</altitude>
+					<heading>70.43903424748977</heading>
+					<tilt>72.14545520857088</tilt>
+					<range>822.4364786492165</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_star0</styleUrl>
+				<Point>
+  					<extrude>1</extrude>
+					<altitudeMode>relativeToGround</altitudeMode>
+  					<coordinates>11.25503116376476,43.77314708555805,120</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark id="printers">
+				<name>活版所</name>
+				<description><![CDATA[<a href="printers.html">二　活版所</a>]]></description>
+				<LookAt>
+			        <TimeStamp>
+			          <when>2012-06-24T15:30:00+02:00</when>
+			        </TimeStamp>
+					<longitude>11.25068866627778</longitude>
+					<latitude>43.77851804628714</latitude>
+					<altitude>0</altitude>
+					<heading>50.44885029668428</heading>
+					<tilt>75.18561596650289</tilt>
+					<range>314.1887884621995</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_star0</styleUrl>
+				<Point>
+  					<extrude>1</extrude>
+					<altitudeMode>relativeToGround</altitudeMode>
+					<coordinates>11.25068866627778,43.77851804628715,50</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>パン屋</name>
+				<LookAt>
+			        <TimeStamp>
+			          <when>2012-06-24T18:15:00+02:00</when>
+			        </TimeStamp>
+					<longitude>11.25837402477173</longitude>
+					<latitude>43.77745669128269</latitude>
+					<altitude>0</altitude>
+					<heading>-156.5827991125136</heading>
+					<tilt>68.89297517265766</tilt>
+					<range>302.1672144830438</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_star0</styleUrl>
+				<Point>
+  					<extrude>1</extrude>
+					<altitudeMode>relativeToGround</altitudeMode>
+					<coordinates>11.25850201168949,43.77763185496161,50</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark id="home">
+				<name>家</name>
+				<description><![CDATA[<a href="home.html">三　家</a>]]></description>
+				<LookAt>
+			        <TimeStamp>
+			          <when>2012-06-24T19:00:00+02:00</when>
+			        </TimeStamp>
+					<longitude>11.28632809054681</longitude>
+					<latitude>43.79178222391887</latitude>
+					<altitude>0</altitude>
+					<heading>-10.68043172056821</heading>
+					<tilt>73.0337805461679</tilt>
+					<range>468.8678853038633</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_star0</styleUrl>
+				<Point>
+  					<extrude>1</extrude>
+					<altitudeMode>relativeToGround</altitudeMode>
+					<coordinates>11.28647699248998,43.79147168303802,50</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark id="slope">
+				<name>坂の下</name>
+				<description><![CDATA[<a href="slope.html">四　ケンタウル祭の夜（坂の下）</a>]]></description>
+				<LookAt>
+			        <TimeStamp>
+			          <when>2012-06-24T19:30:00+02:00</when>
+			        </TimeStamp>
+					<longitude>11.28456537647476</longitude>
+					<latitude>43.78762895472497</latitude>
+					<altitude>0</altitude>
+					<heading>45.48261509129816</heading>
+					<tilt>73.03616008494762</tilt>
+					<range>553.0375637549607</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_star0</styleUrl>
+				<Point>
+  					<extrude>1</extrude>
+					<altitudeMode>relativeToGround</altitudeMode>
+					<coordinates>11.28456537647476,43.78762895472497,50</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark id="watch_shop">
+				<name>時計屋</name>
+				<description><![CDATA[<a href="watch_shop.html">四　ケンタウル祭の夜（時計屋）</a>]]></description>
+				<LookAt>
+			        <TimeStamp>
+			          <when>2012-06-24T20:00:00+02:00</when>
+			        </TimeStamp>
+					<longitude>11.25447741287634</longitude>
+					<latitude>43.77319622414839</latitude>
+					<altitude>0</altitude>
+					<heading>-69.64232871514213</heading>
+					<tilt>45.11645393948307</tilt>
+					<range>322.0141581875086</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_star0</styleUrl>
+				<Point>
+  					<extrude>1</extrude>
+					<altitudeMode>relativeToGround</altitudeMode>
+					<coordinates>11.25443600617535,43.77320731123918,50</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark id="company">
+				<name>電気会社</name>
+				<description><![CDATA[<a href="electric_power_company.html">四　ケンタウル祭の夜（電気会社）</a>]]></description>
+				<LookAt>
+			        <TimeStamp>
+			          <when>2012-06-24T20:10:00+02:00</when>
+			        </TimeStamp>
+					<longitude>11.25551820694623</longitude>
+					<latitude>43.77118295435881</latitude>
+					<altitude>0</altitude>
+					<heading>178.7553674899312</heading>
+					<tilt>60.93949397031247</tilt>
+					<range>377.1569082590601</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_star0</styleUrl>
+				<Point>
+  					<extrude>1</extrude>
+					<altitudeMode>relativeToGround</altitudeMode>
+					<coordinates>11.2555063358712,43.77157749366118,50</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark id="milk_shop">
+				<name>牛乳屋</name>
+				<description><![CDATA[<a href="milk_shop.html">四　ケンタウル祭の夜（牛乳屋）</a>]]></description>
+				<LookAt>
+			        <TimeStamp>
+			          <when>2012-06-24T20:20:00+02:00</when>
+			        </TimeStamp>
+					<longitude>11.25336303978218</longitude>
+					<latitude>43.76549045348695</latitude>
+					<altitude>0</altitude>
+					<heading>-162.8658437231703</heading>
+					<tilt>68.67291156573764</tilt>
+					<range>428.8725943698079</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_star0</styleUrl>
+				<Point>
+  					<extrude>1</extrude>
+					<altitudeMode>relativeToGround</altitudeMode>
+					<coordinates>11.25313824641877,43.76545403311962,50</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark id="corner">
+				<name>町のかど</name>
+				<description><![CDATA[<a href="corner.html">四　ケンタウル祭の夜（町のかど）</a>]]></description>
+				<LookAt>
+			        <TimeStamp>
+			          <when>2012-06-24T20:30:00+02:00</when>
+			        </TimeStamp>
+					<longitude>11.25865447134985</longitude>
+					<latitude>43.76540027830556</latitude>
+					<altitude>0</altitude>
+					<heading>-162.8621837948957</heading>
+					<tilt>68.67361362028335</tilt>
+					<range>476.8988635591758</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_star0</styleUrl>
+				<Point>
+  					<extrude>1</extrude>
+					<altitudeMode>relativeToGround</altitudeMode>
+					<coordinates>11.25785257310578,43.76453255691564,50</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark id="hill">
+				<name>黒い丘</name>
+				<description><![CDATA[<a href="hill.html">五　天気輪の柱</a>]]></description>
+				<LookAt>
+			        <TimeStamp>
+			          <when>2012-06-24T21:00:00+02:00</when>
+			        </TimeStamp>
+					<longitude>11.26391978930704</longitude>
+					<latitude>43.76272918376243</latitude>
+					<altitude>0</altitude>
+					<heading>92.66394432544389</heading>
+					<tilt>70.3398318692667</tilt>
+					<range>358.3628436807184</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_star0</styleUrl>
+				<Point>
+  					<extrude>1</extrude>
+					<altitudeMode>relativeToGround</altitudeMode>
+					<coordinates>11.26450926414988,43.76286999140848,50</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder id="main">
+			<name>銀河鉄道(前半)</name>
+			<Placemark id="station">
+				<name>銀河ステーション</name>
+				<description><![CDATA[<a href="station.html">六　銀河ステーション</a>]]></description>
+				<LookAt>
+					<longitude>141.1467309823333</longitude>
+					<latitude>39.72172300361945</latitude>
+					<altitude>0</altitude>
+					<heading>-1.162302856960432e-08</heading>
+					<tilt>0</tilt>
+					<range>16223.29788056405</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_star2</styleUrl>
+				<Point>
+					<coordinates>141.1467309823333,39.72172300361946,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>島</name>
+				<LookAt>
+					<longitude>130.3051362554793</longitude>
+					<latitude>45.33409117150664</latitude>
+					<altitude>0</altitude>
+					<heading>-0.5781113023324879</heading>
+					<tilt>0</tilt>
+					<range>795146.0098953543</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_star2</styleUrl>
+				<Point>
+					<gx:altitudeMode>clampToSeaFloor</gx:altitudeMode>
+					<coordinates>130.3469529238874,45.65121646234485,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark id="cross">
+				<name>白い十字架</name>
+				<description><![CDATA[<a href="cross.html">七　北十字とプリオシン海岸（十字架）</a>]]></description>
+				<LookAt>
+					<longitude>124.9114981919361</longitude>
+					<latitude>40.44991444703419</latitude>
+					<altitude>0</altitude>
+					<heading>2.253397316303747</heading>
+					<tilt>0</tilt>
+					<range>2712906.680710968</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_star2</styleUrl>
+				<Point>
+					<coordinates>125.4387236633096,40.31216164308238,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark id="swan">
+				<name>白鳥の停車場</name>
+				<description><![CDATA[<a href="swan.html">七　北十字とプリオシン海岸（白鳥の停車場）</a>]]></description>
+				<LookAt>
+					<longitude>119.0581835886765</longitude>
+					<latitude>35.12575786496019</latitude>
+					<altitude>0</altitude>
+					<heading>6.045473471350196</heading>
+					<tilt>0</tilt>
+					<range>31894.1622785143</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_star2</styleUrl>
+				<Point>
+					<coordinates>119.065330161789,35.1405186505079,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark id="albireo">
+				<name>アルビレオの観測所</name>
+				<description><![CDATA[<a href="albireo.html">八　鳥を捕る人、九　ジョバンニの切符</a>]]></description>
+				<LookAt>
+					<longitude>112.6758560963542</longitude>
+					<latitude>28.06888815825472</latitude>
+					<altitude>0</altitude>
+					<heading>0.009864489924946351</heading>
+					<tilt>0</tilt>
+					<range>74406.45117593871</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_star2</styleUrl>
+				<Point>
+					<coordinates>112.6786679199749,28.09807091036751,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder id="flashback">
+			<name>回想</name>
+			<Placemark id="titanic">
+				<name>タイタニック号</name>
+				<description><![CDATA[<a href="titanic.html">九　ジョバンニの切符（タイタニック号）</a>]]></description>
+				<LookAt>
+					<longitude>-49.94712760475316</longitude>
+					<latitude>41.73177902253526</latitude>
+					<altitude>0</altitude>
+					<heading>12.23024760091403</heading>
+					<tilt>86.64259709585083</tilt>
+					<range>678.403982938999</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_star0</styleUrl>
+				<Point>
+  					<extrude>1</extrude>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+					<coordinates>-49.94851618744479,41.72699801051029,50</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder id="main2">
+			<name>銀河鉄道(後半)</name>
+			<Placemark id="apple">
+				<name> 苹果（りんご）</name>
+				<description><![CDATA[<a href="apple.html">九　ジョバンニの切符（りんご）</a>]]></description>
+				<LookAt>
+					<longitude>84.34451644073312</longitude>
+					<latitude>72.96573356142822</latitude>
+					<altitude>0</altitude>
+					<heading>27.71008514309168</heading>
+					<tilt>0</tilt>
+					<range>6092580.826975858</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_star2</styleUrl>
+				<Point>
+					<coordinates>66.47137550305665,69.50935264744582,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark id="picapica">
+				<name>かささぎ</name>
+				<description><![CDATA[<a href="picapica.html">九　ジョバンニの切符（かささぎ）</a>]]></description>
+				<LookAt>
+					<longitude>124.9114981915236</longitude>
+					<latitude>40.44991444699185</latitude>
+					<altitude>0</altitude>
+					<heading>2.253394978204567</heading>
+					<tilt>0</tilt>
+					<range>2712907.700729027</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_star2</styleUrl>
+				<Point>
+					<coordinates>124.9114981915236,40.44991444699185,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark id="pavo">
+				<name>孔雀</name>
+				<description><![CDATA[<a href="pavo.html">九　ジョバンニの切符（孔雀）</a>]]></description>
+				<LookAt>
+					<longitude>114.1694579296212</longitude>
+					<latitude>-61.85563256619097</latitude>
+					<altitude>0</altitude>
+					<heading>0.08459881389009864</heading>
+					<tilt>0</tilt>
+					<range>3799518.586488096</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_star2</styleUrl>
+				<Point>
+					<coordinates>113.2889246334269,-59.75252544888478,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark id="delphinus">
+				<name>海豚（いるか）</name>
+				<description><![CDATA[<a href="delphinus.html">九　ジョバンニの切符（海豚）</a>]]></description>
+				<LookAt>
+					<longitude>130.220418284256</longitude>
+					<latitude>15.19445645260084</latitude>
+					<altitude>0</altitude>
+					<heading>0.1688555995635352</heading>
+					<tilt>0</tilt>
+					<range>986420.9727763576</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_star2</styleUrl>
+				<Point>
+					<gx:altitudeMode>clampToSeaFloor</gx:altitudeMode>
+					<coordinates>130.3321398798087,16.59077497772074,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark id="tower">
+				<name>やぐら</name>
+				<description><![CDATA[<a href="tower.html">九　ジョバンニの切符（やぐら）</a>]]></description>
+				<LookAt>
+					<longitude>115.922776348981</longitude>
+					<latitude>18.27381314287582</latitude>
+					<altitude>0</altitude>
+					<heading>-1.418660627649265</heading>
+					<tilt>0</tilt>
+					<range>533684.9367357821</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_star2</styleUrl>
+				<Point>
+					<coordinates>116.8565480630473,18.69641857872256,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark id="aquila">
+				<name>鷲の停車場</name>
+				<description><![CDATA[<a href="aquila.html">九　ジョバンニの切符（鷲の停車場）</a>]]></description>
+				<LookAt>
+					<longitude>117.6921461601725</longitude>
+					<latitude>8.946766391285777</latitude>
+					<altitude>0</altitude>
+					<heading>0.001509045612065336</heading>
+					<tilt>0</tilt>
+					<range>130656.9367448901</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_star2</styleUrl>
+				<Point>
+					<coordinates>117.6912229187847,9.115045438856646,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark id="indian">
+				<name>インデアンと鶴</name>
+				<description><![CDATA[<a href="indian.html">九　ジョバンニの切符（インデアンと鶴）</a>]]></description>
+				<LookAt>
+					<longitude>148.2745017768032</longitude>
+					<latitude>-43.11141502659955</latitude>
+					<altitude>0</altitude>
+					<heading>10.51501942905211</heading>
+					<tilt>0</tilt>
+					<range>3752362.145235643</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_star2</styleUrl>
+				<Point>
+					<coordinates>147.4443595113013,-43.33275041709202,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark id="down">
+				<name>下り</name>
+				<description><![CDATA[<a href="down.html">九　ジョバンニの切符（下り）</a>]]></description>
+				<LookAt>
+					<longitude>98.36681694691993</longitude>
+					<latitude>-10.37000162752323</latitude>
+					<altitude>0</altitude>
+					<heading>-31.01104327289415</heading>
+					<tilt>0</tilt>
+					<range>2783203.115144982</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_star2</styleUrl>
+				<Point>
+					<gx:altitudeMode>clampToSeaFloor</gx:altitudeMode>
+					<coordinates>98.36681694691993,-10.37000162752323,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark id="gemini">
+				<name>双子のお星さまのお宮</name>
+				<description><![CDATA[<a href="gemini.html">九　ジョバンニの切符（双子のお星さまのお宮）</a>]]></description>
+				<LookAt>
+					<longitude>-73.9883195939141</longitude>
+					<latitude>29.49179513918957</latitude>
+					<altitude>0</altitude>
+					<heading>1.479253661522502</heading>
+					<tilt>0</tilt>
+					<range>3637068.896674535</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_star2</styleUrl>
+				<Point>
+					<coordinates>-72.01306007991754,34.63469670392091,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark id="scorpius">
+				<name>蠍（さそり）の火</name>
+				<description><![CDATA[<a href="scorpius.html">九　ジョバンニの切符（蠍の火）</a>]]></description>
+				<LookAt>
+					<longitude>71.06167495792039</longitude>
+					<latitude>-29.42950922303992</latitude>
+					<altitude>0</altitude>
+					<heading>-0.9523859684983201</heading>
+					<tilt>0</tilt>
+					<range>3179051.301336552</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_star2</styleUrl>
+				<Point>
+					<coordinates>72.80139578947133,-24.16211393846102,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark id="centaurus">
+				<name>ケンタウルの村</name>
+				<description><![CDATA[<a href="centaurus.html">九　ジョバンニの切符（ケンタウルの村）</a>]]></description>
+				<LookAt>
+					<longitude>23.06758211441493</longitude>
+					<latitude>-43.48581932237777</latitude>
+					<altitude>0</altitude>
+					<heading>1.710526252353096</heading>
+					<tilt>0</tilt>
+					<range>6118977.945419447</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_star2</styleUrl>
+				<Point>
+					<coordinates>23.32041870379125,-36.20587663155489,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark id="southern_cross">
+				<name>サウザンクロス</name>
+				<description><![CDATA[<a href="southern_cross.html">九　ジョバンニの切符（サウザンクロス）</a>]]></description>
+				<LookAt>
+					<longitude>7.015575408569666</longitude>
+					<latitude>-58.55161462658011</latitude>
+					<altitude>0</altitude>
+					<heading>0.5101693185983388</heading>
+					<tilt>0</tilt>
+					<range>1617428.916472628</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_star2</styleUrl>
+				<Point>
+					<coordinates>7.567504152046922,-55.98559261742646,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark id="pleiades">
+				<name>プレシオス</name>
+				<description><![CDATA[<a href="pleiades.html">九　ジョバンニの切符（プレシオス）</a>]]></description>
+				<LookAt>
+					<longitude>-123.3073396672625</longitude>
+					<latitude>24.69817114425593</latitude>
+					<altitude>0</altitude>
+					<heading>0.06110781461114244</heading>
+					<tilt>0</tilt>
+					<range>295340.5653293681</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_star2</styleUrl>
+				<Point>
+					<coordinates>-123.2647168926285,24.9104856855383,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark id="magellan">
+				<name>マジェランの星雲</name>
+				<description><![CDATA[<a href="magellan.html">九　ジョバンニの切符（マジェランの星雲）</a>]]></description>
+				<LookAt>
+					<longitude>-98.80873247354803</longitude>
+					<latitude>-67.27479544224704</latitude>
+					<altitude>0</altitude>
+					<heading>-0.2233755208558707</heading>
+					<tilt>0</tilt>
+					<range>1291004.508824542</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_star2</styleUrl>
+				<Point>
+					<coordinates>-100.0880719087907,-66.00497837900402,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder id="epilogue">
+			<name>エピローグ</name>
+			<Placemark id="hill2">
+				<name>黒い丘</name>
+				<open>1</open>
+				<description><![CDATA[<a href="hill2.html">九　ジョバンニの切符（黒い丘）</a>]]></description>
+		        <TimeStamp>
+		          <when>2012-06-24T21:30:00+02:00</when>
+		        </TimeStamp>
+				<LookAt>
+			        <TimeStamp>
+			          <when>2012-06-24T21:30:00+02:00</when>
+			        </TimeStamp>
+					<longitude>11.26391979206204</longitude>
+					<latitude>43.76272918692487</latitude>
+					<altitude>0</altitude>
+					<heading>92.6639443261878</heading>
+					<tilt>70.34027927146424</tilt>
+					<range>358.3630416606728</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_star0</styleUrl>
+				<Point>
+  					<extrude>1</extrude>
+					<altitudeMode>relativeToGround</altitudeMode>
+					<coordinates>11.26454104629752,43.7628627225066,50</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark id="milk_shop2">
+				<name>牛乳屋</name>
+				<open>1</open>
+				<description><![CDATA[<a href="milk_shop2.html">九　ジョバンニの切符（牛乳屋）</a>]]></description>
+				<LookAt>
+			        <TimeStamp>
+			          <when>2012-06-24T21:50:00+02:00</when>
+			        </TimeStamp>
+					<longitude>11.25336303799419</longitude>
+					<latitude>43.76549045124852</latitude>
+					<altitude>0</altitude>
+					<heading>-162.8658437241828</heading>
+					<tilt>68.67351175752154</tilt>
+					<range>428.8728718371093</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_star0</styleUrl>
+				<Point>
+  					<extrude>1</extrude>
+					<altitudeMode>relativeToGround</altitudeMode>
+					<coordinates>11.25336303799419,43.76549045124852,50</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark id="corner2">
+				<name>町のかど</name>
+				<description><![CDATA[<a href="corner2.html">九　ジョバンニの切符（町のかど）</a>]]></description>
+				<LookAt>
+			        <TimeStamp>
+			          <when>2012-06-24T22:00:00+02:00</when>
+			        </TimeStamp>
+					<longitude>11.2586544675523</longitude>
+					<latitude>43.76540027597212</latitude>
+					<altitude>0</altitude>
+					<heading>-162.8621837967678</heading>
+					<tilt>68.67421398564832</tilt>
+					<range>476.8991827824913</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_star0</styleUrl>
+				<Point>
+  					<extrude>1</extrude>
+					<altitudeMode>relativeToGround</altitudeMode>
+					<coordinates>11.2586544675523,43.76540027597213,50</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark id="shore">
+				<name>河原</name>
+				<description><![CDATA[<a href="shore.html">九　ジョバンニの切符（河原）</a>]]></description>
+				<LookAt>
+			        <TimeStamp>
+			          <when>2012-06-24T22:10:00+02:00</when>
+			        </TimeStamp>
+					<longitude>11.26445258477689</longitude>
+					<latitude>43.76586239012347</latitude>
+					<altitude>0</altitude>
+					<heading>-162.8581732441685</heading>
+					<tilt>68.6750136477928</tilt>
+					<range>500.6925521664206</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_star0</styleUrl>
+				<Point>
+  					<extrude>1</extrude>
+					<altitudeMode>relativeToGround</altitudeMode>
+					<coordinates>11.26436093324738,43.76564779744103,50</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+	</Folder>
+</Document>
+</kml>

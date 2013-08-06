@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+<script src="http://cdn.jqmobi.com/jq.mobi.min.js"></script>
+<script src="http://y-ich.github.com/js-console/js/js-console-bundle.js"></script>
+<script type="text/javascript">
+var works = [
+    {title: '緑の太陽',
+     year: 1969,
+     url: 'http://image.mapple.net/img/user/00/00/11/91/H0000119124.jpg'},
+    {title: '歓び',
+     year: null,
+     url: 'http://2.bp.blogspot.com/-2OnvqAGImTY/TxpoVx9U8rI/AAAAAAAARIE/Od9IYtQj8hw/s1600/%25E3%2580%258A%25E5%2596%259C%25E3%2581%25B2%25E3%2582%2599%25E3%2580%258B.PNG'},
+    {title: '未来を拓(ひら)く塔',
+     year: 1988,
+     url: 'http://blogimg.goo.ne.jp/user_image/45/f4/fc3996f8023836ee03bca32b5705e4d6.jpg'},
+    {title: '足あと広場',
+     year: 1978,
+     url: 'http://pds.exblog.jp/pds/1/201104/21/91/a0183191_12272527.jpg'},
+    {title: '若い太陽の塔',
+     year: 1969,
+     url: 'http://3.bp.blogspot.com/__nOgMaUJzU0/S7ifQrs6Q_I/AAAAAAAAJRc/4lFjB1RBRCA/s1600/ピクチャ+9.png'},
+    {title: '夢の樹',
+     year: 1983,
+     url: 'http://image.space.rakuten.co.jp/d/strg/ctrl/2/d17956e2be7c919bedaaf8b19f385b89698baa4c.86.2.2.2.jpg'},
+    {title: 'こどもの樹',
+     year: 1985,
+     url: 'http://image.space.rakuten.co.jp/lg01/64/0000109064/09/imge4267183lol6io.jpeg'},
+    {title: '歓喜',
+     year: 1965,
+     url: 'http://livedoor.blogimg.jp/sparky55/imgs/e/8/e85cc8c2.JPG'},
+    {title: '神話',
+     year: 1982,
+     url: 'http://www.naniwa-i.com/dandan_blog/img/oka.JPG'},
+    {title: '花炎',
+     year: 1995,
+     url: 'http://www.oharido.com/WP/wp-content/uploads/2010/05/DSCN1615-600x800-525x700.jpg'},
+    {title: '天に舞',
+     year: 1974,
+     url: 'http://www.new-york-art.com/old/images/o-dancing-in-the-heaven.jpg'},
+    {title: '河神',
+     year: 1995,
+     url: 'http://blog-imgs-26.fc2.com/h/a/r/harropage/OIRASEKEIRYUUH1.jpg'},
+    {title: '躍進',
+     year: 1972,
+     url: 'http://blogimg.goo.ne.jp/user_image/66/e6/e1acd569f370c7a30d7c9dfa42d89643.jpg'},
+    {title: '太陽の塔',
+     year: 1970,
+     url: 'http://blog.zaq.ne.jp/jazzvisualparadise/img/img_box/img20091126170136622.jpg'},
+    {title: '明日の神話',
+     year: 1968,
+     url: 'http://www.yuriko.net/travel/wp-content/uploads/2008/11/20081119212439.jpg'},
+    {title: '若い時計台',
+     year: 1966,
+     url: 'http://2.bp.blogspot.com/-xVkvIKjdWNw/TvGoWbzBijI/AAAAAAAAMrc/z0L_jtQupz0/s1600/R0024079.JPG'},
+    {title: '午後の日',
+     year: 1967,
+     url: 'http://www1.u-netsurf.ne.jp/~kitada/doc/taiyo/ohaka.jpg'},
+    {title: '赤い兎',
+     year: 1949,
+     url: 'http://www.artcreation.co.jp/80914-tarou-akaiusagi.JPG'},
+    {title: '未来を視る',
+     year: 1985,
+     url: 'http://tsukuba-style.jp/blog/2009030117040000.jpg'},
+    {title: '躍動の門',
+     year: 1993,
+     url: 'http://www.takenakadouki.com/cms/wp-content/uploads/04yakudonomon.jpg'},
+    {title: '五大陸',
+     year: 1993,
+     url: 'https://lh3.googleusercontent.com/-_rs1vSHYwec/S_t4iEpTlbI/AAAAAAAANtY/w1TiqH0ifb0/s912/IMG_1100.JPG'},
+]    
+</script>
+<style type="text/css">
+body {
+    margin: 0;
+}
+div.container {
+    width: 1000000px;
+}
+div.frame {
+    float: left;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+</style>
+</head>
+<body>
+<script type="text/javascript">
+(function() {
+    var timerId;
+    var scrollEnd;
+    var endFlag = false;　// scrollEndによるスクロールの場合の抑制処理用。
+    var width = window.innerWidth; // Mobile SafariではinnerWidthはスクロール中？微妙に変化するので定数にしておく。
+    var $container = $('<div>').addClass('container');
+    works.forEach(function(e) {
+        $container.append($('<div>').addClass('frame')
+                  .css('width', width + 'px')
+                  .css('height', innerHeight + 'px')
+                  .css('background-image', 'url(' + e.url + ')'));
+    });
+    $(document.body).append($container);
+    scrollEnd = function() {
+        if (endFlag) {
+            endFlag = false;
+        }
+        else {
+            document.body.scrollLeft = Math.round(document.body.scrollLeft / width) * width;
+            endFlag = true;
+        }
+    };
+    window.addEventListener('scroll', function(e) {
+        console.log('onscroll');
+        if (typeof timeId !== 'undefined') clearTimeout(timeId);
+        timeId = setTimeout(scrollEnd, 500);
+    });
+})();
+</script>
+</body>
+</html>

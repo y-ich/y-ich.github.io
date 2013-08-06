@@ -1,0 +1,1865 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>fromGE.kml</name>
+	<Style id="sh_ylw-pushpin00">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<BalloonStyle>
+			<text><![CDATA[<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="initial-scale=1, user-scalable=yes"> 
+<style type="text/css">
+body {
+  margin: 0;
+}
+h3 {
+  font-size: medium;
+}
+</style>
+<base href="http://dl.dropbox.com/u/8719413/y_ichikawa/taro/">
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script src="js/geo.js"></script>
+<!--<script type="text/javascript">
+document.write('<script src="http://192.168.10.158/~yuji/js/js-console.js?dummy=' + (new Date()).getTime() + '"><' + '/script>');
+</script>-->
+</head>
+<body>
+$[description]
+<h3 style="position: relative; top: -100px; color: white;">ようこそ<br />$[name]へ<br />(写真をタッチして下さい)</h3>
+<script type="text/javascript">
+document.write(/iPad/.test(navigator.userAgent) ? '<a href="#" ontouchstart="geoQuery();" onclick="this.href=pollAndUrlTo(\'$[name]\');"><input type="button" value="現在地からの経路を見る"></input></a>' : '<input type="button" value="現在地からの経路を見る" onclick="jumpTo(\'$[name]\');"></input>');
+console.log(innerWidth);
+console.log(innerHeight);
+</script>
+</body>
+</html>]]></text>
+			<bgColor>0000d7ff</bgColor>
+		</BalloonStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin0">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<BalloonStyle>
+			<text><![CDATA[<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="initial-scale=1, user-scalable=yes"> 
+<style type="text/css">
+body {
+  margin: 0;
+}
+h3 {
+  font-size: medium;
+}
+</style>
+<base href="http://dl.dropbox.com/u/8719413/y_ichikawa/taro/">
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script src="js/geo.js"></script>
+<!--<script type="text/javascript">
+document.write('<script src="http://192.168.10.158/~yuji/js/js-console.js?dummy=' + (new Date()).getTime() + '"><' + '/script>');
+</script>-->
+</head>
+<body>
+$[description]
+<h3 style="position: relative; top: -100px; color: white;">ようこそ<br />$[name]へ<br />(写真をタッチして下さい)</h3>
+<script type="text/javascript">
+document.write(/iPad/.test(navigator.userAgent) ? '<a href="#" ontouchstart="geoQuery();" onclick="this.href=pollAndUrlTo(\'$[name]\');"><input type="button" value="現在地からの経路を見る"></input></a>' : '<input type="button" value="現在地からの経路を見る" onclick="jumpTo(\'$[name]\');"></input>');
+console.log(innerWidth);
+console.log(innerHeight);
+</script>
+</body>
+</html>]]></text>
+			<bgColor>0000d7ff</bgColor>
+		</BalloonStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<BalloonStyle>
+			<text><![CDATA[<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="initial-scale=1, user-scalable=yes"> 
+<style type="text/css">
+body {
+  margin: 0;
+}
+h3 {
+  font-size: medium;
+}
+</style>
+<base href="http://dl.dropbox.com/u/8719413/y_ichikawa/taro/">
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script src="js/geo.js"></script>
+<!--<script type="text/javascript">
+document.write('<script src="http://192.168.10.158/~yuji/js/js-console.js?dummy=' + (new Date()).getTime() + '"><' + '/script>');
+</script>-->
+</head>
+<body>
+$[description]
+<h3 style="position: relative; top: -100px; color: white;">ようこそ<br />$[name]へ<br />(写真をタッチして下さい)</h3>
+<script type="text/javascript">
+document.write(/iPad/.test(navigator.userAgent) ? '<a href="#" ontouchstart="geoQuery();" onclick="this.href=pollAndUrlTo(\'$[name]\');"><input type="button" value="現在地からの経路を見る"></input></a>' : '<input type="button" value="現在地からの経路を見る" onclick="jumpTo(\'$[name]\');"></input>');
+console.log(innerWidth);
+console.log(innerHeight);
+</script>
+</body>
+</html>]]></text>
+			<bgColor>0000d7ff</bgColor>
+		</BalloonStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin00">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin00</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl00</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin3">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin0">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin00</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin1</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin2">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<BalloonStyle>
+			<text><![CDATA[<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="initial-scale=1, user-scalable=yes"> 
+<style type="text/css">
+body {
+  margin: 0;
+}
+h3 {
+  font-size: medium;
+}
+</style>
+<base href="http://dl.dropbox.com/u/8719413/y_ichikawa/taro/">
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script src="js/geo.js"></script>
+<!--<script type="text/javascript">
+document.write('<script src="http://192.168.10.158/~yuji/js/js-console.js?dummy=' + (new Date()).getTime() + '"><' + '/script>');
+</script>-->
+</head>
+<body>
+$[description]
+<h3 style="position: relative; top: -100px; color: white;">ようこそ<br />$[name]へ<br />(写真をタッチして下さい)</h3>
+<script type="text/javascript">
+document.write(/iPad/.test(navigator.userAgent) ? '<a href="#" ontouchstart="geoQuery();" onclick="this.href=pollAndUrlTo(\'$[name]\');"><input type="button" value="現在地からの経路を見る"></input></a>' : '<input type="button" value="現在地からの経路を見る" onclick="jumpTo(\'$[name]\');"></input>');
+console.log(innerWidth);
+console.log(innerHeight);
+</script>
+</body>
+</html>]]></text>
+		</BalloonStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin10">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin0</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin_hl00">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<BalloonStyle>
+			<text><![CDATA[<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="initial-scale=1, user-scalable=yes"> 
+<style type="text/css">
+body {
+  margin: 0;
+}
+h3 {
+  font-size: medium;
+}
+</style>
+<base href="http://dl.dropbox.com/u/8719413/y_ichikawa/taro/">
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script src="js/geo.js"></script>
+<!--<script type="text/javascript">
+document.write('<script src="http://192.168.10.158/~yuji/js/js-console.js?dummy=' + (new Date()).getTime() + '"><' + '/script>');
+</script>-->
+</head>
+<body>
+$[description]
+<h3 style="position: relative; top: -100px; color: white;">ようこそ<br />$[name]へ<br />(写真をタッチして下さい)</h3>
+<script type="text/javascript">
+document.write(/iPad/.test(navigator.userAgent) ? '<a href="#" ontouchstart="geoQuery();" onclick="this.href=pollAndUrlTo(\'$[name]\');"><input type="button" value="現在地からの経路を見る"></input></a>' : '<input type="button" value="現在地からの経路を見る" onclick="jumpTo(\'$[name]\');"></input>');
+console.log(innerWidth);
+console.log(innerHeight);
+</script>
+</body>
+</html>]]></text>
+		</BalloonStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin00">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin002</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin00</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin1">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin0</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin02</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin0">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<BalloonStyle>
+			<text><![CDATA[<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="initial-scale=1, user-scalable=yes"> 
+<style type="text/css">
+body {
+  margin: 0;
+}
+h3 {
+  font-size: medium;
+}
+</style>
+<base href="http://dl.dropbox.com/u/8719413/y_ichikawa/taro/">
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script src="js/geo.js"></script>
+<!--<script type="text/javascript">
+document.write('<script src="http://192.168.10.158/~yuji/js/js-console.js?dummy=' + (new Date()).getTime() + '"><' + '/script>');
+</script>-->
+</head>
+<body>
+$[description]
+<h3 style="position: relative; top: -100px; color: white;">ようこそ<br />$[name]へ<br />(写真をタッチして下さい)</h3>
+<script type="text/javascript">
+document.write(/iPad/.test(navigator.userAgent) ? '<a href="#" ontouchstart="geoQuery();" onclick="this.href=pollAndUrlTo(\'$[name]\');"><input type="button" value="現在地からの経路を見る"></input></a>' : '<input type="button" value="現在地からの経路を見る" onclick="jumpTo(\'$[name]\');"></input>');
+console.log(innerWidth);
+console.log(innerHeight);
+</script>
+</body>
+</html>]]></text>
+		</BalloonStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin1</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl0</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin1">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin0</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin2</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin00">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<BalloonStyle>
+			<text><![CDATA[<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="initial-scale=1, user-scalable=yes"> 
+<style type="text/css">
+body {
+  margin: 0;
+}
+h3 {
+  font-size: medium;
+}
+</style>
+<base href="http://dl.dropbox.com/u/8719413/y_ichikawa/taro/">
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script src="js/geo.js"></script>
+<!--<script type="text/javascript">
+document.write('<script src="http://192.168.10.158/~yuji/js/js-console.js?dummy=' + (new Date()).getTime() + '"><' + '/script>');
+</script>-->
+</head>
+<body>
+$[description]
+<h3 style="position: relative; top: -100px; color: white;">ようこそ<br />$[name]へ<br />(写真をタッチして下さい)</h3>
+<script type="text/javascript">
+document.write(/iPad/.test(navigator.userAgent) ? '<a href="#" ontouchstart="geoQuery();" onclick="this.href=pollAndUrlTo(\'$[name]\');"><input type="button" value="現在地からの経路を見る"></input></a>' : '<input type="button" value="現在地からの経路を見る" onclick="jumpTo(\'$[name]\');"></input>');
+console.log(innerWidth);
+console.log(innerHeight);
+</script>
+</body>
+</html>]]></text>
+		</BalloonStyle>
+	</Style>
+	<Style id="s_ylw-pushpin00">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<BalloonStyle>
+			<text><![CDATA[<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="initial-scale=1, user-scalable=yes"> 
+<style type="text/css">
+body {
+  margin: 0;
+}
+h3 {
+  font-size: medium;
+}
+</style>
+<base href="http://dl.dropbox.com/u/8719413/y_ichikawa/taro/">
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script src="js/geo.js"></script>
+<!--<script type="text/javascript">
+document.write('<script src="http://192.168.10.158/~yuji/js/js-console.js?dummy=' + (new Date()).getTime() + '"><' + '/script>');
+</script>-->
+</head>
+<body>
+$[description]
+<h3 style="position: relative; top: -100px; color: white;">ようこそ<br />$[name]へ<br />(写真をタッチして下さい)</h3>
+<script type="text/javascript">
+document.write(/iPad/.test(navigator.userAgent) ? '<a href="#" ontouchstart="geoQuery();" onclick="this.href=pollAndUrlTo(\'$[name]\');"><input type="button" value="現在地からの経路を見る"></input></a>' : '<input type="button" value="現在地からの経路を見る" onclick="jumpTo(\'$[name]\');"></input>');
+console.log(innerWidth);
+console.log(innerHeight);
+</script>
+</body>
+</html>]]></text>
+		</BalloonStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin0">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<BalloonStyle>
+			<text><![CDATA[<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="initial-scale=1, user-scalable=yes"> 
+<style type="text/css">
+body {
+  margin: 0;
+}
+h3 {
+  font-size: medium;
+}
+</style>
+<base href="http://dl.dropbox.com/u/8719413/y_ichikawa/taro/">
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script src="js/geo.js"></script>
+<!--<script type="text/javascript">
+document.write('<script src="http://192.168.10.158/~yuji/js/js-console.js?dummy=' + (new Date()).getTime() + '"><' + '/script>');
+</script>-->
+</head>
+<body>
+$[description]
+<h3 style="position: relative; top: -100px; color: white;">ようこそ<br />$[name]へ<br />(写真をタッチして下さい)</h3>
+<script type="text/javascript">
+document.write(/iPad/.test(navigator.userAgent) ? '<a href="#" ontouchstart="geoQuery();" onclick="this.href=pollAndUrlTo(\'$[name]\');"><input type="button" value="現在地からの経路を見る"></input></a>' : '<input type="button" value="現在地からの経路を見る" onclick="jumpTo(\'$[name]\');"></input>');
+console.log(innerWidth);
+console.log(innerHeight);
+</script>
+</body>
+</html>]]></text>
+		</BalloonStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin02">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<BalloonStyle>
+			<text><![CDATA[<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="initial-scale=1, user-scalable=yes"> 
+<style type="text/css">
+body {
+  margin: 0;
+}
+h3 {
+  font-size: medium;
+}
+</style>
+<base href="http://dl.dropbox.com/u/8719413/y_ichikawa/taro/">
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script src="js/geo.js"></script>
+<!--<script type="text/javascript">
+document.write('<script src="http://192.168.10.158/~yuji/js/js-console.js?dummy=' + (new Date()).getTime() + '"><' + '/script>');
+</script>-->
+</head>
+<body>
+$[description]
+<h3 style="position: relative; top: -100px; color: white;">ようこそ<br />$[name]へ<br />(写真をタッチして下さい)</h3>
+<script type="text/javascript">
+document.write(/iPad/.test(navigator.userAgent) ? '<a href="#" ontouchstart="geoQuery();" onclick="this.href=pollAndUrlTo(\'$[name]\');"><input type="button" value="現在地からの経路を見る"></input></a>' : '<input type="button" value="現在地からの経路を見る" onclick="jumpTo(\'$[name]\');"></input>');
+console.log(innerWidth);
+console.log(innerHeight);
+</script>
+</body>
+</html>]]></text>
+			<bgColor>0000d7ff</bgColor>
+		</BalloonStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin002">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<BalloonStyle>
+			<text><![CDATA[<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="initial-scale=1, user-scalable=yes"> 
+<style type="text/css">
+body {
+  margin: 0;
+}
+h3 {
+  font-size: medium;
+}
+</style>
+<base href="http://dl.dropbox.com/u/8719413/y_ichikawa/taro/">
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script src="js/geo.js"></script>
+<!--<script type="text/javascript">
+document.write('<script src="http://192.168.10.158/~yuji/js/js-console.js?dummy=' + (new Date()).getTime() + '"><' + '/script>');
+</script>-->
+</head>
+<body>
+$[description]
+<h3 style="position: relative; top: -100px; color: white;">ようこそ<br />$[name]へ<br />(写真をタッチして下さい)</h3>
+<script type="text/javascript">
+document.write(/iPad/.test(navigator.userAgent) ? '<a href="#" ontouchstart="geoQuery();" onclick="this.href=pollAndUrlTo(\'$[name]\');"><input type="button" value="現在地からの経路を見る"></input></a>' : '<input type="button" value="現在地からの経路を見る" onclick="jumpTo(\'$[name]\');"></input>');
+console.log(innerWidth);
+console.log(innerHeight);
+</script>
+</body>
+</html>]]></text>
+		</BalloonStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl0">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin1">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<BalloonStyle>
+			<text><![CDATA[<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="initial-scale=1, user-scalable=yes"> 
+<style type="text/css">
+body {
+  margin: 0;
+}
+h3 {
+  font-size: medium;
+}
+</style>
+<base href="http://dl.dropbox.com/u/8719413/y_ichikawa/taro/">
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script src="js/geo.js"></script>
+<!--<script type="text/javascript">
+document.write('<script src="http://192.168.10.158/~yuji/js/js-console.js?dummy=' + (new Date()).getTime() + '"><' + '/script>');
+</script>-->
+</head>
+<body>
+$[description]
+<h3 style="position: relative; top: -100px; color: white;">ようこそ<br />$[name]へ<br />(写真をタッチして下さい)</h3>
+<script type="text/javascript">
+document.write(/iPad/.test(navigator.userAgent) ? '<a href="#" ontouchstart="geoQuery();" onclick="this.href=pollAndUrlTo(\'$[name]\');"><input type="button" value="現在地からの経路を見る"></input></a>' : '<input type="button" value="現在地からの経路を見る" onclick="jumpTo(\'$[name]\');"></input>');
+console.log(innerWidth);
+console.log(innerHeight);
+</script>
+</body>
+</html>]]></text>
+			<bgColor>0000d7ff</bgColor>
+		</BalloonStyle>
+	</Style>
+	<Folder>
+		<name>岡本太郎に会いに行こう</name>
+		<open>1</open>
+		<Folder>
+			<name>美術館</name>
+			<open>1</open>
+			<Placemark>
+				<name>川崎市岡本太郎美術館</name>
+				<description><![CDATA[<a href="kawasaki/index.html?dummy=1">
+<img style="width: 320px;" src="http://www.geocities.jp/shinmaiwa/200702001.jpg" />
+</a>]]></description>
+				<LookAt>
+					<longitude>139.5574589992264</longitude>
+					<latitude>35.60764700164172</latitude>
+					<altitude>0</altitude>
+					<heading>-1.079394383912318e-09</heading>
+					<tilt>44.99973704805225</tilt>
+					<range>1064.638677426095</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin0</styleUrl>
+				<Point>
+					<coordinates>139.5574589992264,35.60764700164172,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>岡本太郎記念館</name>
+				<LookAt>
+					<longitude>139.7155948480109</longitude>
+					<latitude>35.66128700865948</latitude>
+					<altitude>0</altitude>
+					<heading>1.651618067001744</heading>
+					<tilt>45.32807910996978</tilt>
+					<range>227.857467202319</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin0</styleUrl>
+				<Point>
+					<coordinates>139.7155948480109,35.66128700865949,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>高松市美術館</name>
+				<description>生成</description>
+				<LookAt>
+					<longitude>134.0491736567813</longitude>
+					<latitude>34.34414072929267</latitude>
+					<altitude>0</altitude>
+					<heading>-1.629490399399522e-09</heading>
+					<tilt>0</tilt>
+					<range>2793.052613186346</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin0</styleUrl>
+				<Point>
+					<coordinates>134.0491736567813,34.34414072929267,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>東京国立近代美術館</name>
+				<description><![CDATA[<a href="tokyo/index.html">
+<img style="width: 320px;" src="http://www.momat.go.jp/campus/images/newsd_1698_1.jpg" />
+</a>]]></description>
+				<LookAt>
+					<longitude>139.7547149997251</longitude>
+					<latitude>35.69054800118573</latitude>
+					<altitude>0</altitude>
+					<heading>-3.836893945530328e-10</heading>
+					<tilt>44.99973704759619</tilt>
+					<range>1019.347908612412</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin0</styleUrl>
+				<Point>
+					<coordinates>139.7547149997251,35.69054800118573,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>富山県立近代美術館</name>
+				<description><![CDATA[<a href="toyama/index.html">
+<img style="width: 320px;" src="http://www.eclip.jp/blog/wp-content/uploads/2011/08/DSCN0904.jpg" />
+</a>]]></description>
+				<LookAt>
+					<longitude>137.2127450108881</longitude>
+					<latitude>36.68015399474071</latitude>
+					<altitude>0</altitude>
+					<heading>6.504021226429233e-09</heading>
+					<tilt>0</tilt>
+					<range>2835.254892603585</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin0</styleUrl>
+				<Point>
+					<coordinates>137.2127450108881,36.68015399474071,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>箱根彫刻の森美術館</name>
+				<description>樹人</description>
+				<LookAt>
+					<longitude>139.0515104606217</longitude>
+					<latitude>35.24471925452019</latitude>
+					<altitude>0</altitude>
+					<heading>6.640395905061341e-07</heading>
+					<tilt>0</tilt>
+					<range>8652.704650898639</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin</styleUrl>
+				<Point>
+					<coordinates>139.0515104606217,35.24471925452019,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>パブリックアート</name>
+			<open>1</open>
+			<Placemark>
+				<name>ふる里</name>
+				<description><![CDATA[<style>
+#pano {
+  width: 640px;
+  height: 480px;
+}
+</style>
+<div id="pano"></div>
+<p>このまま右へ４回進んで下さい。</p>
+<p>
+手の椅子
+</p>
+<script type="text/javascript">
+var panoramaOptions = {
+  position: new google.maps.LatLng(34.684383,135.828626),
+  pov: {
+    heading: 50,
+    pitch: -5,
+    zoom: 3
+  }
+};
+var panorama = new  google.maps.StreetViewPanorama(document.getElementById("pano"), panoramaOptions);
+</script>]]></description>
+				<LookAt>
+					<longitude>135.8287208207522</longitude>
+					<latitude>34.68349756723232</latitude>
+					<altitude>0</altitude>
+					<heading>-0.000136960997657395</heading>
+					<tilt>48.76697071362187</tilt>
+					<range>251.8691989644593</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin00</styleUrl>
+				<Point>
+					<coordinates>135.8287583560657,34.68383222750833,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>大塚製薬徳島研究所</name>
+				<description>いのち踊る</description>
+				<LookAt>
+					<longitude>134.5799708553737</longitude>
+					<latitude>34.12405075219637</latitude>
+					<altitude>0</altitude>
+					<heading>8.074509155932927e-08</heading>
+					<tilt>0</tilt>
+					<range>8881.326386890401</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin00</styleUrl>
+				<Point>
+					<coordinates>134.579971,34.124051,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>ホテルシーショア御津岬</name>
+				<description>繚乱</description>
+				<LookAt>
+					<longitude>134.5479930005338</longitude>
+					<latitude>34.77351017176207</latitude>
+					<altitude>0</altitude>
+					<heading>-7.592938191057851e-11</heading>
+					<tilt>44.99449123391859</tilt>
+					<range>246.9692289377663</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin00</styleUrl>
+				<Point>
+					<coordinates>134.546983882058,34.7737209653637,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>姫路市総合スポーツ会館</name>
+				<description>躍動</description>
+				<LookAt>
+					<longitude>134.6672069992349</longitude>
+					<latitude>34.82017100528396</latitude>
+					<altitude>0</altitude>
+					<heading>-1.064951485103792e-09</heading>
+					<tilt>44.99973705169506</tilt>
+					<range>1011.188754780944</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin00</styleUrl>
+				<Point>
+					<coordinates>134.667207,34.820171,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>書写山</name>
+				<description>椎名麟三文学碑</description>
+				<LookAt>
+					<longitude>134.6582039994867</longitude>
+					<latitude>34.89104000349059</latitude>
+					<altitude>0</altitude>
+					<heading>-7.14607025831223e-10</heading>
+					<tilt>44.99973704990141</tilt>
+					<range>1317.338926720794</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin00</styleUrl>
+				<Point>
+					<coordinates>134.6582039994867,34.89104000349059,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>兵庫県姫路市夢前町護持</name>
+				<description>若い泉</description>
+				<LookAt>
+					<longitude>134.63441140499</longitude>
+					<latitude>34.93804876268815</latitude>
+					<altitude>0</altitude>
+					<heading>-2.955528222909216</heading>
+					<tilt>37.42626673075061</tilt>
+					<range>221.5563295324286</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin00</styleUrl>
+				<Point>
+					<coordinates>134.6344097175928,34.93813408758933,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>豊津公園</name>
+				<description><![CDATA[<style>
+#pano {
+  width: 640px;
+  height: 480px;
+}
+</style>
+<div id="pano"></div>
+<p>
+リオ
+</p>
+<script type="text/javascript">
+var panoramaOptions = {
+  position: new google.maps.LatLng(34.760448,135.496149),
+  pov: {
+    heading: 270,
+    pitch: 0,
+    zoom: 1
+  }
+};
+var panorama = new  google.maps.StreetViewPanorama(document.getElementById("pano"), panoramaOptions);
+</script>]]></description>
+				<LookAt>
+					<longitude>135.4960122210397</longitude>
+					<latitude>34.76046945276337</latitude>
+					<altitude>0</altitude>
+					<heading>-1.389185586714752</heading>
+					<tilt>30.71451069999545</tilt>
+					<range>68.90945368507958</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin00</styleUrl>
+				<Point>
+					<coordinates>135.4960105132123,34.76051427481898,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>ダスキン本社</name>
+				<description>みつめあう愛</description>
+				<LookAt>
+					<longitude>135.4963930427488</longitude>
+					<latitude>34.76034302571129</latitude>
+					<altitude>0</altitude>
+					<heading>4.330585822687198e-05</heading>
+					<tilt>2.131968182997293</tilt>
+					<range>187.1096704708657</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin00</styleUrl>
+				<Point>
+					<coordinates>135.4963930427488,34.76034302571129,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>サンアリーナ</name>
+				<description>であい</description>
+				<LookAt>
+					<longitude>136.7697881607608</longitude>
+					<latitude>34.49063928579405</latitude>
+					<altitude>0</altitude>
+					<heading>0.0005455396075007118</heading>
+					<tilt>0</tilt>
+					<range>347.1075751107024</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin00</styleUrl>
+				<Point>
+					<coordinates>136.769783,34.49059328056279,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>相模原市買物公園通り</name>
+				<description><![CDATA[<style>
+#pano {
+  width: 640px;
+  height: 480px;
+}
+</style>
+<div id="pano"></div>
+<p>
+呼ぶ(赤)、呼ぶ(青)
+</p>
+<script type="text/javascript">
+var panoramaOptions = {
+  position: new google.maps.LatLng(35.574845,139.376827),
+  pov: {
+    heading: 33,
+    pitch: 0,
+    zoom: 1
+  }
+};
+var panorama = new  google.maps.StreetViewPanorama(document.getElementById("pano"), panoramaOptions);
+</script>]]></description>
+				<LookAt>
+					<longitude>139.3770593046133</longitude>
+					<latitude>35.5751761183651</latitude>
+					<altitude>0</altitude>
+					<heading>0.002189192622746184</heading>
+					<tilt>44.99376672961321</tilt>
+					<range>317.6284961218095</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin00</styleUrl>
+				<Point>
+					<coordinates>139.376894,35.574956,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>二子(ふたご)神社</name>
+				<description><![CDATA[<style>
+#pano {
+  width: 640px;
+  height: 480px;
+}
+</style>
+<div id="pano"></div>
+<p>
+誇り
+</p>
+<script type="text/javascript">
+var panoramaOptions = {
+  position: new google.maps.LatLng(35.608476,139.621392),
+  pov: {
+    heading: 57,
+    pitch: 7,
+    zoom: 2
+  }
+};
+var panorama = new  google.maps.StreetViewPanorama(document.getElementById("pano"), panoramaOptions);
+</script>]]></description>
+				<LookAt>
+					<longitude>139.6217573605041</longitude>
+					<latitude>35.6087093039789</latitude>
+					<altitude>0</altitude>
+					<heading>0.0002508007824375752</heading>
+					<tilt>50.15674279631712</tilt>
+					<range>132.5412314597126</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin00</styleUrl>
+				<Point>
+					<coordinates>139.6217573605042,35.60870930397891,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>浦安市運動公園</name>
+				<description><![CDATA[<style>
+#pano {
+  width: 640px;
+  height: 480px;
+}
+</style>
+<div id="pano"></div>
+<p>
+躍動の門、五大陸
+</p>
+<script type="text/javascript">
+var panoramaOptions = {
+  position: new google.maps.LatLng(35.630589,139.889281),
+  pov: {
+    heading: 129,
+    pitch: 9,
+    zoom: 2
+  }
+};
+var panorama = new  google.maps.StreetViewPanorama(document.getElementById("pano"), panoramaOptions);
+</script>]]></description>
+				<LookAt>
+					<longitude>139.8913771858091</longitude>
+					<latitude>35.62995142259933</latitude>
+					<altitude>0</altitude>
+					<heading>-0.0001064716222655172</heading>
+					<tilt>0</tilt>
+					<range>386.0868965684277</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin00</styleUrl>
+				<Point>
+					<coordinates>139.8913771858091,35.62995142259933,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>新鹿沼(しんかぬま)駅前</name>
+				<description><![CDATA[<a href="kanuma/index.html"><img src="http://travelstation.tk/station/kanto/tobu/nikko/pict/shinkanuma01_20050919.jpg" style="width: 320px;" /></a>]]></description>
+				<LookAt>
+					<longitude>139.7453436209763</longitude>
+					<latitude>36.55721937691974</latitude>
+					<altitude>0</altitude>
+					<heading>-7.386911969778025e-05</heading>
+					<tilt>12.69349244943923</tilt>
+					<range>128.6771685486222</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin00</styleUrl>
+				<Point>
+					<coordinates>139.7453436209763,36.55721937691975,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>久国寺</name>
+				<description><![CDATA[<a href="kyukokuji/index.html"><img src="http://network2010.org/contents/files/serialization/03tansaku/06_05_01.jpg" style="width: 320px;" /></a>]]></description>
+				<LookAt>
+					<longitude>136.9160370971873</longitude>
+					<latitude>35.18900142945758</latitude>
+					<altitude>0</altitude>
+					<heading>1.380540082028059</heading>
+					<tilt>46.68489585253158</tilt>
+					<range>99.23774176690965</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin00</styleUrl>
+				<Point>
+					<coordinates>136.9159082479036,35.18905304393925,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>歴史と文化の森公園</name>
+				<description><![CDATA[<a href="morikoen/index.html"><img src="http://www.funfun-odekake.net/funfun/kouen/kyusyu/saga/rekisito_bunkano_morikouen/main.jpg" style="width: 320px;" /></a>]]></description>
+				<LookAt>
+					<longitude>129.8561419896008</longitude>
+					<latitude>33.18867998182942</latitude>
+					<altitude>0</altitude>
+					<heading>-5.69251224111786e-09</heading>
+					<tilt>0</tilt>
+					<range>8046.62437423711</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin00</styleUrl>
+				<Point>
+					<coordinates>129.8561419896008,33.18867998182943,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>岐阜メモリアルセンター</name>
+				<description><![CDATA[<style>
+#pano {
+  width: 640px;
+  height: 480px;
+}
+</style>
+<div id="pano"></div>
+<p>
+未来を拓く塔
+</p>
+<script type="text/javascript">
+var panoramaOptions = {
+  position: new google.maps.LatLng(35.439372,136.765202),
+  pov: {
+    heading: 4,
+    pitch: 5,
+    zoom: 2
+  }
+};
+var panorama = new  google.maps.StreetViewPanorama(document.getElementById("pano"), panoramaOptions);
+</script>]]></description>
+				<LookAt>
+					<longitude>136.7651895117811</longitude>
+					<latitude>35.44020978494274</latitude>
+					<altitude>0</altitude>
+					<heading>0.000848525383652569</heading>
+					<tilt>0</tilt>
+					<range>978.6204999212299</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin00</styleUrl>
+				<Point>
+					<coordinates>136.7652066704034,35.44006064953565,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>ふなばしアンデルセン公園</name>
+				<description><![CDATA[<a href="funabashi/index.html"><img src="http://img.4travel.jp/img/tcs/t/pict/lrg/22/00/65/lrg_22006573.jpg" style="width: 320px;" /></a>]]></description>
+				<LookAt>
+					<longitude>140.0597990012147</longitude>
+					<latitude>35.75851700690141</latitude>
+					<altitude>0</altitude>
+					<heading>1.695515534032023e-09</heading>
+					<tilt>44.99973705331279</tilt>
+					<range>1028.687324184315</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin00</styleUrl>
+				<Point>
+					<coordinates>140.0597990012147,35.75851700690141,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>こどもの城</name>
+				<description><![CDATA[<style>
+#pano {
+  width: 640px;
+  height: 480px;
+}
+</style>
+<div id="pano"></div>
+<p>
+こどもの樹
+</p>
+<script type="text/javascript">
+var panoramaOptions = {
+  position: new google.maps.LatLng(35.661609,139.708102),
+  pov: {
+    heading: -25,
+    pitch: 12,
+    zoom: 1
+  }
+};
+var panorama = new  google.maps.StreetViewPanorama(document.getElementById("pano"), panoramaOptions);
+</script>]]></description>
+				<LookAt>
+					<longitude>139.7080059997586</longitude>
+					<latitude>35.66174899979134</latitude>
+					<altitude>0</altitude>
+					<heading>-1.407141002173089e-10</heading>
+					<tilt>0</tilt>
+					<range>1034.13334934939</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin00</styleUrl>
+				<Point>
+					<coordinates>139.7080059997586,35.66174899979134,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>多磨霊園</name>
+				<description><![CDATA[<a href="tamareien/index.html"><img src="http://www.boseki.net/img-koei-tokyo/tama01.jpg" style="width: 320px;" /></a>]]></description>
+				<LookAt>
+					<longitude>139.5101619998637</longitude>
+					<latitude>35.68369500023243</latitude>
+					<altitude>0</altitude>
+					<heading>-7.950114481786205e-11</heading>
+					<tilt>0</tilt>
+					<range>1053.858165922219</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin00</styleUrl>
+				<Point>
+					<coordinates>139.5101619998637,35.68369500023243,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>つくばエクスプレス万博記念公園駅</name>
+				<description><![CDATA[<a href="tsukuba/index.html"><img src="http://www.k3.dion.ne.jp/~t-t/LOVELOG_IMG/TX-BANPAKU.jpg" style="width: 320px;" /></a>]]></description>
+				<LookAt>
+					<longitude>140.0593919994296</longitude>
+					<latitude>36.0584280013589</latitude>
+					<altitude>0</altitude>
+					<heading>-7.968052810189661e-10</heading>
+					<tilt>44.99973704776938</tilt>
+					<range>741.3642738504193</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin00</styleUrl>
+				<Point>
+					<coordinates>140.0593919994296,36.0584280013589,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>数寄屋橋公園</name>
+				<description><![CDATA[<style>
+#pano {
+  width: 640px;
+  height: 480px;
+}
+</style>
+<div id="pano"></div>
+<p>
+若い時計台
+</p>
+<script type="text/javascript">
+var panoramaOptions = {
+//  position: new google.maps.LatLng(35.672496,139.762462),
+  pov: {
+    heading: 0,
+    pitch: 9,
+    zoom: 1
+  }
+};
+var panorama = new  google.maps.StreetViewPanorama(document.getElementById("pano"), panoramaOptions);
+</script>]]></description>
+				<LookAt>
+					<longitude>139.7623184147509</longitude>
+					<latitude>35.67262492668716</latitude>
+					<altitude>0</altitude>
+					<heading>0.0002060882966832866</heading>
+					<tilt>0</tilt>
+					<range>1004.445576314969</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin00</styleUrl>
+				<Point>
+					<coordinates>139.7622325021462,35.672447,36.01866815231998</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>別府市 さとう皮膚科</name>
+				<description><![CDATA[<a href="bessho/index.html"><img src="http://www.ctb.ne.jp/~face/vol1/post/36.jpg" style="width: 320px;"></a>]]></description>
+				<LookAt>
+					<longitude>131.4986615448133</longitude>
+					<latitude>33.28009272117923</latitude>
+					<altitude>0</altitude>
+					<heading>-1.237687810603966e-06</heading>
+					<tilt>0</tilt>
+					<range>206.2890240963399</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin00</styleUrl>
+				<Point>
+					<coordinates>131.498639,33.279996,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>松江総合運動公園</name>
+				<description><![CDATA[<a href="matsue/index.html"><img src="http://guruguru.blog.eonet.jp/default/images/2012/03/13/120211_161105.jpg" style="width: 320px;" /></a>]]></description>
+				<LookAt>
+					<longitude>133.0653489998821</longitude>
+					<latitude>35.43655449986279</latitude>
+					<altitude>0</altitude>
+					<heading>-6.830877289379195e-11</heading>
+					<tilt>0</tilt>
+					<range>276.8603554684028</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin00</styleUrl>
+				<Point>
+					<coordinates>133.0648125503238,35.43638019590846,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>かわでん　九州工場</name>
+				<description>若い夢</description>
+				<LookAt>
+					<longitude>130.2440372141974</longitude>
+					<latitude>33.31220585482553</latitude>
+					<altitude>0</altitude>
+					<heading>-0.1785694839487076</heading>
+					<tilt>0</tilt>
+					<range>2195.26869373668</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin00</styleUrl>
+				<Point>
+					<coordinates>130.2451873857466,33.31242259335413,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>野沢温泉村役場</name>
+				<open>1</open>
+				<description>乙女</description>
+				<LookAt>
+					<longitude>138.4399690063671</longitude>
+					<latitude>36.92285800298863</latitude>
+					<altitude>0</altitude>
+					<heading>3.824960504365476e-09</heading>
+					<tilt>0</tilt>
+					<range>1311.911695620953</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin10</styleUrl>
+				<Point>
+					<coordinates>138.4399690063671,36.92285800298863,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>野沢温泉スキー場　日影ゲレンデ</name>
+				<open>1</open>
+				<description>シュナイダー記念碑</description>
+				<LookAt>
+					<longitude>138.4527620149113</longitude>
+					<latitude>36.92546003891285</latitude>
+					<altitude>0</altitude>
+					<heading>2.087873212313916e-08</heading>
+					<tilt>44.99973708532939</tilt>
+					<range>9577.424210909026</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin10</styleUrl>
+				<Point>
+					<coordinates>138.4527620149113,36.92546003891285,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>古牧温泉青森屋</name>
+				<open>1</open>
+				<description>「歓喜の鐘」</description>
+				<LookAt>
+					<longitude>141.3557754107475</longitude>
+					<latitude>40.66135502687153</latitude>
+					<altitude>0</altitude>
+					<heading>1.799557838772058e-11</heading>
+					<tilt>0</tilt>
+					<range>58.08555673650687</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin1</styleUrl>
+				<Point>
+					<coordinates>141.3557754107475,40.66135502687153,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>その他</name>
+			<open>1</open>
+			<Placemark>
+				<name>野沢温泉アリーナ</name>
+				<description>黒い太陽</description>
+				<LookAt>
+					<longitude>138.4468320140476</longitude>
+					<latitude>36.91877800695418</latitude>
+					<altitude>0</altitude>
+					<heading>8.438119708781875e-09</heading>
+					<tilt>0</tilt>
+					<range>3126.383720784471</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin10</styleUrl>
+				<Point>
+					<coordinates>138.4468320140476,36.91877800695418,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>慶和幼稚園</name>
+				<description>あそび</description>
+				<LookAt>
+					<longitude>136.8814060016474</longitude>
+					<latitude>35.09938300283137</latitude>
+					<altitude>0</altitude>
+					<heading>9.472932257724123e-10</heading>
+					<tilt>0</tilt>
+					<range>2716.469874121979</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin00</styleUrl>
+				<Point>
+					<coordinates>136.8814060016474,35.09938300283137,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>広島市現代美術館</name>
+				<description>若い夢</description>
+				<LookAt>
+					<longitude>132.4731756904989</longitude>
+					<latitude>34.38612440098543</latitude>
+					<altitude>0</altitude>
+					<heading>-3.808849086571055e-08</heading>
+					<tilt>0</tilt>
+					<range>3143.56709276242</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin00</styleUrl>
+				<Point>
+					<coordinates>132.4731756904989,34.38612440098543,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>おかざき世界子ども美術博物館</name>
+				<description>午後の日
+
+子供の時間</description>
+				<LookAt>
+					<longitude>137.213781114552</longitude>
+					<latitude>34.92695115649509</latitude>
+					<altitude>0</altitude>
+					<heading>-3.849612983701501e-09</heading>
+					<tilt>0</tilt>
+					<range>2792.191853026646</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin00</styleUrl>
+				<Point>
+					<coordinates>137.213781114552,34.92695115649509,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>古牧温泉青森屋</name>
+				<description>「生夢幻」「天平図」</description>
+				<LookAt>
+					<longitude>141.3557754107475</longitude>
+					<latitude>40.66135502687153</latitude>
+					<altitude>0</altitude>
+					<heading>1.799557838772058e-11</heading>
+					<tilt>0</tilt>
+					<range>58.08555673650687</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin3</styleUrl>
+				<Point>
+					<coordinates>141.3557754107475,40.66135502687153,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>寒河江市市役所</name>
+				<description>生誕</description>
+				<LookAt>
+					<longitude>140.2759940052772</longitude>
+					<latitude>38.38095253837633</latitude>
+					<altitude>0</altitude>
+					<heading>7.413278198766025e-09</heading>
+					<tilt>44.99974158551995</tilt>
+					<range>1102.504299917492</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin00</styleUrl>
+				<Point>
+					<coordinates>140.2759940052771,38.38095253837633,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>藤沢文化センター</name>
+				<description>縄文人
+光る彫刻
+座ることを拒否する椅
+炎</description>
+				<LookAt>
+					<longitude>141.3528547731833</longitude>
+					<latitude>38.86793577589274</latitude>
+					<altitude>0</altitude>
+					<heading>-0.0006117636515359983</heading>
+					<tilt>17.20762668460931</tilt>
+					<range>384.6204255731702</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin00</styleUrl>
+				<Point>
+					<coordinates>141.3528547731833,38.86793577589275,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>京都外国語大学　国際交流会館　カフェタロー</name>
+				<description>眼と眼コミュニケーション
+誇り</description>
+				<LookAt>
+					<longitude>135.7194499924078</longitude>
+					<latitude>35.00400511469616</latitude>
+					<altitude>0</altitude>
+					<heading>0.0003281145460558102</heading>
+					<tilt>0</tilt>
+					<range>279.8993818284978</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin10</styleUrl>
+				<Point>
+					<coordinates>135.7194499924078,35.00400511469616,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>そごう横浜店</name>
+				<description>太陽</description>
+				<LookAt>
+					<longitude>139.6249750350931</longitude>
+					<latitude>35.46517428893615</latitude>
+					<altitude>0</altitude>
+					<heading>-0.0001058224372743581</heading>
+					<tilt>21.79246594159967</tilt>
+					<range>107.93750411357</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin00</styleUrl>
+				<Point>
+					<coordinates>139.6250324455722,35.46514074725607,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>神奈川県立向の岡工業高等学校</name>
+				<description>午後の日</description>
+				<LookAt>
+					<longitude>139.5967065615684</longitude>
+					<latitude>35.61423408178078</latitude>
+					<altitude>0</altitude>
+					<heading>7.9249603071642e-05</heading>
+					<tilt>38.97831969081665</tilt>
+					<range>67.84536910309296</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin00</styleUrl>
+				<Point>
+					<coordinates>139.5966666561364,35.61424384470325,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>NHKスタジオパーク</name>
+				<description><![CDATA[<a href="nhk/index.html"><img src="http://blogimg.goo.ne.jp/user_image/1d/8b/70af497ea676c631d739e47b7af23f1e.jpg" style="width: 320px;" /></a>]]></description>
+				<LookAt>
+					<longitude>139.696248999577</longitude>
+					<latitude>35.66454349965289</latitude>
+					<altitude>0</altitude>
+					<heading>-2.466392933287698e-10</heading>
+					<tilt>0</tilt>
+					<range>311.8129068142435</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin00</styleUrl>
+				<Point>
+					<coordinates>139.6962489999781,35.66454350004278,39.47555675096775</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>奥入瀬渓流ホテル</name>
+				<description><![CDATA[<a href="oirase/index.html"><img src="http://www.myyado.com/htlimages/0220021/02_20021_a.jpg" style="width: 320px;" /></a>
+渓流賛歌]]></description>
+				<LookAt>
+					<longitude>140.9818411658052</longitude>
+					<latitude>40.57642479039036</latitude>
+					<altitude>0</altitude>
+					<heading>-3.087212080727393e-08</heading>
+					<tilt>0</tilt>
+					<range>61341.38487002391</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin10</styleUrl>
+				<Point>
+					<coordinates>140.9818411658052,40.57642479039036,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>川崎市立藤崎小学校</name>
+				<description><![CDATA[<a href="fujisaki/index.html"><img src="http://cn-estate.jp/image/area_sp/川崎市川崎区観音１丁目/川崎市立藤崎小学校.jpg" style="width: 320px;" /></a>]]></description>
+				<LookAt>
+					<longitude>139.725016003114</longitude>
+					<latitude>35.52563098992297</latitude>
+					<altitude>0</altitude>
+					<heading>1.809487530487587e-09</heading>
+					<tilt>0</tilt>
+					<range>8055.896069051191</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin00</styleUrl>
+				<Point>
+					<coordinates>139.7250160031141,35.52563098992297,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>日本モンキーパーク</name>
+				<description><![CDATA[<a href="inuyama/index.html"><img src="http://img.4travel.jp/img/tcs/t/pict/lrg/21/72/27/lrg_21722759.jpg" style="width: 320px;"></a>]]></description>
+				<LookAt>
+					<longitude>136.9529319975713</longitude>
+					<latitude>35.39039700063721</latitude>
+					<altitude>0</altitude>
+					<heading>-1.406562141221062e-09</heading>
+					<tilt>0</tilt>
+					<range>1351.198364526474</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin00</styleUrl>
+				<Point>
+					<coordinates>136.9529319975713,35.39039700063721,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>渋谷マークシティ</name>
+				<description><![CDATA[<a href="shibuya/index.html"><img src="http://shibuya-west.cocolog-nifty.com/photos/uncategorized/2010/12/02/101202_1.jpg" style="width: 320px;" /></a>]]></description>
+				<LookAt>
+					<longitude>139.700409999491</longitude>
+					<latitude>35.65870800101141</latitude>
+					<altitude>0</altitude>
+					<heading>-2.967266684524573e-10</heading>
+					<tilt>0</tilt>
+					<range>1016.963459281533</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin00</styleUrl>
+				<Point>
+					<coordinates>139.700409999491,35.65870800101141,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>大阪万博公園</name>
+				<description><![CDATA[<style>
+#pano {
+  width: 640px;
+  height: 480px;
+}
+</style>
+<div id="pano"></div>
+<p>
+太陽の塔
+</p>
+<script type="text/javascript">
+var panoramaOptions = {
+  position: new google.maps.LatLng(34.806868,135.531825),
+  pov: {
+    heading: 8,
+    pitch: 9,
+    zoom: 3
+  }
+};
+var panorama = new  google.maps.StreetViewPanorama(document.getElementById("pano"), panoramaOptions);
+</script>]]></description>
+				<LookAt>
+					<longitude>135.5323969987918</longitude>
+					<latitude>34.80950900047704</latitude>
+					<altitude>0</altitude>
+					<heading>-6.896937410113192e-10</heading>
+					<tilt>0</tilt>
+					<range>1036.607144154701</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin00</styleUrl>
+				<Point>
+					<coordinates>135.5323969987918,34.80950900047704,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>サンフェスタ岡山</name>
+				<description><![CDATA[<a href="okayama/index.html">
+<img src="http://sumai.homes.co.jp/warehouse/img/ekinavi/00029/okayama-2-1.jpg" style="width: 320px;" /></a>]]></description>
+				<LookAt>
+					<longitude>133.9185879997213</longitude>
+					<latitude>34.66636900021521</latitude>
+					<altitude>0</altitude>
+					<heading>-1.585538314256378e-10</heading>
+					<tilt>0</tilt>
+					<range>782.1016838948661</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin00</styleUrl>
+				<Point>
+					<coordinates>133.9185879997213,34.66636900021521,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>日本はきもの博物館</name>
+				<description><![CDATA[<a href="hakimono/index.html"><img src="http://blogimg.goo.ne.jp/user_image/31/6a/9a54cf08955bea9fe7d7e0a27c0083db.jpg" style="width: 320px;" /></a>]]></description>
+				<LookAt>
+					<longitude>133.2608650032326</longitude>
+					<latitude>34.45043000226481</latitude>
+					<altitude>0</altitude>
+					<heading>1.828666275216812e-09</heading>
+					<tilt>0</tilt>
+					<range>2750.582808112361</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin00</styleUrl>
+				<Point>
+					<coordinates>133.2608650032326,34.45043000226482,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>川崎市入江崎総合スラッジセンター</name>
+				<description>水火清風</description>
+				<LookAt>
+					<longitude>139.7430370078198</longitude>
+					<latitude>35.52211600535939</latitude>
+					<altitude>0</altitude>
+					<heading>4.543438265244041e-09</heading>
+					<tilt>0</tilt>
+					<range>7466.255420561569</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin10</styleUrl>
+				<Point>
+					<coordinates>139.7430370078197,35.52211600535939,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>とどろきアリーナ</name>
+				<description>「青空」「マラソン」「風」「マスク」「東京オリンピックメダル」「札幌オリンピックメダル」</description>
+				<LookAt>
+					<longitude>139.6473310082223</longitude>
+					<latitude>35.58763898988632</latitude>
+					<altitude>0</altitude>
+					<heading>1.184439008654669e-06</heading>
+					<tilt>44.7672891553215</tilt>
+					<range>1009.873115333184</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin10</styleUrl>
+				<Point>
+					<coordinates>139.6473310082806,35.58741887312854,36.66237121175863</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>大垣女子短期大学</name>
+				<description>「歓喜の鐘」「座ることを拒否する椅子」</description>
+				<LookAt>
+					<longitude>136.608171996182</longitude>
+					<latitude>35.38648199806385</latitude>
+					<altitude>0</altitude>
+					<heading>-2.210968947928726e-09</heading>
+					<tilt>0</tilt>
+					<range>2732.039690678805</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin10</styleUrl>
+				<Point>
+					<coordinates>136.608171996182,35.38648199806385,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>長野県北安曇郡松川村役場</name>
+				<description>安曇野</description>
+				<LookAt>
+					<longitude>137.8544509987438</longitude>
+					<latitude>36.4240660008877</latitude>
+					<altitude>0</altitude>
+					<heading>-7.458782394593724e-10</heading>
+					<tilt>0</tilt>
+					<range>1617.363626184516</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin1</styleUrl>
+				<Point>
+					<coordinates>137.8544509987438,36.4240660008877,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>越前陶芸公園</name>
+				<description>月の顔</description>
+				<LookAt>
+					<longitude>136.0603589985175</longitude>
+					<latitude>35.93581399989024</latitude>
+					<altitude>0</altitude>
+					<heading>-2.070397972672083e-09</heading>
+					<tilt>44.99973704630047</tilt>
+					<range>1126.202656617493</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin10</styleUrl>
+				<Point>
+					<coordinates>136.0603589985175,35.93581399989024,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>大阪タカシマヤ</name>
+				<description>「ダンス」</description>
+				<LookAt>
+					<longitude>135.5013142172972</longitude>
+					<latitude>34.66418657916839</latitude>
+					<altitude>0</altitude>
+					<heading>-0.0001665253570391908</heading>
+					<tilt>0</tilt>
+					<range>263.5849961015573</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin0</styleUrl>
+				<Point>
+					<coordinates>135.501314217231,34.66418657902041,162.6077941069694</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>行方不明</name>
+			<open>1</open>
+			<Placemark>
+				<name>メルサ４階コロンパン（現存せず）</name>
+				<description>夢</description>
+				<LookAt>
+					<longitude>136.8843890002135</longitude>
+					<latitude>35.16872500069096</latitude>
+					<altitude>0</altitude>
+					<heading>1.2300477175092e-10</heading>
+					<tilt>0</tilt>
+					<range>737.8988169273742</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin10</styleUrl>
+				<Point>
+					<coordinates>136.8843889993548,35.16872500002057,99.10244663673326</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>岡本太郎記念公園</name>
+				<description>2004年に管理会社が民事再生法適用。
+2007年には「歓びの鐘」以外の作品は撤去された。
+
+歓びの鐘
+太郎カッパ神像
+さかな
+瑞鳥
+愛
+エラン
+瑞鳳飛翔</description>
+				<LookAt>
+					<longitude>141.3560686097876</longitude>
+					<latitude>40.65993869946332</latitude>
+					<altitude>0</altitude>
+					<heading>6.05847958498578e-09</heading>
+					<tilt>0</tilt>
+					<range>985.9475978769536</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin</styleUrl>
+				<Point>
+					<coordinates>141.3560686097876,40.65993869946332,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>かわでん中央研究所</name>
+				<description>栄光、月の顔
+
+現在、山形大学総合研究所。栄光は撤去されていた。</description>
+				<LookAt>
+					<longitude>140.3038639992029</longitude>
+					<latitude>38.17360999961026</latitude>
+					<altitude>0</altitude>
+					<heading>-4.926456562759286e-10</heading>
+					<tilt>0</tilt>
+					<range>1040.984618376789</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin1</styleUrl>
+				<Point>
+					<coordinates>140.3038639992029,38.17360999961027,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+	</Folder>
+</Document>
+</kml>

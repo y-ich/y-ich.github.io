@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+    <gx:Tour>
+        <name>オープニング</name>
+        <gx:Playlist>
+            <gx:FlyTo>
+                <gx:duration>10</gx:duration>
+                <LookAt>
+                    <longitude>139.557459</longitude>
+                    <latitude>35.607647</latitude>
+                    <heading>0</heading>
+                    <tilt>10</tilt>
+                    <range>30000</range>
+                </LookAt>
+            </gx:FlyTo>
+        </gx:Playlist>
+    </gx:Tour>
+    <NetworkLink>
+    	<name>taro-load</name>
+    	<Link>
+    		<href>http://dl.dropbox.com/u/8719413/y_ichikawa/taro/doc.kml</href>
+    	</Link>
+    </NetworkLink>
+</Document>
+</kml>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<meta charset="UTF-8" />
+    	<meta  http-equiv="Expires" content="0">
+        <title>東京国立近代美術館</title>
+        <meta name="viewport" content="initial-scale=1, user-scalable=0"> 
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300,300italic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="../css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="../css/style.css" />
+<style>
+.page.cover .front .content{
+	background: #ddd url(http://www.momat.go.jp/campus/images/newsd_1698_1.jpg) no-repeat center center;
+}
+.img-1{
+	background-image: url(http://www.new-york-art.com/old/images/Contrepoint.jpg);
+}
+.img-2{
+	background-image: url(http://search.artmuseums.go.jp/jpeg/momat/s0045016.jpg);
+}
+.img-3{
+	background-image: url(http://www.chigasaki-arts.jp/museum/exhi/image/08-01-22-1.jpg);
+}
+</style>
+		<script type="text/javascript" src="../js/modernizr.custom.08464.js"></script>
+		<script id="pageTmpl" type="text/x-jquery-tmpl">
+			<div class="${theClass}" style="${theStyle}">
+				<div class="front">
+					<div class="outer">
+						<div class="content" style="${theContentStyleFront}">
+							<div class="inner">{{html theContentFront}}</div>
+						</div>
+					</div>
+				</div>
+				<div class="back">
+					<div class="outer">
+						<div class="content" style="${theContentStyleBack}">
+							<div class="inner">{{html theContentBack}}</div>
+						</div>
+					</div>
+				</div>
+			</div>			
+		</script>
+    </head>
+    <body>
+		
+		<header class="main-title">
+			<h1>岡本太郎に<br />会いに行こう</h1>
+		</header>
+		
+		<div id="flip" class="container">
+		
+			<div class="f-page f-cover">
+				<div class="cover-elements">
+<!--					<div class="logo">
+						Pageflip
+						<a class="f-ref" href="http://www.flickr.com/photos/nasahqphoto/">Images by NASA HQ Photo</a>
+					</div>
+				-->
+					<h1>東京国立<br />近代<br />美術館</h1>
+					<div class="f-cover-story"><span></span></div>
+				</div>
+				<div class="f-cover-flip">&lt; Flip</div>
+			</div>
+			
+			<div class="f-page">
+				<div class="f-title">
+					<h2>東京国立近代美術館</h2>
+				</div>
+				<div class="box w-100 h-50">
+					<div class="img-cont img-1"></div>
+					<h3>コントルポアン <span>1935年/1954年(再制作)</span></h3>
+				</div>
+				<div class="box w-50 h-50 box-b-l box-b-r">
+					<div class="img-cont img-2"></div>
+					<h3>燃える人 <span>1955年</span></h3>
+				</div>
+				<div class="box w-50 h-50">
+					<div class="img-cont img-3"></div>
+					<h3>遊ぶ <span>1961年</span></h3>
+				</div>
+			</div>
+						
+			<div class="f-page f-cover-back">
+				<div id="codrops-ad-wrapper">
+					<a href="http://www.momat.go.jp/">東京国立近代美術館</a>
+				</div>
+			</div>
+		</div>
+	
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script type="text/javascript">
+				
+			var $container 	= $( '#flip' ),
+				$pages		= $container.children().hide();
+			
+			Modernizr.load({
+				test: Modernizr.csstransforms3d && Modernizr.csstransitions,
+				yep : ['../js/jquery.tmpl.min.js','../js/jquery.history.js','../js/core.string.js','../js/jquery.touchSwipe-1.2.5.js','../js/jquery.flips.js'],
+				nope: '../css/fallback.css',
+				callback : function( url, result, key ) {
+					
+					if( url === '../css/fallback.css' ) {
+						$pages.show();
+					}
+					else if( url === '../js/jquery.flips.js' ) {
+						$container.flips();
+					}
+			
+				}
+			});
+				
+		</script>
+    </body>
+</html>

@@ -1,0 +1,98 @@
+/* (C) 2012 ICHIKAWA, Yuji (New 3 Rs) */
+
+@import 'css/prefixer';
+
+@transition-time: 1s;
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    background-color: black;
+}
+
+img.my-thumbnail {
+    height: 240px;
+    vertical-align: text-bottom; /* You don't need this line when using bootstrap. */
+}
+
+.vertical-center {
+    display: table;
+}
+
+.vertical-center > div {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.horizontal-center {
+    display: block;
+    margin: 0 auto;
+}
+
+#highres-frame {
+    position: absolute;
+    background-color: black;
+    //.transition(opacity @transition-time, -webkit-transform 0.1s); /* prefixer.less doesn't work for plural arguments. */
+    -webkit-transition: opacity @transition-time, -webkit-transform 0.1s;
+    -moz-transition: opacity @transition-time, -moz-transform 0.1s;
+    -o-transition: opacity @transition-time, -o-transform 0.1s;
+    transition: opacity @transition-time, transform 0.1s;
+}
+
+#spinner {
+    display: none;
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    left: 50%;
+    top: 50%;
+    margin-left: -20px;
+    margin-top: -20px;
+    z-index: 1000;
+}
+
+#container {
+    position: absolute;
+    .transform-origin(left top);
+    // .transition(transform @transition-time); /* prefixer.less doesn't extend argument's vendor prefix. */
+    -webkit-transition: -webkit-transform @transition-time;
+    -moz-transition: -moz-transform @transition-time;
+    -o-transition: -o-transform @transition-time;
+    transition: transform @transition-time;
+}
+
+#info {
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    opacity: 0;
+    border: none;
+    background-color: transparent;
+    z-index: 1000;
+    .transition(opacity @transition-time);
+}
+
+#caption {
+    display: none;
+    opacity: 0;
+    position: fixed;
+    width: 100%;
+    left: 0px;
+    bottom: 0px;
+    z-index: 100;
+    color: white;
+    background-color: black;
+    .transition(opacity @transition-time);    
+}
+
+#caption > div {
+    width: 80%;
+    margin: 0px auto;
+    text-align: center;
+}
