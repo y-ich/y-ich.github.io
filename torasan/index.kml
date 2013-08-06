@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+  <StyleMap id="msn_arrow">
+    <Pair>
+      <key>normal</key>
+      <styleUrl>#sn_arrow</styleUrl>
+    </Pair>
+    <Pair>
+      <key>highlight</key>
+      <styleUrl>#sh_arrow</styleUrl>
+    </Pair>
+  </StyleMap>
+  <Style id="sh_arrow">
+    <IconStyle>
+      <scale>1.4</scale>
+      <Icon>
+        <href>http://maps.google.com/mapfiles/kml/shapes/arrow.png</href>
+      </Icon>
+      <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+    </IconStyle>
+    <BalloonStyle>
+    </BalloonStyle>
+    <ListStyle>
+    </ListStyle>
+  </Style>
+  <Style id="sn_arrow">
+    <IconStyle>
+      <scale>1.2</scale>
+      <Icon>
+        <href>http://maps.google.com/mapfiles/kml/shapes/arrow.png</href>
+      </Icon>
+      <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+    </IconStyle>
+    <BalloonStyle>
+    </BalloonStyle>
+    <ListStyle>
+    </ListStyle>
+  </Style>
+  <Folder>
+  <Placemark>
+    <name>とらや/くるまやのメニュー</name>
+    <styleUrl>#msn_arrow</styleUrl>
+    <Point>
+      <coordinates>139.8767382694173,35.75776760782212,0</coordinates>
+    </Point>
+    <description>
+      <![CDATA[<h1>Google Earthで寅さんと気ままな旅</h1>
+      <h2>メニュー</h2>
+      <ol>
+        <li><a href="openning1.kmz">「男はつらいよ」第一作オープニング</a></li>
+        <li><a href="torasan1.kmz">「男はつらいよ」第一作ロケ地めぐり</a></li>
+      </ol>]]>
+    </description>
+  </Placemark>
+  </Folder>
+</Document>
+</kml>

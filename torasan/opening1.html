@@ -1,0 +1,80 @@
+<!-- Walking around the earth: Street view KML generator
+   - Author: ICHIKAWA, Yuji (New 3 Rs)
+   - Copright (C) 2012 ICHIKAWA, Yuji (New 3 Rs)
+ -->
+ 
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Google earthで「男はつらいよ」第一作オープニング</title>
+<link type="text/css" rel="stylesheet" href="css/common.css"> 
+<link type="text/css" rel="stylesheet" href="opening1.css"> 
+<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="lib/swfobject.js"></script>    
+<script src="https://www.google.com/jsapi?key=AIzaSyDlAvVunVDBPCXKKXO6OB4C6ayU8bB3h9A"></script>
+<script type="text/javascript" src="lib/kmldomwalk.js"></script>    
+<script type="text/javascript">
+  google.load('earth', '1.x');
+</script>
+<!--
+1. Two google earth panes were created when executing last path.coffee.
+2. window.onload in coffeescript in head was not effected.
+so, I use compiled javascript.
+-->
+<script src="opening1.js"></script>
+<!-- <script src="http://coffeescript.org/extras/coffee-script.js"></script> -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-510249-13']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+<body class="picnic stripes">
+  <h1>Google earthで「男はつらいよ」第一作オープニング</h1>
+  <table>
+    <tr>
+      <td>
+        <div id="ytapiplayer">
+          You need Flash player 8+ and JavaScript enabled to view this video.
+        </div>
+      </td><td>
+        <div id="map3d" style="height: 315px; width: 560px;"></div>
+      </td>
+    </tr>
+  </table>
+  <p>
+    謝辞: Google earthと合わせて<a href="http://www.panoramio.com/">Paranomio</a>の投稿写真を利用させていただきました。「松竹映画」のフォントには<a href="http://calligra-tei.oops.jp/index.html">アームド・レモン</a>を利用させていただきました。感謝いたします。
+  </p>
+  <p>
+    画像キャッシュのため、再生1度目より2度目以降の方が美しいです。<strong>是非2度ご覧ください。</strong><br>
+    (注)Google ChromeとApple Safariで動作確認しています。Safariの場合、Google earth pluginが落ちることがあるようです。<br>
+    Internet Explorerではスタートしないことを確認しています。手動でスタートしてください。
+  </p>
+  <p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    Copyright (C) 2012 ICHIKAWA, Yuji (New 3 Rs)</p>
+  <p>動画、Google earthデータ、写真を除くスクリプト関連のデータ(html, js, kml)の著作権は作者に帰属します。kmlファイルの直接の参照やコピーはご遠慮ください。</p>
+</body>
+</html>

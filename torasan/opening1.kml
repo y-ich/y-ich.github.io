@@ -1,0 +1,1067 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2"
+ xmlns:gx="http://www.google.com/kml/ext/2.2">
+
+
+<Document>
+  <name>寅さんの旅</name>
+  <open>1</open>
+
+  <Style id="caption">
+      <IconStyle>
+          <Icon></Icon> <!-- no icon -->
+      </IconStyle>
+      <BalloonStyle>
+        <text>$[description]</text>
+        <displayMode>default</displayMode>
+      </BalloonStyle>
+  </Style>
+
+  <gx:Tour>
+    <name>男はつらいよ 第１作</name>
+    <gx:Playlist>
+
+      <!-- prepare to start -->
+      <gx:AnimatedUpdate>
+  <gx:duration>0</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <Folder targetId="direction_related">
+        <visibility>1</visibility> <!-- you need to enable all parents' visibility -->
+      </Folder>
+      <ScreenOverlay targetId="black">
+        <color>00ffffff</color>
+        <visibility>1</visibility>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>
+
+<gx:AnimatedUpdate>
+  <gx:duration>0</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="black">
+        <color>ffffffff</color>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>      
+
+      <gx:Wait>
+    <gx:duration>2</gx:duration>
+</gx:Wait>
+ <!-- wait for loading back -->
+      <!-- Mt. Fuji -->
+      <gx:FlyTo>
+  <gx:duration>0</gx:duration>
+  
+  <LookAt>
+    <gx:horizFov>60</gx:horizFov>    
+    <longitude>138.731639</longitude>
+    <latitude>35.36306</latitude>
+    
+    <altitudeMode>absolute</altitudeMode>
+    <altitude>2000</altitude>
+    
+    <heading>-142</heading>
+    <tilt>90</tilt>
+    <range>7300</range>
+  </LookAt>
+</gx:FlyTo>
+
+
+      <!-- opening start -->
+      
+      <gx:AnimatedUpdate>
+  <gx:duration>2.6</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="black">
+        <color>00ffffff</color>
+        <visibility>0</visibility>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>      
+
+      <gx:Wait>
+    <gx:duration>2.6</gx:duration>
+</gx:Wait>
+
+
+      <!-- ロゴ 5.6秒+1.6秒 -->
+      <gx:AnimatedUpdate>
+  <gx:duration>0</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <Folder targetId="direction_related">
+        <visibility>1</visibility> <!-- you need to enable all parents' visibility -->
+      </Folder>
+      <ScreenOverlay targetId="logo">
+        <color>00ffffff</color>
+        <visibility>1</visibility>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>
+
+<gx:AnimatedUpdate>
+  <gx:duration>2</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="logo">
+        <color>ffffffff</color>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>      
+
+      <gx:Wait>
+    <gx:duration>5</gx:duration>
+</gx:Wait>
+
+
+      
+      <gx:AnimatedUpdate>
+  <gx:duration>1.6</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="logo">
+        <color>00ffffff</color>
+        <visibility>0</visibility>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>      
+
+      <gx:AnimatedUpdate>
+  <gx:duration>0</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <Folder targetId="direction_related">
+        <visibility>1</visibility> <!-- you need to enable all parents' visibility -->
+      </Folder>
+      <ScreenOverlay targetId="black">
+        <color>00ffffff</color>
+        <visibility>1</visibility>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>
+
+<gx:AnimatedUpdate>
+  <gx:duration>1.6</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="black">
+        <color>ffffffff</color>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>      
+
+      <gx:Wait>
+    <gx:duration>1.6</gx:duration>
+</gx:Wait>
+
+      <gx:AnimatedUpdate>
+  <gx:duration>0</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="black">
+        <color>00ffffff</color>
+        <visibility>0</visibility>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>      
+
+
+      <!-- start of content -->
+
+      <!-- 水元公園の桜 5秒 + 散った花びら 5秒 -->
+      <gx:AnimatedUpdate>
+  <gx:duration>0</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <Folder targetId="direction_related">
+        <visibility>1</visibility> <!-- you need to enable all parents' visibility -->
+      </Folder>
+      <ScreenOverlay targetId="sakura">
+        <color>00ffffff</color>
+        <visibility>1</visibility>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>
+
+<gx:AnimatedUpdate>
+  <gx:duration>6</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="sakura">
+        <color>e5ffffff</color>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>      
+
+      <gx:FlyTo>
+  <gx:duration>4</gx:duration>
+  
+  <LookAt>
+    <gx:horizFov>60</gx:horizFov>    
+    <longitude>139.869089</longitude>
+    <latitude>35.78473</latitude>
+    
+    <heading>0</heading>
+    <tilt>45</tilt>
+    <range>200</range>
+  </LookAt>
+</gx:FlyTo>
+
+      <gx:Wait>
+    <gx:duration>5</gx:duration>
+</gx:Wait>
+
+      <gx:AnimatedUpdate>
+  <gx:duration>1</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="sakura">
+        <color>00ffffff</color>
+        <visibility>0</visibility>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>      
+
+      <gx:Wait>
+    <gx:duration>1</gx:duration>
+</gx:Wait>
+
+
+      <!-- 水元大橋 5秒 -->
+      <gx:AnimatedUpdate>
+  <gx:duration>0</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <Folder targetId="direction_related">
+        <visibility>1</visibility> <!-- you need to enable all parents' visibility -->
+      </Folder>
+      <ScreenOverlay targetId="mizumotooohashi">
+        <color>00ffffff</color>
+        <visibility>1</visibility>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>
+
+<gx:AnimatedUpdate>
+  <gx:duration>2</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="mizumotooohashi">
+        <color>e5ffffff</color>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>      
+
+      <gx:FlyTo>
+  <gx:duration>2</gx:duration>
+  
+  <LookAt>
+    <gx:horizFov>60</gx:horizFov>    
+    <longitude>139.870355</longitude>
+    <latitude>35.783946</latitude>
+    
+    <heading>55</heading>
+    <tilt>35</tilt>
+    <range>200</range>
+  </LookAt>
+</gx:FlyTo>
+
+      <gx:Wait>
+    <gx:duration>2</gx:duration>
+</gx:Wait>
+
+      <gx:AnimatedUpdate>
+  <gx:duration>1</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="mizumotooohashi">
+        <color>00ffffff</color>
+        <visibility>0</visibility>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>      
+
+      <gx:Wait>
+    <gx:duration>1</gx:duration>
+</gx:Wait>
+
+
+      <!--  江戸川沿いの町並み 10秒-->
+      <gx:FlyTo>
+  <gx:duration>1</gx:duration>
+  
+  <Camera>
+    
+    <gx:horizFov>60</gx:horizFov>    
+    <altitude>20</altitude>
+    
+    <longitude>139.87735</longitude>
+    <latitude>35.772857</latitude>
+    <heading>60</heading>
+    <tilt>70</tilt>
+  </Camera>
+</gx:FlyTo>
+
+      <gx:Wait>
+    <gx:duration>1</gx:duration>
+</gx:Wait>
+
+      <gx:FlyTo>
+  <gx:duration>3.5</gx:duration>
+  
+  <gx:flyToMode>smooth</gx:flyToMode>
+  
+  <Camera>
+    
+    <gx:horizFov>60</gx:horizFov>    
+    <altitude>20</altitude>
+    
+    <longitude>139.87735</longitude>
+    <latitude>35.772857</latitude>
+    <heading>0</heading>
+    <tilt>70</tilt>
+  </Camera>
+</gx:FlyTo>
+
+      <gx:FlyTo>
+  <gx:duration>3.5</gx:duration>
+  
+  <gx:flyToMode>smooth</gx:flyToMode>
+  
+  <Camera>
+    
+    <gx:horizFov>60</gx:horizFov>    
+    <altitude>20</altitude>
+    
+    <longitude>139.87735</longitude>
+    <latitude>35.772857</latitude>
+    <heading>300</heading>
+    <tilt>70</tilt>
+  </Camera>
+</gx:FlyTo>
+
+      <gx:Wait>
+    <gx:duration>1</gx:duration>
+</gx:Wait>
+
+
+      <!-- お店、江戸川の土手 10秒 -->
+      <gx:FlyTo>
+  <gx:duration>5</gx:duration>
+  
+  <LookAt>
+    <gx:horizFov>60</gx:horizFov>    
+    <longitude>139.88102</longitude>
+    <latitude>35.75976</latitude>
+    
+    <heading>230</heading>
+    <tilt>45</tilt>
+    <range>200</range>
+  </LookAt>
+</gx:FlyTo>
+
+      <gx:AnimatedUpdate>
+  <gx:duration>0</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <Folder targetId="direction_related">
+        <visibility>1</visibility> <!-- you need to enable all parents' visibility -->
+      </Folder>
+      <ScreenOverlay targetId="edogawa_dote">
+        <color>00ffffff</color>
+        <visibility>1</visibility>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>
+
+<gx:AnimatedUpdate>
+  <gx:duration>2</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="edogawa_dote">
+        <color>e5ffffff</color>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>      
+
+      <gx:Wait>
+    <gx:duration>4</gx:duration>
+</gx:Wait>
+
+      <gx:AnimatedUpdate>
+  <gx:duration>1</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="edogawa_dote">
+        <color>00ffffff</color>
+        <visibility>0</visibility>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>      
+
+      <gx:Wait>
+    <gx:duration>1</gx:duration>
+</gx:Wait>
+
+
+      <!-- 柴又帝釈天 15秒 -->
+      <gx:FlyTo>
+  <gx:duration>3</gx:duration>
+  
+  <LookAt>
+    <gx:horizFov>60</gx:horizFov>    
+    <longitude>139.878214</longitude>
+    <latitude>35.758413</latitude>
+    
+    <heading>85</heading>
+    <tilt>60</tilt>
+    <range>50</range>
+  </LookAt>
+</gx:FlyTo>
+
+      <gx:AnimatedUpdate>
+  <gx:duration>0</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <Folder targetId="direction_related">
+        <visibility>1</visibility> <!-- you need to enable all parents' visibility -->
+      </Folder>
+      <ScreenOverlay targetId="keidai">
+        <color>00ffffff</color>
+        <visibility>1</visibility>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>
+
+<gx:AnimatedUpdate>
+  <gx:duration>4</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="keidai">
+        <color>e5ffffff</color>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>      
+
+      <gx:Wait>
+    <gx:duration>5</gx:duration>
+</gx:Wait>
+
+      <gx:AnimatedUpdate>
+  <gx:duration>1</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="keidai">
+        <color>00ffffff</color>
+        <visibility>0</visibility>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>      
+
+      <gx:Wait>
+    <gx:duration>1</gx:duration>
+</gx:Wait>
+
+      <gx:AnimatedUpdate>
+  <gx:duration>0</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <Folder targetId="direction_related">
+        <visibility>1</visibility> <!-- you need to enable all parents' visibility -->
+      </Folder>
+      <ScreenOverlay targetId="keidai_up">
+        <color>00ffffff</color>
+        <visibility>1</visibility>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>
+
+<gx:AnimatedUpdate>
+  <gx:duration>3</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="keidai_up">
+        <color>e5ffffff</color>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>      
+
+      <gx:Wait>
+    <gx:duration>5</gx:duration>
+</gx:Wait>
+
+      <gx:AnimatedUpdate>
+  <gx:duration>1</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="keidai_up">
+        <color>00ffffff</color>
+        <visibility>0</visibility>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>      
+
+      <gx:Wait>
+    <gx:duration>1</gx:duration>
+</gx:Wait>
+
+
+      <!-- 帝釈天参道 19秒 -->
+      <gx:AnimatedUpdate>
+  <gx:duration>0</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <Folder targetId="direction_related">
+        <visibility>1</visibility> <!-- you need to enable all parents' visibility -->
+      </Folder>
+      <ScreenOverlay targetId="dango">
+        <color>00ffffff</color>
+        <visibility>1</visibility>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>
+
+<gx:AnimatedUpdate>
+  <gx:duration>3</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="dango">
+        <color>e5ffffff</color>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>      
+
+      <gx:Wait>
+    <gx:duration>5</gx:duration>
+</gx:Wait>
+
+      <gx:AnimatedUpdate>
+  <gx:duration>1</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="dango">
+        <color>00ffffff</color>
+        <visibility>0</visibility>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>      
+
+      <gx:Wait>
+    <gx:duration>1</gx:duration>
+</gx:Wait>
+
+      <gx:AnimatedUpdate>
+  <gx:duration>0</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <Folder targetId="direction_related">
+        <visibility>1</visibility> <!-- you need to enable all parents' visibility -->
+      </Folder>
+      <ScreenOverlay targetId="sando">
+        <color>00ffffff</color>
+        <visibility>1</visibility>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>
+
+<gx:AnimatedUpdate>
+  <gx:duration>3</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="sando">
+        <color>e5ffffff</color>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>      
+
+      <gx:Wait>
+    <gx:duration>5</gx:duration>
+</gx:Wait>
+
+      <gx:AnimatedUpdate>
+  <gx:duration>1</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="sando">
+        <color>00ffffff</color>
+        <visibility>0</visibility>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>      
+
+      <gx:Wait>
+    <gx:duration>1</gx:duration>
+</gx:Wait>
+
+      <gx:AnimatedUpdate>
+  <gx:duration>0</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <Folder targetId="direction_related">
+        <visibility>1</visibility> <!-- you need to enable all parents' visibility -->
+      </Folder>
+      <ScreenOverlay targetId="nitenmon">
+        <color>00ffffff</color>
+        <visibility>1</visibility>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>
+
+<gx:AnimatedUpdate>
+  <gx:duration>3</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="nitenmon">
+        <color>e5ffffff</color>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>      
+
+      <gx:Wait>
+    <gx:duration>5</gx:duration>
+</gx:Wait>
+
+      <gx:AnimatedUpdate>
+  <gx:duration>1</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="nitenmon">
+        <color>00ffffff</color>
+        <visibility>0</visibility>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>      
+
+      <gx:Wait>
+    <gx:duration>2</gx:duration>
+</gx:Wait>
+
+
+      <!-- タイトル -->
+      <gx:AnimatedUpdate>
+  <gx:duration>0</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <Folder targetId="direction_related">
+        <visibility>1</visibility> <!-- you need to enable all parents' visibility -->
+      </Folder>
+      <ScreenOverlay targetId="title">
+        <color>00ffffff</color>
+        <visibility>1</visibility>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>
+
+<gx:AnimatedUpdate>
+  <gx:duration>0</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="title">
+        <color>ffffffff</color>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>      
+
+      <gx:Wait>
+    <gx:duration>7.5</gx:duration>
+</gx:Wait>
+
+      <gx:AnimatedUpdate>
+  <gx:duration>0</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="title">
+        <color>00ffffff</color>
+        <visibility>0</visibility>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>      
+
+
+      <!-- 主題歌 -->
+      <!-- 江戸川グルフクラブ 26秒 -->
+      <gx:FlyTo>
+  <gx:duration>10</gx:duration>
+  
+  <LookAt>
+    <gx:horizFov>60</gx:horizFov>    
+    <longitude>139.883216</longitude>
+    <latitude>35.766909</latitude>
+    
+    <heading>55</heading>
+    <tilt>35</tilt>
+    <range>400</range>
+  </LookAt>
+</gx:FlyTo>
+
+      <gx:Wait>
+    <gx:duration>17</gx:duration>
+</gx:Wait>
+
+      <!-- 移動 9秒 -->
+      <!-- 矢切の渡し 8秒 -->
+      <gx:FlyTo>
+  <gx:duration>8</gx:duration>
+  
+  <LookAt>
+    <gx:horizFov>60</gx:horizFov>    
+    <longitude>139.883757</longitude>
+    <latitude>35.759462</latitude>
+    
+    <heading>55</heading>
+    <tilt>35</tilt>
+    <range>200</range>
+  </LookAt>
+</gx:FlyTo>
+
+      <gx:Wait>
+    <gx:duration>0</gx:duration>
+</gx:Wait>
+
+
+      <!-- 移動 7秒 -->
+      <!-- 向こう岸のゴルフコース 31秒 -->
+      <gx:FlyTo>
+  <gx:duration>12</gx:duration>
+  
+  <gx:flyToMode>smooth</gx:flyToMode>
+  
+  <LookAt>
+    <gx:horizFov>60</gx:horizFov>    
+    <longitude>139.882393</longitude>
+    <latitude>35.760017</latitude>
+    
+    <heading>55</heading>
+    <tilt>35</tilt>
+    <range>200</range>
+  </LookAt>
+</gx:FlyTo>
+
+
+      <!-- 江戸川土手 13秒 -->
+      <gx:FlyTo>
+  <gx:duration>28</gx:duration>
+  
+  <gx:flyToMode>smooth</gx:flyToMode>
+  
+  <LookAt>
+    <gx:horizFov>60</gx:horizFov>    
+    <longitude>139.8810434059532</longitude>
+    <latitude>35.75976948127376</latitude>
+    
+    <heading>55</heading>
+    <tilt>35</tilt>
+    <range>200</range>
+  </LookAt>
+</gx:FlyTo>
+
+      <gx:Wait>
+    <gx:duration>1</gx:duration>
+</gx:Wait>
+
+      <gx:FlyTo>
+  <gx:duration>15</gx:duration>
+  
+  <gx:flyToMode>smooth</gx:flyToMode>
+  
+  <LookAt>
+    <gx:horizFov>60</gx:horizFov>    
+    <longitude>139.881075795162</longitude>
+    <latitude>35.76012683753896</latitude>
+    
+    <heading>55</heading>
+    <tilt>35</tilt>
+    <range>200</range>
+  </LookAt>
+</gx:FlyTo>
+
+
+      <!-- オープニング終了 -->
+      <gx:AnimatedUpdate>
+  <gx:duration>0</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <Folder targetId="direction_related">
+        <visibility>1</visibility> <!-- you need to enable all parents' visibility -->
+      </Folder>
+      <ScreenOverlay targetId="black">
+        <color>00ffffff</color>
+        <visibility>1</visibility>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>
+
+<gx:AnimatedUpdate>
+  <gx:duration>1</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="black">
+        <color>ffffffff</color>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>      
+
+      <gx:Wait>
+    <gx:duration>1</gx:duration>
+</gx:Wait>
+
+      <!-- 本編準備 -->
+      <gx:FlyTo>
+  <gx:duration>0</gx:duration>
+  
+  <LookAt>
+    <gx:horizFov>60</gx:horizFov>    
+    <longitude>139.877755</longitude>
+    <latitude>35.758325</latitude>
+    
+    <heading>85</heading>
+    <tilt>60</tilt>
+    <range>200</range>
+  </LookAt>
+</gx:FlyTo>
+
+      <gx:AnimatedUpdate>
+  <gx:duration>0</gx:duration>
+  <Update>
+    <targetHref/>
+    <Change>
+      <ScreenOverlay targetId="black">
+        <color>00ffffff</color>
+        <visibility>0</visibility>
+      </ScreenOverlay>
+    </Change>
+  </Update>
+</gx:AnimatedUpdate>      
+
+
+    </gx:Playlist>
+  </gx:Tour>
+  <Folder id="direction_related">
+    <name>演出関連</name>
+
+    <ScreenOverlay id="logo">
+      <name>松竹映画</name>
+      <description>ロゴ</description>
+      <Icon>
+        <href>images/syochiku_logo.png</href>
+      </Icon>
+      <visibility>0</visibility>
+      <overlayXY x="0.5" y="0.3" xunits="fraction" yunits="fraction"/>
+      <screenXY x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+      <size x="0.8" y="0" xunits="fraction" yunits="fraction"/>
+    </ScreenOverlay>
+
+    <ScreenOverlay id="black">
+      <name>黒</name>
+      <description>黒</description>
+      <Icon>
+        <href>images/black.png</href>
+      </Icon>
+      <visibility>0</visibility>
+      <overlayXY x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+      <screenXY x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+      <size x="3000" y="3000" xunits="pixels" yunits="pixels"/>
+    </ScreenOverlay>
+
+    <ScreenOverlay id="title">
+      <name>タイトル</name>
+      <Icon>
+        <href>images/title1.png</href>
+      </Icon>
+      <visibility>0</visibility>
+      <overlayXY x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+      <screenXY x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+      <size x="1" y="1" xunits="fraction" yunits="fraction"/>
+    </ScreenOverlay>
+
+    <ScreenOverlay id="sakura">
+      <name>水元公園の桜</name>
+      <description>http://www.panoramio.com/photo/8931720</description>
+      <Icon>
+        <href>http://mw2.google.com/mw-panoramio/photos/medium/8931720.jpg</href>
+      </Icon>
+      <visibility>0</visibility>
+      <overlayXY x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+      <screenXY x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+      <size x="0" y="0.8" xunits="fraction" yunits="fraction"/>
+    </ScreenOverlay>
+  
+    <ScreenOverlay id="mizumotooohashi">
+      <name>水元大橋</name>
+      <description>水元公園</description>
+      <Icon>
+        <href>http://mw2.google.com/mw-panoramio/photos/medium/8931657.jpg</href>
+      </Icon>
+      <visibility>0</visibility>
+      <overlayXY x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+      <screenXY x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+      <size x="0" y="0.8" xunits="fraction" yunits="fraction"/>
+    </ScreenOverlay>
+
+    <ScreenOverlay id="edogawa_dote">
+      <name>江戸川の土手</name>
+      <description>http://www.panoramio.com/photo/47514322</description>
+      <Icon>
+        <href>http://mw2.google.com/mw-panoramio/photos/medium/47514322.jpg</href>
+      </Icon>
+      <visibility>0</visibility>
+      <overlayXY x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+      <screenXY x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+      <size x="0" y="0.8" xunits="fraction" yunits="fraction"/>
+    </ScreenOverlay>
+
+    <ScreenOverlay id="keidai">
+      <name>題経寺境内</name>
+      <description>http://www.panoramio.com/photo/36027982</description>
+      <Icon>
+        <href>http://mw2.google.com/mw-panoramio/photos/medium/36027982.jpg</href>
+      </Icon>
+      <visibility>0</visibility>
+      <overlayXY x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+      <screenXY x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+      <size x="0" y="0.8" xunits="fraction" yunits="fraction"/>
+    </ScreenOverlay>
+    
+    <ScreenOverlay id="keidai_up">
+      <name>題経寺境内アップ</name>
+      <description>http://www.panoramio.com/photo/36027985</description>
+      <Icon>
+        <href>http://mw2.google.com/mw-panoramio/photos/medium/36027985.jpg</href>
+      </Icon>
+      <visibility>0</visibility>
+      <overlayXY x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+      <screenXY x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+      <size x="0" y="0.8" xunits="fraction" yunits="fraction"/>
+    </ScreenOverlay>
+
+    <ScreenOverlay id="dango">
+      <name>だんご</name>
+      <description>http://www.panoramio.com/photo/20198466</description>
+      <Icon>
+        <href>http://mw2.google.com/mw-panoramio/photos/medium/20198466.jpg</href>
+      </Icon>
+      <visibility>0</visibility>
+      <overlayXY x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+      <screenXY x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+      <size x="0" y="0.8" xunits="fraction" yunits="fraction"/>
+    </ScreenOverlay>
+
+    <ScreenOverlay id="sando">
+      <name>参道</name>
+      <description>http://www.panoramio.com/photo/188332</description>
+      <Icon>
+        <href>http://mw2.google.com/mw-panoramio/photos/medium/188332.jpg</href>
+      </Icon>
+      <visibility>0</visibility>
+      <overlayXY x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+      <screenXY x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+      <size x="0" y="0.8" xunits="fraction" yunits="fraction"/>
+    </ScreenOverlay>
+
+    <ScreenOverlay id="nitenmon">
+      <name>題経寺二天門</name>
+      <description>http://www.panoramio.com/photo/27068534</description>
+      <Icon>
+        <href>http://mw2.google.com/mw-panoramio/photos/medium/27068534.jpg</href>
+      </Icon>
+      <visibility>0</visibility>
+      <overlayXY x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+      <screenXY x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+      <size x="0" y="0.8" xunits="fraction" yunits="fraction"/>
+    </ScreenOverlay>
+    
+    <ScreenOverlay id="koshin">
+      <name>庚申の日</name>
+      <description>http://www.panoramio.com/photo/26762684</description>
+      <description>庚申の日</description>
+      <Icon>
+        <href>http://mw2.google.com/mw-panoramio/photos/medium/26762684.jpg</href>
+      </Icon>
+      <visibility>0</visibility>
+      <overlayXY x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+      <screenXY x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+      <size x="0" y="0.8" xunits="fraction" yunits="fraction"/>
+    </ScreenOverlay>
+
+  </Folder>
+</Document>
+</kml>
