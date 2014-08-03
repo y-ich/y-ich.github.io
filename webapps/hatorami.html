@@ -6,10 +6,10 @@
     <style type="text/css">
     @-webkit-keyframes restless {
       0% {
-        -webkit-transform: rotateZ(2deg);
+        -webkit-transform: rotateZ(5deg);
       }
       100% {
-        -webkit-transform: rotateZ(-2deg);
+        -webkit-transform: rotateZ(-5deg);
       }
     }
     .move {
@@ -22,12 +22,12 @@
     </style>
 </head>
 <body>
-    <img id="kumamon" src="kumamon.jpg">
+    <img id="hatorami" src="hatorami.png">
     <script type="text/javascript">
     if (!'SpeechSynthesisUtterance' in window) {
         alert('Web Speech API には未対応です.');
     }
-    var kumamon = document.getElementById("kumamon");
+    var hatorami = document.getElementById("hatorami");
     var msg = new SpeechSynthesisUtterance(); // 関数内のローカル変数にするとイベントハンドラがコールされない。
     function speak(text, callback) {
         console.log(text);
@@ -38,10 +38,10 @@
         msg.lang = "ja-JP";
 
         msg.onstart = function (event) {
-            kumamon.className = "move";
+            hatorami.className = "move";
         }
         msg.onend = function (event) {
-            kumamon.className = "";
+            hatorami.className = "";
             if (callback instanceof Function)
                 setTimeout(callback, 500); // 二重読み上げを避けるワークアラウンド
         }
