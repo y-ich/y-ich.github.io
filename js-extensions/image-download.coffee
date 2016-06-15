@@ -6,11 +6,12 @@
     document.body.appendChild scr
 ) ($) ->
     $('#search img').each (num) ->
-        a = document.createElement 'a'
-        a.download = num + '.jpg'
-        a.href = $(this).attr 'src'
-        evt = document.createEvent 'MouseEvent'
-        evt.initEvent 'click', true, false
-        a.dispatchEvent evt
+        if num < 100
+            a = document.createElement 'a'
+            a.download = num + '.jpg'
+            a.href = $(this).attr 'src'
+            evt = document.createEvent 'MouseEvent'
+            evt.initEvent 'click', true, false
+            a.dispatchEvent evt
         return
     return

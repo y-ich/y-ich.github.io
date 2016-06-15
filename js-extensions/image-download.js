@@ -11,12 +11,14 @@
   })(function($) {
     $('#search img').each(function(num) {
       var a, evt;
-      a = document.createElement('a');
-      a.download = num + '.jpg';
-      a.href = $(this).attr('src');
-      evt = document.createEvent('MouseEvent');
-      evt.initEvent('click', true, false);
-      a.dispatchEvent(evt);
+      if (num < 100) {
+        a = document.createElement('a');
+        a.download = num + '.jpg';
+        a.href = $(this).attr('src');
+        evt = document.createEvent('MouseEvent');
+        evt.initEvent('click', true, false);
+        a.dispatchEvent(evt);
+      }
     });
   });
 
