@@ -1,12 +1,8 @@
-<html>
-
+<!DOCTYPE html>
+﻿<html>
 <head>
-<meta http-equiv="Content-Type"
-content="text/html; charset=x-sjis">
-<meta http-equiv="Content-Style-Type" content="text/css">
-<meta http-equiv="Content-Script-Type" content="text/javascript">
-<meta name="GENERATOR" content="Microsoft FrontPage Express 2.0">
-<title>���͌�������</title>
+<meta charset="UTF-8">
+<title>月は見続ける</title>
 <!--
 <bgsound src="sakurazaka.mid" loop="1">
 -->
@@ -28,39 +24,39 @@ content="text/html; charset=x-sjis">
 <body onload="Init()">
 <script language="javascript" type="text/javascript">
 <!--
-var Laymax = 8;	//���C���[�̍ő吔
-var actT = 200;	//�ړ����ԁF������
+var Laymax = 8;	//レイヤーの最大数
+var actT = 200;	//移動時間：速＝小
 var waitT = 25000;
 
 var Comments = new Array();
-Comments[1] = "<p>�@<\/p>\
-<p align=\"center\"><em>�D�ӂƑ����̂���������ꂤ�����A�ނ�������ɋC�Â��Ă��Ȃ��ЂƒB�ɂ�����<\/em><\/p>";
-Comments[2] = "<p>�����́A�܂�����ȁ@���ꂢ�ǂ̂Ȃ��ł����B<\/p>\
-<p>���˂��͂��炾���A�������Ă��܂����B���ꂢ�ǂ́A�̂ڂ�ɂ́@���ׂ������������Ă��āA�ƂĂ��ӂ����A�ƂĂ��ӂ����E�E�E<\/p>\
-<p>���˂��́@���炭�ӂ������ǂ��@����Ă䂫�܂����B�ǂ����Ă���Ă䂭�̂��@�킩��܂���ł����B�������݂�����Ɓ@���������C������邩�����̂ł��B<\/p>\
+Comments[1] = "<p>　<\/p>\
+<p align=\"center\"><em>好意と憎悪のあいだをゆれうごき、つむいだ愛情に気づいていないひと達にささぐ<\/em><\/p>";
+Comments[2] = "<p>そこは、まっくらな　かれいどのなかでした。<\/p>\
+<p>こねこはからだ中、きずついていました。かれいどは、のぼるには　かべがぎざぎざしていて、とてもふかく、とてもふかく・・・<\/p>\
+<p>こねこは　くらくふかいいどを　おりてゆきました。どうしておりてゆくのか　わかりませんでした。うえをみあげると　ただただ気分がわるかったのです。<\/p>\
 <p align=\"center\"><img width=320 height=240 src=\"hurt.jpg\"><\/p>";
-Comments[3] = "<p>���ꂢ�ǂ̂��Ƃł́@������C�̂��˂����@�S�z�����Ɂ@���ǂ������Ƃ̂����Ă��܂����B<\/p>\
-<p>�C�����ƁA���łɂ��ł����B�̂����Ă������˂��̂��Ȃ��ɂ́@���������₫�͂��߂Ă��܂����B<\/p>\
-<p>���˂��͐S�z�̂��܂�Ȃ������܂����B�Ȃ݂��́@���ꂢ�ǂւȂ���Ă䂫�܂����B�ǂ�ǂ�Ȃ���Ă䂫�܂����B<\/p>\
+Comments[3] = "<p>かれいどのそとでは　もう一匹のこねこが　心配そうに　いどをずっとのぞいていました。<\/p>\
+<p>気がつくと、すでによるでした。のぞいていたこねこのせなかには　つきがかがやきはじめていました。<\/p>\
+<p>こねこは心配のあまりなきだしました。なみだは　かれいどへながれてゆきました。どんどんながれてゆきました。<\/p>\
 <p align=\"center\"><img width=320 height=240 src=\"tear.jpg\"><\/p>";
-Comments[4] = "<p>���ǂ̂Ȃ��̂��˂��́@�ڂ���Ɓ@�������Ƃ��݂Ă��܂����B�������Ƃɂ́@�݂������܂�͂��߂Ă��܂����B�͂��߂͂�����肵�����ɁA�₪�āA�ǂ�ǂ�ǂ�ǂ�@�݂��������ӂ��Ă��܂����B<\/p>\
-<p>���˂��͂��悰�܂���ł����B���|�̂��܂�A���˂��́@���ǂ̂��ׂ������ނ���܂����B�߂���@�����ł�܂ł����ނ���܂����B<\/p>\
-<p>�݂��͗e�͂Ȃ��ӂ��Ă����܂��B<\/p>\
-<p>�݂��͂��˂����݂̂��݁A���˂��͂Ȃ�x���݂����̂�ł́@���ʂقǂ��邵���������ł����B<\/p>";
-Comments[5] = "<p>�₪�Ă��˂��͂���͂ĂāA�������̂���߂Ă������ɂ������݂܂����B�������Ȃ��ǂ̂�������@�������Ȃ����݂��܂����B<\/p>\
-<p>�u����Ȃ��ǂӂ���������@�����݂���E�E�E�v<\/p>\
-<p>�@<\/p>\
-<p>���͂��ǂ̂������Ƃ��肷���A�܂�������܂����B�܂��Ƃ��肷��������܂����B<\/p>\
+Comments[4] = "<p>いどのなかのこねこは　ぼんやりと　あしもとをみていました。あしもとには　みずがたまりはじめていました。はじめはゆっくりしずかに、やがて、どんどんどんどん　みずかさがふえてきました。<\/p>\
+<p>こねこはおよげませんでした。恐怖のあまり、こねこは　いどのかべをかきむしりました。つめから　ちがでるまでかきむしりました。<\/p>\
+<p>みずは容赦なくふえていきます。<\/p>\
+<p>みずはこねこをのみこみ、こねこはなん度もみずをのんでは　しぬほどくるしいおもいでした。<\/p>";
+Comments[5] = "<p>やがてこねこはつかれはてて、もがくのをやめてしずかにうえをみました。ちいさないどのくちから　ちいさなつきがみえました。<\/p>\
+<p>「こんないどふかくからも　つきがみえる・・・」<\/p>\
+<p>　<\/p>\
+<p>つきはいどのくちをとおりすぎ、またあらわれました。またとおりすぎあらわれました。<\/p>\
 <p align=\"center\"><img width=320 height=240 src=\"resignation.jpg\"><\/p>";
-Comments[6] = "<p>�ǂ�ȂɂȂ����������A���˂��͂��ڂ�Ă��邱�Ƃ��킷��Ă����̂ł��傤�B<\/p>\
-<p>���˂��́@�Ȃ����������@�݂��ɂ�����ł��܂����B�C�����ƁA���˂��ɂ́@���V�̂ق����炪�݂��Ă��܂����B<\/p>\
-<p>�����ł��B�݂��́@���˂����������������@���ǂ̂��肮���܂ł͂���ł����̂ł����B<\/p>";
-Comments[7] = "<p>���ɂ����������˂��́@����ĂĂ��ǂ���ł�ƁA����̂Ȃ��ւɂ��Ă䂫�܂����B�������͂₳�ł͂���܂����B�Ȃ��Ă������˂����@�т����肵�Ȃ��炨�������Ă䂫�܂����B<\/p>\
-<p>�@<\/p>\
-<p>�������Ȃ�����C�̂��˂����݂܂����Ă��܂����B<\/p>\
+Comments[6] = "<p>どんなにながいあいだ、こねこはおぼれていることをわすれていたのでしょう。<\/p>\
+<p>こねこは　ながいあいだ　みずにうかんでいました。気がつくと、こねこには　満天のほしぞらがみえていました。<\/p>\
+<p>そうです。みずは　こねこをゆっくりゆっくり　いどのいりぐちまではこんでいたのでした。<\/p>";
+Comments[7] = "<p>われにかえったこねこは　あわてていどからでると、もりのなかへにげてゆきました。すごいはやさではしりました。ないていたこねこも　びっくりしながらおいかけてゆきました。<\/p>\
+<p>　<\/p>\
+<p>おおきなつきが二匹のこねこをみまもっていました。<\/p>\
 <p align=\"center\"><img width=320 height=240 src=\"grove.jpg\"><\/p>";
-Comments[8] = "<p>�@<\/p>\
-<p align=\"center\">�����܂�<\/p>\
+Comments[8] = "<p>　<\/p>\
+<p align=\"center\">おしまい<\/p>\
 <p align=\"center\"><img width=320 height=240 src=\"lantana.jpg\"><\/p>";
 Comments[9] = "<p>IE4<\/p>";
 Comments[10] = "<p>NS4<\/p>";
@@ -134,12 +130,12 @@ function SetColor(kkk){
 // -->
 </script>
 
-<h1 align="center">���͌�������</h1>
+<h1 align="center">月は見続ける</h1>
 
-<p>�Q�O�O�U�N�U���S���X�V</p>
-<p>���΂炭�҂ƕ��ꂪ�n�܂�܂��B</p>
+<p>２００６年６月４日更新</p>
+<p>しばらく待つと物語が始まります。</p>
 <hr>
-<DIV ID="content1"><p>�u���E�U���Ή����Ă��܂���B</p></DIV>
+<DIV ID="content1"><p>ブラウザが対応していません。</p></DIV>
 <DIV STYLE="position:absolute; top:90%">
 <hr>
 <p align="center">Copyright &copy; 2002-2006 ICHIKAWA, Yuji</p>
