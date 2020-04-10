@@ -2,7 +2,7 @@
 <html>
 <head>
     <title></title>
-<script src="http://cdn.jqmobi.com/jq.mobi.min.js"></script>
+<script src="js/jq.mobi.min.js"></script>
 <script src="http://y-ich.github.com/js-console/js/js-console-bundle.js"></script>
 <script type="text/javascript">
 var works = [
@@ -69,7 +69,7 @@ var works = [
     {title: '五大陸',
      year: 1993,
      url: 'https://lh3.googleusercontent.com/-_rs1vSHYwec/S_t4iEpTlbI/AAAAAAAANtY/w1TiqH0ifb0/s912/IMG_1100.JPG'},
-]    
+]
 </script>
 <style type="text/css">
 body {
@@ -92,7 +92,7 @@ div.frame {
 (function() {
     var timerId;
     var scrollEnd;
-    var endFlag = false;　// scrollEndによるスクロールの場合の抑制処理用。
+    var endFlag = false; // scrollEndによるスクロールの場合の抑制処理用。
     var width = window.innerWidth; // Mobile SafariではinnerWidthはスクロール中？微妙に変化するので定数にしておく。
     var $container = $('<div>').addClass('container');
     works.forEach(function(e) {

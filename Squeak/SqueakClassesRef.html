@@ -3,7 +3,7 @@
 
 <head>
 <meta http-equiv="Content-Type"
-content="text/html; charset=x-sjis">
+content="text/html; charset=UTF-8">
 <meta name="GENERATOR" content="Microsoft FrontPage Express 2.0">
 <title>Squeak Smalltalk: Classes Reference</title>
 <link rev="made"
@@ -26,7 +26,7 @@ href="mailto:werdna@mucow.com%20(Andrew%20Greenberg)">
 
 <body bgcolor="#E6E1B8">
 
-<h1 align="center">Squeak Smalltalk: ÉNÉâÉXÉäÉtÉ@ÉåÉìÉX</h1>
+<h1 align="center">Squeak Smalltalk: „ÇØ„É©„Çπ„É™„Éï„Ç°„É¨„É≥„Çπ</h1>
 
 <hr>
 
@@ -50,52 +50,52 @@ href="http://www.squeak.org/"><font size="2">http://www.squeak.org</font></a></p
 
 <hr>
 
-<h2>ñ⁄éü</h2>
+<h2>ÁõÆÊ¨°</h2>
 
 <menu>
-    <li><a href="#FundamentalClasses">äÓñ{ìIÇ»ÉNÉâÉXÇ∆ÉÅÉ\ÉbÉh</a>
+    <li><a href="#FundamentalClasses">Âü∫Êú¨ÁöÑ„Å™„ÇØ„É©„Çπ„Å®„É°„ÇΩ„ÉÉ„Éâ</a>
     </li>
-    <li><a href="#NumericClasses">êîílä÷åWÇÃÉNÉâÉXÇ∆ÉÅÉ\ÉbÉh</a>
+    <li><a href="#NumericClasses">Êï∞ÂÄ§Èñ¢‰øÇ„ÅÆ„ÇØ„É©„Çπ„Å®„É°„ÇΩ„ÉÉ„Éâ</a>
     </li>
-    <li><a href="#CollectionClasses">èWçáä÷åWÇÃÉNÉâÉXÇ∆ÉÅÉ\ÉbÉh</a>
+    <li><a href="#CollectionClasses">ÈõÜÂêàÈñ¢‰øÇ„ÅÆ„ÇØ„É©„Çπ„Å®„É°„ÇΩ„ÉÉ„Éâ</a>
     </li>
-    <li><a href="#StreamClasses">ÉXÉgÉäÅ[É~ÉìÉOÉNÉâÉXÇ∆ÉÅÉ\ÉbÉh</a>
+    <li><a href="#StreamClasses">„Çπ„Éà„É™„Éº„Éü„É≥„Ç∞„ÇØ„É©„Çπ„Å®„É°„ÇΩ„ÉÉ„Éâ</a>
     </li>
-    <li><a href="#Exceptions">ANSIèÄãíÇÃó·äOèàóù</a> </li>
-    <li><a href="#Hierarchy">SqueakÉNÉâÉXäKëw</a> </li>
-    <li><a href="#Other">ëºÇÃÉJÉeÉSÉäÇÃSqueakÉNÉâÉX</a>
+    <li><a href="#Exceptions">ANSIÊ∫ñÊã†„ÅÆ‰æãÂ§ñÂá¶ÁêÜ</a> </li>
+    <li><a href="#Hierarchy">Squeak„ÇØ„É©„ÇπÈöéÂ±§</a> </li>
+    <li><a href="#Other">‰ªñ„ÅÆ„Ç´„ÉÜ„Ç¥„É™„ÅÆSqueak„ÇØ„É©„Çπ</a>
     </li>
 </menu>
 
-<p><a href="squeak-qref.html"><font size="2">SqueakåæåÍÉäÉtÉ@ÉåÉìÉX</font></a><font
-size="2">Ç‡å©ÇƒÇ≠ÇæÇ≥Ç¢ÅB</font></p>
+<p><a href="squeak-qref.html"><font size="2">SqueakË®ÄË™û„É™„Éï„Ç°„É¨„É≥„Çπ</font></a><font
+size="2">„ÇÇË¶ã„Å¶„Åè„Å†„Åï„ÅÑ„ÄÇ</font></p>
 
 <hr>
 
-<h2><a name="FundamentalClasses"></a>äÓñ{ìIÇ»ÉNÉâÉXÇ∆ÉÅÉ\ÉbÉh</h2>
+<h2><a name="FundamentalClasses"></a>Âü∫Êú¨ÁöÑ„Å™„ÇØ„É©„Çπ„Å®„É°„ÇΩ„ÉÉ„Éâ</h2>
 
 <menu>
-    <li><a href="#FundamentalObject">ObjectÉNÉâÉX</a> </li>
-    <li><a href="#FundamentalBoolean">BooleanÉNÉâÉX</a> </li>
-    <li><a href="#FundamentalMagnitude">MagnitudeÉNÉâÉX</a> </li>
-    <li><a href="#FundamentalCharacter">CharacterÉNÉâÉX</a> </li>
+    <li><a href="#FundamentalObject">Object„ÇØ„É©„Çπ</a> </li>
+    <li><a href="#FundamentalBoolean">Boolean„ÇØ„É©„Çπ</a> </li>
+    <li><a href="#FundamentalMagnitude">Magnitude„ÇØ„É©„Çπ</a> </li>
+    <li><a href="#FundamentalCharacter">Character„ÇØ„É©„Çπ</a> </li>
 </menu>
 
-<h3><a name="FundamentalObject"></a>ObjectÉNÉâÉXÅiÇ∑Ç◊ÇƒÇÃÉIÉuÉWÉFÉNÉgÇ…ä÷Ç∑ÇÈëÄçÏÅj</h3>
+<h3><a name="FundamentalObject"></a>Object„ÇØ„É©„ÇπÔºà„Åô„Åπ„Å¶„ÅÆ„Ç™„Éñ„Ç∏„Çß„ÇØ„Éà„Å´Èñ¢„Åô„ÇãÊìç‰ΩúÔºâ</h3>
 
-<h4>ÉCÉìÉXÉ^ÉìÉXê∂ê¨(ÉNÉâÉXë§)</h4>
+<h4>„Ç§„É≥„Çπ„Çø„É≥„ÇπÁîüÊàê(„ÇØ„É©„ÇπÂÅ¥)</h4>
 <div align="center"><center>
 
 <table border="1" cellpadding="3" width="85%" bgcolor="#FFFFCC">
 <TBODY>    <tr>
-        <td bgcolor="#FFCC99"><b>ÉÅÉbÉZÅ[ÉW</b></td>
-        <td bgcolor="#FFCC99"><p align="center"><b>ãLèq</b></p>
+        <td bgcolor="#FFCC99"><b>„É°„ÉÉ„Çª„Éº„Ç∏</b></td>
+        <td bgcolor="#FFCC99"><p align="center"><b>Ë®òËø∞</b></p>
         </td>
-        <td bgcolor="#FFCC99"><b>îıçl</b></td>
+        <td bgcolor="#FFCC99"><b>ÂÇôËÄÉ</b></td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99"><b>new</b></td>
-        <td bgcolor="#FFCC99">ÉåÉVÅ[ÉoÅiÉNÉâÉXÇ≈Ç∑ÅjÇÃêVÇΩÇ»ÉCÉìÉXÉ^ÉìÉXÇï‘ÇµÇ‹Ç∑ÅBÇ±ÇÍÇÕAnswer
+        <td bgcolor="#FFCC99">„É¨„Ç∑„Éº„ÉêÔºà„ÇØ„É©„Çπ„Åß„ÅôÔºâ„ÅÆÊñ∞„Åü„Å™„Ç§„É≥„Çπ„Çø„É≥„Çπ„ÇíËøî„Åó„Åæ„Åô„ÄÇ„Åì„Çå„ÅØAnswer
         a new instance of the receiver (which is a class). This
         is the usual way of creating a new object. <b>new</b> is
         often overridden in subclasses to provide class-specific
@@ -269,26 +269,26 @@ size="2">Ç‡å©ÇƒÇ≠ÇæÇ≥Ç¢ÅB</font></p>
         <td bgcolor="#FFCC99">Answer another instance just like
         the receiver. Subclasses typically override this method;
         they typically do not override shallowCopy.</td>
-        <td bgcolor="#FFCC99">Å@</td>
+        <td bgcolor="#FFCC99">„ÄÄ</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99"><b>shallowCopy</b></td>
         <td bgcolor="#FFCC99">Answer a copy of the receiver which
         shares the receiver's instance variables.</td>
-        <td bgcolor="#FFCC99">Å@</td>
+        <td bgcolor="#FFCC99">„ÄÄ</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99"><b>deepCopy</b></td>
         <td bgcolor="#FFCC99">Answer a copy of the receiver with
         its own copy of each instance variable.</td>
-        <td bgcolor="#FFCC99">Å@</td>
+        <td bgcolor="#FFCC99">„ÄÄ</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99"><b>veryDeepCopy</b></td>
         <td bgcolor="#FFCC99">Do a complete tree copy using a
         dictionary. An object in the tree twice is copied once
         and shared by both referents.</td>
-        <td bgcolor="#FFCC99">Å@</td>
+        <td bgcolor="#FFCC99">„ÄÄ</td>
     </tr>
 </TBODY></table>
 </center></div>
@@ -308,7 +308,7 @@ size="2">Ç‡å©ÇƒÇ≠ÇæÇ≥Ç¢ÅB</font></p>
         <td bgcolor="#FFCC99">Send the unary selector, aSymbol,
         to the receiver. Signal an error if the number of
         arguments expected by the selector is not zero.</td>
-        <td bgcolor="#FFCC99">Å@</td>
+        <td bgcolor="#FFCC99">„ÄÄ</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99"><b>perform:</b> aSymbol <b>with:</b>
@@ -325,7 +325,7 @@ size="2">Ç‡å©ÇƒÇ≠ÇæÇ≥Ç¢ÅB</font></p>
         receiver with arguments in argArray. Fail if the number
         of arguments expected by the selector does not match the
         size of argArray.</td>
-        <td bgcolor="#FFCC99">Å@</td>
+        <td bgcolor="#FFCC99">„ÄÄ</td>
     </tr>
 </TBODY></table>
 </center></div>
@@ -352,7 +352,7 @@ size="2">Ç‡å©ÇƒÇ≠ÇæÇ≥Ç¢ÅB</font></p>
         <td bgcolor="#FFCC99">Answer the value of the index'th
         element of the receiver. Signal an Error if index is not
         an Integer or is out of bounds.</td>
-        <td bgcolor="#FFCC99">Å@</td>
+        <td bgcolor="#FFCC99">„ÄÄ</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99"><b>at:</b> index <b>put:</b>
@@ -360,21 +360,21 @@ size="2">Ç‡å©ÇƒÇ≠ÇæÇ≥Ç¢ÅB</font></p>
         <td bgcolor="#FFCC99">Store anObject in the receiver at
         the element index. Signal an Error if index is not an
         Integer or is out of bounds. Answer anObject.</td>
-        <td bgcolor="#FFCC99">Å@</td>
+        <td bgcolor="#FFCC99">„ÄÄ</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99"><b>at:</b> index <b>modify:</b>
         aBlock</td>
         <td bgcolor="#FFCC99">Replace the element at index of the
         receiver with that element transformed by the block.</td>
-        <td bgcolor="#FFCC99">Å@</td>
+        <td bgcolor="#FFCC99">„ÄÄ</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99"><b>size</b></td>
         <td bgcolor="#FFCC99">Answer the number of indexable
         elements in the receiver. This value is the same as the
         largest legal subscript.</td>
-        <td bgcolor="#FFCC99">Å@</td>
+        <td bgcolor="#FFCC99">„ÄÄ</td>
     </tr>
 </TBODY></table>
 </center></div>
@@ -393,25 +393,25 @@ size="2">Ç‡å©ÇƒÇ≠ÇæÇ≥Ç¢ÅB</font></p>
         <td bgcolor="#FFCC99"><b>printString</b></td>
         <td bgcolor="#FFCC99">Answer a String whose characters
         describe the receiver.</td>
-        <td bgcolor="#FFCC99">Å@</td>
+        <td bgcolor="#FFCC99">„ÄÄ</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99"><b>printOn:</b> aStream</td>
         <td bgcolor="#FFCC99">Append to aStream a String whose
         characters describe the receiver.</td>
-        <td bgcolor="#FFCC99">Å@</td>
+        <td bgcolor="#FFCC99">„ÄÄ</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99"><b>storeString</b></td>
         <td bgcolor="#FFCC99">Answer a String from which the
         receiver can be reconstructed.</td>
-        <td bgcolor="#FFCC99">Å@</td>
+        <td bgcolor="#FFCC99">„ÄÄ</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99"><b>storeOn:</b> aStream</td>
         <td bgcolor="#FFCC99">Append to aStream a String from
         which the receiver can be reconstructed</td>
-        <td bgcolor="#FFCC99">Å@</td>
+        <td bgcolor="#FFCC99">„ÄÄ</td>
     </tr>
 </TBODY></table>
 </center></div>
@@ -430,33 +430,33 @@ size="2">Ç‡å©ÇƒÇ≠ÇæÇ≥Ç¢ÅB</font></p>
         <td bgcolor="#FFCC99"><b>class</b></td>
         <td bgcolor="#FFCC99">Answers the receiver's class (an
         object).</td>
-        <td bgcolor="#FFCC99">Å@</td>
+        <td bgcolor="#FFCC99">„ÄÄ</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99"><b>isKindOf:</b> aClass</td>
         <td bgcolor="#FFCC99">Is the receiver an instance of
         aClass or one of its subclasses?</td>
-        <td bgcolor="#FFCC99">Å@</td>
+        <td bgcolor="#FFCC99">„ÄÄ</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99"><b>isMemberOf:</b> aClass</td>
         <td bgcolor="#FFCC99">Is the receiver an instance of
         aClass? (Same as <code>rcvr class == aClass</code>)</td>
-        <td bgcolor="#FFCC99">Å@</td>
+        <td bgcolor="#FFCC99">„ÄÄ</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99"><b>respondsTo:</b> aSelector</td>
         <td bgcolor="#FFCC99">Can the receiver find a method for
         aSelector, either in the receiver's class or in one of
         its superclasses?</td>
-        <td bgcolor="#FFCC99">Å@</td>
+        <td bgcolor="#FFCC99">„ÄÄ</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99"><b>canUnderstand:</b> aSelector</td>
         <td bgcolor="#FFCC99">Does the receiver, which must be a
         class, have a method for aSelector? The method can belong
         to the receiver or to any of its superclasses.</td>
-        <td bgcolor="#FFCC99">Å@</td>
+        <td bgcolor="#FFCC99">„ÄÄ</td>
     </tr>
 </TBODY></table>
 </center></div>
@@ -479,18 +479,18 @@ size="2">Ç‡å©ÇƒÇ≠ÇæÇ≥Ç¢ÅB</font></p>
     <tr>
         <td bgcolor="#FFCC99"><b>asString</b></td>
         <td bgcolor="#FFCC99">Answers the receiver's printString.</td>
-        <td bgcolor="#FFCC99">Å@</td>
+        <td bgcolor="#FFCC99">„ÄÄ</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99"><b>doesNotUnderstand:</b> aSymbol</td>
         <td bgcolor="#FFCC99">Report that the receiver does not
         understand aSymbol as a message.</td>
-        <td bgcolor="#FFCC99">Å@</td>
+        <td bgcolor="#FFCC99">„ÄÄ</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99"><b>error:</b> aString</td>
         <td bgcolor="#FFCC99">Signal an Error.</td>
-        <td bgcolor="#FFCC99">Å@</td>
+        <td bgcolor="#FFCC99">„ÄÄ</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99"><b>halt</b></td>
@@ -539,32 +539,32 @@ respectively.</p>
         <td bgcolor="#FFCC99">Evaluating conjunction (AND).
         Evaluate the argument. Then answer true if both the
         receiver and the argument are true.</td>
-        <td bgcolor="#FFCC99">Å@</td>
+        <td bgcolor="#FFCC99">„ÄÄ</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99"><b>|</b> aBoolean</td>
         <td bgcolor="#FFCC99">Evaluating disjunction (OR).
         Evaluate the argument. Then answer true if either the
         receiver or the argument is true.</td>
-        <td bgcolor="#FFCC99">Å@</td>
+        <td bgcolor="#FFCC99">„ÄÄ</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99"><b>eqv:</b> aBoolean</td>
         <td bgcolor="#FFCC99">Answer true if the receiver is
         equivalent to aBoolean.</td>
-        <td bgcolor="#FFCC99">Å@</td>
+        <td bgcolor="#FFCC99">„ÄÄ</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99"><b>not</b></td>
         <td bgcolor="#FFCC99">Negation. Answer true if the
         receiver is false, answer false if the receiver is true.</td>
-        <td bgcolor="#FFCC99">Å@</td>
+        <td bgcolor="#FFCC99">„ÄÄ</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99"><b>xor:</b> aBoolean</td>
         <td bgcolor="#FFCC99">Exclusive OR. Answer true if the
         receiver is not equivalent to aBoolean.</td>
-        <td bgcolor="#FFCC99">Å@</td>
+        <td bgcolor="#FFCC99">„ÄÄ</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99"><b>and:</b> alternativeBlock</td>
@@ -572,7 +572,7 @@ respectively.</p>
         receiver is true, answer the <i>value</i> of
         alternativeBlock; otherwise answer false without
         evaluating alternativeBlock.</td>
-        <td bgcolor="#FFCC99">Å@</td>
+        <td bgcolor="#FFCC99">„ÄÄ</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99"><b>or:</b> alternativeBlock</td>
@@ -580,7 +580,7 @@ respectively.</p>
         receiver is false, answer the <i>value</i> of
         alternativeBlock; otherwise answer true without
         evaluating alternativeBlock.</td>
-        <td bgcolor="#FFCC99">Å@</td>
+        <td bgcolor="#FFCC99">„ÄÄ</td>
     </tr>
 </TBODY></table>
 </center></div>
@@ -603,44 +603,44 @@ can be linearly ordered.</p>
         <td bgcolor="#FFCC99">&lt; aMagnitude</td>
         <td bgcolor="#FFCC99">Answer whether the receiver is
         strictly less than the argument.</td>
-        <td bgcolor="#FFCC99">Å@</td>
+        <td bgcolor="#FFCC99">„ÄÄ</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99">&gt; aMagnitude</td>
         <td bgcolor="#FFCC99">Answer whether the receiver is
         strictly greater than the argument.</td>
-        <td bgcolor="#FFCC99">Å@</td>
+        <td bgcolor="#FFCC99">„ÄÄ</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99">&lt;= aMagnitude</td>
         <td bgcolor="#FFCC99">Answer whether the receiver is less
         than or equal to the argument.</td>
-        <td bgcolor="#FFCC99">Å@</td>
+        <td bgcolor="#FFCC99">„ÄÄ</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99">&gt;= aMagnitude</td>
         <td bgcolor="#FFCC99">Answer whether the receiver is
         greater than or equal to the argument.</td>
-        <td bgcolor="#FFCC99">Å@</td>
+        <td bgcolor="#FFCC99">„ÄÄ</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99"><b>between:</b> min <b>and:</b> max</td>
         <td bgcolor="#FFCC99">Answer whether the receiver is
         greater than or equal to the argument, min, and less than
         or equal to the argument, max.</td>
-        <td bgcolor="#FFCC99">Å@</td>
+        <td bgcolor="#FFCC99">„ÄÄ</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99"><b>min:</b> aMagnitude</td>
         <td bgcolor="#FFCC99">Answer the receiver or the
         argument, whichever is the lesser magnitude.</td>
-        <td bgcolor="#FFCC99">Å@</td>
+        <td bgcolor="#FFCC99">„ÄÄ</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99"><b>max:</b> aMagnitude</td>
         <td bgcolor="#FFCC99">Answer the receiver or the
         argument, whichever is the greater magnitude.</td>
-        <td bgcolor="#FFCC99">Å@</td>
+        <td bgcolor="#FFCC99">„ÄÄ</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99"><b>min:</b> firstMagnitude <b>max:</b>
@@ -649,7 +649,7 @@ can be linearly ordered.</p>
         firstMagnitude, whichever is the lesser magnitude, and
         answer that or the argument, secondMagnitude, whichever
         is the greater magnitude.</td>
-        <td bgcolor="#FFCC99">Å@</td>
+        <td bgcolor="#FFCC99">„ÄÄ</td>
     </tr>
 </TBODY></table>
 </center></div>
@@ -706,14 +706,14 @@ character encoding.</p>
         <td bgcolor="#FFCC99">Answer the Character whose digit
         value is x. For example, answer $9 for x=9, $0 for x=0,
         $A for x=10, $Z for x=35.</td>
-        <td bgcolor="#FFCC99">Å@</td>
+        <td bgcolor="#FFCC99">„ÄÄ</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99"><b>arrowDown arrowLeft arrowRight
         arrowUp backspace cr delete end enter escape euro home
         insert lf linefeed nbsp newPage pageDown pageUp space tab</b></td>
         <td bgcolor="#FFCC99">Answer the appropriate character</td>
-        <td bgcolor="#FFCC99">Å@</td>
+        <td bgcolor="#FFCC99">„ÄÄ</td>
     </tr>
 </TBODY></table>
 </center></div>
@@ -747,7 +747,7 @@ character encoding.</p>
         <td bgcolor="#FFCC99">Answer 0-9 if the receiver is $0-$9,
         10-35 if it is $A-$Z, and &lt; 0 otherwise. This is used
         to parse literal numbers of radix 2-36.</td>
-        <td bgcolor="#FFCC99">Å@</td>
+        <td bgcolor="#FFCC99">„ÄÄ</td>
     </tr>
 </TBODY></table>
 </center></div>
@@ -775,56 +775,56 @@ character encoding.</p>
         <td bgcolor="#FFCC99"><b>isAlphaNumeric</b></td>
         <td bgcolor="#FFCC99">Answer whether the receiver is a
         letter or a digit.</td>
-        <td bgcolor="#FFCC99">Å@</td>
+        <td bgcolor="#FFCC99">„ÄÄ</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99"><b>isDigit</b></td>
         <td bgcolor="#FFCC99">Answer whether the receiver is a
         digit.</td>
-        <td bgcolor="#FFCC99">Å@</td>
+        <td bgcolor="#FFCC99">„ÄÄ</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99"><b>isLetter</b></td>
         <td bgcolor="#FFCC99">Answer whether the receiver is a
         letter.</td>
-        <td bgcolor="#FFCC99">Å@</td>
+        <td bgcolor="#FFCC99">„ÄÄ</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99"><b>isLowercase</b></td>
         <td bgcolor="#FFCC99">Answer whether the receiver is a
         lowercase letter.</td>
-        <td bgcolor="#FFCC99">Å@</td>
+        <td bgcolor="#FFCC99">„ÄÄ</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99"><b>isSeparator</b></td>
         <td bgcolor="#FFCC99">Answer whether the receiver is one
         of the separator characters: space, cr, tab, line feed,
         or form feed.</td>
-        <td bgcolor="#FFCC99">Å@</td>
+        <td bgcolor="#FFCC99">„ÄÄ</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99"><b>isSpecial</b></td>
         <td bgcolor="#FFCC99">Answer whether the receiver is one
         of the special characters</td>
-        <td bgcolor="#FFCC99">Å@</td>
+        <td bgcolor="#FFCC99">„ÄÄ</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99"><b>isUppercase</b></td>
         <td bgcolor="#FFCC99">Answer whether the receiver is an
         uppercase letter.</td>
-        <td bgcolor="#FFCC99">Å@</td>
+        <td bgcolor="#FFCC99">„ÄÄ</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99"><b>isVowel</b></td>
         <td bgcolor="#FFCC99">Answer whether the receiver is one
         of the vowels, AEIOU, in upper or lower case.</td>
-        <td bgcolor="#FFCC99">Å@</td>
+        <td bgcolor="#FFCC99">„ÄÄ</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99"><b>tokenish</b></td>
         <td bgcolor="#FFCC99">Answer whether the receiver is a
         valid token-character?letter, digit, or colon.</td>
-        <td bgcolor="#FFCC99">Å@</td>
+        <td bgcolor="#FFCC99">„ÄÄ</td>
     </tr>
 </TBODY></table>
 </center></div>
@@ -843,13 +843,13 @@ character encoding.</p>
         <td bgcolor="#FFCC99"><b>asLowercase</b></td>
         <td bgcolor="#FFCC99">If the receiver is uppercase,
         answer its matching lowercase Character.</td>
-        <td bgcolor="#FFCC99">Å@</td>
+        <td bgcolor="#FFCC99">„ÄÄ</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99"><b>asUppercase</b></td>
         <td bgcolor="#FFCC99">If the receiver is lowercase,
         answer its matching uppercase Character.</td>
-        <td bgcolor="#FFCC99">Å@</td>
+        <td bgcolor="#FFCC99">„ÄÄ</td>
     </tr>
 </TBODY></table>
 </center></div>
@@ -879,19 +879,19 @@ character encoding.</p>
                 <td bgcolor="#FFCC99">+ aNumber</td>
                 <td bgcolor="#FFCC99">Answer the sum of the
                 receiver and aNumber.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99">- aNumber</td>
                 <td bgcolor="#FFCC99">Answer the difference of
                 the receiver and aNumber.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99">* aNumber</td>
                 <td bgcolor="#FFCC99">Answer the product of the
                 receiver and aNumber.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99">/ aNumber</td>
@@ -900,7 +900,7 @@ character encoding.</p>
                 much precision as possible. If the result is not
                 exact, the answer will be a Fraction or Float, as
                 appropriate. Signal ZeroDivide if aNumber is Zero.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99">// aNumber</td>
@@ -908,7 +908,7 @@ character encoding.</p>
                 dividing the receiver by aNumber, truncating
                 toward negative infinity. Signal ZeroDivide if
                 aNumber is Zero.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99">\\ aNumber</td>
@@ -916,40 +916,40 @@ character encoding.</p>
                 when dividing the receiver by aNumber, truncating
                 toward negative infinity. This is the modulus
                 operator. Signal ZeroDivide if aNumber is Zero.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>quo:</b> aNumber</td>
                 <td bgcolor="#FFCC99">Answer the result of
                 dividing the receiver by aNumber, truncating
                 toward zero. Signal ZeroDivide if aNumber is Zero.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>rem:</b> aNumber</td>
                 <td bgcolor="#FFCC99">Answer the remainder left
                 when dividing the receiver by aNumber, truncating
                 toward zero. Signal ZeroDivide if aNumber is Zero.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>abs</b></td>
                 <td bgcolor="#FFCC99">Answer the absolute value
                 of the receiver.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>negated</b></td>
                 <td bgcolor="#FFCC99">Answer the negation of the
                 receiver.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>reciprocal</b></td>
                 <td bgcolor="#FFCC99">Answer 1 divided by the
                 receiver. Signal ZeroDivide if the receiver is
                 zero.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
 </TBODY>        </table>
         </center></div><h4>Methods implementing mathematical
@@ -966,32 +966,32 @@ character encoding.</p>
                 <td bgcolor="#FFCC99"><b>exp</b></td>
                 <td bgcolor="#FFCC99">Answer a floating point
                 number that is the exponential of the receiver</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>ln</b></td>
                 <td bgcolor="#FFCC99">Answer the natural log of
                 the receiver.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>log:</b> aNumber</td>
                 <td bgcolor="#FFCC99">Answer the logarithm base
                 aNumber of the receiver.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>floorLog:</b> aNumber</td>
                 <td bgcolor="#FFCC99">Take the logarithm base
                 aNumber of the receiver, and answer the integer
                 nearest that value towards negative infinity.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>raisedTo:</b> aNumber</td>
                 <td bgcolor="#FFCC99">Answer the receiver raised
                 to the power of aNumber.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>raisedToInteger:</b>
@@ -999,20 +999,20 @@ character encoding.</p>
                 <td bgcolor="#FFCC99">Answer the receiver raised
                 to the power of anInteger. Signal an Error if
                 anInteger is not an integer!</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>sqrt</b></td>
                 <td bgcolor="#FFCC99">Answer a floating point
                 number that is the positive square root of the
                 receiver.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>squared</b></td>
                 <td bgcolor="#FFCC99">Answer the receiver
                 multiplied by itself.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
 </TBODY>        </table>
         </center></div><h4>Methods for testing Numbers</h4>
@@ -1028,44 +1028,44 @@ character encoding.</p>
                 <td bgcolor="#FFCC99"><b>even</b></td>
                 <td bgcolor="#FFCC99">Answer whether the receiver
                 is even.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>odd</b></td>
                 <td bgcolor="#FFCC99">Answer whether the receiver
                 is odd.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>negative</b></td>
                 <td bgcolor="#FFCC99">Answer whether the receiver
                 is less than zero.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>positive</b></td>
                 <td bgcolor="#FFCC99">Answer whether the receiver
                 is greater than or equal to zero.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>strictlyPositive</b></td>
                 <td bgcolor="#FFCC99">Answer whether the receiver
                 is greater than zero.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>sign</b></td>
                 <td bgcolor="#FFCC99">Answer 1 if the receiver is
                 strictly positive, zero if the receiver is zero,
                 and -1 if the receiver is strictly negative.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>isZero</b></td>
                 <td bgcolor="#FFCC99">Answer whether the receiver
                 is zero.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
 </TBODY>        </table>
         </center></div><h4>Methods for truncating and rounding
@@ -1082,44 +1082,44 @@ character encoding.</p>
                 <td bgcolor="#FFCC99"><b>ceiling</b></td>
                 <td bgcolor="#FFCC99">Answer the Integer nearest
                 the receiver toward positive infinity.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>floor</b></td>
                 <td bgcolor="#FFCC99">Answer the Integer nearest
                 the receiver toward negative infinity.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>truncated</b></td>
                 <td bgcolor="#FFCC99">Answer an integer nearest
                 the receiver toward zero.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>truncateTo:</b> aNumber</td>
                 <td bgcolor="#FFCC99">Answer the multiple of
                 aNumber that is nearest the receiver toward zero.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>rounded</b></td>
                 <td bgcolor="#FFCC99">Answer the integer nearest
                 the receiver.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>roundTo:</b> quantum</td>
                 <td bgcolor="#FFCC99">Answer the nearest number
                 to the receiver that is a multiple of quantum.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>roundUpTo:</b> quantum</td>
                 <td bgcolor="#FFCC99">Answer the multiple of
                 quantum that is nearest the receiver toward
                 infinity</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
 </TBODY>        </table>
         </center></div><h4>Methods for trigonometry on Numbers</h4>
@@ -1135,67 +1135,67 @@ character encoding.</p>
                 <td bgcolor="#FFCC99"><b>sin</b></td>
                 <td bgcolor="#FFCC99">Answer the sine of the
                 receiver taken as an angle in radians.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>cos</b></td>
                 <td bgcolor="#FFCC99">Answer the cosine of the
                 receiver taken as an angle in radians.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>tan</b></td>
                 <td bgcolor="#FFCC99">Answer the tangent of the
                 receiver taken as an angle in radians.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>degreeSin</b></td>
                 <td bgcolor="#FFCC99">Answer the sin of the
                 receiver taken as an angle in degrees.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>degreeCos</b></td>
                 <td bgcolor="#FFCC99">Answer the cosine of the
                 receiver taken as an angle in degrees.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>arcSin</b></td>
                 <td bgcolor="#FFCC99">Answer an angle in radians
                 whose sine is the receiver.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>arcCos</b></td>
                 <td bgcolor="#FFCC99">Answer an angle in radians
                 whose cosine is the receiver.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>arcTan</b></td>
                 <td bgcolor="#FFCC99">Answer an angle in radians
                 whose tangent is the receiver.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>arcTan:</b> denominator</td>
                 <td bgcolor="#FFCC99">Answer the angle in radians
                 whose tan is the receiver divided by denominator.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>degreesToRadians</b></td>
                 <td bgcolor="#FFCC99">Answer the receiver in
                 radians. Assumes the receiver is in degrees.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>radiansToDegrees</b></td>
                 <td bgcolor="#FFCC99">Answer the receiver in
                 degrees. Assumes the receiver is in radians.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
 </TBODY>        </table>
         </center></div><h3>Class Integer</h3>
@@ -1212,31 +1212,31 @@ character encoding.</p>
                 <td bgcolor="#FFCC99"><b>isPowerOfTwo</b></td>
                 <td bgcolor="#FFCC99">Answer whether the receiver
                 is a power of two.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>factorial</b></td>
                 <td bgcolor="#FFCC99">Answer the factorial of the
                 receiver.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>gcd:</b> anInteger</td>
                 <td bgcolor="#FFCC99">Answer the greatest common
                 denominator of the receiver and the argument.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>lcm:</b> anInteger</td>
                 <td bgcolor="#FFCC99">Answer the least common
                 multiple of the receiver and the argument.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>take:</b> r</td>
                 <td bgcolor="#FFCC99">Answer the number of
                 combinations of the receiver, taken r at a time.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
 </TBODY>        </table>
         </center></div><h4>Methods for bit manipulation on
@@ -1426,7 +1426,7 @@ character encoding.</p>
                 <td bgcolor="#FFCC99"><b>with:</b> anObject</td>
                 <td bgcolor="#FFCC99">Answer an instance of the
                 receiver containing anObject</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>with:</b> firstObject <b>with:</b>
@@ -1435,14 +1435,14 @@ character encoding.</p>
                 receiver containing all the arguments as elements.
                 (Squeak recognizes instantiators of this type up
                 to six &quot;with:&quot; clauses).</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>withAll:</b> aCollection</td>
                 <td bgcolor="#FFCC99">Answer an instance of the
                 receiver containing all the elements from
                 aCollection.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
 </TBODY>        </table>
         </center></div><h4>Methods for testing Collections</h4>
@@ -1458,14 +1458,14 @@ character encoding.</p>
                 <td bgcolor="#FFCC99"><b>isEmpty</b></td>
                 <td bgcolor="#FFCC99">Answer whether the receiver
                 contains any elements.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>occurrencesOf:</b>
                 anObject</td>
                 <td bgcolor="#FFCC99">Answer how many of the
                 receiver's elements are equal to anObject.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>anySatisfy:</b> aBlock</td>
@@ -1473,7 +1473,7 @@ character encoding.</p>
                 elements of the receiver. If aBlock returns true
                 for any element return true. Otherwise return
                 false</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>allSatisfy:</b> aBlock</td>
@@ -1481,27 +1481,27 @@ character encoding.</p>
                 elements of the receiver. If aBlock returns true
                 for all elements return true. Otherwise return
                 false</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>includes:</b> anObject</td>
                 <td bgcolor="#FFCC99">Answer whether anObject is
                 one of the receiver's elements.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>includesAllOf:</b>
                 aCollection</td>
                 <td bgcolor="#FFCC99">Answer whether all the
                 elements of aCollection are in the receiver.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>includesAnyOf:</b>
                 aCollection</td>
                 <td bgcolor="#FFCC99">Answer whether any element
                 of aCollection is one of the receiver's elements.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
 </TBODY>        </table>
         </center></div><h4><a
@@ -1520,21 +1520,21 @@ character encoding.</p>
                 <td bgcolor="#FFCC99">Answer a specimen element
                 of the receiver (any one at all). Signal an error
                 if the receiver is empty.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>add:</b> newObject</td>
                 <td bgcolor="#FFCC99">Include newObject as one of
                 the receiver's elements. Answer newObject.
                 ArrayedCollections cannot respond to this message.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>addAll:</b> newObject</td>
                 <td bgcolor="#FFCC99">Include all the elements of
                 aCollection as the receiver's elements. Answer
                 aCollection.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>remove:</b> oldObject</td>
@@ -1542,7 +1542,7 @@ character encoding.</p>
                 the receiver's elements. Answer oldObject unless
                 no element is equal to oldObject, in which case,
                 signal an Error.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>remove:</b> oldObject <b>ifAbsent:</b>
@@ -1553,7 +1553,7 @@ character encoding.</p>
                 removed. If no element is equal to oldObject,
                 answer the result of evaluating anExceptionBlock.
                 Otherwise, answer oldObject.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>removeAll:</b>
@@ -1562,7 +1562,7 @@ character encoding.</p>
                 aCollection from the receiver. If successful for
                 each, answer aCollection. Otherwise signal an
                 Error.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>removeAllFoundIn:</b>
@@ -1570,7 +1570,7 @@ character encoding.</p>
                 <td bgcolor="#FFCC99">Remove from the receiver
                 each element of aCollection that is present in
                 the receiver.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>removeAllSuchThat:</b>
@@ -1578,7 +1578,7 @@ character encoding.</p>
                 <td bgcolor="#FFCC99">Evaluate aBlock with each
                 element as argument, and remove that element if
                 the answer is true.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>difference:</b>
@@ -1587,7 +1587,7 @@ character encoding.</p>
                 that is computed by copying the receiver and
                 removing all the elements found in
                 secondCollection.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
 </TBODY>        </table>
         </center></div><h4><a name="Enumerating Collections"></a>Methods
@@ -1604,7 +1604,7 @@ character encoding.</p>
                 <td bgcolor="#FFCC99"><b>do:</b> aBlock</td>
                 <td bgcolor="#FFCC99">Evaluate aBlock with each
                 of the receiver's elements as the argument.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>do:</b> aBlock <b>separatedBy:</b>
@@ -1613,7 +1613,7 @@ character encoding.</p>
                 elements in the receiver, and if there is more
                 than one element, evaluate the separatorBlock
                 between each pair of elements in the receiver.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>select:</b>
@@ -1624,7 +1624,7 @@ character encoding.</p>
                 receiver, only those elements for which
                 aPredicateBlock evaluates to true. Answer the new
                 collection.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>reject:</b>
@@ -1635,7 +1635,7 @@ character encoding.</p>
                 receiver only those elements for which
                 aPredicateBlock evaluates to false. Answer the
                 new collection.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>collect:</b>
@@ -1644,7 +1644,7 @@ character encoding.</p>
                 each of the receiver's elements as the argument.
                 Collect the resulting values into a collection
                 like the receiver. Answer the new collection.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>detect:</b>
@@ -1654,7 +1654,7 @@ character encoding.</p>
                 argument. Answer the first element for which
                 aPredicateBlock answers true. Signal an Error if
                 none are found.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>detect:</b>
@@ -1665,7 +1665,7 @@ character encoding.</p>
                 aPredicateBlock evaluates to true. If there is
                 none, answer the result of evaluating
                 exceptionBlock.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>inject:</b> initialValue
@@ -1679,7 +1679,7 @@ character encoding.</p>
                 the elements of a numeric collection, aCollection
                 <b>inject:</b> 0 <b>into:</b> [:subTotal :next |
                 subTotal + next].</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>collect:</b>
@@ -1689,7 +1689,7 @@ character encoding.</p>
                 Collect the resulting values that satisfy
                 aPredicateBlock into a collection like the
                 receiver. Answer the new collection.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>select:</b>
@@ -1699,7 +1699,7 @@ character encoding.</p>
                 aPredicateBlock answers true as the argument.
                 Collect the resulting values into a collection
                 like the receiver. Answer the new collection.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>count:</b>
@@ -1707,7 +1707,7 @@ character encoding.</p>
                 <td bgcolor="#FFCC99">Evaluate aPredicateBlock
                 with each of the receiver's elements as the
                 argument. Return the number that answered true.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
 </TBODY>        </table>
         </center></div><h3>Bag</h3>
@@ -1726,7 +1726,7 @@ character encoding.</p>
                 <td bgcolor="#FFCC99">Add the element newObject
                 to the receiver. Do so as though the element were
                 added anInteger number of times. Answer newObject.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
 </TBODY>        </table>
         </center></div><h3>Dictionary and IdentityDictionary</h3>
@@ -1754,7 +1754,7 @@ character encoding.</p>
                 <td bgcolor="#FFCC99">Answer the value associated
                 with aKey. Signal an Error if no value is
                 associated with aKey.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>at:</b> aKey <b>ifAbsent:</b>
@@ -1762,14 +1762,14 @@ character encoding.</p>
                 <td bgcolor="#FFCC99">Answer the value associated
                 with aKey. If no value is associated with aKey,
                 answer the value of aBlock.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>associationAt:</b> aKey</td>
                 <td bgcolor="#FFCC99">Answer the association
                 whose key is aKey. If there is none, signal an
                 Error</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>associationAt:</b> aKey <b>ifAbsent:</b>
@@ -1777,14 +1777,14 @@ character encoding.</p>
                 <td bgcolor="#FFCC99">Answer the association
                 whose key is aKey. If there is none, answer the
                 value of aBlock.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>keyAtValue:</b> aValue</td>
                 <td bgcolor="#FFCC99">Answer the key of the first
                 association having aValue as its value. If there
                 is none, signal an Error.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>keyAtValue:</b> aValue <b>ifAbsent:</b>
@@ -1793,49 +1793,49 @@ character encoding.</p>
                 association having aValue as its value. If there
                 is none, answer the result of evaluating
                 exceptionBlock.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>keys</b></td>
                 <td bgcolor="#FFCC99">Answer a Set containing the
                 receiver's keys.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>values</b></td>
                 <td bgcolor="#FFCC99">Answer an Array containing
                 the receiver's values.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>includes:</b> aValue</td>
                 <td bgcolor="#FFCC99">Does the receiver contain a
                 value equal to aValue?</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>includesKey:</b>
                 aKey&gt;</td>
                 <td bgcolor="#FFCC99">Does the receiver have a
                 key equal to aKey?</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>do:</b> aBlock</td>
                 <td bgcolor="#FFCC99">Evaluate aBlock with each
                 of the receiver's values as argument.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>keysDo:</b> aBlock</td>
                 <td bgcolor="#FFCC99">Evaluate aBlock with each
                 of the receiver's keys as argument.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>valuesDo:</b> aBlock</td>
                 <td bgcolor="#FFCC99">same as <b>do:</b></td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>keysAndValuesDo:</b>
@@ -1843,7 +1843,7 @@ character encoding.</p>
                 <td bgcolor="#FFCC99">Evaluate aBinaryBlock with
                 each of the receiver's keys and the associated
                 value as the <em>two</em> arguments.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>associationsDo:</b>
@@ -1851,7 +1851,7 @@ character encoding.</p>
                 <td bgcolor="#FFCC99">Evaluate aBlock with each
                 of the receiver's elements (key/value
                 associations) as the argument.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
 </TBODY>        </table>
         </center></div><h3>Sequenceable Collection</h3>
@@ -1871,7 +1871,7 @@ character encoding.</p>
                 containing the elements of the receiver specified
                 by the integer elements of the argument,
                 indexCollection.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>atAll:</b> aCollection <b>put:</b>
@@ -1879,13 +1879,13 @@ character encoding.</p>
                 <td bgcolor="#FFCC99">Put anObject at every index
                 specified by the integer elements of the
                 argument, aCollection.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>atAllPut:</b> anObject</td>
                 <td bgcolor="#FFCC99">Put anObject at every one
                 of the receiver's indices.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>first</b></td>
@@ -1894,42 +1894,42 @@ character encoding.</p>
                 third, fourth, fifth and sixth). Signal an error
                 if there aren't sufficient elements in the
                 receiver.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>middle</b></td>
                 <td bgcolor="#FFCC99">Answer the median element
                 of the receiver. Signal an error if the receiver
                 is empty.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>last</b></td>
                 <td bgcolor="#FFCC99">Answer the last element of
                 the receiver. Signal an error if the receiver is
                 empty.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>allButFirst</b></td>
                 <td bgcolor="#FFCC99">Answer a collection equal
                 to the receiver, but without the first element.
                 Signal an error if the receiver is empty.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>allButLast</b></td>
                 <td bgcolor="#FFCC99">Answer a collection equal
                 to the receiver, but without the last element.
                 Signal an error if the receiver is empty.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>indexOf:</b> anElement</td>
                 <td bgcolor="#FFCC99">Answer the index of
                 anElement within the receiver. If the receiver
                 does not contain anElement, answer 0.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>indexOf:</b> anElement <b>ifAbsent:</b>
@@ -1938,7 +1938,7 @@ character encoding.</p>
                 anElement within the receiver. If the receiver
                 does not contain anElement, answer the result of
                 evaluating the argument, exceptionBlock.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>indexOfSubCollection:</b>
@@ -1950,7 +1950,7 @@ character encoding.</p>
                 of aSubCollection. Begin the search at element
                 anIndex of the receiver. If no such match is
                 found, answer 0.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>indexOfSubCollection:</b>
@@ -1963,7 +1963,7 @@ character encoding.</p>
                 Begin the search at element start of the receiver.
                 If no such match is found, answer the result of
                 evaluating argument, exceptionBlock.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>replaceFrom:</b> start <b>to:</b>
@@ -1973,7 +1973,7 @@ character encoding.</p>
                 Answer the receiver itself. Use <b>copyReplaceFrom:to:with:</b>
                 for insertion/deletion that may alter the size of
                 the result.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>replaceFrom:</b> start <b>to:</b>
@@ -1984,7 +1984,7 @@ character encoding.</p>
                 starting at index, repStart, in the sequenceable
                 collection, replacementCollection. Answer the
                 receiver. No range checks are performed.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
 </TBODY>        </table>
         </center></div><h4>Methods for copying
@@ -2002,7 +2002,7 @@ character encoding.</p>
                 <td bgcolor="#FFCC99">Answer a new collection
                 comprising the receiver concatenated with the
                 argument, otherCollection.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>copyFrom:</b> start <b>to:</b>
@@ -2011,7 +2011,7 @@ character encoding.</p>
                 of the receiver that contains all the elements
                 between index start and index stop, inclusive of
                 both.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>copyReplaceAll:</b>
@@ -2019,7 +2019,7 @@ character encoding.</p>
                 <td bgcolor="#FFCC99">Answer a copy of the
                 receiver in which all occurrences of oldSubstring
                 have been replaced by newSubstring.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>copyReplaceFrom:</b>
@@ -2033,14 +2033,14 @@ character encoding.</p>
                 start = size+1 means append after last character.
                 Otherwise, this is a replacement; start and stop
                 have to be within the receiver's bounds.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>copyWith:</b> newElement</td>
                 <td bgcolor="#FFCC99">Answer a copy of the
                 receiver that is 1 bigger than the receiver and
                 has newElement at the last element.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>copyWithout:</b>
@@ -2048,7 +2048,7 @@ character encoding.</p>
                 <td bgcolor="#FFCC99">Answer a copy of the
                 receiver from which all occurrences of oldElement
                 have been left out.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>copyWithoutAll:</b>
@@ -2056,7 +2056,7 @@ character encoding.</p>
                 <td bgcolor="#FFCC99">Answer a copy of the
                 receiver from which all occurrences of all
                 elements in aCollection have been removed.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>forceTo:</b> length <b>paddingWith:</b>
@@ -2064,21 +2064,21 @@ character encoding.</p>
                 <td bgcolor="#FFCC99">Answer a copy of the
                 receiver with the specified length. If necessary,
                 pad with anElement</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>reversed</b></td>
                 <td bgcolor="#FFCC99">Answer a copy of the
                 receiver in which the sequencing of all the
                 elements has been reversed.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>shuffled</b></td>
                 <td bgcolor="#FFCC99">Answer a copy of the
                 receiver in which the elements have been permuted
                 randomly.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>sortBy:</b> aBinaryBlock</td>
@@ -2086,7 +2086,7 @@ character encoding.</p>
                 sorted. Sort criteria is aBinaryBlock. When the
                 block is true, the first arg goes first (so [:a :b
                 | a &gt; b] sorts in descending order).</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
 </TBODY>        </table>
         </center></div><h4>Methods for enumerating
@@ -2104,14 +2104,14 @@ character encoding.</p>
                 <td bgcolor="#FFCC99">Return the index of the
                 receiver's first element for which aBlock
                 evaluates as true.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>findLast:</b> aBlock</td>
                 <td bgcolor="#FFCC99">Return the index of the
                 receiver's last element for which aBlock
                 evaluates as true.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>keysAndValuesDo:</b>
@@ -2120,7 +2120,7 @@ character encoding.</p>
                 with each valid index for the receiver in order,
                 along with the corresponding value in the
                 receiver for that index.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>reverseDo:</b> aBlock</td>
@@ -2130,7 +2130,7 @@ character encoding.</p>
                 sequence up to the first. For
                 SequenceableCollections, this is the reverse of
                 the enumeration for #do:.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>with:</b>
@@ -2138,7 +2138,7 @@ character encoding.</p>
                 <td bgcolor="#FFCC99">Evaluate binaryBlock with
                 corresponding elements from this collection and
                 otherCollection.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>reverseWith:</b>
@@ -2147,7 +2147,7 @@ character encoding.</p>
                 each of the receiver's elements, in reverse
                 order, along with the corresponding element, also
                 in reverse order, from otherCollection.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
 </TBODY>        </table>
         </center></div><h3>OrderedCollections</h3>
@@ -2167,7 +2167,7 @@ character encoding.</p>
                 newObject, as an element of the receiver. Put it
                 in the sequence just preceding oldObject. Answer
                 newObject.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>add:</b> newObject <b>after:</b>
@@ -2176,7 +2176,7 @@ character encoding.</p>
                 newObject, as an element of the receiver. Put it
                 in the sequence just succeeding oldObject. Answer
                 newObject.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>add:</b> newObject <b>afterIndex:</b>
@@ -2185,13 +2185,13 @@ character encoding.</p>
                 newObject, as an element of the receiver. Put it
                 in the sequence just after index. Answer
                 newObject.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>addFirst:</b> anElement</td>
                 <td bgcolor="#FFCC99">Add newObject to the
                 beginning of the receiver. Answer newObject.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>addAllFirst:</b>
@@ -2199,13 +2199,13 @@ character encoding.</p>
                 <td bgcolor="#FFCC99">Add each element of
                 anOrderedCollection at the beginning of the
                 receiver. Answer anOrderedCollection.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>addLast:</b> anElement</td>
                 <td bgcolor="#FFCC99">Add newObject to the end of
                 the receiver. Answer newObject.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>addAllLast:</b>
@@ -2213,28 +2213,28 @@ character encoding.</p>
                 <td bgcolor="#FFCC99">Add each element of
                 anOrderedCollection at the end of the receiver.
                 Answer anOrderedCollection.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>removeAt:</b> anIndex</td>
                 <td bgcolor="#FFCC99">remove the element of the
                 receiver at location anIndex. Answers the element
                 removed.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>removeFirst</b></td>
                 <td bgcolor="#FFCC99">Remove the first element of
                 the receiver and answer it. If the receiver is
                 empty, signal an Error.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>removeLast</b></td>
                 <td bgcolor="#FFCC99">Remove the last element of
                 the receiver and answer it. If the receiver is
                 empty, signal an Error.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
 </TBODY>        </table>
         </center></div><h3>Strings</h3>
@@ -2263,7 +2263,7 @@ character encoding.</p>
                 delimiters; delimiters is an Array of Strings and/or
                 Characters. If the receiver does not contain any
                 of the delimiters, answer size + 1.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>findBetweenSubStrs:</b>
@@ -2272,7 +2272,7 @@ character encoding.</p>
                 tokens that results from parsing the receiver.
                 And of the Strings (or Characters) in the Array
                 delimiters is recognized as separating tokens.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>findDelimiters:</b>
@@ -2282,7 +2282,7 @@ character encoding.</p>
                 that matches one of the delimiters. If the
                 receiver does not contain any of the delimiters,
                 answer size + 1.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>findString:</b>
@@ -2290,7 +2290,7 @@ character encoding.</p>
                 <td bgcolor="#FFCC99">Answer the first index of
                 subString within the receiver. If the receiver
                 does not contain subString, answer 0.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>findString:</b>
@@ -2299,7 +2299,7 @@ character encoding.</p>
                 subString within the receiver, starting at start.
                 If the receiver does not contain subString,
                 answer 0.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>findTokens:</b>
@@ -2309,14 +2309,14 @@ character encoding.</p>
                 Any character in the argument, delimiters, marks
                 a border. Several delimiters in a row are
                 considered as just one separator</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>indexOf:</b> aCharacter</td>
                 <td bgcolor="#FFCC99">Answer the index of the
                 first occurrence of aCharacter in the receiver. 0
                 Otherwise.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>indexOf:</b> aCharacter <b>startingAt:</b>
@@ -2324,7 +2324,7 @@ character encoding.</p>
                 <td bgcolor="#FFCC99">Answer the index of the
                 first occurrence of aCharacter in the receiver,
                 beginning at index start. 0 Otherwise.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>indexOf:</b> aCharacter <b>startingAt:</b>
@@ -2333,7 +2333,7 @@ character encoding.</p>
                 first occurrence of aCharacter in the receiver,
                 beginning at index start. If not present, answer
                 the value of aBlock.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>indexOfAnyOf:</b>
@@ -2363,7 +2363,7 @@ character encoding.</p>
                 <td bgcolor="#FFCC99">= aString</td>
                 <td bgcolor="#FFCC99">Answer whether the receiver
                 is equal to aString.The comparison is case-sensitive,</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99">&lt; aString,<br>
@@ -2374,13 +2374,13 @@ character encoding.</p>
                 sorts as indicated with aString. The collation
                 order is that of the Squeak character set, and
                 therefore case-sensitive,</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>sameAs:</b> aString</td>
                 <td bgcolor="#FFCC99">Answer whether the receiver
                 is equal to aString, ignoring differences of case.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>compare:</b> aString</td>
@@ -2390,7 +2390,7 @@ character encoding.</p>
                 receiver equal to aString; and 3 - receiver after
                 aString. The collation sequence is that of the
                 Squeak character set and is case insensitive.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>match:</b> text</td>
@@ -2400,19 +2400,19 @@ character encoding.</p>
                 contains #, text may contain any character. Where
                 the receiver contains *, text may contain any
                 sequence of characters.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>beginsWith:</b> prefix</td>
                 <td bgcolor="#FFCC99">Answer whether the receiver
                 begins with the argument, prefix.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>endsWith:</b> prefix</td>
                 <td bgcolor="#FFCC99">Answer whether the receiver
                 ends with the argument, prefix.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>alike:</b> aString</td>
@@ -2420,7 +2420,7 @@ character encoding.</p>
                 integer indicating how similar the receiver is to
                 aString. 0 means &quot;not at all alike&quot;.
                 The best score is <code>aString size * 2.</code></td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
 </TBODY>        </table>
         </center></div><h4>Methods for converting Strings</h4>
@@ -2437,41 +2437,41 @@ character encoding.</p>
                 <td bgcolor="#FFCC99">Answer a new String that
                 matches the receiver but without any upper case
                 characters.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>asUppercase</b></td>
                 <td bgcolor="#FFCC99">Answer a new String that
                 matches the receiver but without any lower case
                 characters.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>capitalized</b></td>
                 <td bgcolor="#FFCC99">Answer a copy of the
                 receiver with the first character capitalized if
                 it is a letter.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>asDisplayText</b></td>
                 <td bgcolor="#FFCC99">Answer a copy of the
                 receiver with default font and style information.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>asInteger</b></td>
                 <td bgcolor="#FFCC99">Attempts to parse the
                 receiver as an Integer. Answers the Integer, or
                 nil if the receiver does not start with a digit.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>asNumber</b></td>
                 <td bgcolor="#FFCC99">Attempts to parse the
                 receiver as a Number. It is an error if the
                 receiver does not start with a digit.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>asDate</b></td>
@@ -2479,7 +2479,7 @@ character encoding.</p>
                 receiver as a date, and answers an appropriate
                 instance of class Date. Many formats are
                 recognized.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
 </TBODY>        </table>
         </center></div><hr>
@@ -2553,19 +2553,19 @@ character encoding.</p>
                 <td bgcolor="#FFCC99"><b>contents</b></td>
                 <td bgcolor="#FFCC99">Answer the entire contents
                 of the receiver.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>next</b></td>
                 <td bgcolor="#FFCC99">Answer the next object
                 accessible by the receiver.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>next:</b> anInteger</td>
                 <td bgcolor="#FFCC99">Answer the next anInteger
                 number of objects accessible by the receiver.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>next:</b> n <b>put:</b>
@@ -2573,14 +2573,14 @@ character encoding.</p>
                 <td bgcolor="#FFCC99">Make the next n objects
                 accessible by the receiver anObject. Answer
                 anObject.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>nextMatchAll:</b> aColl</td>
                 <td bgcolor="#FFCC99">Answer true if next N
                 objects are the ones in aColl, else false.
                 Advance stream if true, leave as was if false.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>nextMatchFor:</b>
@@ -2588,14 +2588,14 @@ character encoding.</p>
                 <td bgcolor="#FFCC99">Answer whether the next
                 object is equal to the argument, anObject,
                 advancing the stream.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>nextPut:</b> anObject</td>
                 <td bgcolor="#FFCC99">Insert the argument,
                 anObject, as the next object accessible by the
                 receiver. Answer anObject.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>nextPutAll:</b>
@@ -2603,20 +2603,20 @@ character encoding.</p>
                 <td bgcolor="#FFCC99">Append the elements of
                 aCollection to the sequence of objects accessible
                 by the receiver. Answer aCollection.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>upToEnd</b></td>
                 <td bgcolor="#FFCC99">Answer the remaining
                 elements in the string</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>flush</b></td>
                 <td bgcolor="#FFCC99">Ensure that any objects
                 buffered in the receiver are sent to their final
                 destination.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
 </TBODY>        </table>
         </center></div><h4>Methods for testing Streams</h4>
@@ -2632,7 +2632,7 @@ character encoding.</p>
                 <td bgcolor="#FFCC99"><b>atEnd</b></td>
                 <td bgcolor="#FFCC99">Answer whether the receiver
                 can access any more objects.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
 </TBODY>        </table>
         </center></div><h4>Methods for enumerating Streams</h4>
@@ -2648,7 +2648,7 @@ character encoding.</p>
                 <td bgcolor="#FFCC99"><b>do:</b> aBlock</td>
                 <td bgcolor="#FFCC99">Evaluate aBlock for each of
                 the remaining objects accessible by receiver.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
 </TBODY>        </table>
         </center></div><h3>Class PositionableStream</h3>
@@ -2674,13 +2674,13 @@ character encoding.</p>
                 <td bgcolor="#FFCC99"><b>contentsOfEntireFile</b></td>
                 <td bgcolor="#FFCC99">Answer a collection
                 containing the remainder of the receiver.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>last</b></td>
                 <td bgcolor="#FFCC99">Return the final element of
                 the receiver.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>nextDelimited:</b>
@@ -2690,27 +2690,27 @@ character encoding.</p>
                 next terminator character; provided, however,
                 that doubled terminators will be included as a
                 single element.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>nextInto:</b> buffer</td>
                 <td bgcolor="#FFCC99">Given buffer, an indexable
                 object of size n, fill buffer with the next n
                 objects of the receiver.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>nextLine</b></td>
                 <td bgcolor="#FFCC99">Answer next line (may be
                 empty), or nil if at end</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>originalContents</b></td>
                 <td bgcolor="#FFCC99">Answer the receiver's
                 actual contents collection. (<b>contents</b>
                 returns a copy)</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>peek</b></td>
@@ -2718,7 +2718,7 @@ character encoding.</p>
                 returned if the message <b>next</b> were sent to
                 the receiver, but don't advance the receiver. If
                 the receiver is at the end, answer nil.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>peekFor:</b> anObject</td>
@@ -2727,7 +2727,7 @@ character encoding.</p>
                 anObject, or if the receiver is at the end.
                 Answer true and advance the stream if the next
                 element is equal to anObject.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>upTo:</b> anObject</td>
@@ -2736,7 +2736,7 @@ character encoding.</p>
                 any, but not inclusive) of anObject in the
                 receiver. If anObject is not in the collection,
                 answer the entire rest of the receiver.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>upToAll:</b> aCollection</td>
@@ -2745,7 +2745,7 @@ character encoding.</p>
                 any, but not inclusive) of aCollection. If
                 aCollection is not in the stream, answer the
                 entire rest of the stream.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
 </TBODY>        </table>
         </center></div><h4>Methods for testing
@@ -2762,7 +2762,7 @@ character encoding.</p>
                 <td bgcolor="#FFCC99"><b>isEmpty</b></td>
                 <td bgcolor="#FFCC99">Answer whether the
                 receiver's contents has no elements.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
 </TBODY>        </table>
         </center></div><h4>Methods for positioning
@@ -2781,14 +2781,14 @@ character encoding.</p>
                 the receiver to be past the next occurrence of
                 the subCollection. Answer whether subCollection
                 is found. No wildcards, case sensitive.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>padTo:</b> nBytes <b>put:</b>
                 aCharacter</td>
                 <td bgcolor="#FFCC99">Pad, using aCharacter, to
                 the next boundary of nBytes.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>padToNextLongPut:</b>
@@ -2796,13 +2796,13 @@ character encoding.</p>
                 <td bgcolor="#FFCC99">Make position be on long
                 word boundary, writing the padding character,
                 char, if necessary.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>position</b></td>
                 <td bgcolor="#FFCC99">Answer the current position
                 of accessing the sequence of objects.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>position:</b> anInteger</td>
@@ -2811,25 +2811,25 @@ character encoding.</p>
                 long as anInteger is within the bounds of the
                 receiver's contents. If it is not, create an
                 error notification.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>reset</b></td>
                 <td bgcolor="#FFCC99">Set the receiver's position
                 to the beginning of the sequence of objects.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>resetContents</b></td>
                 <td bgcolor="#FFCC99">Set the position and limits
                 to 0.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>setToEnd</b></td>
                 <td bgcolor="#FFCC99">Set the position of the
                 receiver to the end of the sequence of objects.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>skip:</b> anInteger</td>
@@ -2839,14 +2839,14 @@ character encoding.</p>
                 minimum of the receiver's size and position+anInteger,
                 or the maximum of 1 and position+anInteger for
                 the repositioning.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>skipTo:</b> anObject</td>
                 <td bgcolor="#FFCC99">Set the access position of
                 the receiver to be past the next occurrence of
                 anObject. Answer whether anObject is found.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
 </TBODY>        </table>
         </center></div><h3>Class WriteStream</h3>
@@ -2863,33 +2863,33 @@ character encoding.</p>
                 <td bgcolor="#FFCC99"><b>cr</b></td>
                 <td bgcolor="#FFCC99">Append a return character
                 to the receiver.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>crtab</b></td>
                 <td bgcolor="#FFCC99">Append a return character,
                 followed by a single tab character, to the
                 receiver.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>crtab:</b> anInteger</td>
                 <td bgcolor="#FFCC99">Append a return character,
                 followed by anInteger tab characters, to the
                 receiver.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>space</b></td>
                 <td bgcolor="#FFCC99">Append a space character to
                 the receiver.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>tab</b></td>
                 <td bgcolor="#FFCC99">Append a tab character to
                 the receiver.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
 </TBODY>        </table>
         </center></div><h2><a name="Exceptions"></a>ANSI-Compatible
@@ -2911,7 +2911,7 @@ character encoding.</p>
                 <td bgcolor="#FFCC99">Evaluate aTerminationBlock
                 after evaluating the receiver, regardless of
                 whether the receiver's evaluation completes.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>ifCurtailed:</b>
@@ -2919,7 +2919,7 @@ character encoding.</p>
                 <td bgcolor="#FFCC99">Evaluate the receiver. If
                 it terminates abnormally, evaluate
                 aTerminationBlock.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>on:</b> exception <b>do:</b>
@@ -2927,7 +2927,7 @@ character encoding.</p>
                 <td bgcolor="#FFCC99">Evaluate the receiver in
                 the scope of an exception handler,
                 handlerActionBlock.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
 </TBODY>        </table>
         </center></div><h4>Examples </h4>
@@ -2974,31 +2974,31 @@ character encoding.</p>
                 <td bgcolor="#FFCC99"><b>defaultAction</b></td>
                 <td bgcolor="#FFCC99">The default action taken if
                 the exception is signaled.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>description</b></td>
                 <td bgcolor="#FFCC99">Return a textual
                 description of the exception.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>isResumable</b></td>
                 <td bgcolor="#FFCC99">Determine whether an
                 exception is resumable.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>messageText</b></td>
                 <td bgcolor="#FFCC99">Return an exception's
                 message text.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>tag</b></td>
                 <td bgcolor="#FFCC99">Return an exception's tag
                 value.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
 </TBODY>        </table>
         </center></div><h4>Methods for signalling Exceptions</h4>
@@ -3014,14 +3014,14 @@ character encoding.</p>
                 <td bgcolor="#FFCC99"><b>signal</b></td>
                 <td bgcolor="#FFCC99">Signal the occurrence of an
                 exceptional condition.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>signal:</b> signalerText</td>
                 <td bgcolor="#FFCC99">Signal the occurrence of an
                 exceptional condition with a specified textual
                 description.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
 </TBODY>        </table>
         </center></div><h4>Methods for dealing with a signaled
@@ -3039,45 +3039,45 @@ character encoding.</p>
                 <td bgcolor="#FFCC99">Determine whether the
                 current exception handler is within the scope of
                 another handler for the same exception.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>outer</b></td>
                 <td bgcolor="#FFCC99">Evaluate the enclosing
                 exception action for the receiver and return.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>pass</b></td>
                 <td bgcolor="#FFCC99">Yield control to the
                 enclosing exception action for the receiver.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>resignalAs:</b>
                 replacementException</td>
                 <td bgcolor="#FFCC99">Signal an alternative
                 exception in place of the receiver.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>resume</b></td>
                 <td bgcolor="#FFCC99">Return from the message
                 that signaled the receiver.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>resume:</b>
                 resumptionValue</td>
                 <td bgcolor="#FFCC99">Return the argument as the
                 value of the message that signaled the receiver.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>retry</b></td>
                 <td bgcolor="#FFCC99">Abort an exception handler
                 and re-evaluate its protected block.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>retryUsing:</b>
@@ -3085,21 +3085,21 @@ character encoding.</p>
                 <td bgcolor="#FFCC99">Abort an exception handler
                 and evaluate a new block in place of the
                 handler's protected block.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>return</b></td>
                 <td bgcolor="#FFCC99">Return nil as the value of
                 the block protected by the active exception
                 handler.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
             <tr>
                 <td bgcolor="#FFCC99"><b>return:</b> returnValue</td>
                 <td bgcolor="#FFCC99">Return the argument as the
                 value of the block protected by the active
                 exception handler.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
 </TBODY>        </table>
         </center></div><h3>Class ExceptionSet</h3>
@@ -3120,7 +3120,7 @@ character encoding.</p>
                 Exception class or an ExceptionSet. Answers an
                 exception set that contains the receiver and
                 anException.</td>
-                <td bgcolor="#FFCC99">Å@</td>
+                <td bgcolor="#FFCC99">„ÄÄ</td>
             </tr>
 </TBODY>        </table>
         </center></div><h4>Example</h4>

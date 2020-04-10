@@ -3,9 +3,9 @@
 
 <head>
 <meta http-equiv="Content-Type"
-content="text/html; charset=x-sjis">
+content="text/html; charset=UTF-8">
 <meta name="GENERATOR" content="Microsoft FrontPage Express 2.0">
-<title>Squeak Smalltalk: ��{�I�Ȍ��ꃊ�t�@�����X</title>
+<title>Squeak Smalltalk: 基本的な言語リファレンス</title>
 <!--This file created 2001.05.21 1:43 by Claris Home Page version 3.0-->
 <script type="text/javascript"><!--
 
@@ -24,14 +24,14 @@ content="text/html; charset=x-sjis">
 
 <body bgcolor="#E6E1B8">
 
-<h1 align="center">Squeak Smalltalk: ���ꃊ�t�@�����X</h1>
+<h1 align="center">Squeak Smalltalk: 言語リファレンス</h1>
 
-<p align="left">�Q�O�O�R�N�W���P�R���X�V</p>
+<p align="left">２００３年８月１３日更新</p>
 
-<p align="left">���̃y�[�W�́AAndrew C. Greenberg�����Andrew
-P. Black����ɂ��<a
+<p align="left">このページは、Andrew C. GreenbergさんとAndrew
+P. Blackさんによる<a
 href="http://www.mucow.com/squeak-qref.html">&quot;Squeak
-Smalltalk: Language Reference&quot;</a>�̖|��ł��BBlack���񂩂狖�𓾂Č��J���Ă��܂��B</p>
+Smalltalk: Language Reference&quot;</a>の翻訳です。Blackさんから許可を得て公開しています。</p>
 
 <hr align="left">
 
@@ -55,810 +55,810 @@ href="http://www.squeak.org/"><font size="2">http://www.squeak.org</font></a></p
 
 <hr align="left">
 
-<h2>�ڎ�</h2>
+<h2>目次</h2>
 
 <menu>
-    <li><a href="#UsingSqueak">Squeak���g����</a> </li>
-    <li><a href="#Syntax">Squeak Smalltalk�V���^�b�N�X</a> </li>
+    <li><a href="#UsingSqueak">Squeakを使おう</a> </li>
+    <li><a href="#Syntax">Squeak Smalltalkシンタックス</a> </li>
 </menu>
 
 <p><a href="http://www.mucow.com/SqueakClassesRef.html"><font
-size="2">Squeak�N���X���t�@�����X</font></a><font
-size="2">�����Ă��������B</font></p>
+size="2">Squeakクラスリファレンス</font></a><font
+size="2">も見てください。</font></p>
 
 <hr align="left">
 
-<h2><a name="UsingSqueak">Squeak���g����:��b��</a></h2>
+<h2><a name="UsingSqueak">Squeakを使おう:基礎編</a></h2>
 
 <menu>
-    <li><a href="#UsingMousing">�}�E�X�֌W</a> </li>
-    <li><a href="#UsingMenus">�V�X�e�����j���[</a> </li>
-    <li><a href="#UsingBindings">�V�X�e���L�[�o�C���h</a>
+    <li><a href="#UsingMousing">マウス関係</a> </li>
+    <li><a href="#UsingMenus">システムメニュー</a> </li>
+    <li><a href="#UsingBindings">システムキーバインド</a>
     </li>
 </menu>
 
-<h3><a name="UsingMousing">�}�E�X�֌W</a></h3>
+<h3><a name="UsingMousing">マウス関係</a></h3>
 
-<p>Squeak�i��Squeak�𐶂ݏo����Smalltalk-80�j�́A�R�{�^���i�܂��͂R�{�^�������́j�}�E�X�t���̃R���s���[�^��O��ɂ��Ă��܂��B�����̃{�^���́A���ꂼ��u�ԃ{�^���v�u���{�^���v�u�{�^���v�ƌĂ΂�Ă��܂��B�ԃ{�^���́A�u���m�v��I������ۂɎg���܂��B���{�^���́A�E�B���h�E�̒��́u���m�v�𑀍삷��ۂɎg���܂��B�{�^���́A�E�B���h�E���̂��̂𑀍삷��ۂɎg���܂��B�������A�����̋K���͊���I�Ȃ��̂ŁA���������Ƃ�����ł͂���܂���B</p>
+<p>Squeak（とSqueakを生み出したSmalltalk-80）は、３ボタン（または３ボタン相当の）マウス付きのコンピュータを前提にしています。これらのボタンは、それぞれ「赤ボタン」「黄ボタン」「青ボタン」と呼ばれています。赤ボタンは、「モノ」を選択する際に使います。黄ボタンは、ウィンドウの中の「モノ」を操作する際に使います。青ボタンは、ウィンドウそのものを操作する際に使います。ただし、これらの規則は慣例的なもので、いつもそうという訳ではありません。</p>
 
-<p>�����̍����̃}�E�X�͂R�{�^���ł͂Ȃ��A�܂��A�{�^���͐F�t�ł͂Ȃ��̂ŁA�l�X�ȑΉ��t�����p�����Ă��܂��B</p>
+<p>多くの今時のマウスは３ボタンではなく、また、ボタンは色付ではないので、様々な対応付けが用いられています。</p>
 
-<p>�F�t�łȂ��R�{�^���}�E�X�ł́A�ʏ�̑Ή��t���͈ȉ��̒ʂ�ł��B</p>
+<p>色付でない３ボタンマウスでは、通常の対応付けは以下の通りです。</p>
 
 <blockquote>
     <table border="0" cellpadding="0" cellspacing="0" width="200">
         <tr>
-            <td width="90">���{�^��</td>
+            <td width="90">左ボタン</td>
             <td align="middle" width="20"><p align="left"><code>-&gt;</code></p>
             </td>
-            <td>��</td>
+            <td>赤</td>
         </tr>
         <tr>
-            <td width="90">�����{�^��</td>
+            <td width="90">中央ボタン</td>
             <td align="middle" width="20"><p align="left"><code>-&gt;</code></p>
             </td>
-            <td>��</td>
+            <td>黄</td>
         </tr>
         <tr>
-            <td width="90">�E�{�^��</td>
+            <td width="90">右ボタン</td>
             <td align="middle" width="20"><p align="left"><code>-&gt;</code></p>
             </td>
-            <td>��</td>
+            <td>青</td>
         </tr>
     </table>
 </blockquote>
 
 <p><img src="squeak-qref.files/MyMouse.gif" align="right"
-hspace="0" width="143" height="227">�R�{�^���}�E�X��Windows�}�V���ŁA���̑Ή��t���ɂ���ɂ́ASqueak��Windows�^�C�g���o�[���E�N���b�N���āA<i>VM
-Preferences </i>&gt;&gt;<i> Use 3 button mouse mapping</i>��I�����܂��B�f�t�H���g�̑Ή��t���́A�ȉ��̒ʂ�ł��i�Q�{�^���}�E�X�p�ł��j�B</p>
+hspace="0" width="143" height="227">３ボタンマウスのWindowsマシンで、この対応付けにするには、SqueakのWindowsタイトルバーを右クリックして、<i>VM
+Preferences </i>&gt;&gt;<i> Use 3 button mouse mapping</i>を選択します。デフォルトの対応付けは、以下の通りです（２ボタンマウス用です）。</p>
 
 <blockquote>
     <table border="0" cellpadding="0" cellspacing="0" width="200">
         <tr>
-            <td width="90">���{�^��</td>
+            <td width="90">左ボタン</td>
             <td align="middle" width="20"><p align="left"><code>-&gt;</code></p>
             </td>
-            <td>��</td>
+            <td>赤</td>
         </tr>
         <tr>
-            <td width="90">�E�{�^��</td>
+            <td width="90">右ボタン</td>
             <td align="middle" width="20"><p align="left"><code>-&gt;</code></p>
             </td>
-            <td>��</td>
+            <td>黄</td>
         </tr>
         <tr>
-            <td width="90">Alt+���{�^��</td>
+            <td width="90">Alt+左ボタン</td>
             <td align="middle" width="20"><p align="left"><code>-&gt;</code></p>
             </td>
-            <td>��</td>
+            <td>青</td>
         </tr>
     </table>
 </blockquote>
 
-<p>MacOS�ł͊�{�I�ɂP�{�^���}�E�X���g�p���Ă��܂��̂ŁA�Ή��t���͈ȉ��̂��̂��g���Ă��܂��B</p>
+<p>MacOSでは基本的に１ボタンマウスを使用していますので、対応付けは以下のものが使われています。</p>
 
 <blockquote>
     <table border="0" cellpadding="0" cellspacing="0" width="200">
         <tr>
-            <td>�{�^��</td>
+            <td>ボタン</td>
             <td align="middle" width="20"><p align="left"><code>-&gt;</code></p>
             </td>
-            <td>��</td>
+            <td>赤</td>
         </tr>
         <tr>
-            <td>Option+�{�^��</td>
+            <td>Option+ボタン</td>
             <td align="middle" width="20"><p align="left"><code>-&gt;</code></p>
             </td>
-            <td>��</td>
+            <td>黄</td>
         </tr>
         <tr>
             <td><img src="squeak-qref.files/clover.gif"
-            width="12" height="10">+�{�^��</td>
+            width="12" height="10">+ボタン</td>
             <td align="middle" width="20"><p align="left"><code>-&gt;</code></p>
             </td>
-            <td>��</td>
+            <td>青</td>
         </tr>
     </table>
 </blockquote>
 
-<p>�R�{�^���}�E�X���w�����邱�Ƃ������߂��܂��B���͎w�����܂���ԁA�{�^���Ƀ��x���ŐF�����Ă��܂����B�܂��A��̑Ή��t���Ƃ͈Ⴄ�Ή��t����I�����܂����B</p>
+<p>３ボタンマウスを購入することをお勧めします。私は指を馴染ませる間、ボタンにラベルで色をつけていました。また、上の対応付けとは違う対応付けを選択しました。</p>
 
-<p>�����X�N���[���p�̃z�C�[���}�E�X�������Ă���Ȃ�A&quot;wheel
-up&quot;��command-upArrow�ɁA&quot;wheel down&quot;��command-downArrow�ɑΉ��t����Ƃ悢�ł��傤�BSqueak�ŃX�N���[������̂Ƀz�C�[�����g�����Ƃ��ł���悤�ɂȂ�܂��B�i�󒍁F�o�[�W����3.2�ł͍ŏ�����Ή��t�����Ă��܂��B�j</p>
+<p>もしスクロール用のホイールマウスを持っているなら、&quot;wheel
+up&quot;をcommand-upArrowに、&quot;wheel down&quot;をcommand-downArrowに対応付けるとよいでしょう。Squeakでスクロールするのにホイールを使うことができるようになります。（訳注：バージョン3.2では最初から対応付けられています。）</p>
 
-<h3><a name="UsingMenus">�V�X�e�����j���[</a></h3>
+<h3><a name="UsingMenus">システムメニュー</a></h3>
 
-<p>Squeak�ł́A�ȉ��̂悤�ȐF�X�ȃV�X�e�����j���[��ʂ���Smalltalk�̋@�\(service)���g�����Ƃ��ł��܂��B�i�󒍁F�o�[�W����3.2�ł͎኱�ύX����Ă��܂��B�j</p>
+<p>Squeakでは、以下のような色々なシステムメニューを通してSmalltalkの機能(service)を使うことができます。（訳注：バージョン3.2では若干変更されています。）</p>
 
 <p><img src="squeak-qref.files/menus.gif" width="659"
 height="472" naturalsizeflag="3"></p>
 
-<p><strong>���[���h���j���[�B</strong>�@���X�u���C�����j���[�v�ƌĂ΂�邱�̃��[���h���j���[�́A�V�X�e���v���W�F�N�g�i�󒍁F�v���W�F�N�g�ɂ��ẮASqueak���ŏ��ɗ����グ������&quot;<a
-href="welcome.htm">Welcome to...</a>&quot;�E�B���h�E���Q�Ƃ��Ă��������j�̔w�i�̂Ƃ���Őԃ{�^�����N���b�N���邱�ƂŌĂяo���܂��B���̃��j���[���g���āA�C���[�W�t�@�C����`�F���W�t�@�C����ۑ�������A�ʖ��ŕۑ�������ASqueak���z�}�V���̎��s���I����������ł��܂��B�܂��A���̂S�̃��j���[���܂ށA��������̂ق��̃��j���[���Ăяo�����Ƃ��ł��܂��B</p>
+<p><strong>ワールドメニュー。</strong>　時々「メインメニュー」と呼ばれるこのワールドメニューは、システムプロジェクト（訳注：プロジェクトについては、Squeakを最初に立ち上げた時の&quot;<a
+href="welcome.htm">Welcome to...</a>&quot;ウィンドウを参照してください）の背景のところで赤ボタンをクリックすることで呼び出せます。このメニューを使って、イメージファイルやチェンジファイルを保存したり、別名で保存したり、Squeak仮想マシンの実行を終了させたりできます。また、下の４つのメニューを含む、たくさんのほかのメニューを呼び出すことができます。</p>
 
-<p><b>�I�[�v�����j���[</b>�́A�V�X�e���u���E�U��A���[�N�X�y�[�X�A�`�F���W�\�[�^�A�g�����X�N���v�g�A�t�@�C�����X�g�A�X�ɂ̓��[��(Celeste)�A�E�F�b�u�u���E�U(Scamper)���܂ށA�l�X�ȃV�X�e���c�[�����N�����邱�Ƃ��ł��܂��B</p>
+<p><b>オープンメニュー</b>は、システムブラウザや、ワークスペース、チェンジソータ、トランスクリプト、ファイルリスト、更にはメーラ(Celeste)、ウェッブブラウザ(Scamper)を含む、様々なシステムツールを起動することができます。</p>
 
-<p><b>�w���v���j���[</b>�́A�I�����C���w���v�̑��ɁA�v���t�@�����X�_�C�A���O��A���Ɋւ���₢���킹�AGenie�Ȃǂ̎������i�󒍁F���̂Q�A���ɂ��Ă̘b�Ȃ̂��悭�킩��܂���ł����j�Ăяo������ASqueak�̃A�b�v�f�[�g�@�\(facilities)���Ăяo���܂��B</p>
+<p><b>ヘルプメニュー</b>は、オンラインヘルプの他に、プレファレンスダイアログや、環境に関する問い合わせ、Genieなどの辞書を（訳注：この２つ、何についての話なのかよくわかりませんでした）呼び出したり、Squeakのアップデート機能(facilities)を呼び出せます。</p>
 
-<p><b>�E�B���h�E���t���b�v���j���[</b>�i�󒍁F�o�[�W����3.2�ł́A�E�B���h�E���j���[�ƃt���b�v���j���[�͕ʁX�ɗp�ӂ���Ă��܂��j�ł́A�V�X�e���E�B���h�E��i���[�t�B�b�N�ł́j�t���b�v�𑀍삷�邽�߂̋@�\(service)���Ăяo���܂��B�t���b�v�̓X�N���[���̘g�ɂ��������ȃ^�u�̂��ƂŁA�^�u���N���b�N���邱�Ƃň����o���̂悤�Ɉ����o���āA�����ɒu�������̉��ł����΂₭�A�N�Z�X���邱�Ƃ��ł��܂��B����g���Ă݂Ă��������B�I�[�v�����j���[���g�����ނ���A<em>Tools</em>�t���b�v���g���ƁA�ȒP�ɐV���ȃV�X�e���c�[�������o�����Ƃ��ł��܂��B</p>
+<p><b>ウィンドウ＆フラップメニュー</b>（訳注：バージョン3.2では、ウィンドウメニューとフラップメニューは別々に用意されています）では、システムウィンドウや（モーフィックでの）フラップを操作するための機能(service)を呼び出せます。フラップはスクリーンの枠についた小さなタブのことで、タブをクリックすることで引き出しのように引き出して、そこに置いたもの何でもすばやくアクセスすることができます。是非使ってみてください。オープンメニューを使うよりむしろ、<em>Tools</em>フラップを使うと、簡単に新たなシステムツールを取り出すことができます。</p>
 
-<p><strong>�T��(appearance)���j���[</strong>�ł́A�V�X�e���̊T�ς̐F�X�ȓ_��ς��邱�Ƃ��ł��܂��B���ɁA��ʂ̐F�ݒ�𒲐�������A�t���X�N���[�����[�h�̐؂�ւ����s�����Ƃ��ł��܂��B</p>
+<p><strong>概観(appearance)メニュー</strong>では、システムの概観の色々な点を変えることができます。特に、画面の色設定を調整したり、フルスクリーンモードの切り替えを行うことができます。</p>
 
-<h3><a name="UsingBindings">�V�X�e���L�[�o�C���h</a></h3>
+<h3><a name="UsingBindings">システムキーバインド</a></h3>
 
-<p>�V�X�e���u���E�U�⃏�[�N�X�y�[�X�A�t�@�C�����X�g�A�g�����X�N���v�g���܂ށASqueak�̕W���e�L�X�g�R���e�i�E�B�W�F�b�g���g���A�v���P�[�V�����ł́A�e�L�X�g�����A���̃V�X�e���@�\(functionality)�ւ̃A�N�Z�X���@(facility)��񋟂��܂��B�����̋@�\(facility)�̑����́A�ԃ{�^�����j���[���g���ČĂяo�����Ƃ��ł��܂����A�����́A�����ƊȒP�ɁA����L�[�̑g�ݍ��킹���g���ČĂяo�����Ƃ��ł��܂��B����ȃA�v���P�[�V�����ł́A���̃R�}���h�L�[�̃T�|�[�g�͂܂��܂��ł��BWindows�ł�Alt�L�[�ƈꏏ�ɁAMacOS�ł�<img
+<p>システムブラウザやワークスペース、ファイルリスト、トランスクリプトを含む、Squeakの標準テキストコンテナウィジェットを使うアプリケーションでは、テキスト操作や、他のシステム機能(functionality)へのアクセス方法(facility)を提供します。これらの機能(facility)の多くは、赤ボタンメニューを使って呼び出すことができますが、多くは、もっと簡単に、特殊キーの組み合わせを使って呼び出すことができます。特殊なアプリケーションでは、このコマンドキーのサポートはまちまちです。WindowsではAltキーと一緒に、MacOSでは<img
 src="squeak-qref.files/clover.gif" width="12" height="10"
-naturalsizeflag="3">�L�[�ƈꏏ�ɁA���L�̃e�[�u���ɂ��镶�����������ƂŃR�}���h�L�[����͂��邱�Ƃ��ł��܂��B�啶���̏ꍇ�ɂ́AShift�L�[��Alt(<img
+naturalsizeflag="3">キーと一緒に、下記のテーブルにある文字を押すことでコマンドキーを入力することができます。大文字の場合には、ShiftキーとAlt(<img
 src="squeak-qref.files/clover.gif" width="12" height="10"
-naturalsizeflag="3">)�L�[�𓯎��ɉ������Actrl�L�[���Y�����镶�����������ƂŃR�}���h�L�[����͂��邱�Ƃ��ł��܂��B</p>
+naturalsizeflag="3">)キーを同時に押すか、ctrlキーを該当する文字を押すことでコマンドキーを入力することができます。</p>
 
-<p>�i�󒍁FWindows�̒ʏ�̃A�v���P�[�V�����ł̓J�b�g���y�[�X�g�Ȃǂ�ctrl�L�[�Ŏ��s���܂��BSqueak���Alt�L�[��ctrl�L�[���Ђ�����Ԃ��ɂ́AWorld
-Menu-&gt;appearance...-&gt;preferences...-&gt;general-&gt;swapControlAndAltKeys���I���ɂ��܂��B�j</p>
+<p>（訳注：Windowsの通常のアプリケーションではカット＆ペーストなどはctrlキーで実行します。Squeak上でAltキーとctrlキーをひっくり返すには、World
+Menu-&gt;appearance...-&gt;preferences...-&gt;general-&gt;swapControlAndAltKeysをオンにします。）</p>
 
-<h4 align="center">��ʓI�ȕҏW�R�}���h</h4>
+<h4 align="center">一般的な編集コマンド</h4>
 <div align="center"><center>
 
 <table border="1" cellpadding="3" width="85%" bgcolor="#FFFFCC">
     <tr>
-        <td bgcolor="#FFCC99"><b>�L�[</b></td>
-        <td bgcolor="#FFCC99"><p align="center"><b>�L�q</b></p>
+        <td bgcolor="#FFCC99"><b>キー</b></td>
+        <td bgcolor="#FFCC99"><p align="center"><b>記述</b></p>
         </td>
-        <td bgcolor="#FFCC99"><b>���l</b></td>
+        <td bgcolor="#FFCC99"><b>備考</b></td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99">z</td>
-        <td bgcolor="#FFCC99">���ɖ߂��܂��B</td>
-        <td bgcolor="#FFCC99">�@</td>
+        <td bgcolor="#FFCC99">元に戻します。</td>
+        <td bgcolor="#FFCC99">　</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99">x</td>
-        <td bgcolor="#FFCC99">�؂���܂��B</td>
-        <td bgcolor="#FFCC99">�@</td>
+        <td bgcolor="#FFCC99">切り取ります。</td>
+        <td bgcolor="#FFCC99">　</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99">c</td>
-        <td bgcolor="#FFCC99">�R�s�[���܂��B</td>
-        <td bgcolor="#FFCC99">�@</td>
+        <td bgcolor="#FFCC99">コピーします。</td>
+        <td bgcolor="#FFCC99">　</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99">v</td>
-        <td bgcolor="#FFCC99">�\��t���܂��B</td>
-        <td bgcolor="#FFCC99">�@</td>
+        <td bgcolor="#FFCC99">貼り付けます。</td>
+        <td bgcolor="#FFCC99">　</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99">a</td>
-        <td bgcolor="#FFCC99">���ׂĂ�I�����܂��B</td>
-        <td bgcolor="#FFCC99">�@</td>
+        <td bgcolor="#FFCC99">すべてを選択します。</td>
+        <td bgcolor="#FFCC99">　</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99">D</td>
-        <td bgcolor="#FFCC99">�������܂��B���O�̑I��͈͂Ɍ��݂̑I��͈͂��i�������ꂼ��̕������I�[�o�[���b�v���Ă��Ȃ���΁j�\��t���܂��B</td>
+        <td bgcolor="#FFCC99">複製します。直前の選択範囲に現在の選択範囲を（もしそれぞれの部分がオーバーラップしていなければ）貼り付けます。</td>
         <td bgcolor="#FFCC99">1</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99">e</td>
-        <td bgcolor="#FFCC99">�������܂��B���O�̑I��͈͂ƌ��݂̑I��͈͂��������܂��B</td>
+        <td bgcolor="#FFCC99">交換します。直前の選択範囲と現在の選択範囲を交換します。</td>
         <td bgcolor="#FFCC99">1</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99">y</td>
-        <td bgcolor="#FFCC99">�X���b�v���܂��B
-        �I��͈͂��Ȃ���΁A�J�[�\���̑O��̕������������A�J�[�\����i�߂܂��B<br>
-        �I��͈͂��Q�����Ȃ�΁A�������������A�J�[�\����i�߂܂��B</td>
-        <td bgcolor="#FFCC99">�@</td>
+        <td bgcolor="#FFCC99">スワップします。
+        選択範囲がなければ、カーソルの前後の文字を交換し、カーソルを進めます。<br>
+        選択範囲が２文字ならば、それらを交換し、カーソルを進めます。</td>
+        <td bgcolor="#FFCC99">　</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99">w</td>
-        <td bgcolor="#FFCC99">�J�[�\���O�̒P����폜���܂��B</td>
-        <td bgcolor="#FFCC99">�@</td>
+        <td bgcolor="#FFCC99">カーソル前の単語を削除します。</td>
+        <td bgcolor="#FFCC99">　</td>
     </tr>
 </table>
 </center></div>
 
-<p align="center">���l</p>
+<p align="center">備考</p>
 
 <ol>
-    <li>�����̃R�}���h�͎኱���ʂƈقȂ�܂��B�����̃R�}���h�́A���݂̑I��͈͂����łȂ��A���O�̑I��͈͂��l�����A�e����^���܂��B</li>
+    <li>これらのコマンドは若干普通と異なります。これらのコマンドは、現在の選択範囲だけでなく、直前の選択範囲も考慮し、影響を与えます。</li>
 </ol>
 
-<h4>�����ƒu��</h4>
+<h4>検索と置換</h4>
 <div align="center"><center>
 
 <table border="1" cellpadding="3" width="85%" bgcolor="#FFFFCC">
     <tr>
-        <td bgcolor="#FFCC99"><b>�L�[</b></td>
-        <td bgcolor="#FFCC99"><p align="center"><b>�L�q</b></p>
+        <td bgcolor="#FFCC99"><b>キー</b></td>
+        <td bgcolor="#FFCC99"><p align="center"><b>記述</b></p>
         </td>
-        <td bgcolor="#FFCC99"><b>���l</b></td>
+        <td bgcolor="#FFCC99"><b>備考</b></td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99">f</td>
-        <td bgcolor="#FFCC99">�������܂��B�_�C�A���O�ɓ��͂��������������������Ƃ��Đݒ肵�A���������񂪌��ꂽ�ꏊ�փJ�[�\����i�߂܂��B</td>
-        <td bgcolor="#FFCC99">�@</td>
+        <td bgcolor="#FFCC99">検索します。ダイアログに入力した文字列を検索文字列として設定し、検索文字列が現れた場所へカーソルを進めます。</td>
+        <td bgcolor="#FFCC99">　</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99">g</td>
-        <td bgcolor="#FFCC99">�Č������܂��B���������񂪎��Ɍ��ꂽ�ꏊ�փJ�[�\����i�߂܂��B</td>
-        <td bgcolor="#FFCC99">�@</td>
+        <td bgcolor="#FFCC99">再検索します。検索文字列が次に現れた場所へカーソルを進めます。</td>
+        <td bgcolor="#FFCC99">　</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99">h</td>
-        <td bgcolor="#FFCC99">�I��͈͂�����������Ƃ��Đݒ肵�܂��B</td>
-        <td bgcolor="#FFCC99">�@</td>
+        <td bgcolor="#FFCC99">選択範囲を検索文字列として設定します。</td>
+        <td bgcolor="#FFCC99">　</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99">j</td>
-        <td bgcolor="#FFCC99">�J��Ԃ��܂��B�i���O�̃e�L�X�g�֘A�̑�����J��Ԃ��܂��B�j</td>
-        <td bgcolor="#FFCC99">�@</td>
+        <td bgcolor="#FFCC99">繰り返します。（直前のテキスト関連の操作を繰り返します。）</td>
+        <td bgcolor="#FFCC99">　</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99">A</td>
-        <td bgcolor="#FFCC99">���̈����ֈړ����܂��B���̃L�[���[�h�����Ɂi�������͂����L�[���[�h�������c���Ă��Ȃ���Ε�����̏I���Ɂj�J�[�\����i�߂܂��B</td>
-        <td bgcolor="#FFCC99">�@</td>
+        <td bgcolor="#FFCC99">次の引数へ移動します。次のキーワード引数に（もしくはもしキーワード引数が残っていなければ文字列の終わりに）カーソルを進めます。</td>
+        <td bgcolor="#FFCC99">　</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99">J</td>
-        <td bgcolor="#FFCC99">�Ō�܂ŌJ��Ԃ��܂��B�i���O�̃e�L�X�g�֘A�̑�����e�L�X�g�̏I���܂ŌJ��Ԃ��܂��B�j</td>
-        <td bgcolor="#FFCC99">�@</td>
+        <td bgcolor="#FFCC99">最後まで繰り返します。（直前のテキスト関連の操作をテキストの終わりまで繰り返します。）</td>
+        <td bgcolor="#FFCC99">　</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99">S</td>
-        <td bgcolor="#FFCC99">Search.�i�󒍁F�o�[�W����3.2�ł́A�E�B���h�E�S�̂���u�t���b�V�����܂��B�@�\���悭�킩��܂���ł����B�j</td>
-        <td bgcolor="#FFCC99">�@</td>
+        <td bgcolor="#FFCC99">Search.（訳注：バージョン3.2では、ウィンドウ全体が一瞬フラッシュします。機能がよくわかりませんでした。）</td>
+        <td bgcolor="#FFCC99">　</td>
     </tr>
 </table>
 </center></div>
 
-<h4>�L�����Z���^����(accept)</h4>
+<h4>キャンセル／承諾(accept)</h4>
 <div align="center"><center>
 
 <table border="1" cellpadding="3" width="85%" bgcolor="#FFFFCC">
     <tr>
-        <td bgcolor="#FFCC99"><b>�L�[</b></td>
-        <td bgcolor="#FFCC99"><p align="center"><b>�L�q</b></p>
+        <td bgcolor="#FFCC99"><b>キー</b></td>
+        <td bgcolor="#FFCC99"><p align="center"><b>記述</b></p>
         </td>
-        <td bgcolor="#FFCC99"><b>���l</b></td>
+        <td bgcolor="#FFCC99"><b>備考</b></td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99">l</td>
         <td bgcolor="#FFCC99">Cancel (also &quot;revert&quot;).
-        �g(pane)���I�[�v�����Ă���̕ҏW�A�������͍Ō�̏�������̕ҏW���ׂĂ��L�����Z�����܂��B
+        枠(pane)をオープンしてからの編集、もしくは最後の承諾からの編集すべてをキャンセルします。
         </td>
-        <td bgcolor="#FFCC99">�@</td>
+        <td bgcolor="#FFCC99">　</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99">s</td>
         <td bgcolor="#FFCC99">Accept (also &quot;save&quot;).
-        ���݂̘g(pane)�ł��ꂽ�ύX���������܂��B</td>
-        <td bgcolor="#FFCC99">�@</td>
+        現在の枠(pane)でされた変更を承諾します。</td>
+        <td bgcolor="#FFCC99">　</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99">o</td>
-        <td bgcolor="#FFCC99">Spawn. �g(pane)�̌��݂̒��g���܂ސV�����E�B���h�E���I�[�v�����A���̃E�B���h�E���Ō�ɏ���������ԂɃ��Z�b�g���܂��B<br>
-        �i���Ȃ킿�A���݂̃E�B���h�E���L�����Z�����܂��B�j</td>
-        <td bgcolor="#FFCC99">�@</td>
+        <td bgcolor="#FFCC99">Spawn. 枠(pane)の現在の中身を含む新しいウィンドウをオープンし、このウィンドウを最後に承諾した状態にリセットします。<br>
+        （すなわち、現在のウィンドウをキャンセルします。）</td>
+        <td bgcolor="#FFCC99">　</td>
     </tr>
 </table>
 </center></div>
 
-<h4>�u���E�Y�ƃC���X�y�N�g</h4>
+<h4>ブラウズとインスペクト</h4>
 <div align="center"><center>
 
 <table border="1" cellpadding="3" width="85%" bgcolor="#FFFFCC">
     <tr>
-        <td bgcolor="#FFCC99">�L�[</td>
-        <td bgcolor="#FFCC99"><p align="center"><b>�L�q</b></p>
+        <td bgcolor="#FFCC99">キー</td>
+        <td bgcolor="#FFCC99"><p align="center"><b>記述</b></p>
         </td>
-        <td bgcolor="#FFCC99"><b>���l</b></td>
+        <td bgcolor="#FFCC99"><b>備考</b></td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99">b</td>
-        <td bgcolor="#FFCC99">&quot;����&quot;���u���E�Y���܂��B�i&quot;����&quot;�̓N���X���B�j�V���ȃu���E�U���J���܂��B</td>
+        <td bgcolor="#FFCC99">&quot;それ&quot;をブラウズします。（&quot;それ&quot;はクラス名。）新たなブラウザを開きます。</td>
         <td bgcolor="#FFCC99">1</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99">d</td>
-        <td bgcolor="#FFCC99">&quot;����&quot;�����s���܂��B�i&quot;����&quot;��Squeak���ł��B�j</td>
+        <td bgcolor="#FFCC99">&quot;それ&quot;を実行します。（&quot;それ&quot;はSqueak式です。）</td>
         <td bgcolor="#FFCC99">1</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99">i</td>
-        <td bgcolor="#FFCC99">&quot;����&quot;�𒲂ׂ܂��B:&quot;����&quot;��]�����āA���̌��ʂɂ��ăC���X�y�N�^���J���܂��B(&quot;����&quot;��Squeak���ł��B�j<br>
-        ��O:���\�b�h���X�g�g�ł�i�͌p���u���E�U���J���܂��B</td>
+        <td bgcolor="#FFCC99">&quot;それ&quot;を調べます。:&quot;それ&quot;を評価して、その結果についてインスペクタを開きます。(&quot;それ&quot;はSqueak式です。）<br>
+        例外:メソッドリスト枠ではiは継承ブラウザを開きます。</td>
         <td bgcolor="#FFCC99">1</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99">m</td>
-        <td bgcolor="#FFCC99">&quot;����&quot;���������Ă��郁�\�b�h�̃u���E�U���J���܂��B�i&quot;����&quot;�̓��b�Z�[�W�Z���N�^�ł��B�j</td>
+        <td bgcolor="#FFCC99">&quot;それ&quot;を実装しているメソッドのブラウザを開きます。（&quot;それ&quot;はメッセージセレクタです。）</td>
         <td bgcolor="#FFCC99">1,2</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99">n</td>
-        <td bgcolor="#FFCC99">&quot;����&quot;�𑗂郁�\�b�h�̃u���E�U���J���܂��B�i&quot;����&quot;�̓��b�Z�[�W�Z���N�^�ł��B�j</td>
+        <td bgcolor="#FFCC99">&quot;それ&quot;を送るメソッドのブラウザを開きます。（&quot;それ&quot;はメッセージセレクタです。）</td>
         <td bgcolor="#FFCC99">1,2</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99">p</td>
-        <td bgcolor="#FFCC99">&quot;����&quot;���o�͂��܂��B&quot;����&quot;��]�����āA&quot;����&quot;�̒���Ɍ��ʂ�}�����܂��B�i&quot;����&quot;��Smalltalk���ł��B�j</td>
+        <td bgcolor="#FFCC99">&quot;それ&quot;を出力します。&quot;それ&quot;を評価して、&quot;それ&quot;の直後に結果を挿入します。（&quot;それ&quot;はSmalltalk式です。）</td>
         <td bgcolor="#FFCC99">1</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99">B</td>
-        <td bgcolor="#FFCC99">&quot;����&quot;��<i>����u���E�U</i>�Ńu���E�Y���܂��i�V�X�e���u���E�U���̂݁j�B�i&quot;����&quot;�̓N���X���ł��B�j</td>
+        <td bgcolor="#FFCC99">&quot;それ&quot;を<i>同一ブラウザ</i>でブラウズします（システムブラウザ内のみ）。（&quot;それ&quot;はクラス名です。）</td>
         <td bgcolor="#FFCC99">1</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99">E</td>
-        <td bgcolor="#FFCC99">�R�[�h�̒���&quot;����&quot;�𕶎���Ƃ��Ċ܂ރ��\�b�h�̃u���E�U���J���܂��B</td>
+        <td bgcolor="#FFCC99">コードの中に&quot;それ&quot;を文字列として含むメソッドのブラウザを開きます。</td>
         <td bgcolor="#FFCC99">1</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99">I</td>
-        <td bgcolor="#FFCC99">�I�u�W�F�N�g�C�N�X�v���[�����g���āA&quot;����&quot;�𒲂ׂ܂��B�i&quot;����&quot;�͎��ł��B�j</td>
+        <td bgcolor="#FFCC99">オブジェクトイクスプローラを使って、&quot;それ&quot;を調べます。（&quot;それ&quot;は式です。）</td>
         <td bgcolor="#FFCC99">1</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99">N</td>
-        <td bgcolor="#FFCC99">&quot;����&quot;���g���Ă��郁�\�b�h�̃u���E�U���J���܂��B�i&quot;����&quot;�͎��ʎq�������̓N���X���ł��B�j</td>
+        <td bgcolor="#FFCC99">&quot;それ&quot;を使っているメソッドのブラウザを開きます。（&quot;それ&quot;は識別子もしくはクラス名です。）</td>
         <td bgcolor="#FFCC99">1</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99">O</td>
-        <td bgcolor="#FFCC99">�i���b�Z�[�W���X�g���Łj�V���O�����b�Z�[�W�u���E�U���J���܂��B</td>
+        <td bgcolor="#FFCC99">（メッセージリスト内で）シングルメッセージブラウザを開きます。</td>
         <td bgcolor="#FFCC99">1</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99">W</td>
-        <td bgcolor="#FFCC99">&quot;����&quot;�𕶎���Ƃ��Ċ܂ރZ���N�^�̃��\�b�h�̃u���E�U���J���܂��B</td>
+        <td bgcolor="#FFCC99">&quot;それ&quot;を文字列として含むセレクタのメソッドのブラウザを開きます。</td>
         <td bgcolor="#FFCC99">1</td>
     </tr>
 </table>
 </center></div>
 
-<p>���l:</p>
+<p>備考:</p>
 
 <ol>
-    <li>�I��͈͂��Ȃ��ꍇ�A�P��������͌��݂̍s�ɑI��͈͂��g������܂��B</li>
-    <li>�I��͈͂��L���ꍇ�A�����̑���ł́A&quot;����&quot;��<i>��ԊO����</i>�̃L�[���[�h�Z���N�^�������܂��B</li>
+    <li>選択範囲がない場合、単語もしくは現在の行に選択範囲が拡張されます。</li>
+    <li>選択範囲が広い場合、これらの操作では、&quot;それ&quot;は<i>一番外側の</i>のキーワードセレクタを示します。</li>
 </ol>
 
-<h4>����ȕϊ��Ə���</h4>
+<h4>特殊な変換と処理</h4>
 <div align="center"><center>
 
 <table border="1" cellpadding="3" width="85%" bgcolor="#FFFFCC">
     <tr>
-        <td bgcolor="#FFCC99"><b>�L�[</b></td>
-        <td bgcolor="#FFCC99"><p align="center"><b>�L�q</b></p>
+        <td bgcolor="#FFCC99"><b>キー</b></td>
+        <td bgcolor="#FFCC99"><p align="center"><b>記述</b></p>
         </td>
-        <td bgcolor="#FFCC99"><b>���l</b></td>
+        <td bgcolor="#FFCC99"><b>備考</b></td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99">C</td>
-        <td bgcolor="#FFCC99">�N���b�v�{�[�h�̒��g�Ƙg���̓��e(argument)���r���āA���[�N�X�y�[�X���J���Č��ʂ�\�����܂��B</td>
-        <td bgcolor="#FFCC99">�@</td>
+        <td bgcolor="#FFCC99">クリップボードの中身と枠内の内容(argument)を比較して、ワークスペースを開いて結果を表示します。</td>
+        <td bgcolor="#FFCC99">　</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99">U</td>
-        <td bgcolor="#FFCC99">�I��͈͂̒��̃��C���t�B�[�h���L�����b�W���^�[���ɕϊ����܂��B</td>
-        <td bgcolor="#FFCC99">�@</td>
+        <td bgcolor="#FFCC99">選択範囲の中のラインフィードをキャリッジリターンに変換します。</td>
+        <td bgcolor="#FFCC99">　</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99">X</td>
-        <td bgcolor="#FFCC99">�I��͈͂̒������ׂď������ɕϊ����܂��B</td>
-        <td bgcolor="#FFCC99">�@</td>
+        <td bgcolor="#FFCC99">選択範囲の中をすべて小文字に変換します。</td>
+        <td bgcolor="#FFCC99">　</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99">Y</td>
-        <td bgcolor="#FFCC99">�I��͈͂̒������ׂđ啶���ɕϊ����܂��B</td>
-        <td bgcolor="#FFCC99">�@</td>
+        <td bgcolor="#FFCC99">選択範囲の中をすべて大文字に変換します。</td>
+        <td bgcolor="#FFCC99">　</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99">Z</td>
-        <td bgcolor="#FFCC99">�I��͈͂̒��̒P��̓�������啶���ɕϊ����܂��B</td>
-        <td bgcolor="#FFCC99">�@</td>
+        <td bgcolor="#FFCC99">選択範囲の中の単語の頭文字を大文字に変換します。</td>
+        <td bgcolor="#FFCC99">　</td>
     </tr>
 </table>
 </center></div>
 
-<h4>Smalltalk�v���O�����f�[�^�o�^(Program Data Entry)</h4>
+<h4>Smalltalkプログラムデータ登録(Program Data Entry)</h4>
 <div align="center"><center>
 
 <table border="1" cellpadding="3" width="85%" bgcolor="#FFFFCC">
     <tr>
-        <td bgcolor="#FFCC99"><b>�L�[</b></td>
-        <td bgcolor="#FFCC99"><p align="center"><b>�L�q</b></p>
+        <td bgcolor="#FFCC99"><b>キー</b></td>
+        <td bgcolor="#FFCC99"><p align="center"><b>記述</b></p>
         </td>
-        <td bgcolor="#FFCC99"><b>���l</b></td>
+        <td bgcolor="#FFCC99"><b>備考</b></td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99">q</td>
-        <td bgcolor="#FFCC99">�J�[�\���̑O�̕�������v���t�B�b�N�X�Ƃ���V���{����}�����܂��B�ēx�����Ǝ��̌��ɕϊ����܂��B</td>
-        <td bgcolor="#FFCC99">�@</td>
+        <td bgcolor="#FFCC99">カーソルの前の文字列をプレフィックスとするシンボルを挿入します。再度押すと次の候補に変換します。</td>
+        <td bgcolor="#FFCC99">　</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99">r</td>
-        <td bgcolor="#FFCC99">Squeak�̊G�����F�����Ăяo���܂��B�i�E�B���h�E�̊O�Ƀ}�E�X���ړ�������ƁA�F�����I�����܂��B�j</td>
-        <td bgcolor="#FFCC99">�@</td>
+        <td bgcolor="#FFCC99">Squeakの絵文字認識を呼び出します。（ウィンドウの外にマウスを移動させると、認識を終了します。）</td>
+        <td bgcolor="#FFCC99">　</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99">F</td>
-        <td bgcolor="#FFCC99">'ifFalse:'��}�����܂��B</td>
-        <td bgcolor="#FFCC99">�@</td>
+        <td bgcolor="#FFCC99">'ifFalse:'を挿入します。</td>
+        <td bgcolor="#FFCC99">　</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99">T</td>
-        <td bgcolor="#FFCC99">'ifTrue:'��}�����܂��B</td>
-        <td bgcolor="#FFCC99">�@</td>
+        <td bgcolor="#FFCC99">'ifTrue:'を挿入します。</td>
+        <td bgcolor="#FFCC99">　</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99">V</td>
-        <td bgcolor="#FFCC99">���O(initial)����͂���ƁA���O�Ɠ�����}�����܂��B</td>
-        <td bgcolor="#FFCC99">�@</td>
+        <td bgcolor="#FFCC99">名前(initial)を入力すると、名前と日時を挿入します。</td>
+        <td bgcolor="#FFCC99">　</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99">L</td>
-        <td bgcolor="#FFCC99">�C���f���g���P�����܂��B</td>
-        <td bgcolor="#FFCC99">�@</td>
+        <td bgcolor="#FFCC99">インデントを１つ下げます。</td>
+        <td bgcolor="#FFCC99">　</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99">R</td>
-        <td bgcolor="#FFCC99">�C���f���g���P�グ�܂��B</td>
-        <td bgcolor="#FFCC99">�@</td>
+        <td bgcolor="#FFCC99">インデントを１つ上げます。</td>
+        <td bgcolor="#FFCC99">　</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99">[Alt-return]</td>
-        <td bgcolor="#FFCC99">���݂̍s�Ɠ����C���f���g�̍s��}�����܂��B�i&quot;[&quot;�A&quot;]&quot;�ɉ����ăC���f���g�𒲐����܂��B�j</td>
-        <td bgcolor="#FFCC99">�@</td>
+        <td bgcolor="#FFCC99">現在の行と同じインデントの行を挿入します。（&quot;[&quot;、&quot;]&quot;に応じてインデントを調整します。）</td>
+        <td bgcolor="#FFCC99">　</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99">[shift-delete]</td>
-        <td bgcolor="#FFCC99">�J�[�\���ʒu���玟�̒P��̐擪�܂ŏ������܂��B</td>
-        <td bgcolor="#FFCC99">�@</td>
+        <td bgcolor="#FFCC99">カーソル位置から次の単語の先頭まで消去します。</td>
+        <td bgcolor="#FFCC99">　</td>
     </tr>
 </table>
 </center></div>
 
-<h4>���ʃL�[</h4>
+<h4>括弧キー</h4>
 
-<p>�����̃L�[�́A�I��͈͂�&quot;����&quot;�ň͂ށi���Ɉ͂܂�Ă���ꍇ�ɂ͊��ʂ������j�̂Ɏg���܂��B���ʂň͂܂ꂽ�e�L�X�g�̒����_�u���N���b�N���邾���ŁA���ʓ��̃e�L�X�g�S�́i���ʂ͊܂܂Ȃ��j��I�����邱�Ƃ��ł��܂��B�i�󒍁F�o�[�W����3.2��command-key
-help���Q�Ƃ���ƁA���ʃL�[�͂��ׂẴv���b�g�t�H�[�����p�\�Ƃ����킯�łȂ��A���ہAWindows�łł͋@�\���܂���ł����B�j</p>
+<p>これらのキーは、選択範囲を&quot;括弧&quot;で囲む（既に囲まれている場合には括弧を消す）のに使われます。括弧で囲まれたテキストの中をダブルクリックするだけで、括弧内のテキスト全体（括弧は含まない）を選択することができます。（訳注：バージョン3.2のcommand-key
+helpを参照すると、括弧キーはすべてのプラットフォーム利用可能というわけでなく、実際、Windows版では機能しませんでした。）</p>
 <div align="center"><center>
 
 <table border="1" cellpadding="3" width="85%" bgcolor="#FFFFCC">
     <tr>
-        <td bgcolor="#FFCC99"><b>�L�[</b></td>
-        <td bgcolor="#FFCC99"><p align="center"><b>�L�q</b></p>
+        <td bgcolor="#FFCC99"><b>キー</b></td>
+        <td bgcolor="#FFCC99"><p align="center"><b>記述</b></p>
         </td>
-        <td bgcolor="#FFCC99"><b>���l</b></td>
+        <td bgcolor="#FFCC99"><b>備考</b></td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99">Control-(</td>
-        <td bgcolor="#FFCC99">(��)�ň݂͂܂��A�܂��́A(
-        )�������܂��B</td>
-        <td bgcolor="#FFCC99">�@</td>
+        <td bgcolor="#FFCC99">(と)で囲みます、または、(
+        )を消します。</td>
+        <td bgcolor="#FFCC99">　</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99">Control- [</td>
-        <td bgcolor="#FFCC99">[��]�ň݂͂܂��A�܂��́A[
-        ]�������܂��B</td>
-        <td bgcolor="#FFCC99">�@</td>
+        <td bgcolor="#FFCC99">[と]で囲みます、または、[
+        ]を消します。</td>
+        <td bgcolor="#FFCC99">　</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99">Control- {</td>
-        <td bgcolor="#FFCC99">{��}�ň݂͂܂��A�܂��́A{
-        }�������܂��B</td>
-        <td bgcolor="#FFCC99">�@</td>
+        <td bgcolor="#FFCC99">{と}で囲みます、または、{
+        }を消します。</td>
+        <td bgcolor="#FFCC99">　</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99">Control- &lt;</td>
-        <td bgcolor="#FFCC99">&lt;��&gt;�ň݂͂܂��A�܂��́A&lt;
-        &gt;�������܂��B</td>
-        <td bgcolor="#FFCC99">�@</td>
+        <td bgcolor="#FFCC99">&lt;と&gt;で囲みます、または、&lt;
+        &gt;を消します。</td>
+        <td bgcolor="#FFCC99">　</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99">Control- '</td>
-        <td bgcolor="#FFCC99">'��'�ň݂͂܂��A�܂��́A'
-        '�������܂��B</td>
-        <td bgcolor="#FFCC99">�@</td>
+        <td bgcolor="#FFCC99">'と'で囲みます、または、'
+        'を消します。</td>
+        <td bgcolor="#FFCC99">　</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99">Control- &quot;</td>
-        <td bgcolor="#FFCC99">&quot;��&quot;�ň݂͂܂��A�܂��́A&quot;
-        &quot;�������܂��B</td>
-        <td bgcolor="#FFCC99">�@</td>
+        <td bgcolor="#FFCC99">&quot;と&quot;で囲みます、または、&quot;
+        &quot;を消します。</td>
+        <td bgcolor="#FFCC99">　</td>
     </tr>
 </table>
 </center></div>
 
-<h4><a name="TextStyle">�e�L�X�g�X�^�C���⋭����ς���L�[</a></h4>
+<h4><a name="TextStyle">テキストスタイルや強勢を変えるキー</a></h4>
 
-<p>�i�󒍁FswapControlAndAltKeys���I���ɂ��Ă��A���̃e�[�u���ɂ͉e������܂���ł���(Squeak
-3.5)�BswapControlAndAltKeys�̃I���I�t�Ɋւ�炸�AAlt�L�[�ƈꏏ�Ɏg���Ă��������B�j</p>
+<p>（訳注：swapControlAndAltKeysをオンにしても、このテーブルには影響ありませんでした(Squeak
+3.5)。swapControlAndAltKeysのオンオフに関わらず、Altキーと一緒に使ってください。）</p>
 <div align="center"><center>
 
 <table border="1" cellpadding="3" width="85%" bgcolor="#FFFFCC">
     <tr>
-        <td bgcolor="#FFCC99"><b>�L�[</b></td>
-        <td bgcolor="#FFCC99"><p align="center"><b>�L�q</b></p>
+        <td bgcolor="#FFCC99"><b>キー</b></td>
+        <td bgcolor="#FFCC99"><p align="center"><b>記述</b></p>
         </td>
-        <td bgcolor="#FFCC99"><b>���l</b></td>
+        <td bgcolor="#FFCC99"><b>備考</b></td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99">k</td>
-        <td bgcolor="#FFCC99">�t�H���g��ݒ肵�܂��B</td>
-        <td bgcolor="#FFCC99">�@</td>
+        <td bgcolor="#FFCC99">フォントを設定します。</td>
+        <td bgcolor="#FFCC99">　</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99">u</td>
-        <td bgcolor="#FFCC99">�z�u��ύX���܂��B</td>
-        <td bgcolor="#FFCC99">�@</td>
+        <td bgcolor="#FFCC99">配置を変更します。</td>
+        <td bgcolor="#FFCC99">　</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99">K</td>
-        <td bgcolor="#FFCC99">�X�^�C����ݒ肵�܂��B</td>
-        <td bgcolor="#FFCC99">�@</td>
+        <td bgcolor="#FFCC99">スタイルを設定します。</td>
+        <td bgcolor="#FFCC99">　</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99">1</td>
-        <td bgcolor="#FFCC99">�P�O�|�C���g�t�H���g�ɂ��܂��B</td>
-        <td bgcolor="#FFCC99">�@</td>
+        <td bgcolor="#FFCC99">１０ポイントフォントにします。</td>
+        <td bgcolor="#FFCC99">　</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99">2</td>
-        <td bgcolor="#FFCC99">�P�Q�|�C���g�t�H���g�ɂ��܂��B�i���{��ł͂P�O�|�C���g�t�H���g�ɂȂ�悤�ł��B�j</td>
-        <td bgcolor="#FFCC99">�@</td>
+        <td bgcolor="#FFCC99">１２ポイントフォントにします。（日本語では１０ポイントフォントになるようです。）</td>
+        <td bgcolor="#FFCC99">　</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99">3</td>
-        <td bgcolor="#FFCC99">�P�W�|�C���g�t�H���g�ɂ��܂��B�i���{��ł͂P�O�|�C���g�t�H���g�ɂȂ�悤�ł��B�j</td>
-        <td bgcolor="#FFCC99">�@</td>
+        <td bgcolor="#FFCC99">１８ポイントフォントにします。（日本語では１０ポイントフォントになるようです。）</td>
+        <td bgcolor="#FFCC99">　</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99">4</td>
-        <td bgcolor="#FFCC99">�Q�S�|�C���g�t�H���g�ɂ��܂��B�i���{��ł͂P�O�|�C���g�t�H���g�ɂȂ�悤�ł��B�j</td>
-        <td bgcolor="#FFCC99">�@</td>
+        <td bgcolor="#FFCC99">２４ポイントフォントにします。（日本語では１０ポイントフォントになるようです。）</td>
+        <td bgcolor="#FFCC99">　</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99">5</td>
-        <td bgcolor="#FFCC99">�R�U�|�C���g�t�H���g�ɂ��܂��B�i���{��ł͂P�O�|�C���g�t�H���g�ɂȂ�悤�ł��B�j</td>
-        <td bgcolor="#FFCC99">�@</td>
+        <td bgcolor="#FFCC99">３６ポイントフォントにします。（日本語では１０ポイントフォントになるようです。）</td>
+        <td bgcolor="#FFCC99">　</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99">6</td>
-        <td bgcolor="#FFCC99">�F�̑I����N���b�N���̃A�N�V�����A�N���X�R�����g�ւ̃����N�A���\�b�h��URL�ւ̃����N�Ȃǂ�ݒ肷�邽�߂̃��j���[��\�����܂��B<br>
-        �����̑�������菜���ɂ́A�Y���̃A�N�e�B�u�ȕ������܂ޗ̈��I�����āAcommand-0�������܂��B</td>
-        <td bgcolor="#FFCC99">�@</td>
+        <td bgcolor="#FFCC99">色の選択やクリック時のアクション、クラスコメントへのリンク、メソッドやURLへのリンクなどを設定するためのメニューを表示します。<br>
+        これらの属性を取り除くには、該当のアクティブな部分を含む領域を選択して、command-0を押します。</td>
+        <td bgcolor="#FFCC99">　</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99">7</td>
-        <td bgcolor="#FFCC99">�{�[���h�ɂ��܂��B</td>
-        <td bgcolor="#FFCC99">�@</td>
+        <td bgcolor="#FFCC99">ボールドにします。</td>
+        <td bgcolor="#FFCC99">　</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99">8</td>
-        <td bgcolor="#FFCC99">�C�^���b�N�ɂ��܂��B</td>
-        <td bgcolor="#FFCC99">�@</td>
+        <td bgcolor="#FFCC99">イタリックにします。</td>
+        <td bgcolor="#FFCC99">　</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99">9</td>
-        <td bgcolor="#FFCC99">�i���[�ɂ��܂��inegative
-        kern�ƈꏏ�ł��j�B</td>
-        <td bgcolor="#FFCC99">�@</td>
+        <td bgcolor="#FFCC99">ナローにします（negative
+        kernと一緒です）。</td>
+        <td bgcolor="#FFCC99">　</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99">0</td>
-        <td bgcolor="#FFCC99">�v���[���e�L�X�g�ɂ��܂��B�i���ׂĂ̋�������菜���܂��B�j</td>
-        <td bgcolor="#FFCC99">�@</td>
+        <td bgcolor="#FFCC99">プレーンテキストにします。（すべての強勢を取り除きます。）</td>
+        <td bgcolor="#FFCC99">　</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99">- (minus)</td>
-        <td bgcolor="#FFCC99">�A���_�[���C���ɂ��܂��B�i������x�����ƃA���_�[���C���������܂��B)�i���{��ł͂܂��T�|�[�g����Ă��Ȃ��悤�ł��B�j</td>
-        <td bgcolor="#FFCC99">�@</td>
+        <td bgcolor="#FFCC99">アンダーラインにします。（もう一度押すとアンダーラインが消えます。)（日本語ではまだサポートされていないようです。）</td>
+        <td bgcolor="#FFCC99">　</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99">=</td>
-        <td bgcolor="#FFCC99">�������܂�(struck out) (������x�����Ƌ����������܂��B)�i�󒍁F�P�O�U���{��L�[�{�[�h�ł̓L�[�A�T�C�����ς��悤�ł��B�j</td>
-        <td bgcolor="#FFCC99">�@</td>
+        <td bgcolor="#FFCC99">強調します(struck out) (もう一度押すと強調が消えます。)（訳注：１０６日本語キーボードではキーアサインが変わるようです。）</td>
+        <td bgcolor="#FFCC99">　</td>
     </tr>
     <tr>
-        <td bgcolor="#FFCC99">_ (�ʖ� shift -)</td>
-        <td bgcolor="#FFCC99">negative kern (�������P�s�N�Z���߂Â��܂��B�j</td>
-        <td bgcolor="#FFCC99">�@</td>
+        <td bgcolor="#FFCC99">_ (別名 shift -)</td>
+        <td bgcolor="#FFCC99">negative kern (文字を１ピクセル近づけます。）</td>
+        <td bgcolor="#FFCC99">　</td>
     </tr>
     <tr>
-        <td bgcolor="#FFCC99">+ (�ʖ� shift =)</td>
-        <td bgcolor="#FFCC99">positive kern (�������P�s�N�Z�������܂��B�j�i�󒍁F�P�O�U���{��L�[�{�[�h�ł�=
-        (�ʖ� shift -)�ł��B</td>
-        <td bgcolor="#FFCC99">�@</td>
+        <td bgcolor="#FFCC99">+ (別名 shift =)</td>
+        <td bgcolor="#FFCC99">positive kern (文字を１ピクセル離します。）（訳注：１０６日本語キーボードでは=
+        (別名 shift -)です。</td>
+        <td bgcolor="#FFCC99">　</td>
     </tr>
 </table>
 </center></div>
 
 <hr align="left">
 
-<h2><a name="Syntax">Squeak Smalltalk�V���^�b�N�X:��b��</a></h2>
+<h2><a name="Syntax">Squeak Smalltalkシンタックス:基礎編</a></h2>
 
 <menu>
-    <li><a href="#SyntaxKeywords">�[���ϐ�</a> </li>
-    <li><a href="#SyntaxIdentifiers">���ʎq</a> </li>
-    <li><a href="#SyntaxComments">�R�����g</a> </li>
-    <li><a href="#SyntaxLiterals">���e����</a> </li>
-    <li><a href="#SyntaxAssignments">���</a> </li>
-    <li><a href="#SyntaxMessages">���b�Z�[�W</a> </li>
-    <li><a href="#ExpressionSequences">����</a> </li>
-    <li><a href="#SyntaxCascades">�J�X�P�[�h</a> </li>
-    <li><a href="#SyntaxBlocks">���u���b�N</a> </li>
-    <li><a href="#SyntaxControl">����\��</a> </li>
-    <li><a href="#BraceArray">�劇�ʔz��</a> </li>
-    <li><a href="#Class Definition">�N���X��`</a> </li>
-    <li><a href="#Method Definition">���\�b�h��`</a> </li>
+    <li><a href="#SyntaxKeywords">擬似変数</a> </li>
+    <li><a href="#SyntaxIdentifiers">識別子</a> </li>
+    <li><a href="#SyntaxComments">コメント</a> </li>
+    <li><a href="#SyntaxLiterals">リテラル</a> </li>
+    <li><a href="#SyntaxAssignments">代入</a> </li>
+    <li><a href="#SyntaxMessages">メッセージ</a> </li>
+    <li><a href="#ExpressionSequences">式列</a> </li>
+    <li><a href="#SyntaxCascades">カスケード</a> </li>
+    <li><a href="#SyntaxBlocks">式ブロック</a> </li>
+    <li><a href="#SyntaxControl">制御構造</a> </li>
+    <li><a href="#BraceArray">大括弧配列</a> </li>
+    <li><a href="#Class Definition">クラス定義</a> </li>
+    <li><a href="#Method Definition">メソッド定義</a> </li>
 </menu>
 
-<h3><a name="SyntaxKeywords">�[���ϐ�</a></h3>
+<h3><a name="SyntaxKeywords">擬似変数</a></h3>
 <div align="center"><center>
 
 <table border="1" cellpadding="3" width="85%" bgcolor="#FFFFCC">
     <tr>
-        <td bgcolor="#FFCC99"><b>�[���ϐ�</b></td>
-        <td bgcolor="#FFCC99"><p align="center"><b>�L�q</b></p>
+        <td bgcolor="#FFCC99"><b>擬似変数</b></td>
+        <td bgcolor="#FFCC99"><p align="center"><b>記述</b></p>
         </td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99"><b>nil</b></td>
-        <td bgcolor="#FFCC99">UndefinedObject�N���X�̗B��̃C���X�^���X</td>
+        <td bgcolor="#FFCC99">UndefinedObjectクラスの唯一のインスタンス</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99"><b>true</b></td>
-        <td bgcolor="#FFCC99">True�N���X�̗B��̃C���X�^���X</td>
+        <td bgcolor="#FFCC99">Trueクラスの唯一のインスタンス</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99"><b>false</b></td>
-        <td bgcolor="#FFCC99">False�N���X�̗B��̃C���X�^���X</td>
+        <td bgcolor="#FFCC99">Falseクラスの唯一のインスタンス</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99"><b>self</b></td>
-        <td bgcolor="#FFCC99">���\�b�h�̒��ŁA���̃��\�b�h�ɑΉ����郁�b�Z�[�W�̃��V�[�o�I�u�W�F�N�g�������[���ϐ��ł��B�B�܂�A���ݏ������̃I�u�W�F�N�g�ł��B�B</td>
+        <td bgcolor="#FFCC99">メソッドの中で、そのメソッドに対応するメッセージのレシーバオブジェクトを示す擬似変数です。。つまり、現在処理中のオブジェクトです。。</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99"><b>super</b></td>
-        <td bgcolor="#FFCC99"><b>super</b>��<b>self</b>�Ɠ����I�u�W�F�N�g�������܂����A<b>super</b>�Ƀ��b�Z�[�W������ꂽ�ꍇ�A�X�[�p�[�N���X�̃��\�b�h�����s���܂��B</td>
+        <td bgcolor="#FFCC99"><b>super</b>は<b>self</b>と同じオブジェクトを示しますが、<b>super</b>にメッセージが送られた場合、スーパークラスのメソッドを実行します。</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99"><b>thisContext</b></td>
-        <td bgcolor="#FFCC99">�A�N�e�B�u�R���e�L�X�g�A���Ȃ킿�A&quot;���ݎ��s����&quot;MethodContext��BlockContext�ł��B</td>
+        <td bgcolor="#FFCC99">アクティブコンテキスト、すなわち、&quot;現在実行中の&quot;MethodContextかBlockContextです。</td>
     </tr>
 </table>
 </center></div>
 
 <ul>
-    <li>�[���ϐ��́A�ق��̌���̃L�[���[�h�Ɠ��l�ɁA�\�񎯕ʎq�ł��B</li>
-    <li><b>nil</b>��<b>true</b>�A<b>false</b>�͒萔�ł��B</li>
-    <li><b>self</b>��<b>super</b>�A<b>thisContext</b>�́A�R�[�h�����s�����ƁA���I�ɕω����܂��B</li>
-    <li>�����̋[���ϐ��ǂ�ɂ�����͂ł��܂���B<br>
+    <li>擬似変数は、ほかの言語のキーワードと同様に、予約識別子です。</li>
+    <li><b>nil</b>と<b>true</b>、<b>false</b>は定数です。</li>
+    <li><b>self</b>と<b>super</b>、<b>thisContext</b>は、コードが実行されると、動的に変化します。</li>
+    <li>これらの擬似変数どれにも代入はできません。<br>
         </li>
 </ul>
 
-<h3><a name="SyntaxIdentifiers">���ʎq</a></h3>
+<h3><a name="SyntaxIdentifiers">識別子</a></h3>
 
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ���� ( ���� |
-���� )*</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 文字 ( 文字 |
+数字 )*</p>
 
 <ul>
-    <li>Smalltalk�̎��ʎq�i�ƃV���{���j��<b>�啶���������̋��</b>������܂��B
+    <li>Smalltalkの識別子（とシンボル）は<b>大文字小文字の区別</b>があります。
     </li>
-    <li>�������̒P�ꂩ��Ȃ鎯�ʎq�i�C���X�^���X��temporaries�j�́A�������Ŏn�߂āA�����P��̓�������啶���ɂ���̂�Smalltalk�̊���ł��B(<i>�Ⴆ��</i>�AthisIsACompoundIdentifier).
+    <li>いくつかの単語からなる識別子（インスタンスやtemporaries）は、小文字で始めて、続く単語の頭文字を大文字にするのがSmalltalkの慣例です。(<i>例えば</i>、thisIsACompoundIdentifier).
     </li>
-    <li>����̎��ʎq�A�Ⴆ�΃O���[�o���ϐ��i<i>�Ⴆ��</i>�ASmalltalk)�A�N���X�ϐ��́A��������啶���ɂ���̂�����ł��B�N���X�������ׂăO���[�o���ϐ��ł��B(<i>�Ⴆ��</i>�ASystemDictionary)<br>
+    <li>特定の識別子、例えばグローバル変数（<i>例えば</i>、Smalltalk)、クラス変数は、頭文字を大文字にするのが慣例です。クラス名もすべてグローバル変数です。(<i>例えば</i>、SystemDictionary)<br>
         </li>
 </ul>
 
-<h3><a name="SyntaxComments">�R�����g</a></h3>
+<h3><a name="SyntaxComments">コメント</a></h3>
 
-<p><b>&quot;</b>�_�u���R�[�e�[�V�����ň͂ނƃR�����g�ɂȂ�܂��B<b>&quot;<br>
-&quot;</b>�R�����g��'�V���O���R�[�e�[�V����(string
-delimiting)'���܂ނ��Ƃ��ł��܂��B<b>&quot;<br>
-&quot;</b>�_�u���R�[�e�[�V������&quot;&quot;��d&quot;&quot;�ɂ���ƁA�R�����g�̒��Ń_�u���R�[�e�[�V�������g�����Ƃ��ł��܂��B<b>&quot;<br>
-&quot;</b>�R�����g�́A<br>
-��<br>
-��<br>
-��<br>
-�s�ɂ܂����邱�Ƃ��ł��܂�<b>&quot;<br>
+<p><b>&quot;</b>ダブルコーテーションで囲むとコメントになります。<b>&quot;<br>
+&quot;</b>コメントは'シングルコーテーション(string
+delimiting)'を含むことができます。<b>&quot;<br>
+&quot;</b>ダブルコーテーションを&quot;&quot;二重&quot;&quot;にすると、コメントの中でダブルコーテーションを使うことができます。<b>&quot;<br>
+&quot;</b>コメントは、<br>
+複<br>
+数<br>
+の<br>
+行にまたがることができます<b>&quot;<br>
 </b></p>
 
-<h3><a name="SyntaxLiterals">���e�����i�萔�\���j</a></h3>
+<h3><a name="SyntaxLiterals">リテラル（定数表現）</a></h3>
 
-<h4>�� (Number�N���X�̃C���X�^���X)</h4>
+<h4>数 (Numberクラスのインスタンス)</h4>
 
-<p>�ȉ��ł́A==&gt;�́A&quot;�E�E�E�Əo�͂����&quot;�Ƃ����Ӗ��ł��B</p>
+<p>以下では、==&gt;は、&quot;・・・と出力される&quot;という意味です。</p>
 
-<p>�P�O�i����: <b>1234</b>, <b>12345678901234567890</b><br>
-�W�i����: <b>8r177</b>, <b>8r1777777777777777777777</b><br>
-�P�U�i����: <b>16rFF</b>, <b>16r123456789ABCDEF012345</b><br>
-�C�ӂ̊�̐���: <b>2r1010</b> ==&gt; 10<br>
-�����̎w���\��: <b>123e2</b> ==&gt; 12300, <b>2r1010e2</b>
+<p>１０進整数: <b>1234</b>, <b>12345678901234567890</b><br>
+８進整数: <b>8r177</b>, <b>8r1777777777777777777777</b><br>
+１６進整数: <b>16rFF</b>, <b>16r123456789ABCDEF012345</b><br>
+任意の基数の整数: <b>2r1010</b> ==&gt; 10<br>
+整数の指数表現: <b>123e2</b> ==&gt; 12300, <b>2r1010e2</b>
 ==&gt; 40<br>
-���������_���i�{���x�j: <b>3.14e-10</b><br>
-�C�ӂ̊�̕��������_��: <b>2r1.1</b> ==&gt; 1.5<br>
-���������_���̎w���\��: <b>2r1.1e2</b> ==&gt; 6.0</p>
+浮動小数点数（倍精度）: <b>3.14e-10</b><br>
+任意の基数の浮動小数点数: <b>2r1.1</b> ==&gt; 1.5<br>
+浮動小数点数の指数表現: <b>2r1.1e2</b> ==&gt; 6.0</p>
 
 <ul>
-    <li>Squeak�ɂ́A�����ȓ����v���~�e�B�u�̉��Z���T�|�[�g����SmallInteger�N���X�i-2<sup>30</sup>����2<sup>30-1</sup>�܂ł̐����j������܂��B</li>
-    <li>Squeak�́A�C�Ӑ��x�̉��Z���V�[�����X�ɃT�|�[�g���܂��B�i�K�v�ɉ����Ď����I�ɁASmallInteger����LargePositiveInteger��negativeInteger�ɕϊ����܂��B�j�������x�ւ̉e���͂킸���ł��B</li>
-    <li>Squeak�́AFraction�i�����A�C�Ӑ��x�̗L�����j��Point�i�Q�������W�j�ȂǁA�ق��̎�ނ�&quot;��&quot;�l�N���X���T�|�[�g���܂��B�����̃I�u�W�F�N�g�̒萔�\���͂���܂��񂪁A�p�ӂ��ꂽ�萔�\���̉��Z�̌`�Ŏ��R�ɕ\������܂��B�i���ꂼ��A&quot;2/3&quot;��&quot;2@3&quot;�j
+    <li>Squeakには、高速な内部プリミティブの演算をサポートするSmallIntegerクラス（-2<sup>30</sup>から2<sup>30-1</sup>までの整数）があります。</li>
+    <li>Squeakは、任意精度の演算をシームレスにサポートします。（必要に応じて自動的に、SmallIntegerからLargePositiveIntegerやnegativeIntegerに変換します。）処理速度への影響はわずかです。</li>
+    <li>Squeakは、Fraction（分数、任意精度の有理数）やPoint（２次元座標）など、ほかの種類の&quot;数&quot;値クラスをサポートします。これらのオブジェクトの定数表現はありませんが、用意された定数表現の演算の形で自然に表現されます。（それぞれ、&quot;2/3&quot;や&quot;2@3&quot;）
     </li>
-    <li>���́A�F�X�Ȋ(radix)�ŕ\���ł��܂����A����̂͏�ɂP�O�i�\���ł��B�w���\���̎w��������Ɠ��l�ł��B�]����:
+    <li>数は、色々な基数(radix)で表現できますが、基数自体は常に１０進表現です。指数表現の指数部も基数と同様です。従って:
         <b>2r1010</b> ==&gt; 10, <b>10e2</b> ==&gt; 1000 (=10 x
         10<sup>2</sup>), but <b>2r1010e2</b> ==&gt; 40 (=10 x 2<sup>2</sup>)
     </li>
 </ul>
 
-<h4>�����iCharacter�N���X�̃C���X�^���X�j</h4>
+<h4>文字（Characterクラスのインスタンス）</h4>
 
-<p><b>$x</b> &quot;�����̒萔�\���̓h���L���{�i�v�����g�s�\�Ȃ��̂ł��j�Y�������ŕ\������܂��B&quot;<br>
-<b>$3</b> &quot;�����ɂ��Ă��A&quot;<br>
-<b>$&lt;</b> &quot;�V���{���ɂ��Ă��A&quot;<br>
-<b>$$</b> &quot;�h���L���ł����l�ł�&quot;</p>
+<p><b>$x</b> &quot;文字の定数表現はドル記号＋（プリント不可能なものでも）該当文字で表現されます。&quot;<br>
+<b>$3</b> &quot;数字についても、&quot;<br>
+<b>$&lt;</b> &quot;シンボルについても、&quot;<br>
+<b>$$</b> &quot;ドル記号でも同様です&quot;</p>
 
-<h4>������iString�N���X�̃C���X�^���X�j</h4>
+<h4>文字列（Stringクラスのインスタンス）</h4>
 
-<p><b>'</b>������̓V���O���R�[�e�[�V����<b>'�ň͂܂ꂽ�����̔C�ӂ̗񂩂�Ȃ�܂��B<br>
-'</b>�������&quot;�R�����g��؂�&quot;�������܂ނ��Ƃ��ł��܂��B<b>'<br>
-'</b>������ɃV���O���R�[�e�[�V�������܂߂�ɂ́A�V���O���R�[�e�[�V������''��d�ɂ��܂��B<b>'<br>
-'</b>������́A���s������<br>
-�܂ނ��Ƃ��ł��܂��B<b>'<br>
-''</b> &quot;�󕶎�������Y��Ȃ��B&quot;</p>
+<p><b>'</b>文字列はシングルコーテーション<b>'で囲まれた文字の任意の列からなります。<br>
+'</b>文字列は&quot;コメント区切り&quot;文字を含むことができます。<b>'<br>
+'</b>文字列にシングルコーテーションを含めるには、シングルコーテーションを''二重にします。<b>'<br>
+'</b>文字列は、改行文字を<br>
+含むことができます。<b>'<br>
+''</b> &quot;空文字列もお忘れなく。&quot;</p>
 
 <ul>
-    <li>������͕������܂ޔz��Ɣ��Ɏ��Ă��܂��i&quot;����&quot;�ł��B�j�B��������P����n�܂�C���f�b�N�X�ŎQ�Ƃ���ƁA�Ή�����ʒu�̕������Ԃ�܂��B</li>
+    <li>文字列は文字を含む配列と非常に似ています（&quot;同質&quot;です。）。文字列を１から始まるインデックスで参照すると、対応する位置の文字が返ります。</li>
 </ul>
 
-<h4>�V���{���iSymbol�N���X�̃C���X�^���X�j</h4>
+<h4>シンボル（Symbolクラスのインスタンス）</h4>
 
-<p><b>#'</b>�䌅�L���ɑ���������̓V���{���ł��B<b>'<br>
-#</b>�䌅�����Ŏn�܂�C�ӂ̎��ʎq<br>
-<b>#</b>�R�����ŏI��鎯�ʎq:<br>
-<b>#</b>���ꂼ�ꂪ:�R����:��:�I���:��������:���ʎq:<br>
-<b>#</b>- &nbsp;&nbsp;&nbsp;&nbsp;&quot;�䌅��'-'�ȂǓ��ꕶ�����������̂��V���{���ł��B&quot;<br>
-<b>#</b>+&lt; &nbsp;&quot;�䌅�ɓ��ꕶ���̔C�ӂ̓񕶎����������̂��V���{���ł��B&quot;</p>
+<p><b>#'</b>井桁記号に続く文字列はシンボルです。<b>'<br>
+#</b>井桁文字で始まる任意の識別子<br>
+<b>#</b>コロンで終わる識別子:<br>
+<b>#</b>それぞれが:コロン:で:終わる:いくつかの:識別子:<br>
+<b>#</b>- &nbsp;&nbsp;&nbsp;&nbsp;&quot;井桁に'-'など特殊文字がついたものもシンボルです。&quot;<br>
+<b>#</b>+&lt; &nbsp;&quot;井桁に特殊文字の任意の二文字をつけたものもシンボルです。&quot;</p>
 
 <ul>
-    <li>Symbol��String�̃T�u�N���X�ł��B�啔���ɂ����ē������b�Z�[�W�𗝉����܂��B</li>
-    <li>�V���{���ƕ�����̎�ȈႢ�́A���������񂩂�Ȃ�V���{���͂��ׂāA�����C���X�^���X�ł���Ƃ����Ƃ���ł��B�Q�̈قȂ镶����C���X�^���X���Ⴆ��'test
-        one two three'�Ƃ������e�������Ƃ��ł��܂����A#'test
-        one two three'�Ƃ����V���{���͂��ׂē����C���X�^���X�ł��B����&quot;�B��̃C���X�^���X&quot;�Ƃ��������̂������ŁASymbol�������I�ɔ�r���邱�Ƃ��ł��܂��B�V���{���ł́A����������(=)�Ɠ���ł��邱��(==)������������ł��B</li>
-    <li>&quot;�R�����t���̎��ʎq&quot;�̃V���{���i<i>�Ⴆ��</i>#a:keyword:selector:)�́A���΂��΁A�L�[���[�h�Z���N�^�Ƃ��ĎQ�Ƃ���܂��B���R�͌�Ŗ��炩�ɂȂ�ł��傤�B</li>
-    <li>&quot;�V���O���������̓f���A���V���{��&quot;�i<i>�Ⴆ��</i>#*
-        or #++�j�́A���΂��΁A�o�C�i���Z���N�^�Ƃ��ĎQ�Ƃ���܂��B</li>
-    <li>�ȉ��͋�����Ă�����ꕶ���ł��B: +/*\~&lt;=&gt;@%|&amp;?!
+    <li>SymbolはStringのサブクラスです。大部分において同じメッセージを理解します。</li>
+    <li>シンボルと文字列の主な違いは、同じ文字列からなるシンボルはすべて、同じインスタンスであるというところです。２つの異なる文字列インスタンスが例えば'test
+        one two three'という内容を持つことができますが、#'test
+        one two three'というシンボルはすべて同じインスタンスです。この&quot;唯一のインスタンス&quot;という性質のおかげで、Symbolを効率的に比較することができます。シンボルでは、等しいこと(=)と同一であること(==)が同じだからです。</li>
+    <li>&quot;コロン付きの識別子&quot;のシンボル（<i>例えば</i>#a:keyword:selector:)は、しばしば、キーワードセレクタとして参照されます。理由は後で明らかになるでしょう。</li>
+    <li>&quot;シングルもしくはデュアルシンボル&quot;（<i>例えば</i>#*
+        or #++）は、しばしば、バイナリセレクタとして参照されます。</li>
+    <li>以下は許されている特殊文字です。: +/*\~&lt;=&gt;@%|&amp;?!
     </li>
-    <li>#--�̓V���{���ł��o�C�i���Z���N�^�ł��Ȃ����Ƃɒ��ӂ��Ă��������B����A#'--'�̓V���{��<i>�ł�</i>�B(�������A�o�C�i���Z���N�^�ł͂Ȃ��ł��B�j</li>
+    <li>#--はシンボルでもバイナリセレクタでもないことに注意してください。一方、#'--'はシンボル<i>です</i>。(しかし、バイナリセレクタではないです。）</li>
 </ul>
 
-<h4>��z��iArray�N���X�̃C���X�^���X�j</h4>
+<h4>定配列（Arrayクラスのインスタンス）</h4>
 
-<p><b>#(</b> 1 2 3 4 5 <b>)</b> &quot;�T�̐����i�P����T�j����Ȃ�A�T�C�Y���T�̔z��&quot;<br>
-<b>#(</b> 'this' #is $a #'constant' array <b>)</b> &quot;String ('this')��Symbol
-(#is)�ACharacter ($a)�ƂQ��Symbol�i#constant��#array�j����Ȃ�A�T�C�Y���T�̔z��&quot;<br>
-<b>#(</b> 1 2 ( 1 #(2) 3 ) 4 <b>)</b> &quot;�Q�̐����i�P�ƂQ�j�ƁA�T�C�Y���R�̔z��A�����P�̐����i�S�j����Ȃ�A�T�C�Y���S�̔z��B&quot;<br>
-<b>#(</b> 1 + 2 <b>)</b> &quot;1, #+, and 2����Ȃ�A�T�C�Y���R�̔z��B3����Ȃ�T�C�Y���P�̔z��<i>�ł͂Ȃ�</i>�B&quot;</p>
+<p><b>#(</b> 1 2 3 4 5 <b>)</b> &quot;５つの整数（１から５）からなる、サイズが５の配列&quot;<br>
+<b>#(</b> 'this' #is $a #'constant' array <b>)</b> &quot;String ('this')とSymbol
+(#is)、Character ($a)と２つのSymbol（#constantと#array）からなる、サイズが５の配列&quot;<br>
+<b>#(</b> 1 2 ( 1 #(2) 3 ) 4 <b>)</b> &quot;２つの整数（１と２）と、サイズが３の配列、もう１つの整数（４）からなる、サイズが４の配列。&quot;<br>
+<b>#(</b> 1 + 2 <b>)</b> &quot;1, #+, and 2からなる、サイズが３の配列。3からなるサイズが１の配列<i>ではない</i>。&quot;</p>
 
 <ul>
-    <li>��z��͌Œ�l�ł��B����̂ɂ����̗v�f���萔�łȂ���΂����܂���B��̗�̂悤�ɁA&quot;��&quot;�͕]�����ꂸ�A��ʂɁA�V���{���̗�Ƃ��ăp�[�X����܂��B</li>
-    <li>��z��́A��z����܂ނ��Ƃ��ł��܂��B�����̒�z��̂��߂̈䌅�͏ȗ��\(optional)�ł��B</li>
-    <li>��z��̒��̎��ʎq�╶����(sequences of
-        characters)�̓V���{���Ƃ��Ĉ����܂��B;�����̃V���{���̂��߂̈䌅�L���͏ȗ��\�ł��B</li>
-    <li>�z��́A�C���f�b�N�X�P�ōŏ��̗v�f���w��ł��܂��B</li>
+    <li>定配列は固定値です。それ故にそれらの要素も定数でなければいけません。上の例のように、&quot;式&quot;は評価されず、一般に、シンボルの列としてパースされます。</li>
+    <li>定配列は、定配列を含むことができます。内部の定配列のための井桁は省略可能(optional)です。</li>
+    <li>定配列の中の識別子や文字列(sequences of
+        characters)はシンボルとして扱われます。;内部のシンボルのための井桁記号は省略可能です。</li>
+    <li>配列は、インデックス１で最初の要素を指定できます。</li>
 </ul>
 
 <h3><a name="SyntaxAssignments">Assignments</a></h3>
 
 <blockquote>
-    <p>���ʎq<img src="squeak-qref.files/arrow.gif"
+    <p>識別子<img src="squeak-qref.files/arrow.gif"
     align="top" width="14" height="13" naturalsizeflag="3">&nbsp;
-    ��<br>
-    ���ʎq :=&nbsp; ��&nbsp;&nbsp;&nbsp;&nbsp;&quot;
-    ���ł��A:= ��<img src="squeak-qref.files/arrow.gif"
-    align="top" width="14" height="13" naturalsizeflag="3">�̑���Ɏg�����Ƃ��ł��܂��Bbut
+    式<br>
+    識別子 :=&nbsp; 式&nbsp;&nbsp;&nbsp;&nbsp;&quot;
+    いつでも、:= を<img src="squeak-qref.files/arrow.gif"
+    align="top" width="14" height="13" naturalsizeflag="3">の代わりに使うことができます。but
     the pretty printer uses <img
     src="squeak-qref.files/arrow.gif" align="top" width="14"
     height="13" naturalsizeflag="3">&quot;<br>
@@ -873,64 +873,64 @@ src="squeak-qref.files/arrow.gif" align="top" width="14"
 height="13" naturalsizeflag="3"> 1000 factorial</p>
 
 <ul>
-    <li>�i�C���X�^���X�ϐ��ł���A�N���X�ϐ��ł���A�e���|�����ϐ��ł���A���ł���j���ʎq�́A���蓖�Č�A���̕]�����ʂ̃I�u�W�F�N�g���Q�Ƃ��܂��B</li>
+    <li>（インスタンス変数であれ、クラス変数であれ、テンポラリ変数であれ、他であれ）識別子は、割り当て後、式の評価結果のオブジェクトを参照します。</li>
     <li>The &quot;<img src="squeak-qref.files/arrow.gif"
         align="top" width="14" height="13" naturalsizeflag="3">&quot;
-        �G�����́ASqueak�̒��ł́A�A���_�[�o�[�œ��͂ł��܂��B
+        絵文字は、Squeakの中では、アンダーバーで入力できます。
     </li>
-    <li>���蓖�Ď��̂����ł��B���蓖�Ď��́A�E�ӂ̕]���̌��ʂ�Ԃ��܂��B</li>
-    <li>���蓖�ẮA��̂悤�ɃJ�X�P�[�h�ł��܂��B�E�ӂ̕]�����ʂł���I�u�W�F�N�g�����ꂼ��̕ϐ����Q�Ƃ���悤�ɂȂ�܂��B</li>
+    <li>割り当て自体が式です。割り当て式は、右辺の評価の結果を返します。</li>
+    <li>割り当ては、上のようにカスケードできます。右辺の評価結果であるオブジェクトをそれぞれの変数が参照するようになります。</li>
 </ul>
 
-<h3><a name="SyntaxMessages">���b�Z�[�W</a></h3>
+<h3><a name="SyntaxMessages">メッセージ</a></h3>
 
-<h4>�P�����b�Z�[�W</h4>
+<h4>単項メッセージ</h4>
 
 <p>theta sin<br>
 quantity sqrt<br>
 nameString size<br>
-1.5 tan rounded asString &quot;(((1.5 tan) rounded) asString)�Ɠ�������&quot;</p>
+1.5 tan rounded asString &quot;(((1.5 tan) rounded) asString)と同じ結果&quot;</p>
 
 <ul>
-    <li>�P�����b�Z�[�W�͈����̂Ȃ����b�Z�[�W�ł��B</li>
-    <li>�P�����b�Z�[�W�͍ł�&quot;�D�揇�ʍ����p�[�X&quot;����܂��B�܂��A�P�����b�Z�[�W������ł���ꍇ�A������E�փp�[�X����܂��B�]���āA�Ō�̗��1.5��#tan�𑗂������ʂ�#rounded�𑗂�A���̌��ʂ�#asString�𑗂������ʂ�Ԃ��܂��B</li>
+    <li>単項メッセージは引数のないメッセージです。</li>
+    <li>単項メッセージは最も&quot;優先順位高くパース&quot;されます。また、単項メッセージが並んでいる場合、左から右へパースされます。従って、最後の例は1.5に#tanを送った結果に#roundedを送り、その結果に#asStringを送った結果を返します。</li>
 </ul>
 
-<h4>�񍀃��b�Z�[�W</h4>
+<h4>二項メッセージ</h4>
 
 <p>3 + 4 &quot; ==&gt; 7 &quot;<br>
 3 + 4 * 5 &quot; ==&gt; 35 (<b>not</b> 23) &quot;<br>
 3 + 4 factorial &quot; ==&gt; 27 (<b>not</b> 5040) &quot;<br>
 total - 1<br>
-total &lt;= max&nbsp;&nbsp;&quot;����total��max�ȉ��Ȃ��true&quot;<br>
-(4/3)*3 = 4 &quot;==&gt; true �Ȃ��H�������񍀃��b�Z�[�W�̂P������A�܂�Fraction�͌���������Atrue��Ԃ��܂��B&quot;<br>
-(3/4) == (3/4) &quot;==&gt; false �Ȃ��H�Q�̓�����Fraction�ł����A�����͓����I�u�W�F�N�g�ł͂Ȃ�����Afalse��Ԃ��܂�&quot;</p>
+total &lt;= max&nbsp;&nbsp;&quot;もしtotalがmax以下ならばtrue&quot;<br>
+(4/3)*3 = 4 &quot;==&gt; true なぜ？等号も二項メッセージの１つだから、またFractionは厳密だから、trueを返します。&quot;<br>
+(3/4) == (3/4) &quot;==&gt; false なぜ？２つの等しいFractionですが、これらは同じオブジェクトではないから、falseを返します&quot;</p>
 
 <ul>
-    <li>�񍀃��b�Z�[�W�̏ꍇ�A�����Ƀ��V�[�o�A�E���Ɉ������P����܂��B
-        ��̍ŏ��̎��ł́A����4�̃Z���N�^#+����Ȃ郁�b�Z�[�W��3�ɑ���܂��B</li>
-    <li>�񍀃��b�Z�[�W�́A�����Z�̗D�揇�ʂɊւ�炸�A���ʂŎw�肵�Ȃ�����A<em>����</em>������E�Ƀp�[�X����܂��B</li>
-    <li>�P�����b�Z�[�W�́A�񍀃��b�Z�[�W�����D�揇�ʂ������ł��B</li>
+    <li>二項メッセージの場合、左側にレシーバ、右側に引数が１つ現れます。
+        上の最初の式では、引数4のセレクタ#+からなるメッセージを3に送ります。</li>
+    <li>二項メッセージは、数演算の優先順位に関わらず、括弧で指定しない限り、<em>いつも</em>左から右にパースされます。</li>
+    <li>単項メッセージは、二項メッセージよりも優先順位が高いです。</li>
 </ul>
 
-<h4>�L�[���[�h���b�Z�[�W</h4>
+<h4>キーワードメッセージ</h4>
 
 <p>12 between: 8 and: 15 &quot; ==&gt; true &quot;<br>
 #($t $e $s $t) at: 3 &quot; ==&gt; $s &quot;<br>
-array at: index put: value &quot;==&gt; value��array��index�ʒu�ɓ��ꂽ��Avalue��Ԃ��܂��B&quot;<br>
-array at: index factorial put: value &quot;value��array��index
-factorial�ʒu�ɓ��ꂽ��Avalue��Ԃ��܂��B&quot;<br>
-1 to: 3 do: aBlock &quot;����́A�i�����Q�ƈꏏ�Ɂj#to:do:����1�ɑ���܂�&quot;<br>
-(1 to: 3) do: aBlock &quot;����́A�i�����P�ƈꏏ�Ɂj#do:���A'1
-to: 3'��]���������ʕԂ����Interval�ɑ���܂��B&quot;</p>
+array at: index put: value &quot;==&gt; valueをarrayのindex位置に入れた後、valueを返します。&quot;<br>
+array at: index factorial put: value &quot;valueをarrayのindex
+factorial位置に入れた後、valueを返します。&quot;<br>
+1 to: 3 do: aBlock &quot;これは、（引数２つと一緒に）#to:do:整数1に送ります&quot;<br>
+(1 to: 3) do: aBlock &quot;これは、（引数１つと一緒に）#do:を、'1
+to: 3'を評価した結果返されるIntervalに送ります。&quot;</p>
 
 <ul>
-    <li>�L�[���[�h���b�Z�[�W�͂P�ȏ�̈����𔺂��܂��B</li>
-    <li>�L�[���[�h���b�Z�[�W�́A��ԗD�揇�ʂ��ア���b�Z�[�W�ł��B���ʂŎw�肵�Ȃ�����A�P�����b�Z�[�W�Ɠ񍀃��b�Z�[�W����ɉ�������܂��B<br>
+    <li>キーワードメッセージは１つ以上の引数を伴います。</li>
+    <li>キーワードメッセージは、一番優先順位が弱いメッセージです。括弧で指定しない限り、単項メッセージと二項メッセージが先に解決されます。<br>
         </li>
 </ul>
 
-<h3><a name="ExpressionSequences">���̗�</a></h3>
+<h3><a name="ExpressionSequences">式の列</a></h3>
 
 <blockquote>
     <p>expressionSequence ::= expression (. expression)* (.)<sup>opt</sup></p>
@@ -941,14 +941,14 @@ width="14" height="13" naturalsizeflag="3"> 20@30 corner: 60@90.
 box containsPoint: 40@50</pre>
 
 <ul>
-    <li><em>�s���I�h</em>�ŋ�؂�ꂽ���́A���Ɏ��s����܂��B</li>
-    <li>��̒l�́A�Ō�̎��̒l�ɂȂ�܂��B</li>
-    <li>���̎��̂��ׂĂ̒l�͖�������܂��B</li>
-    <li>�Ō�̃s���I�h�͕K�������K�v����܂���B<br>
+    <li><em>ピリオド</em>で区切られた式は、順に実行されます。</li>
+    <li>列の値は、最後の式の値になります。</li>
+    <li>他の式のすべての値は無視されます。</li>
+    <li>最後のピリオドは必ずしも必要ありません。<br>
         </li>
 </ul>
 
-<h3><a name="SyntaxCascades">�J�X�P�[�h��</a></h3>
+<h3><a name="SyntaxCascades">カスケード式</a></h3>
 
 <pre>receiver
 &nbsp;&nbsp;&nbsp;&nbsp;unaryMessage;
@@ -957,247 +957,247 @@ box containsPoint: 40@50</pre>
 &nbsp;&nbsp;&nbsp;&nbsp;yourself</pre>
 
 <ul>
-    <li>�J�X�P�[�h�̒��̃��b�Z�[�W�́A<em>�Z�~�R����</em>�ŋ�؂��܂��B���ꂼ��̃��b�Z�[�W�́A<code>receiver</code>�ɏ��ɑ����܂��B</li>
-    <li>�r���̖߂�l�͖�������܂����A<code>receiver</code>�̕ω�(side-effect)�͕ۂ���܂��B</li>
-    <li>�J�X�P�[�h�́A�i�r���̃��b�Z�[�W�����ׂđ�������A�j�Ō�̃��b�Z�[�W��<code>receiver</code>�ɑ��������ʂ�Ԃ��܂��B<br>
+    <li>カスケードの中のメッセージは、<em>セミコロン</em>で区切られます。それぞれのメッセージは、<code>receiver</code>に順に送られます。</li>
+    <li>途中の戻り値は無視されますが、<code>receiver</code>の変化(side-effect)は保たれます。</li>
+    <li>カスケードは、（途中のメッセージをすべて送った後、）最後のメッセージを<code>receiver</code>に送った結果を返します。<br>
         </li>
 </ul>
 
-<h3><a name="SyntaxBlocks">�u���b�N��</a></h3>
+<h3><a name="SyntaxBlocks">ブロック式</a></h3>
 
-<p>�u���b�N�́A���ۂɂ�BlockContext�N���X�̃C���X�^���X�ł��B
-�u���b�N�́A����\�����L�q(build)���鎞�K���g���܂��B
-�u���b�N�́A���̗�̉����͂�<b>[ ]</b>�V���^�b�N�X���g���č���܂��B</p>
+<p>ブロックは、実際にはBlockContextクラスのインスタンスです。
+ブロックは、制御構造を記述(build)する時必ず使われます。
+ブロックは、式の列の回りを囲む<b>[ ]</b>シンタックスを使って作られます。</p>
 
 <blockquote>
-    <p><b>[&nbsp;</b> expressionSequence&nbsp;<b>] </b>&nbsp;&nbsp;&nbsp;&nbsp;&quot;�����Ȃ��̃u���b�N&quot;<br>
+    <p><b>[&nbsp;</b> expressionSequence&nbsp;<b>] </b>&nbsp;&nbsp;&nbsp;&nbsp;&quot;引数なしのブロック&quot;<br>
     <b>[</b>&nbsp; (: identifier)<sup>+</sup> |
-    expressionSequence <b>]</b> &nbsp;&nbsp;&nbsp;&nbsp;&quot;���������u���b�N&quot;<br>
+    expressionSequence <b>]</b> &nbsp;&nbsp;&nbsp;&nbsp;&quot;引数を持つブロック&quot;<br>
     <b>[ </b>(: identifier)<sup>+</sup> | | identifier<sup>+</sup>
-    | expressionSequence <b>]&nbsp;</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;�����ƃ��[�J���ϐ������u���b�N&quot;</p>
+    | expressionSequence <b>]&nbsp;</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;引数とローカル変数を持つブロック&quot;</p>
 </blockquote>
 
 <p><br>
-<b>[</b> 1. 2. 3 <b>]</b> &quot;���̃u���b�N�́A�]������鎞�A�l3��Ԃ��܂��B&quot;<br>
-<b>[</b> object doWithSideEffects. test<b>]</b> &quot;���̃u���b�N�́A�]������鎞�A#doWithSideEffects��object�ɑ���Atest�I�u�W�F�N�g��Ԃ��܂��B&quot;<br>
+<b>[</b> 1. 2. 3 <b>]</b> &quot;このブロックは、評価される時、値3を返します。&quot;<br>
+<b>[</b> object doWithSideEffects. test<b>]</b> &quot;このブロックは、評価される時、#doWithSideEffectsをobjectに送り、testオブジェクトを返します。&quot;<br>
 <b>[</b> :param <font size="4"><b>|</b></font> param doSomething <b>]</b>
-&quot;���̃u���b�N�́A�]������鎞�A�p�����[�^��#doSomething�𑗂������ʂ�Ԃ��܂��B</p>
+&quot;このブロックは、評価される時、パラメータに#doSomethingを送った結果を返します。</p>
 
 <ul>
-    <li>�u���b�N�́A��ŕ]��������(a deferred
-        sequence of actions)������킵�܂��B </li>
-    <li>�u���b�N���̒l�́A���ƂŃ��N�G�X�g�����������ɁA�͂܂ꂽ�������s���邱�Ƃ��ł���I�u�W�F�N�g�ł��BThus
+    <li>ブロックは、後で評価される列(a deferred
+        sequence of actions)をあらわします。 </li>
+    <li>ブロック式の値は、あとでリクエストがあった時に、囲まれた式を実行することができるオブジェクトです。Thus
         <ul>
             <li><b>[</b> 1. 2. 3 <b>]</b> ==&gt; [ ] in
                 UndefinedObject&gt;&gt;DoIt<br>
                 <b>[</b> 1. 2. 3 <b>]</b> value ==&gt; 3 </li>
         </ul>
     </li>
-    <li>����̐��Ƃ́A��G�c�Ɍ����āA�u���b�N�������_����A�����֐�(anonymous
-        function)�A�N���[�W��(closure)�ɓ����ł��邱�ƂɋC�Â��ł��傤�B<br>
+    <li>言語の専門家は、大雑把に言って、ブロックがラムダ式や、匿名関数(anonymous
+        function)、クロージャ(closure)に等価であることに気づくでしょう。<br>
         </li>
 </ul>
 
-<h4>BlockContext�̕]�����b�Z�[�W</h4>
+<h4>BlockContextの評価メッセージ</h4>
 <div align="center"><center>
 
 <table border="1" cellpadding="3" width="85%" bgcolor="#FFFFCC">
     <tr>
-        <td bgcolor="#FFCC99"><b>���b�Z�[�W</b></td>
-        <td bgcolor="#FFCC99"><p align="center"><b>�L�q</b></p>
+        <td bgcolor="#FFCC99"><b>メッセージ</b></td>
+        <td bgcolor="#FFCC99"><p align="center"><b>記述</b></p>
         </td>
-        <td bgcolor="#FFCC99"><b>���l</b></td>
+        <td bgcolor="#FFCC99"><b>備考</b></td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99"><b>value</b></td>
-        <td bgcolor="#FFCC99">���V�[�o�ɓ�����u���b�N��]�����A���ʂ�Ԃ��܂��B</td>
+        <td bgcolor="#FFCC99">レシーバに当たるブロックを評価し、結果を返します。</td>
         <td bgcolor="#FFCC99">1</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99"><b>value:</b> arg</td>
-        <td bgcolor="#FFCC99">����arg�̒l��n���āA���V�[�o�ɓ�����u���b�N��]�����܂��B</td>
+        <td bgcolor="#FFCC99">引数argの値を渡して、レシーバに当たるブロックを評価します。</td>
         <td bgcolor="#FFCC99">2</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99"><b>valueWithArguments:</b> anArray</td>
-        <td bgcolor="#FFCC99">���V�[�o�ɓ�����u���b�N��]�����܂��B�����́A�v�f���u���b�N�̈����ɓ�����z��ł��B<br>
-        �����z��̒������u���b�N�����҂��Ă�������̐��Ɠ������Ȃ���΁A�G���[��m�点�܂��B</td>
+        <td bgcolor="#FFCC99">レシーバに当たるブロックを評価します。引数は、要素がブロックの引数に当たる配列です。<br>
+        もし配列の長さがブロックが期待している引数の数と等しくなければ、エラーを知らせます。</td>
         <td bgcolor="#FFCC99">3</td>
     </tr>
 </table>
 </center></div>
 
-<p>���l</p>
+<p>備考</p>
 
 <ol>
-    <li>�u���b�N�Ƀ��b�Z�[�W<code>#value</code>��������ƁA�u���b�N�����s����A���ʂ��Ԃ���܂��B</li>
-    <li>���b�Z�[�W<code> #value: arg</code>�ł��u���b�N�����s����܂��B���̏ꍇ�A�u���b�N�͈�����K���P�v�����Ȃ��Ƃ����܂���B�����ɑΉ�����p�����[�^��<code>arg</code>�ɏ���������܂��B
+    <li>ブロックにメッセージ<code>#value</code>が送られると、ブロックが実行され、結果が返されます。</li>
+    <li>メッセージ<code> #value: arg</code>でもブロックが実行されます。この場合、ブロックは引数を必ず１つ要求しないといけません。引数に対応するパラメータは<code>arg</code>に初期化されます。
     </li>
-    <li>Squeak�ł́A<code>#value:value:</code>���A <code>#value:value:value:</code>���A<code>#value:value:value:value:</code>���g���܂��B
-        �T�ȏ�̃p�����[�^�����u���b�N�̏ꍇ�ɂ́A<code>#valueWithArguments:</code>���g���܂��B
+    <li>Squeakでは、<code>#value:value:</code>も、 <code>#value:value:value:</code>も、<code>#value:value:value:value:</code>も使えます。
+        ５つ以上のパラメータを持つブロックの場合には、<code>#valueWithArguments:</code>を使います。
     </li>
 </ol>
 
-<h3><a name="SyntaxControl">����\��</a></h3>
+<h3><a name="SyntaxControl">制御構造</a></h3>
 
-<h4>�i���V�[�o��Boolean�I�u�W�F�N�g�̏ꍇ�́j��ґ���̐���\��</h4>
+<h4>（レシーバがBooleanオブジェクトの場合の）二者択一の制御構造</h4>
 <div align="center"><center>
 
 <table border="1" cellpadding="3" width="85%" bgcolor="#FFFFCC">
     <tr>
-        <td bgcolor="#FFCC99"><b>���b�Z�[�W</b></td>
+        <td bgcolor="#FFCC99"><b>メッセージ</b></td>
         <td bgcolor="#FFCC99"><p align="center"><b>Description</b></p>
         </td>
-        <td bgcolor="#FFCC99"><b>���l</b></td>
+        <td bgcolor="#FFCC99"><b>備考</b></td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99"><b>ifTrue:</b> alternativeBlock</td>
-        <td bgcolor="#FFCC99">�������V�[�o��false�Ȃ�Anil��Ԃ��܂��B�������V�[�o��Boolean�łȂ��Ȃ�A�G���[��m�点�܂��B<br>
-        ���̂ق��̏ꍇ�AalternativeBlock��]���������ʂ�Ԃ��܂��B</td>
+        <td bgcolor="#FFCC99">もしレシーバがfalseなら、nilを返します。もしレシーバがBooleanでないなら、エラーを知らせます。<br>
+        そのほかの場合、alternativeBlockを評価した結果を返します。</td>
         <td bgcolor="#FFCC99">1,2</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99"><b>ifFalse:</b> alternativeBlock</td>
-        <td bgcolor="#FFCC99">�������V�[�o��true�Ȃ�Anil��Ԃ��܂��B�������V�[�o��Boolean�łȂ��Ȃ�A�G���[��m�点�܂��B<br>
-        ���̂ق��̏ꍇ�AalternativeBlock��]���������ʂ�Ԃ��܂��B</td>
+        <td bgcolor="#FFCC99">もしレシーバがtrueなら、nilを返します。もしレシーバがBooleanでないなら、エラーを知らせます。<br>
+        そのほかの場合、alternativeBlockを評価した結果を返します。</td>
         <td bgcolor="#FFCC99">1,2</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99"><b>ifTrue:</b> trueAlternativeBlock<br>
         <b>ifFalse:</b> falseAlternativeBlock</td>
-        <td bgcolor="#FFCC99">�������V�[�o��ture�Ȃ�AtrueAlternativeBlock�̒l��Ԃ��܂��B<br>
-        �������V�[�o��false�Ȃ�AfalseAlternativeBlock�̒l��Ԃ��܂��B���̂ق��̏ꍇ�A�G���[��m�点�܂��B</td>
+        <td bgcolor="#FFCC99">もしレシーバがtureなら、trueAlternativeBlockの値を返します。<br>
+        もしレシーバがfalseなら、falseAlternativeBlockの値を返します。そのほかの場合、エラーを知らせます。</td>
         <td bgcolor="#FFCC99">1,2</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99"><b>ifFalse:</b>
         falseAlternativeBlock<br>
         <b>ifTrue:</b> trueAlternativeBlock</td>
-        <td bgcolor="#FFCC99">ifTrue:ifFalse:�Ɠ����ł��B</td>
+        <td bgcolor="#FFCC99">ifTrue:ifFalse:と同じです。</td>
         <td bgcolor="#FFCC99">1,2</td>
     </tr>
 </table>
 </center></div>
 
-<p>���l</p>
+<p>備考</p>
 
 <ol>
-    <li>�����́ABoolean�I�u�W�F�N�g�ɑ�����L�[���[�h���b�Z�[�W�Ƃ��ĉ��߂����̂ŁA�Z�p�I�ɂ����Ɛ���\���ł͂���܂���B�iTrue�N���X��False�N���X�̂����̃��\�b�h�̒�`���Q�Ƃ��Ă��������B�j</li>
-    <li>�������A�����̎��́A���̌���̐���\���Ɠ����������ʂ����܂��B</li>
+    <li>これらは、Booleanオブジェクトに送られるキーワードメッセージとして解釈されるので、技術的にいうと制御構造ではありません。（TrueクラスとFalseクラスのこれらのメソッドの定義を参照してください。）</li>
+    <li>しかし、これらの式は、他の言語の制御構造と同じ役割を果たします。</li>
 </ol>
 
-<h4>�i���V�[�o���C�ӂ̃I�u�W�F�N�g�̏ꍇ�́j��ґ���̐���\��</h4>
+<h4>（レシーバが任意のオブジェクトの場合の）二者択一の制御構造</h4>
 <div align="center"><center>
 
 <table border="1" cellpadding="3" width="85%" bgcolor="#FFFFCC">
     <tr>
-        <td bgcolor="#FFCC99"><b>���b�Z�[�W</b></td>
-        <td bgcolor="#FFCC99"><p align="center"><b>�L�q</b></p>
+        <td bgcolor="#FFCC99"><b>メッセージ</b></td>
+        <td bgcolor="#FFCC99"><p align="center"><b>記述</b></p>
         </td>
-        <td bgcolor="#FFCC99"><b>���l</b></td>
+        <td bgcolor="#FFCC99"><b>備考</b></td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99"><b>ifNil:</b> nilBlock</td>
-        <td bgcolor="#FFCC99">�������V�[�o��nil�Ȃ�AnilBlock��]���������ʂ�Ԃ��܂��B���̂ق��̏ꍇ�A���V�[�o��Ԃ��܂��B</td>
-        <td bgcolor="#FFCC99">�@</td>
+        <td bgcolor="#FFCC99">もしレシーバがnilなら、nilBlockを評価した結果を返します。そのほかの場合、レシーバを返します。</td>
+        <td bgcolor="#FFCC99">　</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99"><b>ifNotNil:</b> ifNotNilBlock</td>
-        <td bgcolor="#FFCC99">�������V�[�o��nil�łȂ��Ȃ�AifNotNilBlock��]���������ʂ�Ԃ��܂��B���̂ق��̏ꍇ�Anil��Ԃ��܂��B</td>
-        <td bgcolor="#FFCC99">�@</td>
+        <td bgcolor="#FFCC99">もしレシーバがnilでないなら、ifNotNilBlockを評価した結果を返します。そのほかの場合、nilを返します。</td>
+        <td bgcolor="#FFCC99">　</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99"><b>ifNil:</b> nilBlock<br>
         <b>ifNotNil:</b> ifNotNilBlock</td>
-        <td bgcolor="#FFCC99">�������V�[�o��nil�Ȃ�AnilBlock��]���������ʂ�Ԃ��܂��B���̂ق��̏ꍇ�AifNotNilBlock��]���������ʂ�Ԃ��܂��B</td>
-        <td bgcolor="#FFCC99">�@</td>
+        <td bgcolor="#FFCC99">もしレシーバがnilなら、nilBlockを評価した結果を返します。そのほかの場合、ifNotNilBlockを評価した結果を返します。</td>
+        <td bgcolor="#FFCC99">　</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99"><b>ifNotNil:</b> ifNotNilBlock<br>
         <b>ifNil:</b> nilBlock</td>
-        <td bgcolor="#FFCC99">#ifNil:ifNotNil:�Ɠ����ł��B</td>
-        <td bgcolor="#FFCC99">�@</td>
+        <td bgcolor="#FFCC99">#ifNil:ifNotNil:と同じです。</td>
+        <td bgcolor="#FFCC99">　</td>
     </tr>
 </table>
 </center></div>
 
-<h4>�J��Ԃ��̂��߂̐���\���i���V�[�o��aBlockContext�j</h4>
+<h4>繰り返しのための制御構造（レシーバがaBlockContext）</h4>
 <div align="center"><center>
 
 <table border="1" cellpadding="3" width="85%" bgcolor="#FFFFCC">
     <tr>
-        <td bgcolor="#FFCC99"><b>���b�Z�[�W</b></td>
-        <td bgcolor="#FFCC99"><p align="center"><b>�L�q</b></p>
+        <td bgcolor="#FFCC99"><b>メッセージ</b></td>
+        <td bgcolor="#FFCC99"><p align="center"><b>記述</b></p>
         </td>
-        <td bgcolor="#FFCC99"><b>���l</b></td>
+        <td bgcolor="#FFCC99"><b>備考</b></td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99"><b>whileTrue</b></td>
-        <td bgcolor="#FFCC99">���V�[�o��]�����܂��B���ʂ�true�ł���ԁA���V�[�o�̕]�����J��Ԃ��܂��B</td>
-        <td bgcolor="#FFCC99">�@</td>
+        <td bgcolor="#FFCC99">レシーバを評価します。結果がtrueである間、レシーバの評価を繰り返します。</td>
+        <td bgcolor="#FFCC99">　</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99"><b>whileTrue:</b> aBlock</td>
-        <td bgcolor="#FFCC99">���V�[�o��]�����܂��B����true�Ȃ�AaBlock��]�����āA���V�[�o�̕]���ɖ߂�܂��B</td>
-        <td bgcolor="#FFCC99">�@</td>
+        <td bgcolor="#FFCC99">レシーバを評価します。もしtrueなら、aBlockを評価して、レシーバの評価に戻ります。</td>
+        <td bgcolor="#FFCC99">　</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99"><b>whileFalse</b></td>
-        <td bgcolor="#FFCC99">���V�[�o��]�����܂��B���ʂ�false�ł���ԁA���V�[�o�̕]�����J��Ԃ��܂��B</td>
-        <td bgcolor="#FFCC99">�@</td>
+        <td bgcolor="#FFCC99">レシーバを評価します。結果がfalseである間、レシーバの評価を繰り返します。</td>
+        <td bgcolor="#FFCC99">　</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99"><b>whileFalse:</b> aBlock</td>
-        <td bgcolor="#FFCC99">���V�[�o��]�����܂��B����false�Ȃ�AaBlock��]�����ă��V�[�o�̕]���ɖ߂�܂��B</td>
-        <td bgcolor="#FFCC99">�@</td>
+        <td bgcolor="#FFCC99">レシーバを評価します。もしfalseなら、aBlockを評価してレシーバの評価に戻ります。</td>
+        <td bgcolor="#FFCC99">　</td>
     </tr>
 </table>
 </center></div>
 
-<h4>�񋓂̐���\���i���V�[�o��anInteger)</h4>
+<h4>列挙の制御構造（レシーバはanInteger)</h4>
 <div align="center"><center>
 
 <table border="1" cellpadding="3" width="85%" bgcolor="#FFFFCC">
     <tr>
-        <td bgcolor="#FFCC99"><b>���b�Z�[�W</b></td>
-        <td bgcolor="#FFCC99"><p align="center"><b>�L�q</b></p>
+        <td bgcolor="#FFCC99"><b>メッセージ</b></td>
+        <td bgcolor="#FFCC99"><p align="center"><b>記述</b></p>
         </td>
-        <td bgcolor="#FFCC99"><b>���l</b></td>
+        <td bgcolor="#FFCC99"><b>備考</b></td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99"><b>timesRepeat:</b> aBlock</td>
-        <td bgcolor="#FFCC99">���V�[�o�̐��̉񐔂�������aBlock��]�����܂��B</td>
-        <td bgcolor="#FFCC99">�@</td>
+        <td bgcolor="#FFCC99">レシーバの数の回数だけ引数aBlockを評価します。</td>
+        <td bgcolor="#FFCC99">　</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99"><b>to:</b> stop <b>do:</b> aBlock</td>
-        <td bgcolor="#FFCC99">�C���^�[�o��(self to: stop by:
-        1)�̂��ꂼ��̗v�f�������Ƃ���aBlock��]�����܂��B</td>
-        <td bgcolor="#FFCC99">�@</td>
+        <td bgcolor="#FFCC99">インターバル(self to: stop by:
+        1)のそれぞれの要素を引数としてaBlockを評価します。</td>
+        <td bgcolor="#FFCC99">　</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99"><b>to:</b> stop <b>by:</b> step <b>do:</b>
         aBlock</td>
-        <td bgcolor="#FFCC99">�C���^�[�o��(self to: stop by:
-        step)�̂��ꂼ��̗v�f�������Ƃ���aBlock��]�����܂��B</td>
-        <td bgcolor="#FFCC99">�@</td>
+        <td bgcolor="#FFCC99">インターバル(self to: stop by:
+        step)のそれぞれの要素を引数としてaBlockを評価します。</td>
+        <td bgcolor="#FFCC99">　</td>
     </tr>
 </table>
 </center></div>
 
-<h4>�񋓂̐���\���i���V�[�o��Collection�j</h4>
+<h4>列挙の制御構造（レシーバはCollection）</h4>
 <div align="center"><center>
 
 <table border="1" cellpadding="3" width="85%" bgcolor="#FFFFCC">
     <tr>
-        <td bgcolor="#FFCC99"><b>���b�Z�[�W</b></td>
-        <td bgcolor="#FFCC99"><p align="center"><b>�L�q</b></p>
+        <td bgcolor="#FFCC99"><b>メッセージ</b></td>
+        <td bgcolor="#FFCC99"><p align="center"><b>記述</b></p>
         </td>
-        <td bgcolor="#FFCC99"><b>���l</b></td>
+        <td bgcolor="#FFCC99"><b>備考</b></td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99"><b>do:</b> aBlock</td>
-        <td bgcolor="#FFCC99">���V�[�o�̂��ꂼ��̗v�f�ɂ��āA�v�f�������Ƃ���aBlock��]�����܂��B</td>
+        <td bgcolor="#FFCC99">レシーバのそれぞれの要素について、要素を引数としてaBlockを評価します。</td>
         <td bgcolor="#FFCC99">1</td>
     </tr>
 </table>
@@ -1206,61 +1206,61 @@ box containsPoint: 40@50</pre>
 <p>Note</p>
 
 <ol>
-    <li>Squeak�̏W���^�͔��ɂ�������̗񋓉��Z��񋟂��Ă��܂��B�N���X���t�@�����X��<a
-        href="http://www.mucow.com/SqueakClassesRef.html#Enumerating Collections">�u�W����񋓂���v</a>�߂����Ă��������B</li>
+    <li>Squeakの集合型は非常にたくさんの列挙演算を提供しています。クラスリファレンスの<a
+        href="http://www.mucow.com/SqueakClassesRef.html#Enumerating Collections">「集合を列挙する」</a>節を見てください。</li>
 </ol>
 
-<h4><a name="Case Structures">�P�[�X�\���i���V�[�o�͔C�ӂ̃I�u�W�F�N�g�j</a></h4>
+<h4><a name="Case Structures">ケース構造（レシーバは任意のオブジェクト）</a></h4>
 <div align="center"><center>
 
 <table border="1" cellpadding="3" width="85%" bgcolor="#FFFFCC">
     <tr>
-        <td bgcolor="#FFCC99"><b>���b�Z�[�W</b></td>
-        <td bgcolor="#FFCC99"><p align="center"><b>�L�q</b></p>
+        <td bgcolor="#FFCC99"><b>メッセージ</b></td>
+        <td bgcolor="#FFCC99"><p align="center"><b>記述</b></p>
         </td>
-        <td bgcolor="#FFCC99"><b>���l</b></td>
+        <td bgcolor="#FFCC99"><b>備考</b></td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99"><b>caseOf:</b>
         aBlockAssociationCollection</td>
-        <td bgcolor="#FFCC99">aBlockAssociationCollection�̒��́A�]�������L�[�����V�[�o�Ɠ������ŏ��̘A�z�̕]���l��Ԃ��܂��B������v������̂�������Ȃ���΁A�G���[��m�点�܂��B</td>
+        <td bgcolor="#FFCC99">aBlockAssociationCollectionの中の、評価したキーがレシーバと等しい最初の連想の評価値を返します。もし一致するものが見つからなければ、エラーを知らせます。</td>
         <td bgcolor="#FFCC99">1</td>
     </tr>
     <tr>
         <td bgcolor="#FFCC99"><b>caseOf:</b>
         aBlockAssociationCollection <b>otherwise:</b> aBlock</td>
-        <td bgcolor="#FFCC99">aBlockAssociationCollection�̒��́A�]�������L�[�����V�[�o�Ɠ������ŏ��̘A�z�̕]���l��Ԃ��܂��B������v������̂�������Ȃ���΁A�G���[��m�点�܂��B������v������̂�������Ȃ���΁AaBlock�̕]���l��Ԃ��܂��B</td>
+        <td bgcolor="#FFCC99">aBlockAssociationCollectionの中の、評価したキーがレシーバと等しい最初の連想の評価値を返します。もし一致するものが見つからなければ、エラーを知らせます。もし一致するものが見つからなければ、aBlockの評価値を返します。</td>
         <td bgcolor="#FFCC99">1</td>
     </tr>
 </table>
 </center></div>
 
-<p>���l</p>
+<p>備考</p>
 
 <ol>
-    <li>aBlockAssociationCollection�͘A�z�i�L�[�ƒl�̃y�A�j�̏W���ł��B<br>
-        ��: <code>aSymbol caseOf: {[#a]-&gt;[1+1]. ['b' asSymbol]-&gt;[2+2].
+    <li>aBlockAssociationCollectionは連想（キーと値のペア）の集合です。<br>
+        例: <code>aSymbol caseOf: {[#a]-&gt;[1+1]. ['b' asSymbol]-&gt;[2+2].
         [#c]-&gt;[3+3]}</code> </li>
 </ol>
 
-<h3><a name="BraceArray">���� &quot;�劇��&quot; �z��</a></h3>
+<h3><a name="BraceArray">式の &quot;大括弧&quot; 配列</a></h3>
 
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; braceArray ::= <b>{</b>&nbsp;
 expressionSequence&nbsp;<b>}<br>
 <br>
-{</b> 1. 2. 3. 4. 5 <b>}</b> &quot;�T��Integer(1 to 5)����Ȃ�A�T�C�Y���T�̔z��B&quot;<br>
-<b>{</b> $a. #brace. array <b>}</b> &quot;Character($a)��Symbol(#brace)�ƕϐ��z���<i>���݂̒l</i>����Ȃ�A�T�C�Y���R�̔z��B&quot;<br>
-<b>{</b> 1 + 2 <b>}</b> &quot;�P�̐����R����Ȃ�A�T�C�Y���P�̔z��B&quot;</p>
+{</b> 1. 2. 3. 4. 5 <b>}</b> &quot;５つのInteger(1 to 5)からなる、サイズが５の配列。&quot;<br>
+<b>{</b> $a. #brace. array <b>}</b> &quot;Character($a)とSymbol(#brace)と変数配列の<i>現在の値</i>からなる、サイズが３の配列。&quot;<br>
+<b>{</b> 1 + 2 <b>}</b> &quot;１つの整数３からなる、サイズが１の配列。&quot;</p>
 
 <ul>
-    <li>�劇�ʔz��́A�����^�C�����Ɍv�Z����鐳�^������Smalltalk���ł��B</li>
-    <li>�劇�ʔz��̗v�f�͍\���v�f���̕Ԃ�l�ł��B</li>
-    <li>�����́A���X�A�`���΂�����&quot;Array
-        with: expr1 with: expr2 with: expr3&quot;�́A�֗��ł����ƈ�ʓI�ȑ���ɂȂ�܂��B</li>
-    <li>�C���f�b�N�X�͂P����n�܂�܂��B</li>
+    <li>大括弧配列は、ランタイム時に計算される正真正銘のSmalltalk式です。</li>
+    <li>大括弧配列の要素は構成要素式の返り値です。</li>
+    <li>これらは、時々、形式ばった式&quot;Array
+        with: expr1 with: expr2 with: expr3&quot;の、便利でもっと一般的な代わりになります。</li>
+    <li>インデックスは１から始まります。</li>
 </ul>
 
-<h3><a name="Answer Expressions">�A���T�[��</a></h3>
+<h3><a name="Answer Expressions">アンサー式</a></h3>
 
 <blockquote>
     <p>answerExpression ::= ^ expression</p>
@@ -1270,14 +1270,14 @@ expressionSequence&nbsp;<b>}<br>
 ^ 2+3</p>
 
 <ul>
-    <li>���\�b�h�̒��g�̒��ŁA�A���T�[���̓��\�b�h�̎��s���I��������̂Ɏg���A���\�b�h�̕Ԃ�l�Ƃ��Ď���`���܂��B
+    <li>メソッドの中身の中で、アンサー式はメソッドの実行を終了させるのに使われ、メソッドの返り値として式を伝えます。
     </li>
-    <li>���\�b�h�̒��Ŏg�p�����u���b�N���̒��̃A���T�[����]������ƁA�i�󒍁F�u���b�N�����łȂ��j���\�b�h���I�����܂��B</li>
+    <li>メソッドの中で使用されるブロック式の中のアンサー式を評価すると、（訳注：ブロックだけでなく）メソッドが終了します。</li>
 </ul>
 
-<h3><a name="Class Definition">�N���X�̒�`</a></h3>
+<h3><a name="Class Definition">クラスの定義</a></h3>
 
-<h4>�ʏ�̃N���X�̒�`</h4>
+<h4>通常のクラスの定義</h4>
 
 <pre>SuperClass subclass: #NameOfClass
     instanceVariableNames: 'instVarName1 instVarName2'
@@ -1285,9 +1285,9 @@ expressionSequence&nbsp;<b>}<br>
     poolDictionaries: ''
     category: 'Major-Minor'</pre>
 
-<h4>�ϐ��N���X�̒�`</h4>
+<h4>変数クラスの定義</h4>
 
-<p>�����̃N���X��`�̌`���́AArray�Ƃ�ByteArray�Ƃ�WordArray�̃I�u�W�F�N�g�̂悤�ɁA�ԍ��t���\�ȃI�u�W�F�N�g�𐶐�����̂Ɏg���܂��B�����͊��S���������߂ɂ����Ɋ܂܂�ċ��܂����A�ʏ�͒��ڂ͎g�p����܂���G����ɁA���̒l���K�؂Ȕz��i�⑼�̏W���j�I�u�W�F�N�g���w���C���X�^���X�ϐ��𔺂��ʏ�̃I�u�W�F�N�g���g���܂��B</p>
+<p>これらのクラス定義の形式は、ArrayとかByteArrayとかWordArrayのオブジェクトのように、番号付け可能なオブジェクトを生成するのに使われます。これらは完全を期すためにここに含まれて居ますが、通常は直接は使用されません；代わりに、その値が適切な配列（や他の集合）オブジェクトを指すインスタンス変数を伴う通常のオブジェクトを使います。</p>
 
 <pre>SuperClass variableSubclass: #NameOfClass
     instanceVariableNames: 'instVarName1 instVarName2'
@@ -1307,12 +1307,12 @@ SuperClass variableWordSubclass: #NameOfClass
     poolDictionaries: ''
     category: 'Major-Minor'</pre>
 
-<h3><a name="Method Definition">���\�b�h�̒�`</a></h3>
+<h3><a name="Method Definition">メソッドの定義</a></h3>
 
-<p>���ׂẴ��\�b�h�͒l��Ԃ��܂��G�����ۏ؂��邽�߂ɁA���ׂẴ��\�b�h�̏I���ɂ͈Öق�<code>^self</code>�����݂��܂��B�ȉ���String�N���X����̗�ł��B</p>
+<p>すべてのメソッドは値を返します；これを保証するために、すべてのメソッドの終わりには暗黙の<code>^self</code>が存在します。以下はStringクラスからの例です。</p>
 
 <pre><b>lineCount
-    </b>&quot;���ׂĂ�cr�łP�s�������ƂŁA���V�[�o�̍s����Ԃ��܂��B&quot;
+    </b>&quot;すべてのcrで１行足すことで、レシーバの行数を返します。&quot;
          
 &nbsp;&nbsp;&nbsp;&nbsp;| cr count |
 &nbsp;&nbsp;&nbsp;&nbsp;cr <img src="squeak-qref.files/arrow.gif"
@@ -1330,7 +1330,7 @@ height="13" naturalsizeflag="3"> count + 1]].
 <hr align="left">
 
 <p align="center">Copyright &copy; <font
-face="�l�r �o�S�V�b�N">1999</font> Andrew C. Greenberg<br>
+face="ＭＳ Ｐゴシック">1999</font> Andrew C. Greenberg<br>
 Copyright &copy; 2001 Andrew P. Black<br>
 Copyright &copy; 2003 ICHIKAWA, Yuji</p>
 </body>

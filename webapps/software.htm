@@ -2,9 +2,9 @@
 
 <head>
 <meta http-equiv="Content-Type"
-content="text/html; charset=x-sjis">
+content="text/html; charset=UTF-8">
 <meta name="GENERATOR" content="Microsoft FrontPage Express 2.0">
-<title>�\�t�g�E�G�A�̕���</title>
+<title>ソフトウエアの部屋</title>
 <script type="text/javascript"><!--
 
   var _gaq = _gaq || [];
@@ -25,30 +25,30 @@ content="text/html; charset=x-sjis">
 src="http://www.dff.jp/pix/dffbanner2005_2.gif" border="0"
 width="149" height="22"></a> </p>
 
-<h1 align="center">�\�t�g�E�G�A�̕���</h1>
+<h1 align="center">ソフトウエアの部屋</h1>
 
-<p>�Q�O�O�R�N�S���P�P���X�V</p>
+<p>２００３年４月１１日更新</p>
 
 <hr>
 
-<h2>�o�C�IC1��Linux</h2>
+<h2>バイオC1でLinux</h2>
 
-<p>PCG-C1XF��Linux���C���X�g�[�����Ďg���Ă��܂��B</p>
+<p>PCG-C1XFにLinuxをインストールして使っています。</p>
 
-<p>�ǂ̃o�[�W������Linux�J�[�l���ł��A���X�t���[�Y���܂��B�n�[�h�f�B�X�N�̃����v�����������B�J�[�l�����č\�z����ۂɁA�`�o�l�̃p���[�}�l�[�W�����g�I�v�V������Yes�ɂ���ƁA���쎞�ɕs���Ȋ��荞�݂��オ���Ă��Ă���Ƃ����J�[�l���G���[�o�͂��o��̂ŁA���̕ӂ肪���������B</p>
+<p>どのバージョンのLinuxカーネルでも、時々フリーズします。ハードディスクのランプがつきっ放し。カーネルを再構築する際に、ＡＰＭのパワーマネージメントオプションをYesにすると、動作時に不明な割り込みが上がってきているというカーネルエラー出力が出るので、この辺りが怪しそう。</p>
 
-<p>�@</p>
+<p>　</p>
 
-<h2><a name="mpeg4ip"></a>�o�C�IC1�Ń��C�u�z�M</h2>
+<h2><a name="mpeg4ip"></a>バイオC1でライブ配信</h2>
 
-<p>MPEG4IP���g���ƁAQuickCam�Ń��C�u�z�M���ł���̂ł����A�o�C�IC1�̃��[�V�����A�C�ł͓��삵�܂���ł����B���R�́A���[�V�����A�C�̏o�͂́AYUV422�`���ŁAMPEG4IP��mp4live�̃T�|�[�g����`���́AYUV420P��������RGB24������B</p>
+<p>MPEG4IPを使うと、QuickCamでライブ配信ができるのですが、バイオC1のモーションアイでは動作しませんでした。理由は、モーションアイの出力は、YUV422形式で、MPEG4IPのmp4liveのサポートする形式は、YUV420PもしくはRGB24だから。</p>
 
-<p>YUV422��YUV420P�ϊ����[�`����ǉ����邱�ƂŁA�ȒP�ɓ������܂����̂ŁA���Љ�܂��B</p>
+<p>YUV422→YUV420P変換ルーチンを追加することで、簡単に動かせましたので、ご紹介します。</p>
 
-<h3 class="MsoBodyText" style="text-indent:10.5pt">�ޗ�</h3>
+<h3 class="MsoBodyText" style="text-indent:10.5pt">材料</h3>
 
 <ol>
-    <li>�\�j�[VAIO C1 <a
+    <li>ソニーVAIO C1 <a
         href="http://www.sony.co.jp/sd/products/Consumer/PCOM/PCG-C1XF/">PCG-C1XF</a></li>
     <li><a href="http://www.redhat.co.jp/download/">Red Hat 7.2</a></li>
     <li><a
@@ -60,29 +60,29 @@ width="149" height="22"></a> </p>
     <li><a
         href="http://prdownloads.sourceforge.net/mpeg4ip/mpeg4ip-0.9.5.tar.gz">MPEG4IP
         0.9.5</a></li>
-    <li><a href="mp4live_for_vaio-c1.tar.gz">mp4live�X�V�t�@�C��</a>�i�p�b�`�̍������킩��Ȃ��̂ŕύX�����t�@�C���Q��p�Ӂj</li>
+    <li><a href="mp4live_for_vaio-c1.tar.gz">mp4live更新ファイル</a>（パッチの作り方がわからないので変更したファイル群を用意）</li>
 </ol>
 
-<h3 class="MsoBodyText" style="text-indent:10.5pt">����</h3>
+<h3 class="MsoBodyText" style="text-indent:10.5pt">調理</h3>
 
 <ol>
-    <li>�o�C�IC1��Linux���C���X�g�[������BPCMCIA�C���^�t�F�[�X�̏���CD-ROM�h���C�u���g���ẴC���X�g�[���̏ꍇ�Atext
-        ide2=0x180,0x386�ŗ����グ��̂��~�\�BX�̐ݒ�m�E�n�E�Ȃǂ̓E�F�b�u�Ō������܂��B</li>
-    <li>�J�[�l�����č\�z����BCharacter devices��Sony
-        Vaio Programmable I/O Control Device support���AMultimedia
-        devices�ŁAVideo For Linux��Sony Vaio Picturebook
-        Motion Eye Video for Linux��ǉ����܂��B���̑��̕K�v�Ȑݒ�ɂ��ẮADocumentation/video4linux/meye.txt�Q�ƁB</li>
-    <li>�����グ�����āAxawtv���C���X�g�[�����āAMotion
-        Eye���g���邱�Ƃ��m�F���Ă����̂��悢�ł��傤�B</li>
-    <li>Darwin Streaming Server���C���X�g�[������B���ɋ�J�͂Ȃ��ł��B</li>
-    <li>MPEG4IP��W�J���āAmp4live�f�B���N�g���ɕύX�����t�@�C���Q���R�s�[����B</li>
-    <li>MPEG4IP�̍\�z���s���B./bootstrap��make��su��make
+    <li>バイオC1にLinuxをインストールする。PCMCIAインタフェースの純正CD-ROMドライブを使ってのインストールの場合、text
+        ide2=0x180,0x386で立ち上げるのがミソ。Xの設定ノウハウなどはウェッブで見つけられます。</li>
+    <li>カーネルを再構築する。Character devicesでSony
+        Vaio Programmable I/O Control Device supportを、Multimedia
+        devicesで、Video For LinuxとSony Vaio Picturebook
+        Motion Eye Video for Linuxを追加します。その他の必要な設定については、Documentation/video4linux/meye.txt参照。</li>
+    <li>立ち上げ直して、xawtvをインストールして、Motion
+        Eyeが使えることを確認しておくのがよいでしょう。</li>
+    <li>Darwin Streaming Serverをインストールする。特に苦労はないです。</li>
+    <li>MPEG4IPを展開して、mp4liveディレクトリに変更したファイル群をコピーする。</li>
+    <li>MPEG4IPの構築を行う。./bootstrap→make→su→make
         install</li>
 </ol>
 
 <p class="MsoBodyText" style="text-indent:10.5pt">Enjoy!</p>
 
-<p class="MsoBodyText" style="text-indent:10.5pt">�i���jPCG-C1XF�̏ꍇ�A�b�ԂV�R�}�����肪�K���Ȃ悤�ł��B�����葬���t���[�����[�g�ł̓G���R�[�h�ł��܂���B</p>
+<p class="MsoBodyText" style="text-indent:10.5pt">（注）PCG-C1XFの場合、秒間７コマ当たりが適当なようです。それより速いフレームレートではエンコードできません。</p>
 
 <hr>
 
